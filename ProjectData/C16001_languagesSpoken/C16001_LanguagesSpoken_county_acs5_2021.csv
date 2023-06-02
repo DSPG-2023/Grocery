@@ -1,0 +1,1288 @@
+"","GEOID","NAME","variable","estimate","moe","summary_est","summary_moe"
+"1","19001","Adair County, Iowa","Speak only English",6845,62,6997,24
+"2","19001","Adair County, Iowa","Spanish",71,42,6997,24
+"3","19001","Adair County, Iowa","French, Haitian, or Cajun",0,15,6997,24
+"4","19001","Adair County, Iowa","German or other West Germanic languages",8,8,6997,24
+"5","19001","Adair County, Iowa","Russian, Polish, or other Slavic languages",5,7,6997,24
+"6","19001","Adair County, Iowa","Other Indo-European languages",25,34,6997,24
+"7","19001","Adair County, Iowa","Korean",10,16,6997,24
+"8","19001","Adair County, Iowa","Chinese (incl. Mandarin, Cantonese)",30,32,6997,24
+"9","19001","Adair County, Iowa","Vietnamese",0,15,6997,24
+"10","19001","Adair County, Iowa","Tagalog (incl. Filipino)",0,15,6997,24
+"11","19001","Adair County, Iowa","Other Asian and Pacific Island languages",3,5,6997,24
+"12","19001","Adair County, Iowa","Arabic",0,15,6997,24
+"13","19001","Adair County, Iowa","Other and unspecified languages",0,15,6997,24
+"14","19003","Adams County, Iowa","Speak only English",3413,33,3490,8
+"15","19003","Adams County, Iowa","Spanish",66,32,3490,8
+"16","19003","Adams County, Iowa","French, Haitian, or Cajun",4,6,3490,8
+"17","19003","Adams County, Iowa","German or other West Germanic languages",1,3,3490,8
+"18","19003","Adams County, Iowa","Russian, Polish, or other Slavic languages",6,8,3490,8
+"19","19003","Adams County, Iowa","Other Indo-European languages",0,10,3490,8
+"20","19003","Adams County, Iowa","Korean",0,10,3490,8
+"21","19003","Adams County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,10,3490,8
+"22","19003","Adams County, Iowa","Vietnamese",0,10,3490,8
+"23","19003","Adams County, Iowa","Tagalog (incl. Filipino)",0,10,3490,8
+"24","19003","Adams County, Iowa","Other Asian and Pacific Island languages",0,10,3490,8
+"25","19003","Adams County, Iowa","Arabic",0,10,3490,8
+"26","19003","Adams County, Iowa","Other and unspecified languages",0,10,3490,8
+"27","19005","Allamakee County, Iowa","Speak only English",11416,279,13109,17
+"28","19005","Allamakee County, Iowa","Spanish",791,79,13109,17
+"29","19005","Allamakee County, Iowa","French, Haitian, or Cajun",11,19,13109,17
+"30","19005","Allamakee County, Iowa","German or other West Germanic languages",458,225,13109,17
+"31","19005","Allamakee County, Iowa","Russian, Polish, or other Slavic languages",57,52,13109,17
+"32","19005","Allamakee County, Iowa","Other Indo-European languages",88,95,13109,17
+"33","19005","Allamakee County, Iowa","Korean",0,16,13109,17
+"34","19005","Allamakee County, Iowa","Chinese (incl. Mandarin, Cantonese)",12,21,13109,17
+"35","19005","Allamakee County, Iowa","Vietnamese",0,16,13109,17
+"36","19005","Allamakee County, Iowa","Tagalog (incl. Filipino)",20,19,13109,17
+"37","19005","Allamakee County, Iowa","Other Asian and Pacific Island languages",0,16,13109,17
+"38","19005","Allamakee County, Iowa","Arabic",43,66,13109,17
+"39","19005","Allamakee County, Iowa","Other and unspecified languages",213,92,13109,17
+"40","19007","Appanoose County, Iowa","Speak only English",11255,150,11670,28
+"41","19007","Appanoose County, Iowa","Spanish",48,51,11670,28
+"42","19007","Appanoose County, Iowa","French, Haitian, or Cajun",6,8,11670,28
+"43","19007","Appanoose County, Iowa","German or other West Germanic languages",343,137,11670,28
+"44","19007","Appanoose County, Iowa","Russian, Polish, or other Slavic languages",0,16,11670,28
+"45","19007","Appanoose County, Iowa","Other Indo-European languages",10,13,11670,28
+"46","19007","Appanoose County, Iowa","Korean",0,16,11670,28
+"47","19007","Appanoose County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,11670,28
+"48","19007","Appanoose County, Iowa","Vietnamese",0,16,11670,28
+"49","19007","Appanoose County, Iowa","Tagalog (incl. Filipino)",6,10,11670,28
+"50","19007","Appanoose County, Iowa","Other Asian and Pacific Island languages",2,6,11670,28
+"51","19007","Appanoose County, Iowa","Arabic",0,16,11670,28
+"52","19007","Appanoose County, Iowa","Other and unspecified languages",0,16,11670,28
+"53","19009","Audubon County, Iowa","Speak only English",5218,36,5276,31
+"54","19009","Audubon County, Iowa","Spanish",57,31,5276,31
+"55","19009","Audubon County, Iowa","French, Haitian, or Cajun",0,15,5276,31
+"56","19009","Audubon County, Iowa","German or other West Germanic languages",0,15,5276,31
+"57","19009","Audubon County, Iowa","Russian, Polish, or other Slavic languages",0,15,5276,31
+"58","19009","Audubon County, Iowa","Other Indo-European languages",1,2,5276,31
+"59","19009","Audubon County, Iowa","Korean",0,15,5276,31
+"60","19009","Audubon County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,5276,31
+"61","19009","Audubon County, Iowa","Vietnamese",0,15,5276,31
+"62","19009","Audubon County, Iowa","Tagalog (incl. Filipino)",0,15,5276,31
+"63","19009","Audubon County, Iowa","Other Asian and Pacific Island languages",0,15,5276,31
+"64","19009","Audubon County, Iowa","Arabic",0,15,5276,31
+"65","19009","Audubon County, Iowa","Other and unspecified languages",0,15,5276,31
+"66","19011","Benton County, Iowa","Speak only English",23483,186,24087,15
+"67","19011","Benton County, Iowa","Spanish",351,100,24087,15
+"68","19011","Benton County, Iowa","French, Haitian, or Cajun",28,31,24087,15
+"69","19011","Benton County, Iowa","German or other West Germanic languages",133,138,24087,15
+"70","19011","Benton County, Iowa","Russian, Polish, or other Slavic languages",2,4,24087,15
+"71","19011","Benton County, Iowa","Other Indo-European languages",83,73,24087,15
+"72","19011","Benton County, Iowa","Korean",0,19,24087,15
+"73","19011","Benton County, Iowa","Chinese (incl. Mandarin, Cantonese)",3,5,24087,15
+"74","19011","Benton County, Iowa","Vietnamese",1,2,24087,15
+"75","19011","Benton County, Iowa","Tagalog (incl. Filipino)",0,19,24087,15
+"76","19011","Benton County, Iowa","Other Asian and Pacific Island languages",3,4,24087,15
+"77","19011","Benton County, Iowa","Arabic",0,19,24087,15
+"78","19011","Benton County, Iowa","Other and unspecified languages",0,19,24087,15
+"79","19013","Black Hawk County, Iowa","Speak only English",112090,1094,123224,28
+"80","19013","Black Hawk County, Iowa","Spanish",4123,490,123224,28
+"81","19013","Black Hawk County, Iowa","French, Haitian, or Cajun",1043,382,123224,28
+"82","19013","Black Hawk County, Iowa","German or other West Germanic languages",362,167,123224,28
+"83","19013","Black Hawk County, Iowa","Russian, Polish, or other Slavic languages",2422,637,123224,28
+"84","19013","Black Hawk County, Iowa","Other Indo-European languages",807,333,123224,28
+"85","19013","Black Hawk County, Iowa","Korean",92,86,123224,28
+"86","19013","Black Hawk County, Iowa","Chinese (incl. Mandarin, Cantonese)",175,141,123224,28
+"87","19013","Black Hawk County, Iowa","Vietnamese",149,85,123224,28
+"88","19013","Black Hawk County, Iowa","Tagalog (incl. Filipino)",101,76,123224,28
+"89","19013","Black Hawk County, Iowa","Other Asian and Pacific Island languages",1429,338,123224,28
+"90","19013","Black Hawk County, Iowa","Arabic",253,173,123224,28
+"91","19013","Black Hawk County, Iowa","Other and unspecified languages",178,97,123224,28
+"92","19015","Boone County, Iowa","Speak only English",24673,175,25293,70
+"93","19015","Boone County, Iowa","Spanish",459,111,25293,70
+"94","19015","Boone County, Iowa","French, Haitian, or Cajun",18,21,25293,70
+"95","19015","Boone County, Iowa","German or other West Germanic languages",23,19,25293,70
+"96","19015","Boone County, Iowa","Russian, Polish, or other Slavic languages",76,86,25293,70
+"97","19015","Boone County, Iowa","Other Indo-European languages",21,30,25293,70
+"98","19015","Boone County, Iowa","Korean",0,19,25293,70
+"99","19015","Boone County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,19,25293,70
+"100","19015","Boone County, Iowa","Vietnamese",0,19,25293,70
+"101","19015","Boone County, Iowa","Tagalog (incl. Filipino)",0,19,25293,70
+"102","19015","Boone County, Iowa","Other Asian and Pacific Island languages",23,34,25293,70
+"103","19015","Boone County, Iowa","Arabic",0,19,25293,70
+"104","19015","Boone County, Iowa","Other and unspecified languages",0,19,25293,70
+"105","19017","Bremer County, Iowa","Speak only English",22913,108,23445,50
+"106","19017","Bremer County, Iowa","Spanish",164,56,23445,50
+"107","19017","Bremer County, Iowa","French, Haitian, or Cajun",25,20,23445,50
+"108","19017","Bremer County, Iowa","German or other West Germanic languages",122,83,23445,50
+"109","19017","Bremer County, Iowa","Russian, Polish, or other Slavic languages",0,19,23445,50
+"110","19017","Bremer County, Iowa","Other Indo-European languages",38,29,23445,50
+"111","19017","Bremer County, Iowa","Korean",5,8,23445,50
+"112","19017","Bremer County, Iowa","Chinese (incl. Mandarin, Cantonese)",67,78,23445,50
+"113","19017","Bremer County, Iowa","Vietnamese",0,19,23445,50
+"114","19017","Bremer County, Iowa","Tagalog (incl. Filipino)",0,19,23445,50
+"115","19017","Bremer County, Iowa","Other Asian and Pacific Island languages",37,50,23445,50
+"116","19017","Bremer County, Iowa","Arabic",7,14,23445,50
+"117","19017","Bremer County, Iowa","Other and unspecified languages",67,61,23445,50
+"118","19019","Buchanan County, Iowa","Speak only English",18435,276,19228,37
+"119","19019","Buchanan County, Iowa","Spanish",276,107,19228,37
+"120","19019","Buchanan County, Iowa","French, Haitian, or Cajun",33,34,19228,37
+"121","19019","Buchanan County, Iowa","German or other West Germanic languages",402,253,19228,37
+"122","19019","Buchanan County, Iowa","Russian, Polish, or other Slavic languages",53,71,19228,37
+"123","19019","Buchanan County, Iowa","Other Indo-European languages",9,16,19228,37
+"124","19019","Buchanan County, Iowa","Korean",0,19,19228,37
+"125","19019","Buchanan County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,19,19228,37
+"126","19019","Buchanan County, Iowa","Vietnamese",0,19,19228,37
+"127","19019","Buchanan County, Iowa","Tagalog (incl. Filipino)",3,5,19228,37
+"128","19019","Buchanan County, Iowa","Other Asian and Pacific Island languages",8,11,19228,37
+"129","19019","Buchanan County, Iowa","Arabic",0,19,19228,37
+"130","19019","Buchanan County, Iowa","Other and unspecified languages",9,12,19228,37
+"131","19021","Buena Vista County, Iowa","Speak only English",12764,318,19241,21
+"132","19021","Buena Vista County, Iowa","Spanish",4407,240,19241,21
+"133","19021","Buena Vista County, Iowa","French, Haitian, or Cajun",9,10,19241,21
+"134","19021","Buena Vista County, Iowa","German or other West Germanic languages",45,25,19241,21
+"135","19021","Buena Vista County, Iowa","Russian, Polish, or other Slavic languages",0,19,19241,21
+"136","19021","Buena Vista County, Iowa","Other Indo-European languages",2,4,19241,21
+"137","19021","Buena Vista County, Iowa","Korean",4,7,19241,21
+"138","19021","Buena Vista County, Iowa","Chinese (incl. Mandarin, Cantonese)",40,62,19241,21
+"139","19021","Buena Vista County, Iowa","Vietnamese",141,143,19241,21
+"140","19021","Buena Vista County, Iowa","Tagalog (incl. Filipino)",4,6,19241,21
+"141","19021","Buena Vista County, Iowa","Other Asian and Pacific Island languages",1615,201,19241,21
+"142","19021","Buena Vista County, Iowa","Arabic",12,18,19241,21
+"143","19021","Buena Vista County, Iowa","Other and unspecified languages",198,152,19241,21
+"144","19023","Butler County, Iowa","Speak only English",13348,86,13654,43
+"145","19023","Butler County, Iowa","Spanish",107,63,13654,43
+"146","19023","Butler County, Iowa","French, Haitian, or Cajun",0,16,13654,43
+"147","19023","Butler County, Iowa","German or other West Germanic languages",91,43,13654,43
+"148","19023","Butler County, Iowa","Russian, Polish, or other Slavic languages",1,3,13654,43
+"149","19023","Butler County, Iowa","Other Indo-European languages",12,18,13654,43
+"150","19023","Butler County, Iowa","Korean",7,10,13654,43
+"151","19023","Butler County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,13654,43
+"152","19023","Butler County, Iowa","Vietnamese",0,16,13654,43
+"153","19023","Butler County, Iowa","Tagalog (incl. Filipino)",32,28,13654,43
+"154","19023","Butler County, Iowa","Other Asian and Pacific Island languages",49,30,13654,43
+"155","19023","Butler County, Iowa","Arabic",0,16,13654,43
+"156","19023","Butler County, Iowa","Other and unspecified languages",7,10,13654,43
+"157","19025","Calhoun County, Iowa","Speak only English",9201,54,9374,37
+"158","19025","Calhoun County, Iowa","Spanish",113,36,9374,37
+"159","19025","Calhoun County, Iowa","French, Haitian, or Cajun",0,15,9374,37
+"160","19025","Calhoun County, Iowa","German or other West Germanic languages",29,20,9374,37
+"161","19025","Calhoun County, Iowa","Russian, Polish, or other Slavic languages",3,5,9374,37
+"162","19025","Calhoun County, Iowa","Other Indo-European languages",7,9,9374,37
+"163","19025","Calhoun County, Iowa","Korean",0,15,9374,37
+"164","19025","Calhoun County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,4,9374,37
+"165","19025","Calhoun County, Iowa","Vietnamese",2,3,9374,37
+"166","19025","Calhoun County, Iowa","Tagalog (incl. Filipino)",7,9,9374,37
+"167","19025","Calhoun County, Iowa","Other Asian and Pacific Island languages",6,6,9374,37
+"168","19025","Calhoun County, Iowa","Arabic",0,15,9374,37
+"169","19025","Calhoun County, Iowa","Other and unspecified languages",4,6,9374,37
+"170","19027","Carroll County, Iowa","Speak only English",19095,220,19487,79
+"171","19027","Carroll County, Iowa","Spanish",251,122,19487,79
+"172","19027","Carroll County, Iowa","French, Haitian, or Cajun",0,19,19487,79
+"173","19027","Carroll County, Iowa","German or other West Germanic languages",21,15,19487,79
+"174","19027","Carroll County, Iowa","Russian, Polish, or other Slavic languages",0,19,19487,79
+"175","19027","Carroll County, Iowa","Other Indo-European languages",0,19,19487,79
+"176","19027","Carroll County, Iowa","Korean",0,19,19487,79
+"177","19027","Carroll County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,19,19487,79
+"178","19027","Carroll County, Iowa","Vietnamese",0,19,19487,79
+"179","19027","Carroll County, Iowa","Tagalog (incl. Filipino)",1,2,19487,79
+"180","19027","Carroll County, Iowa","Other Asian and Pacific Island languages",69,59,19487,79
+"181","19027","Carroll County, Iowa","Arabic",0,19,19487,79
+"182","19027","Carroll County, Iowa","Other and unspecified languages",50,202,19487,79
+"183","19029","Cass County, Iowa","Speak only English",12108,146,12441,48
+"184","19029","Cass County, Iowa","Spanish",269,137,12441,48
+"185","19029","Cass County, Iowa","French, Haitian, or Cajun",5,8,12441,48
+"186","19029","Cass County, Iowa","German or other West Germanic languages",8,10,12441,48
+"187","19029","Cass County, Iowa","Russian, Polish, or other Slavic languages",0,16,12441,48
+"188","19029","Cass County, Iowa","Other Indo-European languages",27,26,12441,48
+"189","19029","Cass County, Iowa","Korean",0,16,12441,48
+"190","19029","Cass County, Iowa","Chinese (incl. Mandarin, Cantonese)",5,9,12441,48
+"191","19029","Cass County, Iowa","Vietnamese",0,16,12441,48
+"192","19029","Cass County, Iowa","Tagalog (incl. Filipino)",0,16,12441,48
+"193","19029","Cass County, Iowa","Other Asian and Pacific Island languages",19,30,12441,48
+"194","19029","Cass County, Iowa","Arabic",0,16,12441,48
+"195","19029","Cass County, Iowa","Other and unspecified languages",0,16,12441,48
+"196","19031","Cedar County, Iowa","Speak only English",17299,116,17587,23
+"197","19031","Cedar County, Iowa","Spanish",197,83,17587,23
+"198","19031","Cedar County, Iowa","French, Haitian, or Cajun",1,2,17587,23
+"199","19031","Cedar County, Iowa","German or other West Germanic languages",15,11,17587,23
+"200","19031","Cedar County, Iowa","Russian, Polish, or other Slavic languages",0,16,17587,23
+"201","19031","Cedar County, Iowa","Other Indo-European languages",3,4,17587,23
+"202","19031","Cedar County, Iowa","Korean",0,16,17587,23
+"203","19031","Cedar County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,17587,23
+"204","19031","Cedar County, Iowa","Vietnamese",0,16,17587,23
+"205","19031","Cedar County, Iowa","Tagalog (incl. Filipino)",45,45,17587,23
+"206","19031","Cedar County, Iowa","Other Asian and Pacific Island languages",0,16,17587,23
+"207","19031","Cedar County, Iowa","Arabic",0,16,17587,23
+"208","19031","Cedar County, Iowa","Other and unspecified languages",27,34,17587,23
+"209","19033","Cerro Gordo County, Iowa","Speak only English",39586,303,40896,25
+"210","19033","Cerro Gordo County, Iowa","Spanish",904,265,40896,25
+"211","19033","Cerro Gordo County, Iowa","French, Haitian, or Cajun",65,56,40896,25
+"212","19033","Cerro Gordo County, Iowa","German or other West Germanic languages",41,25,40896,25
+"213","19033","Cerro Gordo County, Iowa","Russian, Polish, or other Slavic languages",40,49,40896,25
+"214","19033","Cerro Gordo County, Iowa","Other Indo-European languages",43,37,40896,25
+"215","19033","Cerro Gordo County, Iowa","Korean",11,15,40896,25
+"216","19033","Cerro Gordo County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,5,40896,25
+"217","19033","Cerro Gordo County, Iowa","Vietnamese",18,27,40896,25
+"218","19033","Cerro Gordo County, Iowa","Tagalog (incl. Filipino)",21,25,40896,25
+"219","19033","Cerro Gordo County, Iowa","Other Asian and Pacific Island languages",144,88,40896,25
+"220","19033","Cerro Gordo County, Iowa","Arabic",15,25,40896,25
+"221","19033","Cerro Gordo County, Iowa","Other and unspecified languages",6,11,40896,25
+"222","19035","Cherokee County, Iowa","Speak only English",10478,150,10993,45
+"223","19035","Cherokee County, Iowa","Spanish",450,169,10993,45
+"224","19035","Cherokee County, Iowa","French, Haitian, or Cajun",0,16,10993,45
+"225","19035","Cherokee County, Iowa","German or other West Germanic languages",31,29,10993,45
+"226","19035","Cherokee County, Iowa","Russian, Polish, or other Slavic languages",2,4,10993,45
+"227","19035","Cherokee County, Iowa","Other Indo-European languages",0,16,10993,45
+"228","19035","Cherokee County, Iowa","Korean",0,16,10993,45
+"229","19035","Cherokee County, Iowa","Chinese (incl. Mandarin, Cantonese)",8,12,10993,45
+"230","19035","Cherokee County, Iowa","Vietnamese",0,16,10993,45
+"231","19035","Cherokee County, Iowa","Tagalog (incl. Filipino)",7,16,10993,45
+"232","19035","Cherokee County, Iowa","Other Asian and Pacific Island languages",7,13,10993,45
+"233","19035","Cherokee County, Iowa","Arabic",4,10,10993,45
+"234","19035","Cherokee County, Iowa","Other and unspecified languages",6,14,10993,45
+"235","19037","Chickasaw County, Iowa","Speak only English",10523,278,11212,54
+"236","19037","Chickasaw County, Iowa","Spanish",279,65,11212,54
+"237","19037","Chickasaw County, Iowa","French, Haitian, or Cajun",0,16,11212,54
+"238","19037","Chickasaw County, Iowa","German or other West Germanic languages",387,279,11212,54
+"239","19037","Chickasaw County, Iowa","Russian, Polish, or other Slavic languages",2,3,11212,54
+"240","19037","Chickasaw County, Iowa","Other Indo-European languages",0,16,11212,54
+"241","19037","Chickasaw County, Iowa","Korean",0,16,11212,54
+"242","19037","Chickasaw County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,11212,54
+"243","19037","Chickasaw County, Iowa","Vietnamese",0,16,11212,54
+"244","19037","Chickasaw County, Iowa","Tagalog (incl. Filipino)",2,4,11212,54
+"245","19037","Chickasaw County, Iowa","Other Asian and Pacific Island languages",0,16,11212,54
+"246","19037","Chickasaw County, Iowa","Arabic",8,13,11212,54
+"247","19037","Chickasaw County, Iowa","Other and unspecified languages",11,14,11212,54
+"248","19039","Clarke County, Iowa","Speak only English",7962,256,9111,4
+"249","19039","Clarke County, Iowa","Spanish",1026,247,9111,4
+"250","19039","Clarke County, Iowa","French, Haitian, or Cajun",0,15,9111,4
+"251","19039","Clarke County, Iowa","German or other West Germanic languages",92,85,9111,4
+"252","19039","Clarke County, Iowa","Russian, Polish, or other Slavic languages",10,17,9111,4
+"253","19039","Clarke County, Iowa","Other Indo-European languages",0,15,9111,4
+"254","19039","Clarke County, Iowa","Korean",0,15,9111,4
+"255","19039","Clarke County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,9111,4
+"256","19039","Clarke County, Iowa","Vietnamese",0,15,9111,4
+"257","19039","Clarke County, Iowa","Tagalog (incl. Filipino)",0,15,9111,4
+"258","19039","Clarke County, Iowa","Other Asian and Pacific Island languages",21,26,9111,4
+"259","19039","Clarke County, Iowa","Arabic",0,15,9111,4
+"260","19039","Clarke County, Iowa","Other and unspecified languages",0,15,9111,4
+"261","19041","Clay County, Iowa","Speak only English",15086,163,15465,70
+"262","19041","Clay County, Iowa","Spanish",238,150,15465,70
+"263","19041","Clay County, Iowa","French, Haitian, or Cajun",0,16,15465,70
+"264","19041","Clay County, Iowa","German or other West Germanic languages",63,48,15465,70
+"265","19041","Clay County, Iowa","Russian, Polish, or other Slavic languages",0,16,15465,70
+"266","19041","Clay County, Iowa","Other Indo-European languages",7,14,15465,70
+"267","19041","Clay County, Iowa","Korean",0,16,15465,70
+"268","19041","Clay County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,15465,70
+"269","19041","Clay County, Iowa","Vietnamese",0,16,15465,70
+"270","19041","Clay County, Iowa","Tagalog (incl. Filipino)",0,16,15465,70
+"271","19041","Clay County, Iowa","Other Asian and Pacific Island languages",48,49,15465,70
+"272","19041","Clay County, Iowa","Arabic",0,16,15465,70
+"273","19041","Clay County, Iowa","Other and unspecified languages",23,21,15465,70
+"274","19043","Clayton County, Iowa","Speak only English",15138,338,16166,55
+"275","19043","Clayton County, Iowa","Spanish",412,101,16166,55
+"276","19043","Clayton County, Iowa","French, Haitian, or Cajun",19,19,16166,55
+"277","19043","Clayton County, Iowa","German or other West Germanic languages",485,313,16166,55
+"278","19043","Clayton County, Iowa","Russian, Polish, or other Slavic languages",0,16,16166,55
+"279","19043","Clayton County, Iowa","Other Indo-European languages",2,3,16166,55
+"280","19043","Clayton County, Iowa","Korean",6,9,16166,55
+"281","19043","Clayton County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,16166,55
+"282","19043","Clayton County, Iowa","Vietnamese",0,16,16166,55
+"283","19043","Clayton County, Iowa","Tagalog (incl. Filipino)",41,10,16166,55
+"284","19043","Clayton County, Iowa","Other Asian and Pacific Island languages",10,11,16166,55
+"285","19043","Clayton County, Iowa","Arabic",0,16,16166,55
+"286","19043","Clayton County, Iowa","Other and unspecified languages",53,72,16166,55
+"287","19045","Clinton County, Iowa","Speak only English",43028,283,43861,35
+"288","19045","Clinton County, Iowa","Spanish",467,241,43861,35
+"289","19045","Clinton County, Iowa","French, Haitian, or Cajun",27,26,43861,35
+"290","19045","Clinton County, Iowa","German or other West Germanic languages",42,23,43861,35
+"291","19045","Clinton County, Iowa","Russian, Polish, or other Slavic languages",15,19,43861,35
+"292","19045","Clinton County, Iowa","Other Indo-European languages",30,31,43861,35
+"293","19045","Clinton County, Iowa","Korean",14,21,43861,35
+"294","19045","Clinton County, Iowa","Chinese (incl. Mandarin, Cantonese)",84,102,43861,35
+"295","19045","Clinton County, Iowa","Vietnamese",0,22,43861,35
+"296","19045","Clinton County, Iowa","Tagalog (incl. Filipino)",63,73,43861,35
+"297","19045","Clinton County, Iowa","Other Asian and Pacific Island languages",33,32,43861,35
+"298","19045","Clinton County, Iowa","Arabic",58,57,43861,35
+"299","19045","Clinton County, Iowa","Other and unspecified languages",0,22,43861,35
+"300","19047","Crawford County, Iowa","Speak only English",10651,259,15560,25
+"301","19047","Crawford County, Iowa","Spanish",3965,285,15560,25
+"302","19047","Crawford County, Iowa","French, Haitian, or Cajun",2,3,15560,25
+"303","19047","Crawford County, Iowa","German or other West Germanic languages",50,30,15560,25
+"304","19047","Crawford County, Iowa","Russian, Polish, or other Slavic languages",3,12,15560,25
+"305","19047","Crawford County, Iowa","Other Indo-European languages",76,80,15560,25
+"306","19047","Crawford County, Iowa","Korean",16,28,15560,25
+"307","19047","Crawford County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,15560,25
+"308","19047","Crawford County, Iowa","Vietnamese",0,16,15560,25
+"309","19047","Crawford County, Iowa","Tagalog (incl. Filipino)",6,10,15560,25
+"310","19047","Crawford County, Iowa","Other Asian and Pacific Island languages",336,101,15560,25
+"311","19047","Crawford County, Iowa","Arabic",102,125,15560,25
+"312","19047","Crawford County, Iowa","Other and unspecified languages",353,188,15560,25
+"313","19049","Dallas County, Iowa","Speak only English",78751,1057,89536,60
+"314","19049","Dallas County, Iowa","Spanish",4019,416,89536,60
+"315","19049","Dallas County, Iowa","French, Haitian, or Cajun",274,163,89536,60
+"316","19049","Dallas County, Iowa","German or other West Germanic languages",285,171,89536,60
+"317","19049","Dallas County, Iowa","Russian, Polish, or other Slavic languages",883,401,89536,60
+"318","19049","Dallas County, Iowa","Other Indo-European languages",1555,573,89536,60
+"319","19049","Dallas County, Iowa","Korean",96,100,89536,60
+"320","19049","Dallas County, Iowa","Chinese (incl. Mandarin, Cantonese)",583,286,89536,60
+"321","19049","Dallas County, Iowa","Vietnamese",239,180,89536,60
+"322","19049","Dallas County, Iowa","Tagalog (incl. Filipino)",100,98,89536,60
+"323","19049","Dallas County, Iowa","Other Asian and Pacific Island languages",1544,474,89536,60
+"324","19049","Dallas County, Iowa","Arabic",791,551,89536,60
+"325","19049","Dallas County, Iowa","Other and unspecified languages",416,251,89536,60
+"326","19051","Davis County, Iowa","Speak only English",6171,370,8246,29
+"327","19051","Davis County, Iowa","Spanish",108,63,8246,29
+"328","19051","Davis County, Iowa","French, Haitian, or Cajun",16,25,8246,29
+"329","19051","Davis County, Iowa","German or other West Germanic languages",1917,395,8246,29
+"330","19051","Davis County, Iowa","Russian, Polish, or other Slavic languages",0,15,8246,29
+"331","19051","Davis County, Iowa","Other Indo-European languages",17,26,8246,29
+"332","19051","Davis County, Iowa","Korean",8,15,8246,29
+"333","19051","Davis County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8246,29
+"334","19051","Davis County, Iowa","Vietnamese",0,15,8246,29
+"335","19051","Davis County, Iowa","Tagalog (incl. Filipino)",0,15,8246,29
+"336","19051","Davis County, Iowa","Other Asian and Pacific Island languages",0,15,8246,29
+"337","19051","Davis County, Iowa","Arabic",0,15,8246,29
+"338","19051","Davis County, Iowa","Other and unspecified languages",9,15,8246,29
+"339","19053","Decatur County, Iowa","Speak only English",6876,120,7259,10
+"340","19053","Decatur County, Iowa","Spanish",89,42,7259,10
+"341","19053","Decatur County, Iowa","French, Haitian, or Cajun",0,15,7259,10
+"342","19053","Decatur County, Iowa","German or other West Germanic languages",209,114,7259,10
+"343","19053","Decatur County, Iowa","Russian, Polish, or other Slavic languages",7,12,7259,10
+"344","19053","Decatur County, Iowa","Other Indo-European languages",32,23,7259,10
+"345","19053","Decatur County, Iowa","Korean",8,15,7259,10
+"346","19053","Decatur County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,7259,10
+"347","19053","Decatur County, Iowa","Vietnamese",5,10,7259,10
+"348","19053","Decatur County, Iowa","Tagalog (incl. Filipino)",0,15,7259,10
+"349","19053","Decatur County, Iowa","Other Asian and Pacific Island languages",13,18,7259,10
+"350","19053","Decatur County, Iowa","Arabic",5,7,7259,10
+"351","19053","Decatur County, Iowa","Other and unspecified languages",15,17,7259,10
+"352","19055","Delaware County, Iowa","Speak only English",16007,182,16374,77
+"353","19055","Delaware County, Iowa","Spanish",183,101,16374,77
+"354","19055","Delaware County, Iowa","French, Haitian, or Cajun",1,2,16374,77
+"355","19055","Delaware County, Iowa","German or other West Germanic languages",112,98,16374,77
+"356","19055","Delaware County, Iowa","Russian, Polish, or other Slavic languages",17,30,16374,77
+"357","19055","Delaware County, Iowa","Other Indo-European languages",0,16,16374,77
+"358","19055","Delaware County, Iowa","Korean",0,16,16374,77
+"359","19055","Delaware County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,16374,77
+"360","19055","Delaware County, Iowa","Vietnamese",0,16,16374,77
+"361","19055","Delaware County, Iowa","Tagalog (incl. Filipino)",37,54,16374,77
+"362","19055","Delaware County, Iowa","Other Asian and Pacific Island languages",6,9,16374,77
+"363","19055","Delaware County, Iowa","Arabic",0,16,16374,77
+"364","19055","Delaware County, Iowa","Other and unspecified languages",11,19,16374,77
+"365","19057","Des Moines County, Iowa","Speak only English",35524,315,36862,103
+"366","19057","Des Moines County, Iowa","Spanish",618,280,36862,103
+"367","19057","Des Moines County, Iowa","French, Haitian, or Cajun",112,125,36862,103
+"368","19057","Des Moines County, Iowa","German or other West Germanic languages",121,71,36862,103
+"369","19057","Des Moines County, Iowa","Russian, Polish, or other Slavic languages",81,69,36862,103
+"370","19057","Des Moines County, Iowa","Other Indo-European languages",84,74,36862,103
+"371","19057","Des Moines County, Iowa","Korean",9,15,36862,103
+"372","19057","Des Moines County, Iowa","Chinese (incl. Mandarin, Cantonese)",41,41,36862,103
+"373","19057","Des Moines County, Iowa","Vietnamese",0,22,36862,103
+"374","19057","Des Moines County, Iowa","Tagalog (incl. Filipino)",54,60,36862,103
+"375","19057","Des Moines County, Iowa","Other Asian and Pacific Island languages",201,148,36862,103
+"376","19057","Des Moines County, Iowa","Arabic",8,13,36862,103
+"377","19057","Des Moines County, Iowa","Other and unspecified languages",9,14,36862,103
+"378","19059","Dickinson County, Iowa","Speak only English",16177,174,16769,28
+"379","19059","Dickinson County, Iowa","Spanish",283,108,16769,28
+"380","19059","Dickinson County, Iowa","French, Haitian, or Cajun",9,9,16769,28
+"381","19059","Dickinson County, Iowa","German or other West Germanic languages",71,44,16769,28
+"382","19059","Dickinson County, Iowa","Russian, Polish, or other Slavic languages",34,28,16769,28
+"383","19059","Dickinson County, Iowa","Other Indo-European languages",6,8,16769,28
+"384","19059","Dickinson County, Iowa","Korean",1,3,16769,28
+"385","19059","Dickinson County, Iowa","Chinese (incl. Mandarin, Cantonese)",22,25,16769,28
+"386","19059","Dickinson County, Iowa","Vietnamese",0,16,16769,28
+"387","19059","Dickinson County, Iowa","Tagalog (incl. Filipino)",113,115,16769,28
+"388","19059","Dickinson County, Iowa","Other Asian and Pacific Island languages",32,35,16769,28
+"389","19059","Dickinson County, Iowa","Arabic",16,24,16769,28
+"390","19059","Dickinson County, Iowa","Other and unspecified languages",5,9,16769,28
+"391","19061","Dubuque County, Iowa","Speak only English",88669,421,92605,50
+"392","19061","Dubuque County, Iowa","Spanish",2004,295,92605,50
+"393","19061","Dubuque County, Iowa","French, Haitian, or Cajun",107,53,92605,50
+"394","19061","Dubuque County, Iowa","German or other West Germanic languages",167,70,92605,50
+"395","19061","Dubuque County, Iowa","Russian, Polish, or other Slavic languages",118,79,92605,50
+"396","19061","Dubuque County, Iowa","Other Indo-European languages",253,122,92605,50
+"397","19061","Dubuque County, Iowa","Korean",37,42,92605,50
+"398","19061","Dubuque County, Iowa","Chinese (incl. Mandarin, Cantonese)",163,108,92605,50
+"399","19061","Dubuque County, Iowa","Vietnamese",69,63,92605,50
+"400","19061","Dubuque County, Iowa","Tagalog (incl. Filipino)",270,111,92605,50
+"401","19061","Dubuque County, Iowa","Other Asian and Pacific Island languages",502,113,92605,50
+"402","19061","Dubuque County, Iowa","Arabic",150,113,92605,50
+"403","19061","Dubuque County, Iowa","Other and unspecified languages",96,81,92605,50
+"404","19063","Emmet County, Iowa","Speak only English",8283,177,8922,62
+"405","19063","Emmet County, Iowa","Spanish",567,149,8922,62
+"406","19063","Emmet County, Iowa","French, Haitian, or Cajun",12,15,8922,62
+"407","19063","Emmet County, Iowa","German or other West Germanic languages",25,24,8922,62
+"408","19063","Emmet County, Iowa","Russian, Polish, or other Slavic languages",11,17,8922,62
+"409","19063","Emmet County, Iowa","Other Indo-European languages",2,4,8922,62
+"410","19063","Emmet County, Iowa","Korean",0,15,8922,62
+"411","19063","Emmet County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8922,62
+"412","19063","Emmet County, Iowa","Vietnamese",0,15,8922,62
+"413","19063","Emmet County, Iowa","Tagalog (incl. Filipino)",4,8,8922,62
+"414","19063","Emmet County, Iowa","Other Asian and Pacific Island languages",1,2,8922,62
+"415","19063","Emmet County, Iowa","Arabic",11,15,8922,62
+"416","19063","Emmet County, Iowa","Other and unspecified languages",6,9,8922,62
+"417","19065","Fayette County, Iowa","Speak only English",17951,111,18506,36
+"418","19065","Fayette County, Iowa","Spanish",293,73,18506,36
+"419","19065","Fayette County, Iowa","French, Haitian, or Cajun",0,16,18506,36
+"420","19065","Fayette County, Iowa","German or other West Germanic languages",146,60,18506,36
+"421","19065","Fayette County, Iowa","Russian, Polish, or other Slavic languages",0,16,18506,36
+"422","19065","Fayette County, Iowa","Other Indo-European languages",2,4,18506,36
+"423","19065","Fayette County, Iowa","Korean",0,16,18506,36
+"424","19065","Fayette County, Iowa","Chinese (incl. Mandarin, Cantonese)",83,57,18506,36
+"425","19065","Fayette County, Iowa","Vietnamese",0,16,18506,36
+"426","19065","Fayette County, Iowa","Tagalog (incl. Filipino)",11,19,18506,36
+"427","19065","Fayette County, Iowa","Other Asian and Pacific Island languages",12,20,18506,36
+"428","19065","Fayette County, Iowa","Arabic",4,8,18506,36
+"429","19065","Fayette County, Iowa","Other and unspecified languages",4,6,18506,36
+"430","19067","Floyd County, Iowa","Speak only English",13771,205,14729,89
+"431","19067","Floyd County, Iowa","Spanish",253,96,14729,89
+"432","19067","Floyd County, Iowa","French, Haitian, or Cajun",0,16,14729,89
+"433","19067","Floyd County, Iowa","German or other West Germanic languages",253,162,14729,89
+"434","19067","Floyd County, Iowa","Russian, Polish, or other Slavic languages",0,16,14729,89
+"435","19067","Floyd County, Iowa","Other Indo-European languages",17,28,14729,89
+"436","19067","Floyd County, Iowa","Korean",0,16,14729,89
+"437","19067","Floyd County, Iowa","Chinese (incl. Mandarin, Cantonese)",3,5,14729,89
+"438","19067","Floyd County, Iowa","Vietnamese",0,16,14729,89
+"439","19067","Floyd County, Iowa","Tagalog (incl. Filipino)",139,73,14729,89
+"440","19067","Floyd County, Iowa","Other Asian and Pacific Island languages",128,96,14729,89
+"441","19067","Floyd County, Iowa","Arabic",0,16,14729,89
+"442","19067","Floyd County, Iowa","Other and unspecified languages",165,136,14729,89
+"443","19069","Franklin County, Iowa","Speak only English",8055,192,9445,15
+"444","19069","Franklin County, Iowa","Spanish",1080,154,9445,15
+"445","19069","Franklin County, Iowa","French, Haitian, or Cajun",0,16,9445,15
+"446","19069","Franklin County, Iowa","German or other West Germanic languages",177,121,9445,15
+"447","19069","Franklin County, Iowa","Russian, Polish, or other Slavic languages",88,92,9445,15
+"448","19069","Franklin County, Iowa","Other Indo-European languages",45,113,9445,15
+"449","19069","Franklin County, Iowa","Korean",0,16,9445,15
+"450","19069","Franklin County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,9445,15
+"451","19069","Franklin County, Iowa","Vietnamese",0,16,9445,15
+"452","19069","Franklin County, Iowa","Tagalog (incl. Filipino)",0,16,9445,15
+"453","19069","Franklin County, Iowa","Other Asian and Pacific Island languages",0,16,9445,15
+"454","19069","Franklin County, Iowa","Arabic",0,16,9445,15
+"455","19069","Franklin County, Iowa","Other and unspecified languages",0,16,9445,15
+"456","19071","Fremont County, Iowa","Speak only English",6246,49,6347,24
+"457","19071","Fremont County, Iowa","Spanish",76,39,6347,24
+"458","19071","Fremont County, Iowa","French, Haitian, or Cajun",8,16,6347,24
+"459","19071","Fremont County, Iowa","German or other West Germanic languages",5,7,6347,24
+"460","19071","Fremont County, Iowa","Russian, Polish, or other Slavic languages",6,7,6347,24
+"461","19071","Fremont County, Iowa","Other Indo-European languages",2,4,6347,24
+"462","19071","Fremont County, Iowa","Korean",0,15,6347,24
+"463","19071","Fremont County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,6347,24
+"464","19071","Fremont County, Iowa","Vietnamese",0,15,6347,24
+"465","19071","Fremont County, Iowa","Tagalog (incl. Filipino)",0,15,6347,24
+"466","19071","Fremont County, Iowa","Other Asian and Pacific Island languages",3,5,6347,24
+"467","19071","Fremont County, Iowa","Arabic",0,15,6347,24
+"468","19071","Fremont County, Iowa","Other and unspecified languages",1,4,6347,24
+"469","19073","Greene County, Iowa","Speak only English",8043,70,8339,14
+"470","19073","Greene County, Iowa","Spanish",197,49,8339,14
+"471","19073","Greene County, Iowa","French, Haitian, or Cajun",4,5,8339,14
+"472","19073","Greene County, Iowa","German or other West Germanic languages",34,25,8339,14
+"473","19073","Greene County, Iowa","Russian, Polish, or other Slavic languages",0,15,8339,14
+"474","19073","Greene County, Iowa","Other Indo-European languages",0,15,8339,14
+"475","19073","Greene County, Iowa","Korean",0,15,8339,14
+"476","19073","Greene County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8339,14
+"477","19073","Greene County, Iowa","Vietnamese",0,15,8339,14
+"478","19073","Greene County, Iowa","Tagalog (incl. Filipino)",6,7,8339,14
+"479","19073","Greene County, Iowa","Other Asian and Pacific Island languages",21,23,8339,14
+"480","19073","Greene County, Iowa","Arabic",30,40,8339,14
+"481","19073","Greene County, Iowa","Other and unspecified languages",4,7,8339,14
+"482","19075","Grundy County, Iowa","Speak only English",11352,79,11647,37
+"483","19075","Grundy County, Iowa","Spanish",185,69,11647,37
+"484","19075","Grundy County, Iowa","French, Haitian, or Cajun",4,6,11647,37
+"485","19075","Grundy County, Iowa","German or other West Germanic languages",66,32,11647,37
+"486","19075","Grundy County, Iowa","Russian, Polish, or other Slavic languages",0,16,11647,37
+"487","19075","Grundy County, Iowa","Other Indo-European languages",15,18,11647,37
+"488","19075","Grundy County, Iowa","Korean",0,16,11647,37
+"489","19075","Grundy County, Iowa","Chinese (incl. Mandarin, Cantonese)",17,18,11647,37
+"490","19075","Grundy County, Iowa","Vietnamese",0,16,11647,37
+"491","19075","Grundy County, Iowa","Tagalog (incl. Filipino)",0,16,11647,37
+"492","19075","Grundy County, Iowa","Other Asian and Pacific Island languages",8,8,11647,37
+"493","19075","Grundy County, Iowa","Arabic",0,16,11647,37
+"494","19075","Grundy County, Iowa","Other and unspecified languages",0,16,11647,37
+"495","19077","Guthrie County, Iowa","Speak only English",9861,59,10071,14
+"496","19077","Guthrie County, Iowa","Spanish",150,50,10071,14
+"497","19077","Guthrie County, Iowa","French, Haitian, or Cajun",1,2,10071,14
+"498","19077","Guthrie County, Iowa","German or other West Germanic languages",15,12,10071,14
+"499","19077","Guthrie County, Iowa","Russian, Polish, or other Slavic languages",0,16,10071,14
+"500","19077","Guthrie County, Iowa","Other Indo-European languages",0,16,10071,14
+"501","19077","Guthrie County, Iowa","Korean",0,16,10071,14
+"502","19077","Guthrie County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,3,10071,14
+"503","19077","Guthrie County, Iowa","Vietnamese",0,16,10071,14
+"504","19077","Guthrie County, Iowa","Tagalog (incl. Filipino)",1,6,10071,14
+"505","19077","Guthrie County, Iowa","Other Asian and Pacific Island languages",41,32,10071,14
+"506","19077","Guthrie County, Iowa","Arabic",0,16,10071,14
+"507","19077","Guthrie County, Iowa","Other and unspecified languages",0,16,10071,14
+"508","19079","Hamilton County, Iowa","Speak only English",13129,180,14225,77
+"509","19079","Hamilton County, Iowa","Spanish",763,171,14225,77
+"510","19079","Hamilton County, Iowa","French, Haitian, or Cajun",2,3,14225,77
+"511","19079","Hamilton County, Iowa","German or other West Germanic languages",47,43,14225,77
+"512","19079","Hamilton County, Iowa","Russian, Polish, or other Slavic languages",0,16,14225,77
+"513","19079","Hamilton County, Iowa","Other Indo-European languages",4,4,14225,77
+"514","19079","Hamilton County, Iowa","Korean",0,16,14225,77
+"515","19079","Hamilton County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,5,14225,77
+"516","19079","Hamilton County, Iowa","Vietnamese",0,16,14225,77
+"517","19079","Hamilton County, Iowa","Tagalog (incl. Filipino)",1,2,14225,77
+"518","19079","Hamilton County, Iowa","Other Asian and Pacific Island languages",236,108,14225,77
+"519","19079","Hamilton County, Iowa","Arabic",0,16,14225,77
+"520","19079","Hamilton County, Iowa","Other and unspecified languages",41,53,14225,77
+"521","19081","Hancock County, Iowa","Speak only English",9883,92,10213,13
+"522","19081","Hancock County, Iowa","Spanish",266,86,10213,13
+"523","19081","Hancock County, Iowa","French, Haitian, or Cajun",5,10,10213,13
+"524","19081","Hancock County, Iowa","German or other West Germanic languages",20,15,10213,13
+"525","19081","Hancock County, Iowa","Russian, Polish, or other Slavic languages",6,9,10213,13
+"526","19081","Hancock County, Iowa","Other Indo-European languages",0,16,10213,13
+"527","19081","Hancock County, Iowa","Korean",0,16,10213,13
+"528","19081","Hancock County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,10213,13
+"529","19081","Hancock County, Iowa","Vietnamese",0,16,10213,13
+"530","19081","Hancock County, Iowa","Tagalog (incl. Filipino)",0,16,10213,13
+"531","19081","Hancock County, Iowa","Other Asian and Pacific Island languages",13,20,10213,13
+"532","19081","Hancock County, Iowa","Arabic",0,16,10213,13
+"533","19081","Hancock County, Iowa","Other and unspecified languages",20,16,10213,13
+"534","19083","Hardin County, Iowa","Speak only English",15448,144,16201,29
+"535","19083","Hardin County, Iowa","Spanish",518,91,16201,29
+"536","19083","Hardin County, Iowa","French, Haitian, or Cajun",2,3,16201,29
+"537","19083","Hardin County, Iowa","German or other West Germanic languages",30,24,16201,29
+"538","19083","Hardin County, Iowa","Russian, Polish, or other Slavic languages",7,12,16201,29
+"539","19083","Hardin County, Iowa","Other Indo-European languages",41,40,16201,29
+"540","19083","Hardin County, Iowa","Korean",24,25,16201,29
+"541","19083","Hardin County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,16201,29
+"542","19083","Hardin County, Iowa","Vietnamese",65,50,16201,29
+"543","19083","Hardin County, Iowa","Tagalog (incl. Filipino)",0,16,16201,29
+"544","19083","Hardin County, Iowa","Other Asian and Pacific Island languages",4,7,16201,29
+"545","19083","Hardin County, Iowa","Arabic",46,75,16201,29
+"546","19083","Hardin County, Iowa","Other and unspecified languages",16,23,16201,29
+"547","19085","Harrison County, Iowa","Speak only English",13534,50,13737,22
+"548","19085","Harrison County, Iowa","Spanish",132,50,13737,22
+"549","19085","Harrison County, Iowa","French, Haitian, or Cajun",5,6,13737,22
+"550","19085","Harrison County, Iowa","German or other West Germanic languages",19,15,13737,22
+"551","19085","Harrison County, Iowa","Russian, Polish, or other Slavic languages",3,6,13737,22
+"552","19085","Harrison County, Iowa","Other Indo-European languages",21,21,13737,22
+"553","19085","Harrison County, Iowa","Korean",0,16,13737,22
+"554","19085","Harrison County, Iowa","Chinese (incl. Mandarin, Cantonese)",15,18,13737,22
+"555","19085","Harrison County, Iowa","Vietnamese",2,3,13737,22
+"556","19085","Harrison County, Iowa","Tagalog (incl. Filipino)",6,6,13737,22
+"557","19085","Harrison County, Iowa","Other Asian and Pacific Island languages",0,16,13737,22
+"558","19085","Harrison County, Iowa","Arabic",0,16,13737,22
+"559","19085","Harrison County, Iowa","Other and unspecified languages",0,16,13737,22
+"560","19087","Henry County, Iowa","Speak only English",18240,180,19404,31
+"561","19087","Henry County, Iowa","Spanish",671,134,19404,31
+"562","19087","Henry County, Iowa","French, Haitian, or Cajun",6,11,19404,31
+"563","19087","Henry County, Iowa","German or other West Germanic languages",18,18,19404,31
+"564","19087","Henry County, Iowa","Russian, Polish, or other Slavic languages",8,17,19404,31
+"565","19087","Henry County, Iowa","Other Indo-European languages",27,28,19404,31
+"566","19087","Henry County, Iowa","Korean",10,12,19404,31
+"567","19087","Henry County, Iowa","Chinese (incl. Mandarin, Cantonese)",34,48,19404,31
+"568","19087","Henry County, Iowa","Vietnamese",15,27,19404,31
+"569","19087","Henry County, Iowa","Tagalog (incl. Filipino)",0,19,19404,31
+"570","19087","Henry County, Iowa","Other Asian and Pacific Island languages",318,124,19404,31
+"571","19087","Henry County, Iowa","Arabic",0,19,19404,31
+"572","19087","Henry County, Iowa","Other and unspecified languages",57,67,19404,31
+"573","19089","Howard County, Iowa","Speak only English",8223,208,8781,28
+"574","19089","Howard County, Iowa","Spanish",107,18,8781,28
+"575","19089","Howard County, Iowa","French, Haitian, or Cajun",3,6,8781,28
+"576","19089","Howard County, Iowa","German or other West Germanic languages",389,206,8781,28
+"577","19089","Howard County, Iowa","Russian, Polish, or other Slavic languages",30,19,8781,28
+"578","19089","Howard County, Iowa","Other Indo-European languages",11,11,8781,28
+"579","19089","Howard County, Iowa","Korean",2,3,8781,28
+"580","19089","Howard County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8781,28
+"581","19089","Howard County, Iowa","Vietnamese",0,15,8781,28
+"582","19089","Howard County, Iowa","Tagalog (incl. Filipino)",4,6,8781,28
+"583","19089","Howard County, Iowa","Other Asian and Pacific Island languages",11,10,8781,28
+"584","19089","Howard County, Iowa","Arabic",0,15,8781,28
+"585","19089","Howard County, Iowa","Other and unspecified languages",1,2,8781,28
+"586","19091","Humboldt County, Iowa","Speak only English",8542,81,9040,9
+"587","19091","Humboldt County, Iowa","Spanish",352,58,9040,9
+"588","19091","Humboldt County, Iowa","French, Haitian, or Cajun",2,4,9040,9
+"589","19091","Humboldt County, Iowa","German or other West Germanic languages",27,14,9040,9
+"590","19091","Humboldt County, Iowa","Russian, Polish, or other Slavic languages",20,29,9040,9
+"591","19091","Humboldt County, Iowa","Other Indo-European languages",15,19,9040,9
+"592","19091","Humboldt County, Iowa","Korean",0,15,9040,9
+"593","19091","Humboldt County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,4,9040,9
+"594","19091","Humboldt County, Iowa","Vietnamese",0,15,9040,9
+"595","19091","Humboldt County, Iowa","Tagalog (incl. Filipino)",0,15,9040,9
+"596","19091","Humboldt County, Iowa","Other Asian and Pacific Island languages",80,57,9040,9
+"597","19091","Humboldt County, Iowa","Arabic",0,15,9040,9
+"598","19091","Humboldt County, Iowa","Other and unspecified languages",0,15,9040,9
+"599","19093","Ida County, Iowa","Speak only English",6388,65,6574,5
+"600","19093","Ida County, Iowa","Spanish",151,59,6574,5
+"601","19093","Ida County, Iowa","French, Haitian, or Cajun",0,15,6574,5
+"602","19093","Ida County, Iowa","German or other West Germanic languages",12,11,6574,5
+"603","19093","Ida County, Iowa","Russian, Polish, or other Slavic languages",11,13,6574,5
+"604","19093","Ida County, Iowa","Other Indo-European languages",2,5,6574,5
+"605","19093","Ida County, Iowa","Korean",0,15,6574,5
+"606","19093","Ida County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,6574,5
+"607","19093","Ida County, Iowa","Vietnamese",0,15,6574,5
+"608","19093","Ida County, Iowa","Tagalog (incl. Filipino)",9,12,6574,5
+"609","19093","Ida County, Iowa","Other Asian and Pacific Island languages",0,15,6574,5
+"610","19093","Ida County, Iowa","Arabic",0,15,6574,5
+"611","19093","Ida County, Iowa","Other and unspecified languages",1,3,6574,5
+"612","19095","Iowa County, Iowa","Speak only English",15360,113,15665,51
+"613","19095","Iowa County, Iowa","Spanish",118,59,15665,51
+"614","19095","Iowa County, Iowa","French, Haitian, or Cajun",3,4,15665,51
+"615","19095","Iowa County, Iowa","German or other West Germanic languages",138,67,15665,51
+"616","19095","Iowa County, Iowa","Russian, Polish, or other Slavic languages",24,36,15665,51
+"617","19095","Iowa County, Iowa","Other Indo-European languages",0,16,15665,51
+"618","19095","Iowa County, Iowa","Korean",0,16,15665,51
+"619","19095","Iowa County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,15665,51
+"620","19095","Iowa County, Iowa","Vietnamese",0,16,15665,51
+"621","19095","Iowa County, Iowa","Tagalog (incl. Filipino)",7,13,15665,51
+"622","19095","Iowa County, Iowa","Other Asian and Pacific Island languages",13,16,15665,51
+"623","19095","Iowa County, Iowa","Arabic",0,16,15665,51
+"624","19095","Iowa County, Iowa","Other and unspecified languages",2,4,15665,51
+"625","19097","Jackson County, Iowa","Speak only English",17877,185,18346,59
+"626","19097","Jackson County, Iowa","Spanish",211,127,18346,59
+"627","19097","Jackson County, Iowa","French, Haitian, or Cajun",0,16,18346,59
+"628","19097","Jackson County, Iowa","German or other West Germanic languages",127,124,18346,59
+"629","19097","Jackson County, Iowa","Russian, Polish, or other Slavic languages",0,16,18346,59
+"630","19097","Jackson County, Iowa","Other Indo-European languages",3,6,18346,59
+"631","19097","Jackson County, Iowa","Korean",0,16,18346,59
+"632","19097","Jackson County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,18346,59
+"633","19097","Jackson County, Iowa","Vietnamese",10,14,18346,59
+"634","19097","Jackson County, Iowa","Tagalog (incl. Filipino)",7,12,18346,59
+"635","19097","Jackson County, Iowa","Other Asian and Pacific Island languages",111,27,18346,59
+"636","19097","Jackson County, Iowa","Arabic",0,16,18346,59
+"637","19097","Jackson County, Iowa","Other and unspecified languages",0,16,18346,59
+"638","19099","Jasper County, Iowa","Speak only English",34069,277,35587,61
+"639","19099","Jasper County, Iowa","Spanish",627,187,35587,61
+"640","19099","Jasper County, Iowa","French, Haitian, or Cajun",86,72,35587,61
+"641","19099","Jasper County, Iowa","German or other West Germanic languages",33,38,35587,61
+"642","19099","Jasper County, Iowa","Russian, Polish, or other Slavic languages",46,54,35587,61
+"643","19099","Jasper County, Iowa","Other Indo-European languages",99,108,35587,61
+"644","19099","Jasper County, Iowa","Korean",0,22,35587,61
+"645","19099","Jasper County, Iowa","Chinese (incl. Mandarin, Cantonese)",128,99,35587,61
+"646","19099","Jasper County, Iowa","Vietnamese",22,25,35587,61
+"647","19099","Jasper County, Iowa","Tagalog (incl. Filipino)",7,11,35587,61
+"648","19099","Jasper County, Iowa","Other Asian and Pacific Island languages",25,23,35587,61
+"649","19099","Jasper County, Iowa","Arabic",243,179,35587,61
+"650","19099","Jasper County, Iowa","Other and unspecified languages",202,123,35587,61
+"651","19101","Jefferson County, Iowa","Speak only English",12890,510,14996,298
+"652","19101","Jefferson County, Iowa","Spanish",416,169,14996,298
+"653","19101","Jefferson County, Iowa","French, Haitian, or Cajun",35,29,14996,298
+"654","19101","Jefferson County, Iowa","German or other West Germanic languages",96,71,14996,298
+"655","19101","Jefferson County, Iowa","Russian, Polish, or other Slavic languages",41,60,14996,298
+"656","19101","Jefferson County, Iowa","Other Indo-European languages",502,249,14996,298
+"657","19101","Jefferson County, Iowa","Korean",0,16,14996,298
+"658","19101","Jefferson County, Iowa","Chinese (incl. Mandarin, Cantonese)",121,109,14996,298
+"659","19101","Jefferson County, Iowa","Vietnamese",175,182,14996,298
+"660","19101","Jefferson County, Iowa","Tagalog (incl. Filipino)",32,38,14996,298
+"661","19101","Jefferson County, Iowa","Other Asian and Pacific Island languages",154,110,14996,298
+"662","19101","Jefferson County, Iowa","Arabic",168,111,14996,298
+"663","19101","Jefferson County, Iowa","Other and unspecified languages",366,206,14996,298
+"664","19103","Johnson County, Iowa","Speak only English",120887,1242,143163,53
+"665","19103","Johnson County, Iowa","Spanish",6227,562,143163,53
+"666","19103","Johnson County, Iowa","French, Haitian, or Cajun",2015,594,143163,53
+"667","19103","Johnson County, Iowa","German or other West Germanic languages",1356,482,143163,53
+"668","19103","Johnson County, Iowa","Russian, Polish, or other Slavic languages",569,196,143163,53
+"669","19103","Johnson County, Iowa","Other Indo-European languages",2028,597,143163,53
+"670","19103","Johnson County, Iowa","Korean",1153,441,143163,53
+"671","19103","Johnson County, Iowa","Chinese (incl. Mandarin, Cantonese)",2323,487,143163,53
+"672","19103","Johnson County, Iowa","Vietnamese",953,326,143163,53
+"673","19103","Johnson County, Iowa","Tagalog (incl. Filipino)",172,144,143163,53
+"674","19103","Johnson County, Iowa","Other Asian and Pacific Island languages",1191,378,143163,53
+"675","19103","Johnson County, Iowa","Arabic",2985,734,143163,53
+"676","19103","Johnson County, Iowa","Other and unspecified languages",1304,433,143163,53
+"677","19105","Jones County, Iowa","Speak only English",19182,137,19539,102
+"678","19105","Jones County, Iowa","Spanish",260,122,19539,102
+"679","19105","Jones County, Iowa","French, Haitian, or Cajun",20,27,19539,102
+"680","19105","Jones County, Iowa","German or other West Germanic languages",18,15,19539,102
+"681","19105","Jones County, Iowa","Russian, Polish, or other Slavic languages",8,14,19539,102
+"682","19105","Jones County, Iowa","Other Indo-European languages",6,11,19539,102
+"683","19105","Jones County, Iowa","Korean",0,19,19539,102
+"684","19105","Jones County, Iowa","Chinese (incl. Mandarin, Cantonese)",29,31,19539,102
+"685","19105","Jones County, Iowa","Vietnamese",6,13,19539,102
+"686","19105","Jones County, Iowa","Tagalog (incl. Filipino)",0,19,19539,102
+"687","19105","Jones County, Iowa","Other Asian and Pacific Island languages",10,18,19539,102
+"688","19105","Jones County, Iowa","Arabic",0,19,19539,102
+"689","19105","Jones County, Iowa","Other and unspecified languages",0,19,19539,102
+"690","19107","Keokuk County, Iowa","Speak only English",9332,40,9463,17
+"691","19107","Keokuk County, Iowa","Spanish",78,29,9463,17
+"692","19107","Keokuk County, Iowa","French, Haitian, or Cajun",7,8,9463,17
+"693","19107","Keokuk County, Iowa","German or other West Germanic languages",16,11,9463,17
+"694","19107","Keokuk County, Iowa","Russian, Polish, or other Slavic languages",0,16,9463,17
+"695","19107","Keokuk County, Iowa","Other Indo-European languages",2,3,9463,17
+"696","19107","Keokuk County, Iowa","Korean",0,16,9463,17
+"697","19107","Keokuk County, Iowa","Chinese (incl. Mandarin, Cantonese)",11,13,9463,17
+"698","19107","Keokuk County, Iowa","Vietnamese",0,16,9463,17
+"699","19107","Keokuk County, Iowa","Tagalog (incl. Filipino)",16,17,9463,17
+"700","19107","Keokuk County, Iowa","Other Asian and Pacific Island languages",0,16,9463,17
+"701","19107","Keokuk County, Iowa","Arabic",0,16,9463,17
+"702","19107","Keokuk County, Iowa","Other and unspecified languages",1,2,9463,17
+"703","19109","Kossuth County, Iowa","Speak only English",13581,119,13933,59
+"704","19109","Kossuth County, Iowa","Spanish",237,89,13933,59
+"705","19109","Kossuth County, Iowa","French, Haitian, or Cajun",1,3,13933,59
+"706","19109","Kossuth County, Iowa","German or other West Germanic languages",50,42,13933,59
+"707","19109","Kossuth County, Iowa","Russian, Polish, or other Slavic languages",0,16,13933,59
+"708","19109","Kossuth County, Iowa","Other Indo-European languages",18,24,13933,59
+"709","19109","Kossuth County, Iowa","Korean",0,16,13933,59
+"710","19109","Kossuth County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,13933,59
+"711","19109","Kossuth County, Iowa","Vietnamese",0,16,13933,59
+"712","19109","Kossuth County, Iowa","Tagalog (incl. Filipino)",3,4,13933,59
+"713","19109","Kossuth County, Iowa","Other Asian and Pacific Island languages",43,34,13933,59
+"714","19109","Kossuth County, Iowa","Arabic",0,16,13933,59
+"715","19109","Kossuth County, Iowa","Other and unspecified languages",0,16,13933,59
+"716","19111","Lee County, Iowa","Speak only English",31140,242,31790,25
+"717","19111","Lee County, Iowa","Spanish",453,172,31790,25
+"718","19111","Lee County, Iowa","French, Haitian, or Cajun",0,22,31790,25
+"719","19111","Lee County, Iowa","German or other West Germanic languages",12,12,31790,25
+"720","19111","Lee County, Iowa","Russian, Polish, or other Slavic languages",0,22,31790,25
+"721","19111","Lee County, Iowa","Other Indo-European languages",13,18,31790,25
+"722","19111","Lee County, Iowa","Korean",5,9,31790,25
+"723","19111","Lee County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,22,31790,25
+"724","19111","Lee County, Iowa","Vietnamese",18,34,31790,25
+"725","19111","Lee County, Iowa","Tagalog (incl. Filipino)",105,125,31790,25
+"726","19111","Lee County, Iowa","Other Asian and Pacific Island languages",4,9,31790,25
+"727","19111","Lee County, Iowa","Arabic",0,22,31790,25
+"728","19111","Lee County, Iowa","Other and unspecified languages",40,34,31790,25
+"729","19113","Linn County, Iowa","Speak only English",201052,1193,214481,40
+"730","19113","Linn County, Iowa","Spanish",3924,631,214481,40
+"731","19113","Linn County, Iowa","French, Haitian, or Cajun",1289,393,214481,40
+"732","19113","Linn County, Iowa","German or other West Germanic languages",392,135,214481,40
+"733","19113","Linn County, Iowa","Russian, Polish, or other Slavic languages",329,170,214481,40
+"734","19113","Linn County, Iowa","Other Indo-European languages",2150,568,214481,40
+"735","19113","Linn County, Iowa","Korean",55,44,214481,40
+"736","19113","Linn County, Iowa","Chinese (incl. Mandarin, Cantonese)",460,198,214481,40
+"737","19113","Linn County, Iowa","Vietnamese",517,271,214481,40
+"738","19113","Linn County, Iowa","Tagalog (incl. Filipino)",89,75,214481,40
+"739","19113","Linn County, Iowa","Other Asian and Pacific Island languages",1692,385,214481,40
+"740","19113","Linn County, Iowa","Arabic",1098,565,214481,40
+"741","19113","Linn County, Iowa","Other and unspecified languages",1434,483,214481,40
+"742","19115","Louisa County, Iowa","Speak only English",8451,148,10262,37
+"743","19115","Louisa County, Iowa","Spanish",1399,101,10262,37
+"744","19115","Louisa County, Iowa","French, Haitian, or Cajun",19,17,10262,37
+"745","19115","Louisa County, Iowa","German or other West Germanic languages",26,22,10262,37
+"746","19115","Louisa County, Iowa","Russian, Polish, or other Slavic languages",0,16,10262,37
+"747","19115","Louisa County, Iowa","Other Indo-European languages",41,42,10262,37
+"748","19115","Louisa County, Iowa","Korean",0,16,10262,37
+"749","19115","Louisa County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,10262,37
+"750","19115","Louisa County, Iowa","Vietnamese",0,16,10262,37
+"751","19115","Louisa County, Iowa","Tagalog (incl. Filipino)",0,16,10262,37
+"752","19115","Louisa County, Iowa","Other Asian and Pacific Island languages",279,74,10262,37
+"753","19115","Louisa County, Iowa","Arabic",46,56,10262,37
+"754","19115","Louisa County, Iowa","Other and unspecified languages",1,3,10262,37
+"755","19117","Lucas County, Iowa","Speak only English",7714,150,8135,12
+"756","19117","Lucas County, Iowa","Spanish",121,57,8135,12
+"757","19117","Lucas County, Iowa","French, Haitian, or Cajun",0,15,8135,12
+"758","19117","Lucas County, Iowa","German or other West Germanic languages",128,127,8135,12
+"759","19117","Lucas County, Iowa","Russian, Polish, or other Slavic languages",158,68,8135,12
+"760","19117","Lucas County, Iowa","Other Indo-European languages",1,3,8135,12
+"761","19117","Lucas County, Iowa","Korean",0,15,8135,12
+"762","19117","Lucas County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8135,12
+"763","19117","Lucas County, Iowa","Vietnamese",0,15,8135,12
+"764","19117","Lucas County, Iowa","Tagalog (incl. Filipino)",6,7,8135,12
+"765","19117","Lucas County, Iowa","Other Asian and Pacific Island languages",7,13,8135,12
+"766","19117","Lucas County, Iowa","Arabic",0,15,8135,12
+"767","19117","Lucas County, Iowa","Other and unspecified languages",0,15,8135,12
+"768","19119","Lyon County, Iowa","Speak only English",10806,65,11087,18
+"769","19119","Lyon County, Iowa","Spanish",179,49,11087,18
+"770","19119","Lyon County, Iowa","French, Haitian, or Cajun",0,16,11087,18
+"771","19119","Lyon County, Iowa","German or other West Germanic languages",67,37,11087,18
+"772","19119","Lyon County, Iowa","Russian, Polish, or other Slavic languages",5,8,11087,18
+"773","19119","Lyon County, Iowa","Other Indo-European languages",4,5,11087,18
+"774","19119","Lyon County, Iowa","Korean",0,16,11087,18
+"775","19119","Lyon County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,4,11087,18
+"776","19119","Lyon County, Iowa","Vietnamese",0,16,11087,18
+"777","19119","Lyon County, Iowa","Tagalog (incl. Filipino)",0,16,11087,18
+"778","19119","Lyon County, Iowa","Other Asian and Pacific Island languages",24,23,11087,18
+"779","19119","Lyon County, Iowa","Arabic",0,16,11087,18
+"780","19119","Lyon County, Iowa","Other and unspecified languages",0,16,11087,18
+"781","19121","Madison County, Iowa","Speak only English",14975,236,15559,15
+"782","19121","Madison County, Iowa","Spanish",247,118,15559,15
+"783","19121","Madison County, Iowa","French, Haitian, or Cajun",14,16,15559,15
+"784","19121","Madison County, Iowa","German or other West Germanic languages",77,74,15559,15
+"785","19121","Madison County, Iowa","Russian, Polish, or other Slavic languages",120,152,15559,15
+"786","19121","Madison County, Iowa","Other Indo-European languages",106,85,15559,15
+"787","19121","Madison County, Iowa","Korean",0,16,15559,15
+"788","19121","Madison County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,15559,15
+"789","19121","Madison County, Iowa","Vietnamese",14,21,15559,15
+"790","19121","Madison County, Iowa","Tagalog (incl. Filipino)",0,16,15559,15
+"791","19121","Madison County, Iowa","Other Asian and Pacific Island languages",6,10,15559,15
+"792","19121","Madison County, Iowa","Arabic",0,16,15559,15
+"793","19121","Madison County, Iowa","Other and unspecified languages",0,16,15559,15
+"794","19123","Mahaska County, Iowa","Speak only English",20215,188,20703,96
+"795","19123","Mahaska County, Iowa","Spanish",200,95,20703,96
+"796","19123","Mahaska County, Iowa","French, Haitian, or Cajun",9,15,20703,96
+"797","19123","Mahaska County, Iowa","German or other West Germanic languages",14,15,20703,96
+"798","19123","Mahaska County, Iowa","Russian, Polish, or other Slavic languages",0,19,20703,96
+"799","19123","Mahaska County, Iowa","Other Indo-European languages",7,10,20703,96
+"800","19123","Mahaska County, Iowa","Korean",0,19,20703,96
+"801","19123","Mahaska County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,19,20703,96
+"802","19123","Mahaska County, Iowa","Vietnamese",0,19,20703,96
+"803","19123","Mahaska County, Iowa","Tagalog (incl. Filipino)",51,41,20703,96
+"804","19123","Mahaska County, Iowa","Other Asian and Pacific Island languages",193,111,20703,96
+"805","19123","Mahaska County, Iowa","Arabic",0,19,20703,96
+"806","19123","Mahaska County, Iowa","Other and unspecified languages",14,17,20703,96
+"807","19125","Marion County, Iowa","Speak only English",30452,194,31496,93
+"808","19125","Marion County, Iowa","Spanish",539,133,31496,93
+"809","19125","Marion County, Iowa","French, Haitian, or Cajun",42,51,31496,93
+"810","19125","Marion County, Iowa","German or other West Germanic languages",166,83,31496,93
+"811","19125","Marion County, Iowa","Russian, Polish, or other Slavic languages",15,19,31496,93
+"812","19125","Marion County, Iowa","Other Indo-European languages",12,15,31496,93
+"813","19125","Marion County, Iowa","Korean",32,39,31496,93
+"814","19125","Marion County, Iowa","Chinese (incl. Mandarin, Cantonese)",7,14,31496,93
+"815","19125","Marion County, Iowa","Vietnamese",0,22,31496,93
+"816","19125","Marion County, Iowa","Tagalog (incl. Filipino)",70,61,31496,93
+"817","19125","Marion County, Iowa","Other Asian and Pacific Island languages",151,83,31496,93
+"818","19125","Marion County, Iowa","Arabic",0,22,31496,93
+"819","19125","Marion County, Iowa","Other and unspecified languages",10,16,31496,93
+"820","19127","Marshall County, Iowa","Speak only English",28983,423,37587,115
+"821","19127","Marshall County, Iowa","Spanish",6997,382,37587,115
+"822","19127","Marshall County, Iowa","French, Haitian, or Cajun",83,68,37587,115
+"823","19127","Marshall County, Iowa","German or other West Germanic languages",45,47,37587,115
+"824","19127","Marshall County, Iowa","Russian, Polish, or other Slavic languages",55,54,37587,115
+"825","19127","Marshall County, Iowa","Other Indo-European languages",10,14,37587,115
+"826","19127","Marshall County, Iowa","Korean",0,22,37587,115
+"827","19127","Marshall County, Iowa","Chinese (incl. Mandarin, Cantonese)",62,84,37587,115
+"828","19127","Marshall County, Iowa","Vietnamese",167,198,37587,115
+"829","19127","Marshall County, Iowa","Tagalog (incl. Filipino)",15,28,37587,115
+"830","19127","Marshall County, Iowa","Other Asian and Pacific Island languages",991,306,37587,115
+"831","19127","Marshall County, Iowa","Arabic",107,116,37587,115
+"832","19127","Marshall County, Iowa","Other and unspecified languages",72,61,37587,115
+"833","19129","Mills County, Iowa","Speak only English",13533,99,13901,30
+"834","19129","Mills County, Iowa","Spanish",232,68,13901,30
+"835","19129","Mills County, Iowa","French, Haitian, or Cajun",29,27,13901,30
+"836","19129","Mills County, Iowa","German or other West Germanic languages",50,39,13901,30
+"837","19129","Mills County, Iowa","Russian, Polish, or other Slavic languages",0,16,13901,30
+"838","19129","Mills County, Iowa","Other Indo-European languages",1,4,13901,30
+"839","19129","Mills County, Iowa","Korean",0,16,13901,30
+"840","19129","Mills County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,5,13901,30
+"841","19129","Mills County, Iowa","Vietnamese",1,5,13901,30
+"842","19129","Mills County, Iowa","Tagalog (incl. Filipino)",32,30,13901,30
+"843","19129","Mills County, Iowa","Other Asian and Pacific Island languages",18,21,13901,30
+"844","19129","Mills County, Iowa","Arabic",0,16,13901,30
+"845","19129","Mills County, Iowa","Other and unspecified languages",3,5,13901,30
+"846","19131","Mitchell County, Iowa","Speak only English",9206,185,9876,38
+"847","19131","Mitchell County, Iowa","Spanish",147,54,9876,38
+"848","19131","Mitchell County, Iowa","French, Haitian, or Cajun",24,36,9876,38
+"849","19131","Mitchell County, Iowa","German or other West Germanic languages",419,169,9876,38
+"850","19131","Mitchell County, Iowa","Russian, Polish, or other Slavic languages",0,16,9876,38
+"851","19131","Mitchell County, Iowa","Other Indo-European languages",0,16,9876,38
+"852","19131","Mitchell County, Iowa","Korean",39,39,9876,38
+"853","19131","Mitchell County, Iowa","Chinese (incl. Mandarin, Cantonese)",3,6,9876,38
+"854","19131","Mitchell County, Iowa","Vietnamese",0,16,9876,38
+"855","19131","Mitchell County, Iowa","Tagalog (incl. Filipino)",19,30,9876,38
+"856","19131","Mitchell County, Iowa","Other Asian and Pacific Island languages",19,21,9876,38
+"857","19131","Mitchell County, Iowa","Arabic",0,16,9876,38
+"858","19131","Mitchell County, Iowa","Other and unspecified languages",0,16,9876,38
+"859","19133","Monona County, Iowa","Speak only English",8103,83,8261,11
+"860","19133","Monona County, Iowa","Spanish",102,54,8261,11
+"861","19133","Monona County, Iowa","French, Haitian, or Cajun",0,15,8261,11
+"862","19133","Monona County, Iowa","German or other West Germanic languages",18,18,8261,11
+"863","19133","Monona County, Iowa","Russian, Polish, or other Slavic languages",0,15,8261,11
+"864","19133","Monona County, Iowa","Other Indo-European languages",0,15,8261,11
+"865","19133","Monona County, Iowa","Korean",0,15,8261,11
+"866","19133","Monona County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8261,11
+"867","19133","Monona County, Iowa","Vietnamese",0,15,8261,11
+"868","19133","Monona County, Iowa","Tagalog (incl. Filipino)",0,15,8261,11
+"869","19133","Monona County, Iowa","Other Asian and Pacific Island languages",0,15,8261,11
+"870","19133","Monona County, Iowa","Arabic",0,15,8261,11
+"871","19133","Monona County, Iowa","Other and unspecified languages",38,53,8261,11
+"872","19135","Monroe County, Iowa","Speak only English",6919,173,7122,100
+"873","19135","Monroe County, Iowa","Spanish",48,51,7122,100
+"874","19135","Monroe County, Iowa","French, Haitian, or Cajun",12,18,7122,100
+"875","19135","Monroe County, Iowa","German or other West Germanic languages",96,81,7122,100
+"876","19135","Monroe County, Iowa","Russian, Polish, or other Slavic languages",0,15,7122,100
+"877","19135","Monroe County, Iowa","Other Indo-European languages",0,15,7122,100
+"878","19135","Monroe County, Iowa","Korean",0,15,7122,100
+"879","19135","Monroe County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,7122,100
+"880","19135","Monroe County, Iowa","Vietnamese",22,20,7122,100
+"881","19135","Monroe County, Iowa","Tagalog (incl. Filipino)",0,15,7122,100
+"882","19135","Monroe County, Iowa","Other Asian and Pacific Island languages",25,22,7122,100
+"883","19135","Monroe County, Iowa","Arabic",0,15,7122,100
+"884","19135","Monroe County, Iowa","Other and unspecified languages",0,15,7122,100
+"885","19137","Montgomery County, Iowa","Speak only English",9535,102,9714,44
+"886","19137","Montgomery County, Iowa","Spanish",111,83,9714,44
+"887","19137","Montgomery County, Iowa","French, Haitian, or Cajun",11,15,9714,44
+"888","19137","Montgomery County, Iowa","German or other West Germanic languages",11,11,9714,44
+"889","19137","Montgomery County, Iowa","Russian, Polish, or other Slavic languages",8,13,9714,44
+"890","19137","Montgomery County, Iowa","Other Indo-European languages",0,16,9714,44
+"891","19137","Montgomery County, Iowa","Korean",0,16,9714,44
+"892","19137","Montgomery County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,9714,44
+"893","19137","Montgomery County, Iowa","Vietnamese",0,16,9714,44
+"894","19137","Montgomery County, Iowa","Tagalog (incl. Filipino)",7,14,9714,44
+"895","19137","Montgomery County, Iowa","Other Asian and Pacific Island languages",11,18,9714,44
+"896","19137","Montgomery County, Iowa","Arabic",20,25,9714,44
+"897","19137","Montgomery County, Iowa","Other and unspecified languages",0,16,9714,44
+"898","19139","Muscatine County, Iowa","Speak only English",34541,653,40412,129
+"899","19139","Muscatine County, Iowa","Spanish",5024,435,40412,129
+"900","19139","Muscatine County, Iowa","French, Haitian, or Cajun",120,181,40412,129
+"901","19139","Muscatine County, Iowa","German or other West Germanic languages",108,64,40412,129
+"902","19139","Muscatine County, Iowa","Russian, Polish, or other Slavic languages",72,92,40412,129
+"903","19139","Muscatine County, Iowa","Other Indo-European languages",122,133,40412,129
+"904","19139","Muscatine County, Iowa","Korean",20,30,40412,129
+"905","19139","Muscatine County, Iowa","Chinese (incl. Mandarin, Cantonese)",12,21,40412,129
+"906","19139","Muscatine County, Iowa","Vietnamese",19,28,40412,129
+"907","19139","Muscatine County, Iowa","Tagalog (incl. Filipino)",27,33,40412,129
+"908","19139","Muscatine County, Iowa","Other Asian and Pacific Island languages",85,69,40412,129
+"909","19139","Muscatine County, Iowa","Arabic",111,89,40412,129
+"910","19139","Muscatine County, Iowa","Other and unspecified languages",151,176,40412,129
+"911","19141","O'Brien County, Iowa","Speak only English",12557,178,13233,12
+"912","19141","O'Brien County, Iowa","Spanish",387,152,13233,12
+"913","19141","O'Brien County, Iowa","French, Haitian, or Cajun",12,20,13233,12
+"914","19141","O'Brien County, Iowa","German or other West Germanic languages",34,24,13233,12
+"915","19141","O'Brien County, Iowa","Russian, Polish, or other Slavic languages",6,6,13233,12
+"916","19141","O'Brien County, Iowa","Other Indo-European languages",8,14,13233,12
+"917","19141","O'Brien County, Iowa","Korean",0,16,13233,12
+"918","19141","O'Brien County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,4,13233,12
+"919","19141","O'Brien County, Iowa","Vietnamese",0,16,13233,12
+"920","19141","O'Brien County, Iowa","Tagalog (incl. Filipino)",9,13,13233,12
+"921","19141","O'Brien County, Iowa","Other Asian and Pacific Island languages",136,104,13233,12
+"922","19141","O'Brien County, Iowa","Arabic",73,72,13233,12
+"923","19141","O'Brien County, Iowa","Other and unspecified languages",9,13,13233,12
+"924","19143","Osceola County, Iowa","Speak only English",5340,76,5831,5
+"925","19143","Osceola County, Iowa","Spanish",425,67,5831,5
+"926","19143","Osceola County, Iowa","French, Haitian, or Cajun",8,8,5831,5
+"927","19143","Osceola County, Iowa","German or other West Germanic languages",25,25,5831,5
+"928","19143","Osceola County, Iowa","Russian, Polish, or other Slavic languages",0,15,5831,5
+"929","19143","Osceola County, Iowa","Other Indo-European languages",3,6,5831,5
+"930","19143","Osceola County, Iowa","Korean",0,15,5831,5
+"931","19143","Osceola County, Iowa","Chinese (incl. Mandarin, Cantonese)",2,6,5831,5
+"932","19143","Osceola County, Iowa","Vietnamese",0,15,5831,5
+"933","19143","Osceola County, Iowa","Tagalog (incl. Filipino)",0,15,5831,5
+"934","19143","Osceola County, Iowa","Other Asian and Pacific Island languages",28,26,5831,5
+"935","19143","Osceola County, Iowa","Arabic",0,15,5831,5
+"936","19143","Osceola County, Iowa","Other and unspecified languages",0,15,5831,5
+"937","19145","Page County, Iowa","Speak only English",14177,126,14498,68
+"938","19145","Page County, Iowa","Spanish",125,79,14498,68
+"939","19145","Page County, Iowa","French, Haitian, or Cajun",0,16,14498,68
+"940","19145","Page County, Iowa","German or other West Germanic languages",16,23,14498,68
+"941","19145","Page County, Iowa","Russian, Polish, or other Slavic languages",11,19,14498,68
+"942","19145","Page County, Iowa","Other Indo-European languages",22,30,14498,68
+"943","19145","Page County, Iowa","Korean",0,16,14498,68
+"944","19145","Page County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,14498,68
+"945","19145","Page County, Iowa","Vietnamese",0,16,14498,68
+"946","19145","Page County, Iowa","Tagalog (incl. Filipino)",16,11,14498,68
+"947","19145","Page County, Iowa","Other Asian and Pacific Island languages",68,35,14498,68
+"948","19145","Page County, Iowa","Arabic",0,16,14498,68
+"949","19145","Page County, Iowa","Other and unspecified languages",63,37,14498,68
+"950","19147","Palo Alto County, Iowa","Speak only English",8172,114,8428,65
+"951","19147","Palo Alto County, Iowa","Spanish",147,68,8428,65
+"952","19147","Palo Alto County, Iowa","French, Haitian, or Cajun",6,7,8428,65
+"953","19147","Palo Alto County, Iowa","German or other West Germanic languages",19,25,8428,65
+"954","19147","Palo Alto County, Iowa","Russian, Polish, or other Slavic languages",10,10,8428,65
+"955","19147","Palo Alto County, Iowa","Other Indo-European languages",3,5,8428,65
+"956","19147","Palo Alto County, Iowa","Korean",0,15,8428,65
+"957","19147","Palo Alto County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,8428,65
+"958","19147","Palo Alto County, Iowa","Vietnamese",0,15,8428,65
+"959","19147","Palo Alto County, Iowa","Tagalog (incl. Filipino)",0,15,8428,65
+"960","19147","Palo Alto County, Iowa","Other Asian and Pacific Island languages",0,15,8428,65
+"961","19147","Palo Alto County, Iowa","Arabic",11,16,8428,65
+"962","19147","Palo Alto County, Iowa","Other and unspecified languages",60,73,8428,65
+"963","19149","Plymouth County, Iowa","Speak only English",22372,273,23984,66
+"964","19149","Plymouth County, Iowa","Spanish",1040,190,23984,66
+"965","19149","Plymouth County, Iowa","French, Haitian, or Cajun",12,20,23984,66
+"966","19149","Plymouth County, Iowa","German or other West Germanic languages",110,60,23984,66
+"967","19149","Plymouth County, Iowa","Russian, Polish, or other Slavic languages",20,24,23984,66
+"968","19149","Plymouth County, Iowa","Other Indo-European languages",28,39,23984,66
+"969","19149","Plymouth County, Iowa","Korean",11,17,23984,66
+"970","19149","Plymouth County, Iowa","Chinese (incl. Mandarin, Cantonese)",26,33,23984,66
+"971","19149","Plymouth County, Iowa","Vietnamese",0,19,23984,66
+"972","19149","Plymouth County, Iowa","Tagalog (incl. Filipino)",3,5,23984,66
+"973","19149","Plymouth County, Iowa","Other Asian and Pacific Island languages",74,36,23984,66
+"974","19149","Plymouth County, Iowa","Arabic",0,19,23984,66
+"975","19149","Plymouth County, Iowa","Other and unspecified languages",288,154,23984,66
+"976","19151","Pocahontas County, Iowa","Speak only English",6335,73,6667,34
+"977","19151","Pocahontas County, Iowa","Spanish",230,35,6667,34
+"978","19151","Pocahontas County, Iowa","French, Haitian, or Cajun",17,20,6667,34
+"979","19151","Pocahontas County, Iowa","German or other West Germanic languages",14,13,6667,34
+"980","19151","Pocahontas County, Iowa","Russian, Polish, or other Slavic languages",2,3,6667,34
+"981","19151","Pocahontas County, Iowa","Other Indo-European languages",2,4,6667,34
+"982","19151","Pocahontas County, Iowa","Korean",0,15,6667,34
+"983","19151","Pocahontas County, Iowa","Chinese (incl. Mandarin, Cantonese)",33,46,6667,34
+"984","19151","Pocahontas County, Iowa","Vietnamese",0,15,6667,34
+"985","19151","Pocahontas County, Iowa","Tagalog (incl. Filipino)",0,15,6667,34
+"986","19151","Pocahontas County, Iowa","Other Asian and Pacific Island languages",33,36,6667,34
+"987","19151","Pocahontas County, Iowa","Arabic",0,15,6667,34
+"988","19151","Pocahontas County, Iowa","Other and unspecified languages",1,4,6667,34
+"989","19153","Polk County, Iowa","Speak only English",392341,2588,455237,64
+"990","19153","Polk County, Iowa","Spanish",26652,1129,455237,64
+"991","19153","Polk County, Iowa","French, Haitian, or Cajun",1493,422,455237,64
+"992","19153","Polk County, Iowa","German or other West Germanic languages",847,325,455237,64
+"993","19153","Polk County, Iowa","Russian, Polish, or other Slavic languages",5505,1064,455237,64
+"994","19153","Polk County, Iowa","Other Indo-European languages",4396,813,455237,64
+"995","19153","Polk County, Iowa","Korean",334,198,455237,64
+"996","19153","Polk County, Iowa","Chinese (incl. Mandarin, Cantonese)",1456,454,455237,64
+"997","19153","Polk County, Iowa","Vietnamese",3907,742,455237,64
+"998","19153","Polk County, Iowa","Tagalog (incl. Filipino)",487,158,455237,64
+"999","19153","Polk County, Iowa","Other Asian and Pacific Island languages",8762,1048,455237,64
+"1000","19153","Polk County, Iowa","Arabic",3788,940,455237,64
+"1001","19153","Polk County, Iowa","Other and unspecified languages",5269,836,455237,64
+"1002","19155","Pottawattamie County, Iowa","Speak only English",82124,551,87735,122
+"1003","19155","Pottawattamie County, Iowa","Spanish",4731,477,87735,122
+"1004","19155","Pottawattamie County, Iowa","French, Haitian, or Cajun",30,20,87735,122
+"1005","19155","Pottawattamie County, Iowa","German or other West Germanic languages",103,68,87735,122
+"1006","19155","Pottawattamie County, Iowa","Russian, Polish, or other Slavic languages",121,85,87735,122
+"1007","19155","Pottawattamie County, Iowa","Other Indo-European languages",228,107,87735,122
+"1008","19155","Pottawattamie County, Iowa","Korean",15,31,87735,122
+"1009","19155","Pottawattamie County, Iowa","Chinese (incl. Mandarin, Cantonese)",69,58,87735,122
+"1010","19155","Pottawattamie County, Iowa","Vietnamese",32,46,87735,122
+"1011","19155","Pottawattamie County, Iowa","Tagalog (incl. Filipino)",109,85,87735,122
+"1012","19155","Pottawattamie County, Iowa","Other Asian and Pacific Island languages",109,90,87735,122
+"1013","19155","Pottawattamie County, Iowa","Arabic",32,32,87735,122
+"1014","19155","Pottawattamie County, Iowa","Other and unspecified languages",32,46,87735,122
+"1015","19157","Poweshiek County, Iowa","Speak only English",16895,133,17721,36
+"1016","19157","Poweshiek County, Iowa","Spanish",462,105,17721,36
+"1017","19157","Poweshiek County, Iowa","French, Haitian, or Cajun",21,23,17721,36
+"1018","19157","Poweshiek County, Iowa","German or other West Germanic languages",28,20,17721,36
+"1019","19157","Poweshiek County, Iowa","Russian, Polish, or other Slavic languages",5,6,17721,36
+"1020","19157","Poweshiek County, Iowa","Other Indo-European languages",62,42,17721,36
+"1021","19157","Poweshiek County, Iowa","Korean",39,32,17721,36
+"1022","19157","Poweshiek County, Iowa","Chinese (incl. Mandarin, Cantonese)",113,46,17721,36
+"1023","19157","Poweshiek County, Iowa","Vietnamese",0,16,17721,36
+"1024","19157","Poweshiek County, Iowa","Tagalog (incl. Filipino)",1,2,17721,36
+"1025","19157","Poweshiek County, Iowa","Other Asian and Pacific Island languages",64,39,17721,36
+"1026","19157","Poweshiek County, Iowa","Arabic",12,16,17721,36
+"1027","19157","Poweshiek County, Iowa","Other and unspecified languages",19,19,17721,36
+"1028","19159","Ringgold County, Iowa","Speak only English",4282,65,4451,25
+"1029","19159","Ringgold County, Iowa","Spanish",92,48,4451,25
+"1030","19159","Ringgold County, Iowa","French, Haitian, or Cajun",0,10,4451,25
+"1031","19159","Ringgold County, Iowa","German or other West Germanic languages",72,49,4451,25
+"1032","19159","Ringgold County, Iowa","Russian, Polish, or other Slavic languages",0,10,4451,25
+"1033","19159","Ringgold County, Iowa","Other Indo-European languages",0,10,4451,25
+"1034","19159","Ringgold County, Iowa","Korean",0,10,4451,25
+"1035","19159","Ringgold County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,10,4451,25
+"1036","19159","Ringgold County, Iowa","Vietnamese",0,10,4451,25
+"1037","19159","Ringgold County, Iowa","Tagalog (incl. Filipino)",3,4,4451,25
+"1038","19159","Ringgold County, Iowa","Other Asian and Pacific Island languages",0,10,4451,25
+"1039","19159","Ringgold County, Iowa","Arabic",2,3,4451,25
+"1040","19159","Ringgold County, Iowa","Other and unspecified languages",0,10,4451,25
+"1041","19161","Sac County, Iowa","Speak only English",8821,199,9261,26
+"1042","19161","Sac County, Iowa","Spanish",214,52,9261,26
+"1043","19161","Sac County, Iowa","French, Haitian, or Cajun",0,15,9261,26
+"1044","19161","Sac County, Iowa","German or other West Germanic languages",220,207,9261,26
+"1045","19161","Sac County, Iowa","Russian, Polish, or other Slavic languages",2,3,9261,26
+"1046","19161","Sac County, Iowa","Other Indo-European languages",0,15,9261,26
+"1047","19161","Sac County, Iowa","Korean",0,15,9261,26
+"1048","19161","Sac County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,9261,26
+"1049","19161","Sac County, Iowa","Vietnamese",0,15,9261,26
+"1050","19161","Sac County, Iowa","Tagalog (incl. Filipino)",0,15,9261,26
+"1051","19161","Sac County, Iowa","Other Asian and Pacific Island languages",0,15,9261,26
+"1052","19161","Sac County, Iowa","Arabic",4,6,9261,26
+"1053","19161","Sac County, Iowa","Other and unspecified languages",0,15,9261,26
+"1054","19163","Scott County, Iowa","Speak only English",153759,859,163386,NA
+"1055","19163","Scott County, Iowa","Spanish",4207,610,163386,NA
+"1056","19163","Scott County, Iowa","French, Haitian, or Cajun",480,384,163386,NA
+"1057","19163","Scott County, Iowa","German or other West Germanic languages",389,151,163386,NA
+"1058","19163","Scott County, Iowa","Russian, Polish, or other Slavic languages",371,246,163386,NA
+"1059","19163","Scott County, Iowa","Other Indo-European languages",1369,361,163386,NA
+"1060","19163","Scott County, Iowa","Korean",187,120,163386,NA
+"1061","19163","Scott County, Iowa","Chinese (incl. Mandarin, Cantonese)",219,130,163386,NA
+"1062","19163","Scott County, Iowa","Vietnamese",747,315,163386,NA
+"1063","19163","Scott County, Iowa","Tagalog (incl. Filipino)",307,279,163386,NA
+"1064","19163","Scott County, Iowa","Other Asian and Pacific Island languages",1044,383,163386,NA
+"1065","19163","Scott County, Iowa","Arabic",162,138,163386,NA
+"1066","19163","Scott County, Iowa","Other and unspecified languages",145,88,163386,NA
+"1067","19165","Shelby County, Iowa","Speak only English",10877,84,11167,20
+"1068","19165","Shelby County, Iowa","Spanish",268,84,11167,20
+"1069","19165","Shelby County, Iowa","French, Haitian, or Cajun",19,24,11167,20
+"1070","19165","Shelby County, Iowa","German or other West Germanic languages",0,16,11167,20
+"1071","19165","Shelby County, Iowa","Russian, Polish, or other Slavic languages",0,16,11167,20
+"1072","19165","Shelby County, Iowa","Other Indo-European languages",3,4,11167,20
+"1073","19165","Shelby County, Iowa","Korean",0,16,11167,20
+"1074","19165","Shelby County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,11167,20
+"1075","19165","Shelby County, Iowa","Vietnamese",0,16,11167,20
+"1076","19165","Shelby County, Iowa","Tagalog (incl. Filipino)",0,16,11167,20
+"1077","19165","Shelby County, Iowa","Other Asian and Pacific Island languages",0,16,11167,20
+"1078","19165","Shelby County, Iowa","Arabic",0,16,11167,20
+"1079","19165","Shelby County, Iowa","Other and unspecified languages",0,16,11167,20
+"1080","19167","Sioux County, Iowa","Speak only English",30223,430,33081,33
+"1081","19167","Sioux County, Iowa","Spanish",2584,423,33081,33
+"1082","19167","Sioux County, Iowa","French, Haitian, or Cajun",24,22,33081,33
+"1083","19167","Sioux County, Iowa","German or other West Germanic languages",198,90,33081,33
+"1084","19167","Sioux County, Iowa","Russian, Polish, or other Slavic languages",2,3,33081,33
+"1085","19167","Sioux County, Iowa","Other Indo-European languages",11,21,33081,33
+"1086","19167","Sioux County, Iowa","Korean",0,22,33081,33
+"1087","19167","Sioux County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,22,33081,33
+"1088","19167","Sioux County, Iowa","Vietnamese",0,22,33081,33
+"1089","19167","Sioux County, Iowa","Tagalog (incl. Filipino)",0,22,33081,33
+"1090","19167","Sioux County, Iowa","Other Asian and Pacific Island languages",38,24,33081,33
+"1091","19167","Sioux County, Iowa","Arabic",0,22,33081,33
+"1092","19167","Sioux County, Iowa","Other and unspecified languages",1,2,33081,33
+"1093","19169","Story County, Iowa","Speak only English",83041,755,93738,44
+"1094","19169","Story County, Iowa","Spanish",1884,289,93738,44
+"1095","19169","Story County, Iowa","French, Haitian, or Cajun",201,180,93738,44
+"1096","19169","Story County, Iowa","German or other West Germanic languages",546,234,93738,44
+"1097","19169","Story County, Iowa","Russian, Polish, or other Slavic languages",230,132,93738,44
+"1098","19169","Story County, Iowa","Other Indo-European languages",1663,551,93738,44
+"1099","19169","Story County, Iowa","Korean",574,362,93738,44
+"1100","19169","Story County, Iowa","Chinese (incl. Mandarin, Cantonese)",2963,607,93738,44
+"1101","19169","Story County, Iowa","Vietnamese",615,369,93738,44
+"1102","19169","Story County, Iowa","Tagalog (incl. Filipino)",321,215,93738,44
+"1103","19169","Story County, Iowa","Other Asian and Pacific Island languages",1107,368,93738,44
+"1104","19169","Story County, Iowa","Arabic",192,157,93738,44
+"1105","19169","Story County, Iowa","Other and unspecified languages",401,235,93738,44
+"1106","19171","Tama County, Iowa","Speak only English",14099,162,16046,12
+"1107","19171","Tama County, Iowa","Spanish",1314,137,16046,12
+"1108","19171","Tama County, Iowa","French, Haitian, or Cajun",12,18,16046,12
+"1109","19171","Tama County, Iowa","German or other West Germanic languages",67,58,16046,12
+"1110","19171","Tama County, Iowa","Russian, Polish, or other Slavic languages",16,13,16046,12
+"1111","19171","Tama County, Iowa","Other Indo-European languages",0,16,16046,12
+"1112","19171","Tama County, Iowa","Korean",3,5,16046,12
+"1113","19171","Tama County, Iowa","Chinese (incl. Mandarin, Cantonese)",6,8,16046,12
+"1114","19171","Tama County, Iowa","Vietnamese",0,16,16046,12
+"1115","19171","Tama County, Iowa","Tagalog (incl. Filipino)",2,6,16046,12
+"1116","19171","Tama County, Iowa","Other Asian and Pacific Island languages",3,5,16046,12
+"1117","19171","Tama County, Iowa","Arabic",0,16,16046,12
+"1118","19171","Tama County, Iowa","Other and unspecified languages",524,78,16046,12
+"1119","19173","Taylor County, Iowa","Speak only English",5216,67,5599,19
+"1120","19173","Taylor County, Iowa","Spanish",375,59,5599,19
+"1121","19173","Taylor County, Iowa","French, Haitian, or Cajun",3,4,5599,19
+"1122","19173","Taylor County, Iowa","German or other West Germanic languages",5,10,5599,19
+"1123","19173","Taylor County, Iowa","Russian, Polish, or other Slavic languages",0,15,5599,19
+"1124","19173","Taylor County, Iowa","Other Indo-European languages",0,15,5599,19
+"1125","19173","Taylor County, Iowa","Korean",0,15,5599,19
+"1126","19173","Taylor County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,5599,19
+"1127","19173","Taylor County, Iowa","Vietnamese",0,15,5599,19
+"1128","19173","Taylor County, Iowa","Tagalog (incl. Filipino)",0,15,5599,19
+"1129","19173","Taylor County, Iowa","Other Asian and Pacific Island languages",0,15,5599,19
+"1130","19173","Taylor County, Iowa","Arabic",0,15,5599,19
+"1131","19173","Taylor County, Iowa","Other and unspecified languages",0,15,5599,19
+"1132","19175","Union County, Iowa","Speak only English",11217,113,11516,53
+"1133","19175","Union County, Iowa","Spanish",107,61,11516,53
+"1134","19175","Union County, Iowa","French, Haitian, or Cajun",8,15,11516,53
+"1135","19175","Union County, Iowa","German or other West Germanic languages",84,48,11516,53
+"1136","19175","Union County, Iowa","Russian, Polish, or other Slavic languages",6,10,11516,53
+"1137","19175","Union County, Iowa","Other Indo-European languages",13,21,11516,53
+"1138","19175","Union County, Iowa","Korean",0,16,11516,53
+"1139","19175","Union County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,16,11516,53
+"1140","19175","Union County, Iowa","Vietnamese",0,16,11516,53
+"1141","19175","Union County, Iowa","Tagalog (incl. Filipino)",2,3,11516,53
+"1142","19175","Union County, Iowa","Other Asian and Pacific Island languages",79,66,11516,53
+"1143","19175","Union County, Iowa","Arabic",0,16,11516,53
+"1144","19175","Union County, Iowa","Other and unspecified languages",0,16,11516,53
+"1145","19177","Van Buren County, Iowa","Speak only English",6095,213,6762,8
+"1146","19177","Van Buren County, Iowa","Spanish",46,24,6762,8
+"1147","19177","Van Buren County, Iowa","French, Haitian, or Cajun",3,4,6762,8
+"1148","19177","Van Buren County, Iowa","German or other West Germanic languages",616,213,6762,8
+"1149","19177","Van Buren County, Iowa","Russian, Polish, or other Slavic languages",0,15,6762,8
+"1150","19177","Van Buren County, Iowa","Other Indo-European languages",0,15,6762,8
+"1151","19177","Van Buren County, Iowa","Korean",0,15,6762,8
+"1152","19177","Van Buren County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,6762,8
+"1153","19177","Van Buren County, Iowa","Vietnamese",0,15,6762,8
+"1154","19177","Van Buren County, Iowa","Tagalog (incl. Filipino)",2,4,6762,8
+"1155","19177","Van Buren County, Iowa","Other Asian and Pacific Island languages",0,15,6762,8
+"1156","19177","Van Buren County, Iowa","Arabic",0,15,6762,8
+"1157","19177","Van Buren County, Iowa","Other and unspecified languages",0,15,6762,8
+"1158","19179","Wapello County, Iowa","Speak only English",29313,354,33173,47
+"1159","19179","Wapello County, Iowa","Spanish",2604,302,33173,47
+"1160","19179","Wapello County, Iowa","French, Haitian, or Cajun",127,135,33173,47
+"1161","19179","Wapello County, Iowa","German or other West Germanic languages",128,87,33173,47
+"1162","19179","Wapello County, Iowa","Russian, Polish, or other Slavic languages",11,13,33173,47
+"1163","19179","Wapello County, Iowa","Other Indo-European languages",124,66,33173,47
+"1164","19179","Wapello County, Iowa","Korean",0,22,33173,47
+"1165","19179","Wapello County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,22,33173,47
+"1166","19179","Wapello County, Iowa","Vietnamese",0,22,33173,47
+"1167","19179","Wapello County, Iowa","Tagalog (incl. Filipino)",119,71,33173,47
+"1168","19179","Wapello County, Iowa","Other Asian and Pacific Island languages",421,134,33173,47
+"1169","19179","Wapello County, Iowa","Arabic",120,100,33173,47
+"1170","19179","Wapello County, Iowa","Other and unspecified languages",206,109,33173,47
+"1171","19181","Warren County, Iowa","Speak only English",47533,259,48815,68
+"1172","19181","Warren County, Iowa","Spanish",636,171,48815,68
+"1173","19181","Warren County, Iowa","French, Haitian, or Cajun",25,22,48815,68
+"1174","19181","Warren County, Iowa","German or other West Germanic languages",45,33,48815,68
+"1175","19181","Warren County, Iowa","Russian, Polish, or other Slavic languages",185,153,48815,68
+"1176","19181","Warren County, Iowa","Other Indo-European languages",153,121,48815,68
+"1177","19181","Warren County, Iowa","Korean",0,24,48815,68
+"1178","19181","Warren County, Iowa","Chinese (incl. Mandarin, Cantonese)",24,28,48815,68
+"1179","19181","Warren County, Iowa","Vietnamese",142,145,48815,68
+"1180","19181","Warren County, Iowa","Tagalog (incl. Filipino)",0,24,48815,68
+"1181","19181","Warren County, Iowa","Other Asian and Pacific Island languages",72,56,48815,68
+"1182","19181","Warren County, Iowa","Arabic",0,24,48815,68
+"1183","19181","Warren County, Iowa","Other and unspecified languages",0,24,48815,68
+"1184","19183","Washington County, Iowa","Speak only English",19524,190,21073,34
+"1185","19183","Washington County, Iowa","Spanish",1035,113,21073,34
+"1186","19183","Washington County, Iowa","French, Haitian, or Cajun",7,11,21073,34
+"1187","19183","Washington County, Iowa","German or other West Germanic languages",339,128,21073,34
+"1188","19183","Washington County, Iowa","Russian, Polish, or other Slavic languages",7,11,21073,34
+"1189","19183","Washington County, Iowa","Other Indo-European languages",52,57,21073,34
+"1190","19183","Washington County, Iowa","Korean",0,19,21073,34
+"1191","19183","Washington County, Iowa","Chinese (incl. Mandarin, Cantonese)",43,37,21073,34
+"1192","19183","Washington County, Iowa","Vietnamese",0,19,21073,34
+"1193","19183","Washington County, Iowa","Tagalog (incl. Filipino)",28,31,21073,34
+"1194","19183","Washington County, Iowa","Other Asian and Pacific Island languages",38,59,21073,34
+"1195","19183","Washington County, Iowa","Arabic",0,19,21073,34
+"1196","19183","Washington County, Iowa","Other and unspecified languages",0,19,21073,34
+"1197","19185","Wayne County, Iowa","Speak only English",5514,167,6032,27
+"1198","19185","Wayne County, Iowa","Spanish",84,43,6032,27
+"1199","19185","Wayne County, Iowa","French, Haitian, or Cajun",3,4,6032,27
+"1200","19185","Wayne County, Iowa","German or other West Germanic languages",405,165,6032,27
+"1201","19185","Wayne County, Iowa","Russian, Polish, or other Slavic languages",0,15,6032,27
+"1202","19185","Wayne County, Iowa","Other Indo-European languages",16,18,6032,27
+"1203","19185","Wayne County, Iowa","Korean",0,15,6032,27
+"1204","19185","Wayne County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,6032,27
+"1205","19185","Wayne County, Iowa","Vietnamese",0,15,6032,27
+"1206","19185","Wayne County, Iowa","Tagalog (incl. Filipino)",0,15,6032,27
+"1207","19185","Wayne County, Iowa","Other Asian and Pacific Island languages",10,9,6032,27
+"1208","19185","Wayne County, Iowa","Arabic",0,15,6032,27
+"1209","19185","Wayne County, Iowa","Other and unspecified languages",0,15,6032,27
+"1210","19187","Webster County, Iowa","Speak only English",33260,375,34946,27
+"1211","19187","Webster County, Iowa","Spanish",943,222,34946,27
+"1212","19187","Webster County, Iowa","French, Haitian, or Cajun",121,78,34946,27
+"1213","19187","Webster County, Iowa","German or other West Germanic languages",159,117,34946,27
+"1214","19187","Webster County, Iowa","Russian, Polish, or other Slavic languages",2,3,34946,27
+"1215","19187","Webster County, Iowa","Other Indo-European languages",85,94,34946,27
+"1216","19187","Webster County, Iowa","Korean",89,74,34946,27
+"1217","19187","Webster County, Iowa","Chinese (incl. Mandarin, Cantonese)",107,134,34946,27
+"1218","19187","Webster County, Iowa","Vietnamese",0,22,34946,27
+"1219","19187","Webster County, Iowa","Tagalog (incl. Filipino)",34,43,34946,27
+"1220","19187","Webster County, Iowa","Other Asian and Pacific Island languages",8,12,34946,27
+"1221","19187","Webster County, Iowa","Arabic",12,20,34946,27
+"1222","19187","Webster County, Iowa","Other and unspecified languages",126,91,34946,27
+"1223","19189","Winnebago County, Iowa","Speak only English",9609,112,10201,20
+"1224","19189","Winnebago County, Iowa","Spanish",303,59,10201,20
+"1225","19189","Winnebago County, Iowa","French, Haitian, or Cajun",0,16,10201,20
+"1226","19189","Winnebago County, Iowa","German or other West Germanic languages",19,21,10201,20
+"1227","19189","Winnebago County, Iowa","Russian, Polish, or other Slavic languages",40,40,10201,20
+"1228","19189","Winnebago County, Iowa","Other Indo-European languages",71,71,10201,20
+"1229","19189","Winnebago County, Iowa","Korean",4,7,10201,20
+"1230","19189","Winnebago County, Iowa","Chinese (incl. Mandarin, Cantonese)",3,5,10201,20
+"1231","19189","Winnebago County, Iowa","Vietnamese",27,30,10201,20
+"1232","19189","Winnebago County, Iowa","Tagalog (incl. Filipino)",37,78,10201,20
+"1233","19189","Winnebago County, Iowa","Other Asian and Pacific Island languages",88,96,10201,20
+"1234","19189","Winnebago County, Iowa","Arabic",0,16,10201,20
+"1235","19189","Winnebago County, Iowa","Other and unspecified languages",0,16,10201,20
+"1236","19191","Winneshiek County, Iowa","Speak only English",18399,166,19169,43
+"1237","19191","Winneshiek County, Iowa","Spanish",327,108,19169,43
+"1238","19191","Winneshiek County, Iowa","French, Haitian, or Cajun",20,22,19169,43
+"1239","19191","Winneshiek County, Iowa","German or other West Germanic languages",121,61,19169,43
+"1240","19191","Winneshiek County, Iowa","Russian, Polish, or other Slavic languages",55,33,19169,43
+"1241","19191","Winneshiek County, Iowa","Other Indo-European languages",43,27,19169,43
+"1242","19191","Winneshiek County, Iowa","Korean",33,34,19169,43
+"1243","19191","Winneshiek County, Iowa","Chinese (incl. Mandarin, Cantonese)",6,9,19169,43
+"1244","19191","Winneshiek County, Iowa","Vietnamese",19,31,19169,43
+"1245","19191","Winneshiek County, Iowa","Tagalog (incl. Filipino)",14,19,19169,43
+"1246","19191","Winneshiek County, Iowa","Other Asian and Pacific Island languages",67,40,19169,43
+"1247","19191","Winneshiek County, Iowa","Arabic",31,51,19169,43
+"1248","19191","Winneshiek County, Iowa","Other and unspecified languages",34,31,19169,43
+"1249","19193","Woodbury County, Iowa","Speak only English",80328,1000,97779,17
+"1250","19193","Woodbury County, Iowa","Spanish",12798,711,97779,17
+"1251","19193","Woodbury County, Iowa","French, Haitian, or Cajun",462,283,97779,17
+"1252","19193","Woodbury County, Iowa","German or other West Germanic languages",457,237,97779,17
+"1253","19193","Woodbury County, Iowa","Russian, Polish, or other Slavic languages",10,10,97779,17
+"1254","19193","Woodbury County, Iowa","Other Indo-European languages",181,131,97779,17
+"1255","19193","Woodbury County, Iowa","Korean",92,96,97779,17
+"1256","19193","Woodbury County, Iowa","Chinese (incl. Mandarin, Cantonese)",60,56,97779,17
+"1257","19193","Woodbury County, Iowa","Vietnamese",950,279,97779,17
+"1258","19193","Woodbury County, Iowa","Tagalog (incl. Filipino)",119,81,97779,17
+"1259","19193","Woodbury County, Iowa","Other Asian and Pacific Island languages",1071,335,97779,17
+"1260","19193","Woodbury County, Iowa","Arabic",129,98,97779,17
+"1261","19193","Woodbury County, Iowa","Other and unspecified languages",1122,452,97779,17
+"1262","19195","Worth County, Iowa","Speak only English",6884,76,7040,22
+"1263","19195","Worth County, Iowa","Spanish",18,14,7040,22
+"1264","19195","Worth County, Iowa","French, Haitian, or Cajun",0,15,7040,22
+"1265","19195","Worth County, Iowa","German or other West Germanic languages",83,70,7040,22
+"1266","19195","Worth County, Iowa","Russian, Polish, or other Slavic languages",3,4,7040,22
+"1267","19195","Worth County, Iowa","Other Indo-European languages",10,14,7040,22
+"1268","19195","Worth County, Iowa","Korean",0,15,7040,22
+"1269","19195","Worth County, Iowa","Chinese (incl. Mandarin, Cantonese)",0,15,7040,22
+"1270","19195","Worth County, Iowa","Vietnamese",14,18,7040,22
+"1271","19195","Worth County, Iowa","Tagalog (incl. Filipino)",0,15,7040,22
+"1272","19195","Worth County, Iowa","Other Asian and Pacific Island languages",24,21,7040,22
+"1273","19195","Worth County, Iowa","Arabic",0,15,7040,22
+"1274","19195","Worth County, Iowa","Other and unspecified languages",4,7,7040,22
+"1275","19197","Wright County, Iowa","Speak only English",11004,146,12174,1
+"1276","19197","Wright County, Iowa","Spanish",1120,141,12174,1
+"1277","19197","Wright County, Iowa","French, Haitian, or Cajun",6,12,12174,1
+"1278","19197","Wright County, Iowa","German or other West Germanic languages",12,19,12174,1
+"1279","19197","Wright County, Iowa","Russian, Polish, or other Slavic languages",3,7,12174,1
+"1280","19197","Wright County, Iowa","Other Indo-European languages",0,16,12174,1
+"1281","19197","Wright County, Iowa","Korean",0,16,12174,1
+"1282","19197","Wright County, Iowa","Chinese (incl. Mandarin, Cantonese)",14,14,12174,1
+"1283","19197","Wright County, Iowa","Vietnamese",0,16,12174,1
+"1284","19197","Wright County, Iowa","Tagalog (incl. Filipino)",0,16,12174,1
+"1285","19197","Wright County, Iowa","Other Asian and Pacific Island languages",15,22,12174,1
+"1286","19197","Wright County, Iowa","Arabic",0,16,12174,1
+"1287","19197","Wright County, Iowa","Other and unspecified languages",0,16,12174,1

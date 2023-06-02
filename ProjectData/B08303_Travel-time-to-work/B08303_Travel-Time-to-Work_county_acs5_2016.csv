@@ -1,0 +1,1288 @@
+GEOID,NAME,variable,estimate,moe
+19001,"Adair County, Iowa",Total,3421,142
+19001,"Adair County, Iowa",Less than 5 minutes,614,109
+19001,"Adair County, Iowa",5 to 9 minutes,609,99
+19001,"Adair County, Iowa",10 to 14 minutes,446,88
+19001,"Adair County, Iowa",15 to 19 minutes,275,60
+19001,"Adair County, Iowa",20 to 24 minutes,245,50
+19001,"Adair County, Iowa",25 to 29 minutes,160,57
+19001,"Adair County, Iowa",30 to 34 minutes,285,72
+19001,"Adair County, Iowa",35 to 39 minutes,57,22
+19001,"Adair County, Iowa",40 to 44 minutes,105,43
+19001,"Adair County, Iowa",45 to 59 minutes,326,79
+19001,"Adair County, Iowa",60 to 89 minutes,247,58
+19001,"Adair County, Iowa",90 or more minutes,52,26
+19003,"Adams County, Iowa",Total,1791,70
+19003,"Adams County, Iowa",Less than 5 minutes,198,47
+19003,"Adams County, Iowa",5 to 9 minutes,337,63
+19003,"Adams County, Iowa",10 to 14 minutes,192,56
+19003,"Adams County, Iowa",15 to 19 minutes,233,57
+19003,"Adams County, Iowa",20 to 24 minutes,229,48
+19003,"Adams County, Iowa",25 to 29 minutes,165,46
+19003,"Adams County, Iowa",30 to 34 minutes,241,55
+19003,"Adams County, Iowa",35 to 39 minutes,27,20
+19003,"Adams County, Iowa",40 to 44 minutes,41,29
+19003,"Adams County, Iowa",45 to 59 minutes,58,26
+19003,"Adams County, Iowa",60 to 89 minutes,21,12
+19003,"Adams County, Iowa",90 or more minutes,49,20
+19005,"Allamakee County, Iowa",Total,6451,227
+19005,"Allamakee County, Iowa",Less than 5 minutes,743,146
+19005,"Allamakee County, Iowa",5 to 9 minutes,1303,173
+19005,"Allamakee County, Iowa",10 to 14 minutes,673,122
+19005,"Allamakee County, Iowa",15 to 19 minutes,459,100
+19005,"Allamakee County, Iowa",20 to 24 minutes,882,147
+19005,"Allamakee County, Iowa",25 to 29 minutes,351,68
+19005,"Allamakee County, Iowa",30 to 34 minutes,631,125
+19005,"Allamakee County, Iowa",35 to 39 minutes,158,51
+19005,"Allamakee County, Iowa",40 to 44 minutes,195,72
+19005,"Allamakee County, Iowa",45 to 59 minutes,517,86
+19005,"Allamakee County, Iowa",60 to 89 minutes,327,74
+19005,"Allamakee County, Iowa",90 or more minutes,212,66
+19007,"Appanoose County, Iowa",Total,5301,204
+19007,"Appanoose County, Iowa",Less than 5 minutes,496,112
+19007,"Appanoose County, Iowa",5 to 9 minutes,1356,216
+19007,"Appanoose County, Iowa",10 to 14 minutes,844,125
+19007,"Appanoose County, Iowa",15 to 19 minutes,673,119
+19007,"Appanoose County, Iowa",20 to 24 minutes,544,114
+19007,"Appanoose County, Iowa",25 to 29 minutes,202,55
+19007,"Appanoose County, Iowa",30 to 34 minutes,338,76
+19007,"Appanoose County, Iowa",35 to 39 minutes,39,19
+19007,"Appanoose County, Iowa",40 to 44 minutes,75,35
+19007,"Appanoose County, Iowa",45 to 59 minutes,333,88
+19007,"Appanoose County, Iowa",60 to 89 minutes,341,87
+19007,"Appanoose County, Iowa",90 or more minutes,60,29
+19009,"Audubon County, Iowa",Total,2713,95
+19009,"Audubon County, Iowa",Less than 5 minutes,386,68
+19009,"Audubon County, Iowa",5 to 9 minutes,635,88
+19009,"Audubon County, Iowa",10 to 14 minutes,357,64
+19009,"Audubon County, Iowa",15 to 19 minutes,364,64
+19009,"Audubon County, Iowa",20 to 24 minutes,226,38
+19009,"Audubon County, Iowa",25 to 29 minutes,150,57
+19009,"Audubon County, Iowa",30 to 34 minutes,274,72
+19009,"Audubon County, Iowa",35 to 39 minutes,110,35
+19009,"Audubon County, Iowa",40 to 44 minutes,46,21
+19009,"Audubon County, Iowa",45 to 59 minutes,51,27
+19009,"Audubon County, Iowa",60 to 89 minutes,73,22
+19009,"Audubon County, Iowa",90 or more minutes,41,19
+19011,"Benton County, Iowa",Total,12321,338
+19011,"Benton County, Iowa",Less than 5 minutes,1157,187
+19011,"Benton County, Iowa",5 to 9 minutes,1775,299
+19011,"Benton County, Iowa",10 to 14 minutes,1007,118
+19011,"Benton County, Iowa",15 to 19 minutes,924,131
+19011,"Benton County, Iowa",20 to 24 minutes,1722,209
+19011,"Benton County, Iowa",25 to 29 minutes,1093,160
+19011,"Benton County, Iowa",30 to 34 minutes,1750,213
+19011,"Benton County, Iowa",35 to 39 minutes,727,180
+19011,"Benton County, Iowa",40 to 44 minutes,640,134
+19011,"Benton County, Iowa",45 to 59 minutes,1049,167
+19011,"Benton County, Iowa",60 to 89 minutes,342,118
+19011,"Benton County, Iowa",90 or more minutes,135,55
+19013,"Black Hawk County, Iowa",Total,64822,916
+19013,"Black Hawk County, Iowa",Less than 5 minutes,3076,372
+19013,"Black Hawk County, Iowa",5 to 9 minutes,13270,773
+19013,"Black Hawk County, Iowa",10 to 14 minutes,17123,833
+19013,"Black Hawk County, Iowa",15 to 19 minutes,14403,778
+19013,"Black Hawk County, Iowa",20 to 24 minutes,8807,691
+19013,"Black Hawk County, Iowa",25 to 29 minutes,2343,307
+19013,"Black Hawk County, Iowa",30 to 34 minutes,2719,318
+19013,"Black Hawk County, Iowa",35 to 39 minutes,357,120
+19013,"Black Hawk County, Iowa",40 to 44 minutes,318,84
+19013,"Black Hawk County, Iowa",45 to 59 minutes,780,151
+19013,"Black Hawk County, Iowa",60 to 89 minutes,868,191
+19013,"Black Hawk County, Iowa",90 or more minutes,758,166
+19015,"Boone County, Iowa",Total,12877,403
+19015,"Boone County, Iowa",Less than 5 minutes,982,235
+19015,"Boone County, Iowa",5 to 9 minutes,2101,295
+19015,"Boone County, Iowa",10 to 14 minutes,1962,242
+19015,"Boone County, Iowa",15 to 19 minutes,1316,177
+19015,"Boone County, Iowa",20 to 24 minutes,1865,253
+19015,"Boone County, Iowa",25 to 29 minutes,1134,259
+19015,"Boone County, Iowa",30 to 34 minutes,1401,234
+19015,"Boone County, Iowa",35 to 39 minutes,402,101
+19015,"Boone County, Iowa",40 to 44 minutes,372,106
+19015,"Boone County, Iowa",45 to 59 minutes,852,192
+19015,"Boone County, Iowa",60 to 89 minutes,369,107
+19015,"Boone County, Iowa",90 or more minutes,121,50
+19017,"Bremer County, Iowa",Total,12177,314
+19017,"Bremer County, Iowa",Less than 5 minutes,1195,195
+19017,"Bremer County, Iowa",5 to 9 minutes,2825,266
+19017,"Bremer County, Iowa",10 to 14 minutes,1470,168
+19017,"Bremer County, Iowa",15 to 19 minutes,1175,158
+19017,"Bremer County, Iowa",20 to 24 minutes,1602,176
+19017,"Bremer County, Iowa",25 to 29 minutes,1069,159
+19017,"Bremer County, Iowa",30 to 34 minutes,1482,208
+19017,"Bremer County, Iowa",35 to 39 minutes,347,79
+19017,"Bremer County, Iowa",40 to 44 minutes,363,85
+19017,"Bremer County, Iowa",45 to 59 minutes,387,85
+19017,"Bremer County, Iowa",60 to 89 minutes,130,59
+19017,"Bremer County, Iowa",90 or more minutes,132,39
+19019,"Buchanan County, Iowa",Total,9610,251
+19019,"Buchanan County, Iowa",Less than 5 minutes,875,149
+19019,"Buchanan County, Iowa",5 to 9 minutes,1920,249
+19019,"Buchanan County, Iowa",10 to 14 minutes,1231,170
+19019,"Buchanan County, Iowa",15 to 19 minutes,1030,156
+19019,"Buchanan County, Iowa",20 to 24 minutes,1026,141
+19019,"Buchanan County, Iowa",25 to 29 minutes,685,114
+19019,"Buchanan County, Iowa",30 to 34 minutes,1142,168
+19019,"Buchanan County, Iowa",35 to 39 minutes,330,85
+19019,"Buchanan County, Iowa",40 to 44 minutes,299,79
+19019,"Buchanan County, Iowa",45 to 59 minutes,704,120
+19019,"Buchanan County, Iowa",60 to 89 minutes,221,76
+19019,"Buchanan County, Iowa",90 or more minutes,147,50
+19021,"Buena Vista County, Iowa",Total,9885,242
+19021,"Buena Vista County, Iowa",Less than 5 minutes,1461,229
+19021,"Buena Vista County, Iowa",5 to 9 minutes,2780,313
+19021,"Buena Vista County, Iowa",10 to 14 minutes,2225,269
+19021,"Buena Vista County, Iowa",15 to 19 minutes,1120,197
+19021,"Buena Vista County, Iowa",20 to 24 minutes,706,117
+19021,"Buena Vista County, Iowa",25 to 29 minutes,383,95
+19021,"Buena Vista County, Iowa",30 to 34 minutes,518,93
+19021,"Buena Vista County, Iowa",35 to 39 minutes,155,112
+19021,"Buena Vista County, Iowa",40 to 44 minutes,62,45
+19021,"Buena Vista County, Iowa",45 to 59 minutes,210,92
+19021,"Buena Vista County, Iowa",60 to 89 minutes,152,53
+19021,"Buena Vista County, Iowa",90 or more minutes,113,45
+19023,"Butler County, Iowa",Total,6995,174
+19023,"Butler County, Iowa",Less than 5 minutes,607,95
+19023,"Butler County, Iowa",5 to 9 minutes,844,99
+19023,"Butler County, Iowa",10 to 14 minutes,822,101
+19023,"Butler County, Iowa",15 to 19 minutes,789,107
+19023,"Butler County, Iowa",20 to 24 minutes,964,140
+19023,"Butler County, Iowa",25 to 29 minutes,549,89
+19023,"Butler County, Iowa",30 to 34 minutes,859,110
+19023,"Butler County, Iowa",35 to 39 minutes,322,58
+19023,"Butler County, Iowa",40 to 44 minutes,386,83
+19023,"Butler County, Iowa",45 to 59 minutes,477,79
+19023,"Butler County, Iowa",60 to 89 minutes,183,51
+19023,"Butler County, Iowa",90 or more minutes,193,50
+19025,"Calhoun County, Iowa",Total,4051,153
+19025,"Calhoun County, Iowa",Less than 5 minutes,649,95
+19025,"Calhoun County, Iowa",5 to 9 minutes,604,89
+19025,"Calhoun County, Iowa",10 to 14 minutes,412,82
+19025,"Calhoun County, Iowa",15 to 19 minutes,412,76
+19025,"Calhoun County, Iowa",20 to 24 minutes,435,60
+19025,"Calhoun County, Iowa",25 to 29 minutes,343,61
+19025,"Calhoun County, Iowa",30 to 34 minutes,552,75
+19025,"Calhoun County, Iowa",35 to 39 minutes,123,38
+19025,"Calhoun County, Iowa",40 to 44 minutes,105,38
+19025,"Calhoun County, Iowa",45 to 59 minutes,227,54
+19025,"Calhoun County, Iowa",60 to 89 minutes,92,36
+19025,"Calhoun County, Iowa",90 or more minutes,97,33
+19027,"Carroll County, Iowa",Total,9829,226
+19027,"Carroll County, Iowa",Less than 5 minutes,1486,196
+19027,"Carroll County, Iowa",5 to 9 minutes,2865,286
+19027,"Carroll County, Iowa",10 to 14 minutes,1862,206
+19027,"Carroll County, Iowa",15 to 19 minutes,1326,186
+19027,"Carroll County, Iowa",20 to 24 minutes,855,91
+19027,"Carroll County, Iowa",25 to 29 minutes,244,52
+19027,"Carroll County, Iowa",30 to 34 minutes,641,119
+19027,"Carroll County, Iowa",35 to 39 minutes,78,41
+19027,"Carroll County, Iowa",40 to 44 minutes,36,21
+19027,"Carroll County, Iowa",45 to 59 minutes,112,46
+19027,"Carroll County, Iowa",60 to 89 minutes,155,45
+19027,"Carroll County, Iowa",90 or more minutes,169,65
+19029,"Cass County, Iowa",Total,6180,228
+19029,"Cass County, Iowa",Less than 5 minutes,766,112
+19029,"Cass County, Iowa",5 to 9 minutes,1677,187
+19029,"Cass County, Iowa",10 to 14 minutes,1017,170
+19029,"Cass County, Iowa",15 to 19 minutes,627,121
+19029,"Cass County, Iowa",20 to 24 minutes,598,126
+19029,"Cass County, Iowa",25 to 29 minutes,346,88
+19029,"Cass County, Iowa",30 to 34 minutes,367,83
+19029,"Cass County, Iowa",35 to 39 minutes,57,30
+19029,"Cass County, Iowa",40 to 44 minutes,105,62
+19029,"Cass County, Iowa",45 to 59 minutes,169,49
+19029,"Cass County, Iowa",60 to 89 minutes,285,74
+19029,"Cass County, Iowa",90 or more minutes,166,58
+19031,"Cedar County, Iowa",Total,9120,250
+19031,"Cedar County, Iowa",Less than 5 minutes,923,153
+19031,"Cedar County, Iowa",5 to 9 minutes,1140,166
+19031,"Cedar County, Iowa",10 to 14 minutes,834,151
+19031,"Cedar County, Iowa",15 to 19 minutes,726,121
+19031,"Cedar County, Iowa",20 to 24 minutes,1166,176
+19031,"Cedar County, Iowa",25 to 29 minutes,535,118
+19031,"Cedar County, Iowa",30 to 34 minutes,1112,156
+19031,"Cedar County, Iowa",35 to 39 minutes,654,128
+19031,"Cedar County, Iowa",40 to 44 minutes,454,131
+19031,"Cedar County, Iowa",45 to 59 minutes,1121,140
+19031,"Cedar County, Iowa",60 to 89 minutes,286,74
+19031,"Cedar County, Iowa",90 or more minutes,169,73
+19033,"Cerro Gordo County, Iowa",Total,21107,470
+19033,"Cerro Gordo County, Iowa",Less than 5 minutes,1524,276
+19033,"Cerro Gordo County, Iowa",5 to 9 minutes,5163,454
+19033,"Cerro Gordo County, Iowa",10 to 14 minutes,5021,439
+19033,"Cerro Gordo County, Iowa",15 to 19 minutes,3753,391
+19033,"Cerro Gordo County, Iowa",20 to 24 minutes,2097,288
+19033,"Cerro Gordo County, Iowa",25 to 29 minutes,734,125
+19033,"Cerro Gordo County, Iowa",30 to 34 minutes,1095,235
+19033,"Cerro Gordo County, Iowa",35 to 39 minutes,224,90
+19033,"Cerro Gordo County, Iowa",40 to 44 minutes,169,62
+19033,"Cerro Gordo County, Iowa",45 to 59 minutes,692,154
+19033,"Cerro Gordo County, Iowa",60 to 89 minutes,350,103
+19033,"Cerro Gordo County, Iowa",90 or more minutes,285,89
+19035,"Cherokee County, Iowa",Total,5591,242
+19035,"Cherokee County, Iowa",Less than 5 minutes,694,132
+19035,"Cherokee County, Iowa",5 to 9 minutes,1188,203
+19035,"Cherokee County, Iowa",10 to 14 minutes,1149,150
+19035,"Cherokee County, Iowa",15 to 19 minutes,781,142
+19035,"Cherokee County, Iowa",20 to 24 minutes,647,139
+19035,"Cherokee County, Iowa",25 to 29 minutes,373,103
+19035,"Cherokee County, Iowa",30 to 34 minutes,360,76
+19035,"Cherokee County, Iowa",35 to 39 minutes,25,12
+19035,"Cherokee County, Iowa",40 to 44 minutes,48,27
+19035,"Cherokee County, Iowa",45 to 59 minutes,148,51
+19035,"Cherokee County, Iowa",60 to 89 minutes,124,59
+19035,"Cherokee County, Iowa",90 or more minutes,54,47
+19037,"Chickasaw County, Iowa",Total,5648,194
+19037,"Chickasaw County, Iowa",Less than 5 minutes,621,102
+19037,"Chickasaw County, Iowa",5 to 9 minutes,1332,172
+19037,"Chickasaw County, Iowa",10 to 14 minutes,793,121
+19037,"Chickasaw County, Iowa",15 to 19 minutes,715,118
+19037,"Chickasaw County, Iowa",20 to 24 minutes,552,103
+19037,"Chickasaw County, Iowa",25 to 29 minutes,218,53
+19037,"Chickasaw County, Iowa",30 to 34 minutes,342,68
+19037,"Chickasaw County, Iowa",35 to 39 minutes,158,58
+19037,"Chickasaw County, Iowa",40 to 44 minutes,192,64
+19037,"Chickasaw County, Iowa",45 to 59 minutes,410,91
+19037,"Chickasaw County, Iowa",60 to 89 minutes,207,75
+19037,"Chickasaw County, Iowa",90 or more minutes,108,44
+19039,"Clarke County, Iowa",Total,4473,220
+19039,"Clarke County, Iowa",Less than 5 minutes,392,158
+19039,"Clarke County, Iowa",5 to 9 minutes,1072,203
+19039,"Clarke County, Iowa",10 to 14 minutes,706,154
+19039,"Clarke County, Iowa",15 to 19 minutes,501,109
+19039,"Clarke County, Iowa",20 to 24 minutes,374,79
+19039,"Clarke County, Iowa",25 to 29 minutes,44,26
+19039,"Clarke County, Iowa",30 to 34 minutes,432,141
+19039,"Clarke County, Iowa",35 to 39 minutes,50,34
+19039,"Clarke County, Iowa",40 to 44 minutes,129,58
+19039,"Clarke County, Iowa",45 to 59 minutes,426,125
+19039,"Clarke County, Iowa",60 to 89 minutes,260,95
+19039,"Clarke County, Iowa",90 or more minutes,87,61
+19041,"Clay County, Iowa",Total,7854,288
+19041,"Clay County, Iowa",Less than 5 minutes,845,173
+19041,"Clay County, Iowa",5 to 9 minutes,2183,314
+19041,"Clay County, Iowa",10 to 14 minutes,1592,261
+19041,"Clay County, Iowa",15 to 19 minutes,928,195
+19041,"Clay County, Iowa",20 to 24 minutes,651,132
+19041,"Clay County, Iowa",25 to 29 minutes,314,111
+19041,"Clay County, Iowa",30 to 34 minutes,727,189
+19041,"Clay County, Iowa",35 to 39 minutes,102,58
+19041,"Clay County, Iowa",40 to 44 minutes,32,25
+19041,"Clay County, Iowa",45 to 59 minutes,354,149
+19041,"Clay County, Iowa",60 to 89 minutes,72,44
+19041,"Clay County, Iowa",90 or more minutes,54,34
+19043,"Clayton County, Iowa",Total,8191,215
+19043,"Clayton County, Iowa",Less than 5 minutes,909,120
+19043,"Clayton County, Iowa",5 to 9 minutes,1765,172
+19043,"Clayton County, Iowa",10 to 14 minutes,1169,139
+19043,"Clayton County, Iowa",15 to 19 minutes,1110,136
+19043,"Clayton County, Iowa",20 to 24 minutes,779,121
+19043,"Clayton County, Iowa",25 to 29 minutes,547,101
+19043,"Clayton County, Iowa",30 to 34 minutes,603,94
+19043,"Clayton County, Iowa",35 to 39 minutes,192,57
+19043,"Clayton County, Iowa",40 to 44 minutes,218,62
+19043,"Clayton County, Iowa",45 to 59 minutes,362,72
+19043,"Clayton County, Iowa",60 to 89 minutes,312,61
+19043,"Clayton County, Iowa",90 or more minutes,225,58
+19045,"Clinton County, Iowa",Total,21464,577
+19045,"Clinton County, Iowa",Less than 5 minutes,1330,234
+19045,"Clinton County, Iowa",5 to 9 minutes,4664,429
+19045,"Clinton County, Iowa",10 to 14 minutes,4321,350
+19045,"Clinton County, Iowa",15 to 19 minutes,3226,343
+19045,"Clinton County, Iowa",20 to 24 minutes,2152,270
+19045,"Clinton County, Iowa",25 to 29 minutes,918,147
+19045,"Clinton County, Iowa",30 to 34 minutes,1508,246
+19045,"Clinton County, Iowa",35 to 39 minutes,581,146
+19045,"Clinton County, Iowa",40 to 44 minutes,767,165
+19045,"Clinton County, Iowa",45 to 59 minutes,1236,252
+19045,"Clinton County, Iowa",60 to 89 minutes,365,102
+19045,"Clinton County, Iowa",90 or more minutes,396,101
+19047,"Crawford County, Iowa",Total,7666,360
+19047,"Crawford County, Iowa",Less than 5 minutes,1035,296
+19047,"Crawford County, Iowa",5 to 9 minutes,2247,378
+19047,"Crawford County, Iowa",10 to 14 minutes,1235,270
+19047,"Crawford County, Iowa",15 to 19 minutes,883,151
+19047,"Crawford County, Iowa",20 to 24 minutes,873,116
+19047,"Crawford County, Iowa",25 to 29 minutes,234,66
+19047,"Crawford County, Iowa",30 to 34 minutes,425,96
+19047,"Crawford County, Iowa",35 to 39 minutes,128,61
+19047,"Crawford County, Iowa",40 to 44 minutes,158,91
+19047,"Crawford County, Iowa",45 to 59 minutes,187,65
+19047,"Crawford County, Iowa",60 to 89 minutes,134,82
+19047,"Crawford County, Iowa",90 or more minutes,127,76
+19049,"Dallas County, Iowa",Total,40223,683
+19049,"Dallas County, Iowa",Less than 5 minutes,1942,300
+19049,"Dallas County, Iowa",5 to 9 minutes,5195,481
+19049,"Dallas County, Iowa",10 to 14 minutes,5606,548
+19049,"Dallas County, Iowa",15 to 19 minutes,7371,655
+19049,"Dallas County, Iowa",20 to 24 minutes,7253,551
+19049,"Dallas County, Iowa",25 to 29 minutes,3539,435
+19049,"Dallas County, Iowa",30 to 34 minutes,4637,417
+19049,"Dallas County, Iowa",35 to 39 minutes,1128,206
+19049,"Dallas County, Iowa",40 to 44 minutes,989,165
+19049,"Dallas County, Iowa",45 to 59 minutes,1145,237
+19049,"Dallas County, Iowa",60 to 89 minutes,705,246
+19049,"Dallas County, Iowa",90 or more minutes,713,242
+19051,"Davis County, Iowa",Total,3599,239
+19051,"Davis County, Iowa",Less than 5 minutes,384,112
+19051,"Davis County, Iowa",5 to 9 minutes,534,104
+19051,"Davis County, Iowa",10 to 14 minutes,449,104
+19051,"Davis County, Iowa",15 to 19 minutes,355,108
+19051,"Davis County, Iowa",20 to 24 minutes,390,100
+19051,"Davis County, Iowa",25 to 29 minutes,253,82
+19051,"Davis County, Iowa",30 to 34 minutes,523,147
+19051,"Davis County, Iowa",35 to 39 minutes,154,60
+19051,"Davis County, Iowa",40 to 44 minutes,70,39
+19051,"Davis County, Iowa",45 to 59 minutes,300,94
+19051,"Davis County, Iowa",60 to 89 minutes,103,45
+19051,"Davis County, Iowa",90 or more minutes,84,50
+19053,"Decatur County, Iowa",Total,3384,138
+19053,"Decatur County, Iowa",Less than 5 minutes,668,128
+19053,"Decatur County, Iowa",5 to 9 minutes,789,126
+19053,"Decatur County, Iowa",10 to 14 minutes,290,61
+19053,"Decatur County, Iowa",15 to 19 minutes,345,70
+19053,"Decatur County, Iowa",20 to 24 minutes,239,72
+19053,"Decatur County, Iowa",25 to 29 minutes,191,44
+19053,"Decatur County, Iowa",30 to 34 minutes,290,80
+19053,"Decatur County, Iowa",35 to 39 minutes,51,26
+19053,"Decatur County, Iowa",40 to 44 minutes,35,17
+19053,"Decatur County, Iowa",45 to 59 minutes,143,45
+19053,"Decatur County, Iowa",60 to 89 minutes,204,48
+19053,"Decatur County, Iowa",90 or more minutes,139,44
+19055,"Delaware County, Iowa",Total,8356,310
+19055,"Delaware County, Iowa",Less than 5 minutes,708,179
+19055,"Delaware County, Iowa",5 to 9 minutes,1611,240
+19055,"Delaware County, Iowa",10 to 14 minutes,1207,182
+19055,"Delaware County, Iowa",15 to 19 minutes,1210,189
+19055,"Delaware County, Iowa",20 to 24 minutes,1012,194
+19055,"Delaware County, Iowa",25 to 29 minutes,310,89
+19055,"Delaware County, Iowa",30 to 34 minutes,547,127
+19055,"Delaware County, Iowa",35 to 39 minutes,251,87
+19055,"Delaware County, Iowa",40 to 44 minutes,365,143
+19055,"Delaware County, Iowa",45 to 59 minutes,666,155
+19055,"Delaware County, Iowa",60 to 89 minutes,312,90
+19055,"Delaware County, Iowa",90 or more minutes,157,77
+19057,"Des Moines County, Iowa",Total,18256,546
+19057,"Des Moines County, Iowa",Less than 5 minutes,1304,233
+19057,"Des Moines County, Iowa",5 to 9 minutes,3938,347
+19057,"Des Moines County, Iowa",10 to 14 minutes,5077,462
+19057,"Des Moines County, Iowa",15 to 19 minutes,2929,317
+19057,"Des Moines County, Iowa",20 to 24 minutes,2040,227
+19057,"Des Moines County, Iowa",25 to 29 minutes,464,126
+19057,"Des Moines County, Iowa",30 to 34 minutes,1126,205
+19057,"Des Moines County, Iowa",35 to 39 minutes,174,89
+19057,"Des Moines County, Iowa",40 to 44 minutes,123,47
+19057,"Des Moines County, Iowa",45 to 59 minutes,505,141
+19057,"Des Moines County, Iowa",60 to 89 minutes,367,106
+19057,"Des Moines County, Iowa",90 or more minutes,209,77
+19059,"Dickinson County, Iowa",Total,8300,253
+19059,"Dickinson County, Iowa",Less than 5 minutes,764,156
+19059,"Dickinson County, Iowa",5 to 9 minutes,2004,239
+19059,"Dickinson County, Iowa",10 to 14 minutes,1627,200
+19059,"Dickinson County, Iowa",15 to 19 minutes,1443,191
+19059,"Dickinson County, Iowa",20 to 24 minutes,858,136
+19059,"Dickinson County, Iowa",25 to 29 minutes,292,88
+19059,"Dickinson County, Iowa",30 to 34 minutes,695,160
+19059,"Dickinson County, Iowa",35 to 39 minutes,112,49
+19059,"Dickinson County, Iowa",40 to 44 minutes,116,62
+19059,"Dickinson County, Iowa",45 to 59 minutes,207,71
+19059,"Dickinson County, Iowa",60 to 89 minutes,112,56
+19059,"Dickinson County, Iowa",90 or more minutes,70,30
+19061,"Dubuque County, Iowa",Total,48132,650
+19061,"Dubuque County, Iowa",Less than 5 minutes,2588,328
+19061,"Dubuque County, Iowa",5 to 9 minutes,9583,634
+19061,"Dubuque County, Iowa",10 to 14 minutes,12072,617
+19061,"Dubuque County, Iowa",15 to 19 minutes,9950,549
+19061,"Dubuque County, Iowa",20 to 24 minutes,6155,423
+19061,"Dubuque County, Iowa",25 to 29 minutes,1865,214
+19061,"Dubuque County, Iowa",30 to 34 minutes,2863,252
+19061,"Dubuque County, Iowa",35 to 39 minutes,556,118
+19061,"Dubuque County, Iowa",40 to 44 minutes,478,117
+19061,"Dubuque County, Iowa",45 to 59 minutes,668,157
+19061,"Dubuque County, Iowa",60 to 89 minutes,628,122
+19061,"Dubuque County, Iowa",90 or more minutes,726,128
+19063,"Emmet County, Iowa",Total,4500,229
+19063,"Emmet County, Iowa",Less than 5 minutes,537,101
+19063,"Emmet County, Iowa",5 to 9 minutes,1191,157
+19063,"Emmet County, Iowa",10 to 14 minutes,823,141
+19063,"Emmet County, Iowa",15 to 19 minutes,230,61
+19063,"Emmet County, Iowa",20 to 24 minutes,508,102
+19063,"Emmet County, Iowa",25 to 29 minutes,310,88
+19063,"Emmet County, Iowa",30 to 34 minutes,483,108
+19063,"Emmet County, Iowa",35 to 39 minutes,26,15
+19063,"Emmet County, Iowa",40 to 44 minutes,108,49
+19063,"Emmet County, Iowa",45 to 59 minutes,129,51
+19063,"Emmet County, Iowa",60 to 89 minutes,80,32
+19063,"Emmet County, Iowa",90 or more minutes,75,35
+19065,"Fayette County, Iowa",Total,8974,320
+19065,"Fayette County, Iowa",Less than 5 minutes,1192,182
+19065,"Fayette County, Iowa",5 to 9 minutes,2060,197
+19065,"Fayette County, Iowa",10 to 14 minutes,1389,190
+19065,"Fayette County, Iowa",15 to 19 minutes,953,140
+19065,"Fayette County, Iowa",20 to 24 minutes,938,122
+19065,"Fayette County, Iowa",25 to 29 minutes,391,84
+19065,"Fayette County, Iowa",30 to 34 minutes,550,107
+19065,"Fayette County, Iowa",35 to 39 minutes,306,77
+19065,"Fayette County, Iowa",40 to 44 minutes,187,62
+19065,"Fayette County, Iowa",45 to 59 minutes,554,110
+19065,"Fayette County, Iowa",60 to 89 minutes,318,76
+19065,"Fayette County, Iowa",90 or more minutes,136,39
+19067,"Floyd County, Iowa",Total,7286,283
+19067,"Floyd County, Iowa",Less than 5 minutes,543,126
+19067,"Floyd County, Iowa",5 to 9 minutes,1732,258
+19067,"Floyd County, Iowa",10 to 14 minutes,1376,214
+19067,"Floyd County, Iowa",15 to 19 minutes,921,171
+19067,"Floyd County, Iowa",20 to 24 minutes,740,143
+19067,"Floyd County, Iowa",25 to 29 minutes,500,132
+19067,"Floyd County, Iowa",30 to 34 minutes,555,132
+19067,"Floyd County, Iowa",35 to 39 minutes,252,111
+19067,"Floyd County, Iowa",40 to 44 minutes,113,65
+19067,"Floyd County, Iowa",45 to 59 minutes,324,89
+19067,"Floyd County, Iowa",60 to 89 minutes,104,52
+19067,"Floyd County, Iowa",90 or more minutes,126,70
+19069,"Franklin County, Iowa",Total,4606,200
+19069,"Franklin County, Iowa",Less than 5 minutes,799,121
+19069,"Franklin County, Iowa",5 to 9 minutes,952,162
+19069,"Franklin County, Iowa",10 to 14 minutes,650,133
+19069,"Franklin County, Iowa",15 to 19 minutes,695,134
+19069,"Franklin County, Iowa",20 to 24 minutes,405,99
+19069,"Franklin County, Iowa",25 to 29 minutes,264,83
+19069,"Franklin County, Iowa",30 to 34 minutes,224,64
+19069,"Franklin County, Iowa",35 to 39 minutes,53,29
+19069,"Franklin County, Iowa",40 to 44 minutes,164,51
+19069,"Franklin County, Iowa",45 to 59 minutes,224,67
+19069,"Franklin County, Iowa",60 to 89 minutes,133,66
+19069,"Franklin County, Iowa",90 or more minutes,43,20
+19071,"Fremont County, Iowa",Total,3179,133
+19071,"Fremont County, Iowa",Less than 5 minutes,266,42
+19071,"Fremont County, Iowa",5 to 9 minutes,472,78
+19071,"Fremont County, Iowa",10 to 14 minutes,405,72
+19071,"Fremont County, Iowa",15 to 19 minutes,356,65
+19071,"Fremont County, Iowa",20 to 24 minutes,375,65
+19071,"Fremont County, Iowa",25 to 29 minutes,198,50
+19071,"Fremont County, Iowa",30 to 34 minutes,262,59
+19071,"Fremont County, Iowa",35 to 39 minutes,98,27
+19071,"Fremont County, Iowa",40 to 44 minutes,101,36
+19071,"Fremont County, Iowa",45 to 59 minutes,333,72
+19071,"Fremont County, Iowa",60 to 89 minutes,264,70
+19071,"Fremont County, Iowa",90 or more minutes,49,27
+19073,"Greene County, Iowa",Total,4042,196
+19073,"Greene County, Iowa",Less than 5 minutes,728,141
+19073,"Greene County, Iowa",5 to 9 minutes,954,153
+19073,"Greene County, Iowa",10 to 14 minutes,399,95
+19073,"Greene County, Iowa",15 to 19 minutes,410,92
+19073,"Greene County, Iowa",20 to 24 minutes,348,67
+19073,"Greene County, Iowa",25 to 29 minutes,154,51
+19073,"Greene County, Iowa",30 to 34 minutes,323,74
+19073,"Greene County, Iowa",35 to 39 minutes,132,46
+19073,"Greene County, Iowa",40 to 44 minutes,91,45
+19073,"Greene County, Iowa",45 to 59 minutes,255,80
+19073,"Greene County, Iowa",60 to 89 minutes,166,48
+19073,"Greene County, Iowa",90 or more minutes,82,35
+19075,"Grundy County, Iowa",Total,5819,134
+19075,"Grundy County, Iowa",Less than 5 minutes,696,95
+19075,"Grundy County, Iowa",5 to 9 minutes,898,95
+19075,"Grundy County, Iowa",10 to 14 minutes,540,87
+19075,"Grundy County, Iowa",15 to 19 minutes,790,121
+19075,"Grundy County, Iowa",20 to 24 minutes,798,93
+19075,"Grundy County, Iowa",25 to 29 minutes,481,81
+19075,"Grundy County, Iowa",30 to 34 minutes,766,91
+19075,"Grundy County, Iowa",35 to 39 minutes,251,61
+19075,"Grundy County, Iowa",40 to 44 minutes,156,46
+19075,"Grundy County, Iowa",45 to 59 minutes,223,53
+19075,"Grundy County, Iowa",60 to 89 minutes,115,36
+19075,"Grundy County, Iowa",90 or more minutes,105,53
+19077,"Guthrie County, Iowa",Total,4914,150
+19077,"Guthrie County, Iowa",Less than 5 minutes,460,95
+19077,"Guthrie County, Iowa",5 to 9 minutes,639,86
+19077,"Guthrie County, Iowa",10 to 14 minutes,793,154
+19077,"Guthrie County, Iowa",15 to 19 minutes,508,83
+19077,"Guthrie County, Iowa",20 to 24 minutes,380,75
+19077,"Guthrie County, Iowa",25 to 29 minutes,235,64
+19077,"Guthrie County, Iowa",30 to 34 minutes,464,124
+19077,"Guthrie County, Iowa",35 to 39 minutes,128,38
+19077,"Guthrie County, Iowa",40 to 44 minutes,155,49
+19077,"Guthrie County, Iowa",45 to 59 minutes,590,93
+19077,"Guthrie County, Iowa",60 to 89 minutes,460,78
+19077,"Guthrie County, Iowa",90 or more minutes,102,39
+19079,"Hamilton County, Iowa",Total,7091,250
+19079,"Hamilton County, Iowa",Less than 5 minutes,854,222
+19079,"Hamilton County, Iowa",5 to 9 minutes,1932,246
+19079,"Hamilton County, Iowa",10 to 14 minutes,1015,202
+19079,"Hamilton County, Iowa",15 to 19 minutes,578,107
+19079,"Hamilton County, Iowa",20 to 24 minutes,605,126
+19079,"Hamilton County, Iowa",25 to 29 minutes,456,93
+19079,"Hamilton County, Iowa",30 to 34 minutes,693,127
+19079,"Hamilton County, Iowa",35 to 39 minutes,293,110
+19079,"Hamilton County, Iowa",40 to 44 minutes,165,73
+19079,"Hamilton County, Iowa",45 to 59 minutes,293,81
+19079,"Hamilton County, Iowa",60 to 89 minutes,135,57
+19079,"Hamilton County, Iowa",90 or more minutes,72,40
+19081,"Hancock County, Iowa",Total,5128,161
+19081,"Hancock County, Iowa",Less than 5 minutes,773,127
+19081,"Hancock County, Iowa",5 to 9 minutes,966,141
+19081,"Hancock County, Iowa",10 to 14 minutes,701,124
+19081,"Hancock County, Iowa",15 to 19 minutes,612,116
+19081,"Hancock County, Iowa",20 to 24 minutes,495,90
+19081,"Hancock County, Iowa",25 to 29 minutes,373,77
+19081,"Hancock County, Iowa",30 to 34 minutes,485,86
+19081,"Hancock County, Iowa",35 to 39 minutes,145,58
+19081,"Hancock County, Iowa",40 to 44 minutes,119,51
+19081,"Hancock County, Iowa",45 to 59 minutes,241,60
+19081,"Hancock County, Iowa",60 to 89 minutes,121,45
+19081,"Hancock County, Iowa",90 or more minutes,97,47
+19083,"Hardin County, Iowa",Total,7986,240
+19083,"Hardin County, Iowa",Less than 5 minutes,1135,164
+19083,"Hardin County, Iowa",5 to 9 minutes,1936,195
+19083,"Hardin County, Iowa",10 to 14 minutes,1165,169
+19083,"Hardin County, Iowa",15 to 19 minutes,927,137
+19083,"Hardin County, Iowa",20 to 24 minutes,888,155
+19083,"Hardin County, Iowa",25 to 29 minutes,299,77
+19083,"Hardin County, Iowa",30 to 34 minutes,629,134
+19083,"Hardin County, Iowa",35 to 39 minutes,120,37
+19083,"Hardin County, Iowa",40 to 44 minutes,209,64
+19083,"Hardin County, Iowa",45 to 59 minutes,334,83
+19083,"Hardin County, Iowa",60 to 89 minutes,250,63
+19083,"Hardin County, Iowa",90 or more minutes,94,45
+19085,"Harrison County, Iowa",Total,6838,169
+19085,"Harrison County, Iowa",Less than 5 minutes,734,90
+19085,"Harrison County, Iowa",5 to 9 minutes,989,137
+19085,"Harrison County, Iowa",10 to 14 minutes,822,122
+19085,"Harrison County, Iowa",15 to 19 minutes,696,123
+19085,"Harrison County, Iowa",20 to 24 minutes,398,83
+19085,"Harrison County, Iowa",25 to 29 minutes,375,74
+19085,"Harrison County, Iowa",30 to 34 minutes,721,98
+19085,"Harrison County, Iowa",35 to 39 minutes,270,67
+19085,"Harrison County, Iowa",40 to 44 minutes,311,66
+19085,"Harrison County, Iowa",45 to 59 minutes,927,126
+19085,"Harrison County, Iowa",60 to 89 minutes,448,80
+19085,"Harrison County, Iowa",90 or more minutes,147,57
+19087,"Henry County, Iowa",Total,8489,256
+19087,"Henry County, Iowa",Less than 5 minutes,721,121
+19087,"Henry County, Iowa",5 to 9 minutes,1707,200
+19087,"Henry County, Iowa",10 to 14 minutes,1563,225
+19087,"Henry County, Iowa",15 to 19 minutes,1266,192
+19087,"Henry County, Iowa",20 to 24 minutes,778,116
+19087,"Henry County, Iowa",25 to 29 minutes,481,105
+19087,"Henry County, Iowa",30 to 34 minutes,704,169
+19087,"Henry County, Iowa",35 to 39 minutes,226,85
+19087,"Henry County, Iowa",40 to 44 minutes,160,58
+19087,"Henry County, Iowa",45 to 59 minutes,430,104
+19087,"Henry County, Iowa",60 to 89 minutes,311,82
+19087,"Henry County, Iowa",90 or more minutes,142,53
+19089,"Howard County, Iowa",Total,4226,165
+19089,"Howard County, Iowa",Less than 5 minutes,727,131
+19089,"Howard County, Iowa",5 to 9 minutes,1081,149
+19089,"Howard County, Iowa",10 to 14 minutes,452,120
+19089,"Howard County, Iowa",15 to 19 minutes,260,78
+19089,"Howard County, Iowa",20 to 24 minutes,454,103
+19089,"Howard County, Iowa",25 to 29 minutes,291,86
+19089,"Howard County, Iowa",30 to 34 minutes,298,77
+19089,"Howard County, Iowa",35 to 39 minutes,92,44
+19089,"Howard County, Iowa",40 to 44 minutes,150,60
+19089,"Howard County, Iowa",45 to 59 minutes,188,67
+19089,"Howard County, Iowa",60 to 89 minutes,189,60
+19089,"Howard County, Iowa",90 or more minutes,44,24
+19091,"Humboldt County, Iowa",Total,4363,160
+19091,"Humboldt County, Iowa",Less than 5 minutes,691,144
+19091,"Humboldt County, Iowa",5 to 9 minutes,934,128
+19091,"Humboldt County, Iowa",10 to 14 minutes,548,97
+19091,"Humboldt County, Iowa",15 to 19 minutes,472,93
+19091,"Humboldt County, Iowa",20 to 24 minutes,509,97
+19091,"Humboldt County, Iowa",25 to 29 minutes,272,64
+19091,"Humboldt County, Iowa",30 to 34 minutes,511,95
+19091,"Humboldt County, Iowa",35 to 39 minutes,41,23
+19091,"Humboldt County, Iowa",40 to 44 minutes,120,57
+19091,"Humboldt County, Iowa",45 to 59 minutes,109,38
+19091,"Humboldt County, Iowa",60 to 89 minutes,63,27
+19091,"Humboldt County, Iowa",90 or more minutes,93,38
+19093,"Ida County, Iowa",Total,3277,108
+19093,"Ida County, Iowa",Less than 5 minutes,492,98
+19093,"Ida County, Iowa",5 to 9 minutes,902,108
+19093,"Ida County, Iowa",10 to 14 minutes,586,102
+19093,"Ida County, Iowa",15 to 19 minutes,362,77
+19093,"Ida County, Iowa",20 to 24 minutes,281,61
+19093,"Ida County, Iowa",25 to 29 minutes,125,37
+19093,"Ida County, Iowa",30 to 34 minutes,200,48
+19093,"Ida County, Iowa",35 to 39 minutes,65,37
+19093,"Ida County, Iowa",40 to 44 minutes,56,23
+19093,"Ida County, Iowa",45 to 59 minutes,43,18
+19093,"Ida County, Iowa",60 to 89 minutes,102,32
+19093,"Ida County, Iowa",90 or more minutes,63,25
+19095,"Iowa County, Iowa",Total,8060,243
+19095,"Iowa County, Iowa",Less than 5 minutes,709,169
+19095,"Iowa County, Iowa",5 to 9 minutes,1599,238
+19095,"Iowa County, Iowa",10 to 14 minutes,926,150
+19095,"Iowa County, Iowa",15 to 19 minutes,1005,203
+19095,"Iowa County, Iowa",20 to 24 minutes,820,147
+19095,"Iowa County, Iowa",25 to 29 minutes,392,103
+19095,"Iowa County, Iowa",30 to 34 minutes,881,166
+19095,"Iowa County, Iowa",35 to 39 minutes,465,132
+19095,"Iowa County, Iowa",40 to 44 minutes,434,103
+19095,"Iowa County, Iowa",45 to 59 minutes,624,116
+19095,"Iowa County, Iowa",60 to 89 minutes,154,46
+19095,"Iowa County, Iowa",90 or more minutes,51,35
+19097,"Jackson County, Iowa",Total,8802,242
+19097,"Jackson County, Iowa",Less than 5 minutes,1006,131
+19097,"Jackson County, Iowa",5 to 9 minutes,1579,169
+19097,"Jackson County, Iowa",10 to 14 minutes,979,157
+19097,"Jackson County, Iowa",15 to 19 minutes,781,126
+19097,"Jackson County, Iowa",20 to 24 minutes,584,92
+19097,"Jackson County, Iowa",25 to 29 minutes,439,89
+19097,"Jackson County, Iowa",30 to 34 minutes,1331,152
+19097,"Jackson County, Iowa",35 to 39 minutes,302,83
+19097,"Jackson County, Iowa",40 to 44 minutes,443,115
+19097,"Jackson County, Iowa",45 to 59 minutes,912,139
+19097,"Jackson County, Iowa",60 to 89 minutes,295,71
+19097,"Jackson County, Iowa",90 or more minutes,151,61
+19099,"Jasper County, Iowa",Total,16153,409
+19099,"Jasper County, Iowa",Less than 5 minutes,1326,250
+19099,"Jasper County, Iowa",5 to 9 minutes,2815,292
+19099,"Jasper County, Iowa",10 to 14 minutes,2121,280
+19099,"Jasper County, Iowa",15 to 19 minutes,1646,202
+19099,"Jasper County, Iowa",20 to 24 minutes,1626,228
+19099,"Jasper County, Iowa",25 to 29 minutes,936,151
+19099,"Jasper County, Iowa",30 to 34 minutes,1597,177
+19099,"Jasper County, Iowa",35 to 39 minutes,782,170
+19099,"Jasper County, Iowa",40 to 44 minutes,837,185
+19099,"Jasper County, Iowa",45 to 59 minutes,1835,322
+19099,"Jasper County, Iowa",60 to 89 minutes,525,128
+19099,"Jasper County, Iowa",90 or more minutes,107,51
+19101,"Jefferson County, Iowa",Total,7016,588
+19101,"Jefferson County, Iowa",Less than 5 minutes,869,347
+19101,"Jefferson County, Iowa",5 to 9 minutes,1756,302
+19101,"Jefferson County, Iowa",10 to 14 minutes,1617,354
+19101,"Jefferson County, Iowa",15 to 19 minutes,954,185
+19101,"Jefferson County, Iowa",20 to 24 minutes,640,178
+19101,"Jefferson County, Iowa",25 to 29 minutes,263,172
+19101,"Jefferson County, Iowa",30 to 34 minutes,452,115
+19101,"Jefferson County, Iowa",35 to 39 minutes,50,30
+19101,"Jefferson County, Iowa",40 to 44 minutes,89,44
+19101,"Jefferson County, Iowa",45 to 59 minutes,203,109
+19101,"Jefferson County, Iowa",60 to 89 minutes,76,48
+19101,"Jefferson County, Iowa",90 or more minutes,47,28
+19103,"Johnson County, Iowa",Total,75466,1111
+19103,"Johnson County, Iowa",Less than 5 minutes,2718,405
+19103,"Johnson County, Iowa",5 to 9 minutes,9684,691
+19103,"Johnson County, Iowa",10 to 14 minutes,15325,992
+19103,"Johnson County, Iowa",15 to 19 minutes,16651,923
+19103,"Johnson County, Iowa",20 to 24 minutes,13108,807
+19103,"Johnson County, Iowa",25 to 29 minutes,4665,518
+19103,"Johnson County, Iowa",30 to 34 minutes,7567,706
+19103,"Johnson County, Iowa",35 to 39 minutes,1269,268
+19103,"Johnson County, Iowa",40 to 44 minutes,1125,205
+19103,"Johnson County, Iowa",45 to 59 minutes,1635,297
+19103,"Johnson County, Iowa",60 to 89 minutes,1033,260
+19103,"Johnson County, Iowa",90 or more minutes,686,219
+19105,"Jones County, Iowa",Total,8867,314
+19105,"Jones County, Iowa",Less than 5 minutes,752,164
+19105,"Jones County, Iowa",5 to 9 minutes,1854,270
+19105,"Jones County, Iowa",10 to 14 minutes,1075,207
+19105,"Jones County, Iowa",15 to 19 minutes,743,126
+19105,"Jones County, Iowa",20 to 24 minutes,594,131
+19105,"Jones County, Iowa",25 to 29 minutes,353,89
+19105,"Jones County, Iowa",30 to 34 minutes,886,154
+19105,"Jones County, Iowa",35 to 39 minutes,605,149
+19105,"Jones County, Iowa",40 to 44 minutes,432,103
+19105,"Jones County, Iowa",45 to 59 minutes,925,165
+19105,"Jones County, Iowa",60 to 89 minutes,399,124
+19105,"Jones County, Iowa",90 or more minutes,249,110
+19107,"Keokuk County, Iowa",Total,4506,164
+19107,"Keokuk County, Iowa",Less than 5 minutes,617,118
+19107,"Keokuk County, Iowa",5 to 9 minutes,646,93
+19107,"Keokuk County, Iowa",10 to 14 minutes,390,90
+19107,"Keokuk County, Iowa",15 to 19 minutes,477,100
+19107,"Keokuk County, Iowa",20 to 24 minutes,523,86
+19107,"Keokuk County, Iowa",25 to 29 minutes,294,63
+19107,"Keokuk County, Iowa",30 to 34 minutes,551,74
+19107,"Keokuk County, Iowa",35 to 39 minutes,202,66
+19107,"Keokuk County, Iowa",40 to 44 minutes,158,43
+19107,"Keokuk County, Iowa",45 to 59 minutes,349,59
+19107,"Keokuk County, Iowa",60 to 89 minutes,212,50
+19107,"Keokuk County, Iowa",90 or more minutes,87,34
+19109,"Kossuth County, Iowa",Total,7176,167
+19109,"Kossuth County, Iowa",Less than 5 minutes,1124,170
+19109,"Kossuth County, Iowa",5 to 9 minutes,2041,206
+19109,"Kossuth County, Iowa",10 to 14 minutes,1102,137
+19109,"Kossuth County, Iowa",15 to 19 minutes,898,107
+19109,"Kossuth County, Iowa",20 to 24 minutes,718,96
+19109,"Kossuth County, Iowa",25 to 29 minutes,270,55
+19109,"Kossuth County, Iowa",30 to 34 minutes,439,91
+19109,"Kossuth County, Iowa",35 to 39 minutes,96,39
+19109,"Kossuth County, Iowa",40 to 44 minutes,94,35
+19109,"Kossuth County, Iowa",45 to 59 minutes,263,71
+19109,"Kossuth County, Iowa",60 to 89 minutes,81,30
+19109,"Kossuth County, Iowa",90 or more minutes,50,22
+19111,"Lee County, Iowa",Total,15630,454
+19111,"Lee County, Iowa",Less than 5 minutes,1442,222
+19111,"Lee County, Iowa",5 to 9 minutes,3284,313
+19111,"Lee County, Iowa",10 to 14 minutes,2930,298
+19111,"Lee County, Iowa",15 to 19 minutes,2429,300
+19111,"Lee County, Iowa",20 to 24 minutes,1675,223
+19111,"Lee County, Iowa",25 to 29 minutes,809,158
+19111,"Lee County, Iowa",30 to 34 minutes,1500,227
+19111,"Lee County, Iowa",35 to 39 minutes,217,81
+19111,"Lee County, Iowa",40 to 44 minutes,325,121
+19111,"Lee County, Iowa",45 to 59 minutes,612,129
+19111,"Lee County, Iowa",60 to 89 minutes,230,83
+19111,"Lee County, Iowa",90 or more minutes,177,59
+19113,"Linn County, Iowa",Total,110174,1284
+19113,"Linn County, Iowa",Less than 5 minutes,3692,454
+19113,"Linn County, Iowa",5 to 9 minutes,14952,718
+19113,"Linn County, Iowa",10 to 14 minutes,23670,1007
+19113,"Linn County, Iowa",15 to 19 minutes,24836,1060
+19113,"Linn County, Iowa",20 to 24 minutes,17576,1075
+19113,"Linn County, Iowa",25 to 29 minutes,6533,568
+19113,"Linn County, Iowa",30 to 34 minutes,8472,627
+19113,"Linn County, Iowa",35 to 39 minutes,2229,323
+19113,"Linn County, Iowa",40 to 44 minutes,2152,334
+19113,"Linn County, Iowa",45 to 59 minutes,2732,323
+19113,"Linn County, Iowa",60 to 89 minutes,2095,325
+19113,"Linn County, Iowa",90 or more minutes,1235,222
+19115,"Louisa County, Iowa",Total,5113,193
+19115,"Louisa County, Iowa",Less than 5 minutes,448,79
+19115,"Louisa County, Iowa",5 to 9 minutes,780,116
+19115,"Louisa County, Iowa",10 to 14 minutes,631,118
+19115,"Louisa County, Iowa",15 to 19 minutes,421,86
+19115,"Louisa County, Iowa",20 to 24 minutes,425,79
+19115,"Louisa County, Iowa",25 to 29 minutes,384,88
+19115,"Louisa County, Iowa",30 to 34 minutes,797,128
+19115,"Louisa County, Iowa",35 to 39 minutes,280,88
+19115,"Louisa County, Iowa",40 to 44 minutes,272,78
+19115,"Louisa County, Iowa",45 to 59 minutes,398,100
+19115,"Louisa County, Iowa",60 to 89 minutes,243,68
+19115,"Louisa County, Iowa",90 or more minutes,34,17
+19117,"Lucas County, Iowa",Total,3901,218
+19117,"Lucas County, Iowa",Less than 5 minutes,447,100
+19117,"Lucas County, Iowa",5 to 9 minutes,1109,157
+19117,"Lucas County, Iowa",10 to 14 minutes,667,156
+19117,"Lucas County, Iowa",15 to 19 minutes,453,92
+19117,"Lucas County, Iowa",20 to 24 minutes,222,69
+19117,"Lucas County, Iowa",25 to 29 minutes,95,34
+19117,"Lucas County, Iowa",30 to 34 minutes,179,72
+19117,"Lucas County, Iowa",35 to 39 minutes,37,33
+19117,"Lucas County, Iowa",40 to 44 minutes,39,23
+19117,"Lucas County, Iowa",45 to 59 minutes,161,52
+19117,"Lucas County, Iowa",60 to 89 minutes,408,89
+19117,"Lucas County, Iowa",90 or more minutes,84,44
+19119,"Lyon County, Iowa",Total,5479,153
+19119,"Lyon County, Iowa",Less than 5 minutes,1095,122
+19119,"Lyon County, Iowa",5 to 9 minutes,1007,111
+19119,"Lyon County, Iowa",10 to 14 minutes,816,104
+19119,"Lyon County, Iowa",15 to 19 minutes,563,75
+19119,"Lyon County, Iowa",20 to 24 minutes,542,91
+19119,"Lyon County, Iowa",25 to 29 minutes,235,61
+19119,"Lyon County, Iowa",30 to 34 minutes,540,129
+19119,"Lyon County, Iowa",35 to 39 minutes,138,36
+19119,"Lyon County, Iowa",40 to 44 minutes,193,74
+19119,"Lyon County, Iowa",45 to 59 minutes,250,62
+19119,"Lyon County, Iowa",60 to 89 minutes,73,25
+19119,"Lyon County, Iowa",90 or more minutes,27,14
+19121,"Madison County, Iowa",Total,7297,295
+19121,"Madison County, Iowa",Less than 5 minutes,670,181
+19121,"Madison County, Iowa",5 to 9 minutes,805,173
+19121,"Madison County, Iowa",10 to 14 minutes,432,117
+19121,"Madison County, Iowa",15 to 19 minutes,686,163
+19121,"Madison County, Iowa",20 to 24 minutes,514,106
+19121,"Madison County, Iowa",25 to 29 minutes,530,113
+19121,"Madison County, Iowa",30 to 34 minutes,1184,174
+19121,"Madison County, Iowa",35 to 39 minutes,600,163
+19121,"Madison County, Iowa",40 to 44 minutes,688,138
+19121,"Madison County, Iowa",45 to 59 minutes,797,183
+19121,"Madison County, Iowa",60 to 89 minutes,326,103
+19121,"Madison County, Iowa",90 or more minutes,65,57
+19123,"Mahaska County, Iowa",Total,10317,339
+19123,"Mahaska County, Iowa",Less than 5 minutes,1008,181
+19123,"Mahaska County, Iowa",5 to 9 minutes,2121,273
+19123,"Mahaska County, Iowa",10 to 14 minutes,1634,198
+19123,"Mahaska County, Iowa",15 to 19 minutes,1639,236
+19123,"Mahaska County, Iowa",20 to 24 minutes,1334,190
+19123,"Mahaska County, Iowa",25 to 29 minutes,608,128
+19123,"Mahaska County, Iowa",30 to 34 minutes,796,141
+19123,"Mahaska County, Iowa",35 to 39 minutes,171,71
+19123,"Mahaska County, Iowa",40 to 44 minutes,152,65
+19123,"Mahaska County, Iowa",45 to 59 minutes,396,110
+19123,"Mahaska County, Iowa",60 to 89 minutes,311,76
+19123,"Mahaska County, Iowa",90 or more minutes,147,68
+19125,"Marion County, Iowa",Total,15849,418
+19125,"Marion County, Iowa",Less than 5 minutes,1578,266
+19125,"Marion County, Iowa",5 to 9 minutes,3961,356
+19125,"Marion County, Iowa",10 to 14 minutes,2571,330
+19125,"Marion County, Iowa",15 to 19 minutes,1606,234
+19125,"Marion County, Iowa",20 to 24 minutes,1495,214
+19125,"Marion County, Iowa",25 to 29 minutes,567,155
+19125,"Marion County, Iowa",30 to 34 minutes,1066,209
+19125,"Marion County, Iowa",35 to 39 minutes,262,94
+19125,"Marion County, Iowa",40 to 44 minutes,419,105
+19125,"Marion County, Iowa",45 to 59 minutes,1215,216
+19125,"Marion County, Iowa",60 to 89 minutes,952,188
+19125,"Marion County, Iowa",90 or more minutes,157,48
+19127,"Marshall County, Iowa",Total,18269,513
+19127,"Marshall County, Iowa",Less than 5 minutes,884,172
+19127,"Marshall County, Iowa",5 to 9 minutes,4472,431
+19127,"Marshall County, Iowa",10 to 14 minutes,4737,391
+19127,"Marshall County, Iowa",15 to 19 minutes,2538,263
+19127,"Marshall County, Iowa",20 to 24 minutes,1862,215
+19127,"Marshall County, Iowa",25 to 29 minutes,546,139
+19127,"Marshall County, Iowa",30 to 34 minutes,939,146
+19127,"Marshall County, Iowa",35 to 39 minutes,210,75
+19127,"Marshall County, Iowa",40 to 44 minutes,328,93
+19127,"Marshall County, Iowa",45 to 59 minutes,923,159
+19127,"Marshall County, Iowa",60 to 89 minutes,588,129
+19127,"Marshall County, Iowa",90 or more minutes,242,93
+19129,"Mills County, Iowa",Total,6881,295
+19129,"Mills County, Iowa",Less than 5 minutes,413,116
+19129,"Mills County, Iowa",5 to 9 minutes,915,188
+19129,"Mills County, Iowa",10 to 14 minutes,672,154
+19129,"Mills County, Iowa",15 to 19 minutes,1130,214
+19129,"Mills County, Iowa",20 to 24 minutes,573,104
+19129,"Mills County, Iowa",25 to 29 minutes,395,102
+19129,"Mills County, Iowa",30 to 34 minutes,1060,150
+19129,"Mills County, Iowa",35 to 39 minutes,424,99
+19129,"Mills County, Iowa",40 to 44 minutes,332,85
+19129,"Mills County, Iowa",45 to 59 minutes,654,149
+19129,"Mills County, Iowa",60 to 89 minutes,247,77
+19129,"Mills County, Iowa",90 or more minutes,66,36
+19131,"Mitchell County, Iowa",Total,4653,187
+19131,"Mitchell County, Iowa",Less than 5 minutes,711,133
+19131,"Mitchell County, Iowa",5 to 9 minutes,1199,166
+19131,"Mitchell County, Iowa",10 to 14 minutes,552,119
+19131,"Mitchell County, Iowa",15 to 19 minutes,562,118
+19131,"Mitchell County, Iowa",20 to 24 minutes,468,132
+19131,"Mitchell County, Iowa",25 to 29 minutes,227,103
+19131,"Mitchell County, Iowa",30 to 34 minutes,246,70
+19131,"Mitchell County, Iowa",35 to 39 minutes,106,41
+19131,"Mitchell County, Iowa",40 to 44 minutes,165,55
+19131,"Mitchell County, Iowa",45 to 59 minutes,288,102
+19131,"Mitchell County, Iowa",60 to 89 minutes,105,35
+19131,"Mitchell County, Iowa",90 or more minutes,24,17
+19133,"Monona County, Iowa",Total,3966,152
+19133,"Monona County, Iowa",Less than 5 minutes,561,120
+19133,"Monona County, Iowa",5 to 9 minutes,852,114
+19133,"Monona County, Iowa",10 to 14 minutes,473,79
+19133,"Monona County, Iowa",15 to 19 minutes,245,62
+19133,"Monona County, Iowa",20 to 24 minutes,301,69
+19133,"Monona County, Iowa",25 to 29 minutes,307,119
+19133,"Monona County, Iowa",30 to 34 minutes,310,70
+19133,"Monona County, Iowa",35 to 39 minutes,151,72
+19133,"Monona County, Iowa",40 to 44 minutes,183,57
+19133,"Monona County, Iowa",45 to 59 minutes,239,57
+19133,"Monona County, Iowa",60 to 89 minutes,292,82
+19133,"Monona County, Iowa",90 or more minutes,52,20
+19135,"Monroe County, Iowa",Total,3400,205
+19135,"Monroe County, Iowa",Less than 5 minutes,471,136
+19135,"Monroe County, Iowa",5 to 9 minutes,692,169
+19135,"Monroe County, Iowa",10 to 14 minutes,395,111
+19135,"Monroe County, Iowa",15 to 19 minutes,276,92
+19135,"Monroe County, Iowa",20 to 24 minutes,406,106
+19135,"Monroe County, Iowa",25 to 29 minutes,130,64
+19135,"Monroe County, Iowa",30 to 34 minutes,398,107
+19135,"Monroe County, Iowa",35 to 39 minutes,83,42
+19135,"Monroe County, Iowa",40 to 44 minutes,64,34
+19135,"Monroe County, Iowa",45 to 59 minutes,288,104
+19135,"Monroe County, Iowa",60 to 89 minutes,98,47
+19135,"Monroe County, Iowa",90 or more minutes,99,49
+19137,"Montgomery County, Iowa",Total,4348,231
+19137,"Montgomery County, Iowa",Less than 5 minutes,688,112
+19137,"Montgomery County, Iowa",5 to 9 minutes,982,170
+19137,"Montgomery County, Iowa",10 to 14 minutes,588,125
+19137,"Montgomery County, Iowa",15 to 19 minutes,481,94
+19137,"Montgomery County, Iowa",20 to 24 minutes,448,85
+19137,"Montgomery County, Iowa",25 to 29 minutes,198,72
+19137,"Montgomery County, Iowa",30 to 34 minutes,281,82
+19137,"Montgomery County, Iowa",35 to 39 minutes,40,29
+19137,"Montgomery County, Iowa",40 to 44 minutes,25,16
+19137,"Montgomery County, Iowa",45 to 59 minutes,262,85
+19137,"Montgomery County, Iowa",60 to 89 minutes,254,61
+19137,"Montgomery County, Iowa",90 or more minutes,101,47
+19139,"Muscatine County, Iowa",Total,20115,481
+19139,"Muscatine County, Iowa",Less than 5 minutes,1017,219
+19139,"Muscatine County, Iowa",5 to 9 minutes,4794,428
+19139,"Muscatine County, Iowa",10 to 14 minutes,4705,444
+19139,"Muscatine County, Iowa",15 to 19 minutes,3251,398
+19139,"Muscatine County, Iowa",20 to 24 minutes,1846,241
+19139,"Muscatine County, Iowa",25 to 29 minutes,910,165
+19139,"Muscatine County, Iowa",30 to 34 minutes,1305,184
+19139,"Muscatine County, Iowa",35 to 39 minutes,383,136
+19139,"Muscatine County, Iowa",40 to 44 minutes,580,142
+19139,"Muscatine County, Iowa",45 to 59 minutes,821,159
+19139,"Muscatine County, Iowa",60 to 89 minutes,338,111
+19139,"Muscatine County, Iowa",90 or more minutes,165,71
+19141,"O'Brien County, Iowa",Total,6676,219
+19141,"O'Brien County, Iowa",Less than 5 minutes,1144,178
+19141,"O'Brien County, Iowa",5 to 9 minutes,1906,233
+19141,"O'Brien County, Iowa",10 to 14 minutes,803,131
+19141,"O'Brien County, Iowa",15 to 19 minutes,728,157
+19141,"O'Brien County, Iowa",20 to 24 minutes,497,110
+19141,"O'Brien County, Iowa",25 to 29 minutes,378,126
+19141,"O'Brien County, Iowa",30 to 34 minutes,572,111
+19141,"O'Brien County, Iowa",35 to 39 minutes,118,40
+19141,"O'Brien County, Iowa",40 to 44 minutes,77,30
+19141,"O'Brien County, Iowa",45 to 59 minutes,281,89
+19141,"O'Brien County, Iowa",60 to 89 minutes,101,36
+19141,"O'Brien County, Iowa",90 or more minutes,71,30
+19143,"Osceola County, Iowa",Total,3068,128
+19143,"Osceola County, Iowa",Less than 5 minutes,449,100
+19143,"Osceola County, Iowa",5 to 9 minutes,746,98
+19143,"Osceola County, Iowa",10 to 14 minutes,293,79
+19143,"Osceola County, Iowa",15 to 19 minutes,354,80
+19143,"Osceola County, Iowa",20 to 24 minutes,492,113
+19143,"Osceola County, Iowa",25 to 29 minutes,177,47
+19143,"Osceola County, Iowa",30 to 34 minutes,247,65
+19143,"Osceola County, Iowa",35 to 39 minutes,52,32
+19143,"Osceola County, Iowa",40 to 44 minutes,95,59
+19143,"Osceola County, Iowa",45 to 59 minutes,60,28
+19143,"Osceola County, Iowa",60 to 89 minutes,46,26
+19143,"Osceola County, Iowa",90 or more minutes,57,31
+19145,"Page County, Iowa",Total,6821,368
+19145,"Page County, Iowa",Less than 5 minutes,1018,166
+19145,"Page County, Iowa",5 to 9 minutes,2309,299
+19145,"Page County, Iowa",10 to 14 minutes,1068,164
+19145,"Page County, Iowa",15 to 19 minutes,572,99
+19145,"Page County, Iowa",20 to 24 minutes,627,118
+19145,"Page County, Iowa",25 to 29 minutes,338,92
+19145,"Page County, Iowa",30 to 34 minutes,412,104
+19145,"Page County, Iowa",35 to 39 minutes,74,31
+19145,"Page County, Iowa",40 to 44 minutes,70,46
+19145,"Page County, Iowa",45 to 59 minutes,134,51
+19145,"Page County, Iowa",60 to 89 minutes,127,48
+19145,"Page County, Iowa",90 or more minutes,72,44
+19147,"Palo Alto County, Iowa",Total,4527,171
+19147,"Palo Alto County, Iowa",Less than 5 minutes,827,140
+19147,"Palo Alto County, Iowa",5 to 9 minutes,1158,141
+19147,"Palo Alto County, Iowa",10 to 14 minutes,490,105
+19147,"Palo Alto County, Iowa",15 to 19 minutes,610,94
+19147,"Palo Alto County, Iowa",20 to 24 minutes,551,86
+19147,"Palo Alto County, Iowa",25 to 29 minutes,118,37
+19147,"Palo Alto County, Iowa",30 to 34 minutes,395,104
+19147,"Palo Alto County, Iowa",35 to 39 minutes,114,53
+19147,"Palo Alto County, Iowa",40 to 44 minutes,78,34
+19147,"Palo Alto County, Iowa",45 to 59 minutes,82,38
+19147,"Palo Alto County, Iowa",60 to 89 minutes,72,35
+19147,"Palo Alto County, Iowa",90 or more minutes,32,21
+19149,"Plymouth County, Iowa",Total,11955,372
+19149,"Plymouth County, Iowa",Less than 5 minutes,1272,191
+19149,"Plymouth County, Iowa",5 to 9 minutes,3004,258
+19149,"Plymouth County, Iowa",10 to 14 minutes,1781,216
+19149,"Plymouth County, Iowa",15 to 19 minutes,1375,178
+19149,"Plymouth County, Iowa",20 to 24 minutes,1202,166
+19149,"Plymouth County, Iowa",25 to 29 minutes,585,99
+19149,"Plymouth County, Iowa",30 to 34 minutes,1187,141
+19149,"Plymouth County, Iowa",35 to 39 minutes,461,124
+19149,"Plymouth County, Iowa",40 to 44 minutes,334,97
+19149,"Plymouth County, Iowa",45 to 59 minutes,439,102
+19149,"Plymouth County, Iowa",60 to 89 minutes,192,80
+19149,"Plymouth County, Iowa",90 or more minutes,123,49
+19151,"Pocahontas County, Iowa",Total,3127,113
+19151,"Pocahontas County, Iowa",Less than 5 minutes,621,85
+19151,"Pocahontas County, Iowa",5 to 9 minutes,704,115
+19151,"Pocahontas County, Iowa",10 to 14 minutes,407,73
+19151,"Pocahontas County, Iowa",15 to 19 minutes,346,69
+19151,"Pocahontas County, Iowa",20 to 24 minutes,270,57
+19151,"Pocahontas County, Iowa",25 to 29 minutes,78,28
+19151,"Pocahontas County, Iowa",30 to 34 minutes,252,54
+19151,"Pocahontas County, Iowa",35 to 39 minutes,71,29
+19151,"Pocahontas County, Iowa",40 to 44 minutes,51,32
+19151,"Pocahontas County, Iowa",45 to 59 minutes,176,57
+19151,"Pocahontas County, Iowa",60 to 89 minutes,109,33
+19151,"Pocahontas County, Iowa",90 or more minutes,42,20
+19153,"Polk County, Iowa",Total,231506,1830
+19153,"Polk County, Iowa",Less than 5 minutes,7221,717
+19153,"Polk County, Iowa",5 to 9 minutes,26776,1104
+19153,"Polk County, Iowa",10 to 14 minutes,42337,1637
+19153,"Polk County, Iowa",15 to 19 minutes,50521,1452
+19153,"Polk County, Iowa",20 to 24 minutes,46250,1610
+19153,"Polk County, Iowa",25 to 29 minutes,18425,1026
+19153,"Polk County, Iowa",30 to 34 minutes,23663,1060
+19153,"Polk County, Iowa",35 to 39 minutes,2818,282
+19153,"Polk County, Iowa",40 to 44 minutes,3294,440
+19153,"Polk County, Iowa",45 to 59 minutes,5179,482
+19153,"Polk County, Iowa",60 to 89 minutes,2578,392
+19153,"Polk County, Iowa",90 or more minutes,2444,375
+19155,"Pottawattamie County, Iowa",Total,44722,738
+19155,"Pottawattamie County, Iowa",Less than 5 minutes,1609,201
+19155,"Pottawattamie County, Iowa",5 to 9 minutes,5433,408
+19155,"Pottawattamie County, Iowa",10 to 14 minutes,8515,495
+19155,"Pottawattamie County, Iowa",15 to 19 minutes,8270,605
+19155,"Pottawattamie County, Iowa",20 to 24 minutes,6273,430
+19155,"Pottawattamie County, Iowa",25 to 29 minutes,3124,298
+19155,"Pottawattamie County, Iowa",30 to 34 minutes,6412,560
+19155,"Pottawattamie County, Iowa",35 to 39 minutes,1126,223
+19155,"Pottawattamie County, Iowa",40 to 44 minutes,916,161
+19155,"Pottawattamie County, Iowa",45 to 59 minutes,1665,213
+19155,"Pottawattamie County, Iowa",60 to 89 minutes,906,150
+19155,"Pottawattamie County, Iowa",90 or more minutes,473,124
+19157,"Poweshiek County, Iowa",Total,8835,270
+19157,"Poweshiek County, Iowa",Less than 5 minutes,1100,162
+19157,"Poweshiek County, Iowa",5 to 9 minutes,2762,254
+19157,"Poweshiek County, Iowa",10 to 14 minutes,1487,247
+19157,"Poweshiek County, Iowa",15 to 19 minutes,742,114
+19157,"Poweshiek County, Iowa",20 to 24 minutes,810,148
+19157,"Poweshiek County, Iowa",25 to 29 minutes,202,59
+19157,"Poweshiek County, Iowa",30 to 34 minutes,535,108
+19157,"Poweshiek County, Iowa",35 to 39 minutes,162,63
+19157,"Poweshiek County, Iowa",40 to 44 minutes,92,40
+19157,"Poweshiek County, Iowa",45 to 59 minutes,452,110
+19157,"Poweshiek County, Iowa",60 to 89 minutes,399,105
+19157,"Poweshiek County, Iowa",90 or more minutes,92,59
+19159,"Ringgold County, Iowa",Total,1930,113
+19159,"Ringgold County, Iowa",Less than 5 minutes,375,63
+19159,"Ringgold County, Iowa",5 to 9 minutes,453,74
+19159,"Ringgold County, Iowa",10 to 14 minutes,170,41
+19159,"Ringgold County, Iowa",15 to 19 minutes,179,50
+19159,"Ringgold County, Iowa",20 to 24 minutes,171,46
+19159,"Ringgold County, Iowa",25 to 29 minutes,116,42
+19159,"Ringgold County, Iowa",30 to 34 minutes,147,38
+19159,"Ringgold County, Iowa",35 to 39 minutes,53,25
+19159,"Ringgold County, Iowa",40 to 44 minutes,80,29
+19159,"Ringgold County, Iowa",45 to 59 minutes,96,34
+19159,"Ringgold County, Iowa",60 to 89 minutes,51,21
+19159,"Ringgold County, Iowa",90 or more minutes,39,24
+19161,"Sac County, Iowa",Total,4680,136
+19161,"Sac County, Iowa",Less than 5 minutes,727,92
+19161,"Sac County, Iowa",5 to 9 minutes,979,107
+19161,"Sac County, Iowa",10 to 14 minutes,589,81
+19161,"Sac County, Iowa",15 to 19 minutes,693,82
+19161,"Sac County, Iowa",20 to 24 minutes,560,87
+19161,"Sac County, Iowa",25 to 29 minutes,286,60
+19161,"Sac County, Iowa",30 to 34 minutes,389,61
+19161,"Sac County, Iowa",35 to 39 minutes,151,48
+19161,"Sac County, Iowa",40 to 44 minutes,69,21
+19161,"Sac County, Iowa",45 to 59 minutes,85,27
+19161,"Sac County, Iowa",60 to 89 minutes,89,39
+19161,"Sac County, Iowa",90 or more minutes,63,27
+19163,"Scott County, Iowa",Total,78868,1093
+19163,"Scott County, Iowa",Less than 5 minutes,2574,356
+19163,"Scott County, Iowa",5 to 9 minutes,10410,664
+19163,"Scott County, Iowa",10 to 14 minutes,15894,805
+19163,"Scott County, Iowa",15 to 19 minutes,17339,775
+19163,"Scott County, Iowa",20 to 24 minutes,13784,728
+19163,"Scott County, Iowa",25 to 29 minutes,5814,448
+19163,"Scott County, Iowa",30 to 34 minutes,6288,491
+19163,"Scott County, Iowa",35 to 39 minutes,1332,256
+19163,"Scott County, Iowa",40 to 44 minutes,1090,176
+19163,"Scott County, Iowa",45 to 59 minutes,2303,332
+19163,"Scott County, Iowa",60 to 89 minutes,1162,228
+19163,"Scott County, Iowa",90 or more minutes,878,162
+19165,"Shelby County, Iowa",Total,5635,194
+19165,"Shelby County, Iowa",Less than 5 minutes,677,130
+19165,"Shelby County, Iowa",5 to 9 minutes,1557,181
+19165,"Shelby County, Iowa",10 to 14 minutes,758,150
+19165,"Shelby County, Iowa",15 to 19 minutes,547,107
+19165,"Shelby County, Iowa",20 to 24 minutes,591,127
+19165,"Shelby County, Iowa",25 to 29 minutes,297,105
+19165,"Shelby County, Iowa",30 to 34 minutes,413,111
+19165,"Shelby County, Iowa",35 to 39 minutes,51,25
+19165,"Shelby County, Iowa",40 to 44 minutes,85,37
+19165,"Shelby County, Iowa",45 to 59 minutes,263,59
+19165,"Shelby County, Iowa",60 to 89 minutes,314,77
+19165,"Shelby County, Iowa",90 or more minutes,82,33
+19167,"Sioux County, Iowa",Total,16539,398
+19167,"Sioux County, Iowa",Less than 5 minutes,3122,318
+19167,"Sioux County, Iowa",5 to 9 minutes,5405,433
+19167,"Sioux County, Iowa",10 to 14 minutes,2407,234
+19167,"Sioux County, Iowa",15 to 19 minutes,1894,231
+19167,"Sioux County, Iowa",20 to 24 minutes,1502,231
+19167,"Sioux County, Iowa",25 to 29 minutes,572,107
+19167,"Sioux County, Iowa",30 to 34 minutes,636,141
+19167,"Sioux County, Iowa",35 to 39 minutes,90,49
+19167,"Sioux County, Iowa",40 to 44 minutes,148,54
+19167,"Sioux County, Iowa",45 to 59 minutes,267,74
+19167,"Sioux County, Iowa",60 to 89 minutes,375,132
+19167,"Sioux County, Iowa",90 or more minutes,121,49
+19169,"Story County, Iowa",Total,47496,946
+19169,"Story County, Iowa",Less than 5 minutes,2651,400
+19169,"Story County, Iowa",5 to 9 minutes,8672,594
+19169,"Story County, Iowa",10 to 14 minutes,11767,895
+19169,"Story County, Iowa",15 to 19 minutes,9008,647
+19169,"Story County, Iowa",20 to 24 minutes,5527,498
+19169,"Story County, Iowa",25 to 29 minutes,1543,237
+19169,"Story County, Iowa",30 to 34 minutes,2771,373
+19169,"Story County, Iowa",35 to 39 minutes,779,169
+19169,"Story County, Iowa",40 to 44 minutes,1136,212
+19169,"Story County, Iowa",45 to 59 minutes,2546,502
+19169,"Story County, Iowa",60 to 89 minutes,786,167
+19169,"Story County, Iowa",90 or more minutes,310,104
+19171,"Tama County, Iowa",Total,7828,240
+19171,"Tama County, Iowa",Less than 5 minutes,821,118
+19171,"Tama County, Iowa",5 to 9 minutes,1357,158
+19171,"Tama County, Iowa",10 to 14 minutes,908,123
+19171,"Tama County, Iowa",15 to 19 minutes,857,154
+19171,"Tama County, Iowa",20 to 24 minutes,808,166
+19171,"Tama County, Iowa",25 to 29 minutes,559,74
+19171,"Tama County, Iowa",30 to 34 minutes,886,138
+19171,"Tama County, Iowa",35 to 39 minutes,341,111
+19171,"Tama County, Iowa",40 to 44 minutes,266,73
+19171,"Tama County, Iowa",45 to 59 minutes,620,112
+19171,"Tama County, Iowa",60 to 89 minutes,261,78
+19171,"Tama County, Iowa",90 or more minutes,144,46
+19173,"Taylor County, Iowa",Total,2873,109
+19173,"Taylor County, Iowa",Less than 5 minutes,451,84
+19173,"Taylor County, Iowa",5 to 9 minutes,527,77
+19173,"Taylor County, Iowa",10 to 14 minutes,343,58
+19173,"Taylor County, Iowa",15 to 19 minutes,264,52
+19173,"Taylor County, Iowa",20 to 24 minutes,277,49
+19173,"Taylor County, Iowa",25 to 29 minutes,191,41
+19173,"Taylor County, Iowa",30 to 34 minutes,360,62
+19173,"Taylor County, Iowa",35 to 39 minutes,80,30
+19173,"Taylor County, Iowa",40 to 44 minutes,95,37
+19173,"Taylor County, Iowa",45 to 59 minutes,102,38
+19173,"Taylor County, Iowa",60 to 89 minutes,81,35
+19173,"Taylor County, Iowa",90 or more minutes,102,36
+19175,"Union County, Iowa",Total,6024,207
+19175,"Union County, Iowa",Less than 5 minutes,514,136
+19175,"Union County, Iowa",5 to 9 minutes,1969,275
+19175,"Union County, Iowa",10 to 14 minutes,1229,161
+19175,"Union County, Iowa",15 to 19 minutes,671,128
+19175,"Union County, Iowa",20 to 24 minutes,328,75
+19175,"Union County, Iowa",25 to 29 minutes,246,104
+19175,"Union County, Iowa",30 to 34 minutes,400,99
+19175,"Union County, Iowa",35 to 39 minutes,21,24
+19175,"Union County, Iowa",40 to 44 minutes,74,36
+19175,"Union County, Iowa",45 to 59 minutes,205,123
+19175,"Union County, Iowa",60 to 89 minutes,252,75
+19175,"Union County, Iowa",90 or more minutes,115,51
+19177,"Van Buren County, Iowa",Total,3140,157
+19177,"Van Buren County, Iowa",Less than 5 minutes,368,70
+19177,"Van Buren County, Iowa",5 to 9 minutes,449,91
+19177,"Van Buren County, Iowa",10 to 14 minutes,299,59
+19177,"Van Buren County, Iowa",15 to 19 minutes,389,74
+19177,"Van Buren County, Iowa",20 to 24 minutes,529,110
+19177,"Van Buren County, Iowa",25 to 29 minutes,239,72
+19177,"Van Buren County, Iowa",30 to 34 minutes,252,66
+19177,"Van Buren County, Iowa",35 to 39 minutes,163,48
+19177,"Van Buren County, Iowa",40 to 44 minutes,76,27
+19177,"Van Buren County, Iowa",45 to 59 minutes,225,58
+19177,"Van Buren County, Iowa",60 to 89 minutes,76,30
+19177,"Van Buren County, Iowa",90 or more minutes,75,30
+19179,"Wapello County, Iowa",Total,15373,494
+19179,"Wapello County, Iowa",Less than 5 minutes,850,183
+19179,"Wapello County, Iowa",5 to 9 minutes,3171,353
+19179,"Wapello County, Iowa",10 to 14 minutes,4023,346
+19179,"Wapello County, Iowa",15 to 19 minutes,2663,330
+19179,"Wapello County, Iowa",20 to 24 minutes,1279,212
+19179,"Wapello County, Iowa",25 to 29 minutes,590,138
+19179,"Wapello County, Iowa",30 to 34 minutes,1195,216
+19179,"Wapello County, Iowa",35 to 39 minutes,227,89
+19179,"Wapello County, Iowa",40 to 44 minutes,204,73
+19179,"Wapello County, Iowa",45 to 59 minutes,502,120
+19179,"Wapello County, Iowa",60 to 89 minutes,233,89
+19179,"Wapello County, Iowa",90 or more minutes,436,141
+19181,"Warren County, Iowa",Total,23487,488
+19181,"Warren County, Iowa",Less than 5 minutes,1290,246
+19181,"Warren County, Iowa",5 to 9 minutes,2650,268
+19181,"Warren County, Iowa",10 to 14 minutes,2276,254
+19181,"Warren County, Iowa",15 to 19 minutes,2208,297
+19181,"Warren County, Iowa",20 to 24 minutes,3776,383
+19181,"Warren County, Iowa",25 to 29 minutes,2253,294
+19181,"Warren County, Iowa",30 to 34 minutes,4505,403
+19181,"Warren County, Iowa",35 to 39 minutes,1125,169
+19181,"Warren County, Iowa",40 to 44 minutes,1067,184
+19181,"Warren County, Iowa",45 to 59 minutes,1523,163
+19181,"Warren County, Iowa",60 to 89 minutes,575,119
+19181,"Warren County, Iowa",90 or more minutes,239,81
+19183,"Washington County, Iowa",Total,10523,272
+19183,"Washington County, Iowa",Less than 5 minutes,1075,206
+19183,"Washington County, Iowa",5 to 9 minutes,1938,218
+19183,"Washington County, Iowa",10 to 14 minutes,1460,191
+19183,"Washington County, Iowa",15 to 19 minutes,830,145
+19183,"Washington County, Iowa",20 to 24 minutes,1108,189
+19183,"Washington County, Iowa",25 to 29 minutes,678,137
+19183,"Washington County, Iowa",30 to 34 minutes,1459,177
+19183,"Washington County, Iowa",35 to 39 minutes,403,106
+19183,"Washington County, Iowa",40 to 44 minutes,427,105
+19183,"Washington County, Iowa",45 to 59 minutes,847,151
+19183,"Washington County, Iowa",60 to 89 minutes,227,81
+19183,"Washington County, Iowa",90 or more minutes,71,42
+19185,"Wayne County, Iowa",Total,2542,110
+19185,"Wayne County, Iowa",Less than 5 minutes,320,70
+19185,"Wayne County, Iowa",5 to 9 minutes,516,83
+19185,"Wayne County, Iowa",10 to 14 minutes,293,71
+19185,"Wayne County, Iowa",15 to 19 minutes,218,61
+19185,"Wayne County, Iowa",20 to 24 minutes,314,70
+19185,"Wayne County, Iowa",25 to 29 minutes,171,44
+19185,"Wayne County, Iowa",30 to 34 minutes,293,81
+19185,"Wayne County, Iowa",35 to 39 minutes,54,22
+19185,"Wayne County, Iowa",40 to 44 minutes,28,17
+19185,"Wayne County, Iowa",45 to 59 minutes,101,35
+19185,"Wayne County, Iowa",60 to 89 minutes,104,35
+19185,"Wayne County, Iowa",90 or more minutes,130,45
+19187,"Webster County, Iowa",Total,15589,431
+19187,"Webster County, Iowa",Less than 5 minutes,1039,171
+19187,"Webster County, Iowa",5 to 9 minutes,3773,367
+19187,"Webster County, Iowa",10 to 14 minutes,3898,364
+19187,"Webster County, Iowa",15 to 19 minutes,2481,284
+19187,"Webster County, Iowa",20 to 24 minutes,1578,207
+19187,"Webster County, Iowa",25 to 29 minutes,542,101
+19187,"Webster County, Iowa",30 to 34 minutes,1056,190
+19187,"Webster County, Iowa",35 to 39 minutes,180,62
+19187,"Webster County, Iowa",40 to 44 minutes,142,63
+19187,"Webster County, Iowa",45 to 59 minutes,411,113
+19187,"Webster County, Iowa",60 to 89 minutes,305,93
+19187,"Webster County, Iowa",90 or more minutes,184,56
+19189,"Winnebago County, Iowa",Total,4833,213
+19189,"Winnebago County, Iowa",Less than 5 minutes,515,106
+19189,"Winnebago County, Iowa",5 to 9 minutes,1457,187
+19189,"Winnebago County, Iowa",10 to 14 minutes,730,115
+19189,"Winnebago County, Iowa",15 to 19 minutes,461,100
+19189,"Winnebago County, Iowa",20 to 24 minutes,418,131
+19189,"Winnebago County, Iowa",25 to 29 minutes,232,66
+19189,"Winnebago County, Iowa",30 to 34 minutes,411,97
+19189,"Winnebago County, Iowa",35 to 39 minutes,87,41
+19189,"Winnebago County, Iowa",40 to 44 minutes,177,65
+19189,"Winnebago County, Iowa",45 to 59 minutes,247,64
+19189,"Winnebago County, Iowa",60 to 89 minutes,54,33
+19189,"Winnebago County, Iowa",90 or more minutes,44,25
+19191,"Winneshiek County, Iowa",Total,10885,320
+19191,"Winneshiek County, Iowa",Less than 5 minutes,1150,215
+19191,"Winneshiek County, Iowa",5 to 9 minutes,3054,249
+19191,"Winneshiek County, Iowa",10 to 14 minutes,1882,193
+19191,"Winneshiek County, Iowa",15 to 19 minutes,1352,191
+19191,"Winneshiek County, Iowa",20 to 24 minutes,1443,156
+19191,"Winneshiek County, Iowa",25 to 29 minutes,430,101
+19191,"Winneshiek County, Iowa",30 to 34 minutes,717,162
+19191,"Winneshiek County, Iowa",35 to 39 minutes,79,39
+19191,"Winneshiek County, Iowa",40 to 44 minutes,122,61
+19191,"Winneshiek County, Iowa",45 to 59 minutes,181,52
+19191,"Winneshiek County, Iowa",60 to 89 minutes,244,89
+19191,"Winneshiek County, Iowa",90 or more minutes,231,79
+19193,"Woodbury County, Iowa",Total,49194,772
+19193,"Woodbury County, Iowa",Less than 5 minutes,2365,315
+19193,"Woodbury County, Iowa",5 to 9 minutes,7421,621
+19193,"Woodbury County, Iowa",10 to 14 minutes,10769,590
+19193,"Woodbury County, Iowa",15 to 19 minutes,11589,676
+19193,"Woodbury County, Iowa",20 to 24 minutes,7552,580
+19193,"Woodbury County, Iowa",25 to 29 minutes,2060,302
+19193,"Woodbury County, Iowa",30 to 34 minutes,3878,407
+19193,"Woodbury County, Iowa",35 to 39 minutes,445,97
+19193,"Woodbury County, Iowa",40 to 44 minutes,527,146
+19193,"Woodbury County, Iowa",45 to 59 minutes,1076,191
+19193,"Woodbury County, Iowa",60 to 89 minutes,743,188
+19193,"Woodbury County, Iowa",90 or more minutes,769,178
+19195,"Worth County, Iowa",Total,3538,149
+19195,"Worth County, Iowa",Less than 5 minutes,285,80
+19195,"Worth County, Iowa",5 to 9 minutes,401,94
+19195,"Worth County, Iowa",10 to 14 minutes,469,87
+19195,"Worth County, Iowa",15 to 19 minutes,426,85
+19195,"Worth County, Iowa",20 to 24 minutes,715,106
+19195,"Worth County, Iowa",25 to 29 minutes,357,75
+19195,"Worth County, Iowa",30 to 34 minutes,559,92
+19195,"Worth County, Iowa",35 to 39 minutes,101,35
+19195,"Worth County, Iowa",40 to 44 minutes,46,25
+19195,"Worth County, Iowa",45 to 59 minutes,133,47
+19195,"Worth County, Iowa",60 to 89 minutes,21,19
+19195,"Worth County, Iowa",90 or more minutes,25,16
+19197,"Wright County, Iowa",Total,5474,185
+19197,"Wright County, Iowa",Less than 5 minutes,917,137
+19197,"Wright County, Iowa",5 to 9 minutes,1601,211
+19197,"Wright County, Iowa",10 to 14 minutes,566,108
+19197,"Wright County, Iowa",15 to 19 minutes,730,130
+19197,"Wright County, Iowa",20 to 24 minutes,357,77
+19197,"Wright County, Iowa",25 to 29 minutes,265,84
+19197,"Wright County, Iowa",30 to 34 minutes,498,112
+19197,"Wright County, Iowa",35 to 39 minutes,55,34
+19197,"Wright County, Iowa",40 to 44 minutes,86,45
+19197,"Wright County, Iowa",45 to 59 minutes,254,83
+19197,"Wright County, Iowa",60 to 89 minutes,101,39
+19197,"Wright County, Iowa",90 or more minutes,44,22

@@ -1,0 +1,2080 @@
+GEOID,NAME,variable,estimate,moe
+19001,"Adair County, Iowa",Total,3936,127
+19001,"Adair County, Iowa","Car, truck or van",3368,143
+19001,"Adair County, Iowa","Car, truck or van: drove alone",2988,152
+19001,"Adair County, Iowa","Car, truck or van: carpooled",380,78
+19001,"Adair County, Iowa","Car, truck or van: carpooled: 2 person carpool",258,65
+19001,"Adair County, Iowa","Car, truck or van: carpooled: 3 person carpool",55,28
+19001,"Adair County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,15
+19001,"Adair County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",22,23
+19001,"Adair County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",32,26
+19001,"Adair County, Iowa",Public transportation (excluding taxicab),18,18
+19001,"Adair County, Iowa",Bus,18,18
+19001,"Adair County, Iowa",Subway or elevated rail,0,14
+19001,"Adair County, Iowa",Long distance train or commuter rail,0,14
+19001,"Adair County, Iowa","Light rail, streetcar or trolley",0,14
+19001,"Adair County, Iowa",Ferryboat,0,14
+19001,"Adair County, Iowa",Taxicab,0,14
+19001,"Adair County, Iowa",Motorcycle,9,14
+19001,"Adair County, Iowa",Bicycle,0,14
+19001,"Adair County, Iowa",Walked,112,54
+19001,"Adair County, Iowa",Other means,26,21
+19001,"Adair County, Iowa",Worked from home,403,102
+19003,"Adams County, Iowa",Total,2036,95
+19003,"Adams County, Iowa","Car, truck or van",1692,101
+19003,"Adams County, Iowa","Car, truck or van: drove alone",1465,98
+19003,"Adams County, Iowa","Car, truck or van: carpooled",227,51
+19003,"Adams County, Iowa","Car, truck or van: carpooled: 2 person carpool",137,45
+19003,"Adams County, Iowa","Car, truck or van: carpooled: 3 person carpool",75,34
+19003,"Adams County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,15
+19003,"Adams County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",2,6
+19003,"Adams County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,10
+19003,"Adams County, Iowa",Public transportation (excluding taxicab),11,24
+19003,"Adams County, Iowa",Bus,11,24
+19003,"Adams County, Iowa",Subway or elevated rail,0,10
+19003,"Adams County, Iowa",Long distance train or commuter rail,0,10
+19003,"Adams County, Iowa","Light rail, streetcar or trolley",0,10
+19003,"Adams County, Iowa",Ferryboat,0,10
+19003,"Adams County, Iowa",Taxicab,0,10
+19003,"Adams County, Iowa",Motorcycle,4,6
+19003,"Adams County, Iowa",Bicycle,11,14
+19003,"Adams County, Iowa",Walked,58,35
+19003,"Adams County, Iowa",Other means,55,32
+19003,"Adams County, Iowa",Worked from home,205,51
+19005,"Allamakee County, Iowa",Total,6801,275
+19005,"Allamakee County, Iowa","Car, truck or van",5627,297
+19005,"Allamakee County, Iowa","Car, truck or van: drove alone",4976,287
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled",651,145
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled: 2 person carpool",510,139
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled: 3 person carpool",94,50
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled: 4 person carpool",23,21
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",24,22
+19005,"Allamakee County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19005,"Allamakee County, Iowa",Public transportation (excluding taxicab),28,30
+19005,"Allamakee County, Iowa",Bus,28,30
+19005,"Allamakee County, Iowa",Subway or elevated rail,0,16
+19005,"Allamakee County, Iowa",Long distance train or commuter rail,0,16
+19005,"Allamakee County, Iowa","Light rail, streetcar or trolley",0,16
+19005,"Allamakee County, Iowa",Ferryboat,0,16
+19005,"Allamakee County, Iowa",Taxicab,0,16
+19005,"Allamakee County, Iowa",Motorcycle,4,7
+19005,"Allamakee County, Iowa",Bicycle,28,30
+19005,"Allamakee County, Iowa",Walked,522,146
+19005,"Allamakee County, Iowa",Other means,64,48
+19005,"Allamakee County, Iowa",Worked from home,528,139
+19007,"Appanoose County, Iowa",Total,5659,256
+19007,"Appanoose County, Iowa","Car, truck or van",5000,265
+19007,"Appanoose County, Iowa","Car, truck or van: drove alone",4399,266
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled",601,147
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled: 2 person carpool",383,99
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled: 3 person carpool",148,83
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled: 4 person carpool",29,20
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",4,5
+19007,"Appanoose County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",37,42
+19007,"Appanoose County, Iowa",Public transportation (excluding taxicab),17,16
+19007,"Appanoose County, Iowa",Bus,17,16
+19007,"Appanoose County, Iowa",Subway or elevated rail,0,16
+19007,"Appanoose County, Iowa",Long distance train or commuter rail,0,16
+19007,"Appanoose County, Iowa","Light rail, streetcar or trolley",0,16
+19007,"Appanoose County, Iowa",Ferryboat,0,16
+19007,"Appanoose County, Iowa",Taxicab,0,16
+19007,"Appanoose County, Iowa",Motorcycle,8,14
+19007,"Appanoose County, Iowa",Bicycle,0,16
+19007,"Appanoose County, Iowa",Walked,234,101
+19007,"Appanoose County, Iowa",Other means,25,19
+19007,"Appanoose County, Iowa",Worked from home,375,108
+19009,"Audubon County, Iowa",Total,3129,115
+19009,"Audubon County, Iowa","Car, truck or van",2616,129
+19009,"Audubon County, Iowa","Car, truck or van: drove alone",2362,116
+19009,"Audubon County, Iowa","Car, truck or van: carpooled",254,67
+19009,"Audubon County, Iowa","Car, truck or van: carpooled: 2 person carpool",192,68
+19009,"Audubon County, Iowa","Car, truck or van: carpooled: 3 person carpool",25,17
+19009,"Audubon County, Iowa","Car, truck or van: carpooled: 4 person carpool",35,20
+19009,"Audubon County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",2,3
+19009,"Audubon County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19009,"Audubon County, Iowa",Public transportation (excluding taxicab),3,4
+19009,"Audubon County, Iowa",Bus,3,4
+19009,"Audubon County, Iowa",Subway or elevated rail,0,14
+19009,"Audubon County, Iowa",Long distance train or commuter rail,0,14
+19009,"Audubon County, Iowa","Light rail, streetcar or trolley",0,14
+19009,"Audubon County, Iowa",Ferryboat,0,14
+19009,"Audubon County, Iowa",Taxicab,0,14
+19009,"Audubon County, Iowa",Motorcycle,0,14
+19009,"Audubon County, Iowa",Bicycle,9,9
+19009,"Audubon County, Iowa",Walked,260,84
+19009,"Audubon County, Iowa",Other means,3,5
+19009,"Audubon County, Iowa",Worked from home,238,68
+19011,"Benton County, Iowa",Total,13105,258
+19011,"Benton County, Iowa","Car, truck or van",11605,354
+19011,"Benton County, Iowa","Car, truck or van: drove alone",10474,360
+19011,"Benton County, Iowa","Car, truck or van: carpooled",1131,176
+19011,"Benton County, Iowa","Car, truck or van: carpooled: 2 person carpool",820,152
+19011,"Benton County, Iowa","Car, truck or van: carpooled: 3 person carpool",203,116
+19011,"Benton County, Iowa","Car, truck or van: carpooled: 4 person carpool",64,29
+19011,"Benton County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",28,19
+19011,"Benton County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",16,16
+19011,"Benton County, Iowa",Public transportation (excluding taxicab),19,19
+19011,"Benton County, Iowa",Bus,19,19
+19011,"Benton County, Iowa",Subway or elevated rail,0,18
+19011,"Benton County, Iowa",Long distance train or commuter rail,0,18
+19011,"Benton County, Iowa","Light rail, streetcar or trolley",0,18
+19011,"Benton County, Iowa",Ferryboat,0,18
+19011,"Benton County, Iowa",Taxicab,0,18
+19011,"Benton County, Iowa",Motorcycle,19,19
+19011,"Benton County, Iowa",Bicycle,21,30
+19011,"Benton County, Iowa",Walked,449,124
+19011,"Benton County, Iowa",Other means,315,111
+19011,"Benton County, Iowa",Worked from home,677,175
+19013,"Black Hawk County, Iowa",Total,63928,769
+19013,"Black Hawk County, Iowa","Car, truck or van",58275,818
+19013,"Black Hawk County, Iowa","Car, truck or van: drove alone",52992,844
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled",5283,526
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled: 2 person carpool",4179,517
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled: 3 person carpool",655,186
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled: 4 person carpool",313,165
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",82,54
+19013,"Black Hawk County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",54,35
+19013,"Black Hawk County, Iowa",Public transportation (excluding taxicab),385,144
+19013,"Black Hawk County, Iowa",Bus,385,144
+19013,"Black Hawk County, Iowa",Subway or elevated rail,0,23
+19013,"Black Hawk County, Iowa",Long distance train or commuter rail,0,23
+19013,"Black Hawk County, Iowa","Light rail, streetcar or trolley",0,23
+19013,"Black Hawk County, Iowa",Ferryboat,0,23
+19013,"Black Hawk County, Iowa",Taxicab,17,18
+19013,"Black Hawk County, Iowa",Motorcycle,153,65
+19013,"Black Hawk County, Iowa",Bicycle,245,101
+19013,"Black Hawk County, Iowa",Walked,3162,433
+19013,"Black Hawk County, Iowa",Other means,292,131
+19013,"Black Hawk County, Iowa",Worked from home,1399,208
+19015,"Boone County, Iowa",Total,13311,283
+19015,"Boone County, Iowa","Car, truck or van",12189,348
+19015,"Boone County, Iowa","Car, truck or van: drove alone",10537,358
+19015,"Boone County, Iowa","Car, truck or van: carpooled",1652,272
+19015,"Boone County, Iowa","Car, truck or van: carpooled: 2 person carpool",1323,221
+19015,"Boone County, Iowa","Car, truck or van: carpooled: 3 person carpool",162,106
+19015,"Boone County, Iowa","Car, truck or van: carpooled: 4 person carpool",61,44
+19015,"Boone County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",33,25
+19015,"Boone County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",73,58
+19015,"Boone County, Iowa",Public transportation (excluding taxicab),100,83
+19015,"Boone County, Iowa",Bus,100,83
+19015,"Boone County, Iowa",Subway or elevated rail,0,18
+19015,"Boone County, Iowa",Long distance train or commuter rail,0,18
+19015,"Boone County, Iowa","Light rail, streetcar or trolley",0,18
+19015,"Boone County, Iowa",Ferryboat,0,18
+19015,"Boone County, Iowa",Taxicab,0,18
+19015,"Boone County, Iowa",Motorcycle,36,39
+19015,"Boone County, Iowa",Bicycle,27,31
+19015,"Boone County, Iowa",Walked,331,148
+19015,"Boone County, Iowa",Other means,16,21
+19015,"Boone County, Iowa",Worked from home,612,138
+19017,"Bremer County, Iowa",Total,12475,334
+19017,"Bremer County, Iowa","Car, truck or van",10908,344
+19017,"Bremer County, Iowa","Car, truck or van: drove alone",10132,359
+19017,"Bremer County, Iowa","Car, truck or van: carpooled",776,158
+19017,"Bremer County, Iowa","Car, truck or van: carpooled: 2 person carpool",651,158
+19017,"Bremer County, Iowa","Car, truck or van: carpooled: 3 person carpool",98,36
+19017,"Bremer County, Iowa","Car, truck or van: carpooled: 4 person carpool",11,15
+19017,"Bremer County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",16,14
+19017,"Bremer County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,18
+19017,"Bremer County, Iowa",Public transportation (excluding taxicab),23,19
+19017,"Bremer County, Iowa",Bus,23,19
+19017,"Bremer County, Iowa",Subway or elevated rail,0,18
+19017,"Bremer County, Iowa",Long distance train or commuter rail,0,18
+19017,"Bremer County, Iowa","Light rail, streetcar or trolley",0,18
+19017,"Bremer County, Iowa",Ferryboat,0,18
+19017,"Bremer County, Iowa",Taxicab,0,18
+19017,"Bremer County, Iowa",Motorcycle,10,11
+19017,"Bremer County, Iowa",Bicycle,25,21
+19017,"Bremer County, Iowa",Walked,939,219
+19017,"Bremer County, Iowa",Other means,35,28
+19017,"Bremer County, Iowa",Worked from home,535,118
+19019,"Buchanan County, Iowa",Total,10156,284
+19019,"Buchanan County, Iowa","Car, truck or van",9130,323
+19019,"Buchanan County, Iowa","Car, truck or van: drove alone",7995,355
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled",1135,189
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled: 2 person carpool",856,178
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled: 3 person carpool",201,71
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled: 4 person carpool",22,17
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",37,30
+19019,"Buchanan County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",19,21
+19019,"Buchanan County, Iowa",Public transportation (excluding taxicab),17,17
+19019,"Buchanan County, Iowa",Bus,17,17
+19019,"Buchanan County, Iowa",Subway or elevated rail,0,18
+19019,"Buchanan County, Iowa",Long distance train or commuter rail,0,18
+19019,"Buchanan County, Iowa","Light rail, streetcar or trolley",0,18
+19019,"Buchanan County, Iowa",Ferryboat,0,18
+19019,"Buchanan County, Iowa",Taxicab,0,18
+19019,"Buchanan County, Iowa",Motorcycle,10,16
+19019,"Buchanan County, Iowa",Bicycle,16,15
+19019,"Buchanan County, Iowa",Walked,376,133
+19019,"Buchanan County, Iowa",Other means,70,50
+19019,"Buchanan County, Iowa",Worked from home,537,133
+19021,"Buena Vista County, Iowa",Total,10508,273
+19021,"Buena Vista County, Iowa","Car, truck or van",8998,288
+19021,"Buena Vista County, Iowa","Car, truck or van: drove alone",7203,302
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled",1795,268
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled: 2 person carpool",1386,230
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled: 3 person carpool",202,120
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled: 4 person carpool",74,37
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",132,129
+19021,"Buena Vista County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",1,3
+19021,"Buena Vista County, Iowa",Public transportation (excluding taxicab),24,19
+19021,"Buena Vista County, Iowa",Bus,24,19
+19021,"Buena Vista County, Iowa",Subway or elevated rail,0,18
+19021,"Buena Vista County, Iowa",Long distance train or commuter rail,0,18
+19021,"Buena Vista County, Iowa","Light rail, streetcar or trolley",0,18
+19021,"Buena Vista County, Iowa",Ferryboat,0,18
+19021,"Buena Vista County, Iowa",Taxicab,9,14
+19021,"Buena Vista County, Iowa",Motorcycle,12,9
+19021,"Buena Vista County, Iowa",Bicycle,59,28
+19021,"Buena Vista County, Iowa",Walked,519,145
+19021,"Buena Vista County, Iowa",Other means,48,33
+19021,"Buena Vista County, Iowa",Worked from home,839,139
+19023,"Butler County, Iowa",Total,7009,185
+19023,"Butler County, Iowa","Car, truck or van",6278,207
+19023,"Butler County, Iowa","Car, truck or van: drove alone",5607,222
+19023,"Butler County, Iowa","Car, truck or van: carpooled",671,93
+19023,"Butler County, Iowa","Car, truck or van: carpooled: 2 person carpool",502,88
+19023,"Butler County, Iowa","Car, truck or van: carpooled: 3 person carpool",126,43
+19023,"Butler County, Iowa","Car, truck or van: carpooled: 4 person carpool",23,18
+19023,"Butler County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",8,12
+19023,"Butler County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",12,15
+19023,"Butler County, Iowa",Public transportation (excluding taxicab),19,14
+19023,"Butler County, Iowa",Bus,19,14
+19023,"Butler County, Iowa",Subway or elevated rail,0,16
+19023,"Butler County, Iowa",Long distance train or commuter rail,0,16
+19023,"Butler County, Iowa","Light rail, streetcar or trolley",0,16
+19023,"Butler County, Iowa",Ferryboat,0,16
+19023,"Butler County, Iowa",Taxicab,7,8
+19023,"Butler County, Iowa",Motorcycle,13,9
+19023,"Butler County, Iowa",Bicycle,10,8
+19023,"Butler County, Iowa",Walked,228,67
+19023,"Butler County, Iowa",Other means,21,19
+19023,"Butler County, Iowa",Worked from home,433,74
+19025,"Calhoun County, Iowa",Total,4581,206
+19025,"Calhoun County, Iowa","Car, truck or van",3987,232
+19025,"Calhoun County, Iowa","Car, truck or van: drove alone",3517,232
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled",470,143
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled: 2 person carpool",387,131
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled: 3 person carpool",65,34
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled: 4 person carpool",15,15
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",3,5
+19025,"Calhoun County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19025,"Calhoun County, Iowa",Public transportation (excluding taxicab),40,53
+19025,"Calhoun County, Iowa",Bus,40,53
+19025,"Calhoun County, Iowa",Subway or elevated rail,0,14
+19025,"Calhoun County, Iowa",Long distance train or commuter rail,0,14
+19025,"Calhoun County, Iowa","Light rail, streetcar or trolley",0,14
+19025,"Calhoun County, Iowa",Ferryboat,0,14
+19025,"Calhoun County, Iowa",Taxicab,0,14
+19025,"Calhoun County, Iowa",Motorcycle,8,11
+19025,"Calhoun County, Iowa",Bicycle,17,13
+19025,"Calhoun County, Iowa",Walked,160,45
+19025,"Calhoun County, Iowa",Other means,44,26
+19025,"Calhoun County, Iowa",Worked from home,325,82
+19027,"Carroll County, Iowa",Total,10937,257
+19027,"Carroll County, Iowa","Car, truck or van",9653,304
+19027,"Carroll County, Iowa","Car, truck or van: drove alone",8934,303
+19027,"Carroll County, Iowa","Car, truck or van: carpooled",719,132
+19027,"Carroll County, Iowa","Car, truck or van: carpooled: 2 person carpool",569,132
+19027,"Carroll County, Iowa","Car, truck or van: carpooled: 3 person carpool",112,34
+19027,"Carroll County, Iowa","Car, truck or van: carpooled: 4 person carpool",10,9
+19027,"Carroll County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",16,13
+19027,"Carroll County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",12,20
+19027,"Carroll County, Iowa",Public transportation (excluding taxicab),8,13
+19027,"Carroll County, Iowa",Bus,8,13
+19027,"Carroll County, Iowa",Subway or elevated rail,0,18
+19027,"Carroll County, Iowa",Long distance train or commuter rail,0,18
+19027,"Carroll County, Iowa","Light rail, streetcar or trolley",0,18
+19027,"Carroll County, Iowa",Ferryboat,0,18
+19027,"Carroll County, Iowa",Taxicab,11,16
+19027,"Carroll County, Iowa",Motorcycle,28,31
+19027,"Carroll County, Iowa",Bicycle,38,51
+19027,"Carroll County, Iowa",Walked,416,111
+19027,"Carroll County, Iowa",Other means,43,28
+19027,"Carroll County, Iowa",Worked from home,740,119
+19029,"Cass County, Iowa",Total,6745,216
+19029,"Cass County, Iowa","Car, truck or van",5935,245
+19029,"Cass County, Iowa","Car, truck or van: drove alone",5303,240
+19029,"Cass County, Iowa","Car, truck or van: carpooled",632,129
+19029,"Cass County, Iowa","Car, truck or van: carpooled: 2 person carpool",478,106
+19029,"Cass County, Iowa","Car, truck or van: carpooled: 3 person carpool",71,61
+19029,"Cass County, Iowa","Car, truck or van: carpooled: 4 person carpool",57,55
+19029,"Cass County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",23,24
+19029,"Cass County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",3,5
+19029,"Cass County, Iowa",Public transportation (excluding taxicab),35,38
+19029,"Cass County, Iowa",Bus,35,38
+19029,"Cass County, Iowa",Subway or elevated rail,0,16
+19029,"Cass County, Iowa",Long distance train or commuter rail,0,16
+19029,"Cass County, Iowa","Light rail, streetcar or trolley",0,16
+19029,"Cass County, Iowa",Ferryboat,0,16
+19029,"Cass County, Iowa",Taxicab,46,40
+19029,"Cass County, Iowa",Motorcycle,29,25
+19029,"Cass County, Iowa",Bicycle,31,34
+19029,"Cass County, Iowa",Walked,253,87
+19029,"Cass County, Iowa",Other means,31,19
+19029,"Cass County, Iowa",Worked from home,385,100
+19031,"Cedar County, Iowa",Total,9805,254
+19031,"Cedar County, Iowa","Car, truck or van",8988,269
+19031,"Cedar County, Iowa","Car, truck or van: drove alone",7716,341
+19031,"Cedar County, Iowa","Car, truck or van: carpooled",1272,220
+19031,"Cedar County, Iowa","Car, truck or van: carpooled: 2 person carpool",1009,196
+19031,"Cedar County, Iowa","Car, truck or van: carpooled: 3 person carpool",114,62
+19031,"Cedar County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,10
+19031,"Cedar County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",67,80
+19031,"Cedar County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",69,45
+19031,"Cedar County, Iowa",Public transportation (excluding taxicab),0,16
+19031,"Cedar County, Iowa",Bus,0,16
+19031,"Cedar County, Iowa",Subway or elevated rail,0,16
+19031,"Cedar County, Iowa",Long distance train or commuter rail,0,16
+19031,"Cedar County, Iowa","Light rail, streetcar or trolley",0,16
+19031,"Cedar County, Iowa",Ferryboat,0,16
+19031,"Cedar County, Iowa",Taxicab,7,11
+19031,"Cedar County, Iowa",Motorcycle,6,11
+19031,"Cedar County, Iowa",Bicycle,19,15
+19031,"Cedar County, Iowa",Walked,287,84
+19031,"Cedar County, Iowa",Other means,36,23
+19031,"Cedar County, Iowa",Worked from home,462,109
+19033,"Cerro Gordo County, Iowa",Total,22722,441
+19033,"Cerro Gordo County, Iowa","Car, truck or van",20541,492
+19033,"Cerro Gordo County, Iowa","Car, truck or van: drove alone",18397,556
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled",2144,325
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled: 2 person carpool",1609,282
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled: 3 person carpool",382,139
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled: 4 person carpool",139,88
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",14,24
+19033,"Cerro Gordo County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,21
+19033,"Cerro Gordo County, Iowa",Public transportation (excluding taxicab),263,147
+19033,"Cerro Gordo County, Iowa",Bus,263,147
+19033,"Cerro Gordo County, Iowa",Subway or elevated rail,0,21
+19033,"Cerro Gordo County, Iowa",Long distance train or commuter rail,0,21
+19033,"Cerro Gordo County, Iowa","Light rail, streetcar or trolley",0,21
+19033,"Cerro Gordo County, Iowa",Ferryboat,0,21
+19033,"Cerro Gordo County, Iowa",Taxicab,42,63
+19033,"Cerro Gordo County, Iowa",Motorcycle,16,24
+19033,"Cerro Gordo County, Iowa",Bicycle,162,90
+19033,"Cerro Gordo County, Iowa",Walked,800,197
+19033,"Cerro Gordo County, Iowa",Other means,93,57
+19033,"Cerro Gordo County, Iowa",Worked from home,805,205
+19035,"Cherokee County, Iowa",Total,6204,242
+19035,"Cherokee County, Iowa","Car, truck or van",5608,218
+19035,"Cherokee County, Iowa","Car, truck or van: drove alone",4924,218
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled",684,142
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled: 2 person carpool",533,124
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled: 3 person carpool",100,76
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled: 4 person carpool",26,30
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",25,34
+19035,"Cherokee County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19035,"Cherokee County, Iowa",Public transportation (excluding taxicab),10,8
+19035,"Cherokee County, Iowa",Bus,10,8
+19035,"Cherokee County, Iowa",Subway or elevated rail,0,16
+19035,"Cherokee County, Iowa",Long distance train or commuter rail,0,16
+19035,"Cherokee County, Iowa","Light rail, streetcar or trolley",0,16
+19035,"Cherokee County, Iowa",Ferryboat,0,16
+19035,"Cherokee County, Iowa",Taxicab,0,16
+19035,"Cherokee County, Iowa",Motorcycle,2,4
+19035,"Cherokee County, Iowa",Bicycle,0,16
+19035,"Cherokee County, Iowa",Walked,206,74
+19035,"Cherokee County, Iowa",Other means,51,71
+19035,"Cherokee County, Iowa",Worked from home,327,90
+19037,"Chickasaw County, Iowa",Total,5927,212
+19037,"Chickasaw County, Iowa","Car, truck or van",5155,199
+19037,"Chickasaw County, Iowa","Car, truck or van: drove alone",4682,229
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled",473,101
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled: 2 person carpool",351,88
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled: 3 person carpool",77,50
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled: 4 person carpool",30,19
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",15,20
+19037,"Chickasaw County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19037,"Chickasaw County, Iowa",Public transportation (excluding taxicab),29,23
+19037,"Chickasaw County, Iowa",Bus,29,23
+19037,"Chickasaw County, Iowa",Subway or elevated rail,0,16
+19037,"Chickasaw County, Iowa",Long distance train or commuter rail,0,16
+19037,"Chickasaw County, Iowa","Light rail, streetcar or trolley",0,16
+19037,"Chickasaw County, Iowa",Ferryboat,0,16
+19037,"Chickasaw County, Iowa",Taxicab,0,16
+19037,"Chickasaw County, Iowa",Motorcycle,24,22
+19037,"Chickasaw County, Iowa",Bicycle,15,16
+19037,"Chickasaw County, Iowa",Walked,232,70
+19037,"Chickasaw County, Iowa",Other means,70,32
+19037,"Chickasaw County, Iowa",Worked from home,402,105
+19039,"Clarke County, Iowa",Total,4622,264
+19039,"Clarke County, Iowa","Car, truck or van",4049,302
+19039,"Clarke County, Iowa","Car, truck or van: drove alone",3391,291
+19039,"Clarke County, Iowa","Car, truck or van: carpooled",658,140
+19039,"Clarke County, Iowa","Car, truck or van: carpooled: 2 person carpool",559,138
+19039,"Clarke County, Iowa","Car, truck or van: carpooled: 3 person carpool",13,16
+19039,"Clarke County, Iowa","Car, truck or van: carpooled: 4 person carpool",31,27
+19039,"Clarke County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19039,"Clarke County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",55,46
+19039,"Clarke County, Iowa",Public transportation (excluding taxicab),39,36
+19039,"Clarke County, Iowa",Bus,39,36
+19039,"Clarke County, Iowa",Subway or elevated rail,0,14
+19039,"Clarke County, Iowa",Long distance train or commuter rail,0,14
+19039,"Clarke County, Iowa","Light rail, streetcar or trolley",0,14
+19039,"Clarke County, Iowa",Ferryboat,0,14
+19039,"Clarke County, Iowa",Taxicab,0,14
+19039,"Clarke County, Iowa",Motorcycle,3,5
+19039,"Clarke County, Iowa",Bicycle,0,14
+19039,"Clarke County, Iowa",Walked,148,126
+19039,"Clarke County, Iowa",Other means,7,10
+19039,"Clarke County, Iowa",Worked from home,376,123
+19041,"Clay County, Iowa",Total,8544,297
+19041,"Clay County, Iowa","Car, truck or van",7552,326
+19041,"Clay County, Iowa","Car, truck or van: drove alone",6769,343
+19041,"Clay County, Iowa","Car, truck or van: carpooled",783,196
+19041,"Clay County, Iowa","Car, truck or van: carpooled: 2 person carpool",530,158
+19041,"Clay County, Iowa","Car, truck or van: carpooled: 3 person carpool",233,134
+19041,"Clay County, Iowa","Car, truck or van: carpooled: 4 person carpool",15,22
+19041,"Clay County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",5,7
+19041,"Clay County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19041,"Clay County, Iowa",Public transportation (excluding taxicab),43,39
+19041,"Clay County, Iowa",Bus,23,26
+19041,"Clay County, Iowa",Subway or elevated rail,20,29
+19041,"Clay County, Iowa",Long distance train or commuter rail,0,16
+19041,"Clay County, Iowa","Light rail, streetcar or trolley",0,16
+19041,"Clay County, Iowa",Ferryboat,0,16
+19041,"Clay County, Iowa",Taxicab,0,16
+19041,"Clay County, Iowa",Motorcycle,2,3
+19041,"Clay County, Iowa",Bicycle,79,55
+19041,"Clay County, Iowa",Walked,334,107
+19041,"Clay County, Iowa",Other means,68,58
+19041,"Clay County, Iowa",Worked from home,466,148
+19043,"Clayton County, Iowa",Total,8926,214
+19043,"Clayton County, Iowa","Car, truck or van",7820,244
+19043,"Clayton County, Iowa","Car, truck or van: drove alone",7045,230
+19043,"Clayton County, Iowa","Car, truck or van: carpooled",775,114
+19043,"Clayton County, Iowa","Car, truck or van: carpooled: 2 person carpool",564,98
+19043,"Clayton County, Iowa","Car, truck or van: carpooled: 3 person carpool",119,68
+19043,"Clayton County, Iowa","Car, truck or van: carpooled: 4 person carpool",14,18
+19043,"Clayton County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",50,29
+19043,"Clayton County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",28,25
+19043,"Clayton County, Iowa",Public transportation (excluding taxicab),42,29
+19043,"Clayton County, Iowa",Bus,42,29
+19043,"Clayton County, Iowa",Subway or elevated rail,0,16
+19043,"Clayton County, Iowa",Long distance train or commuter rail,0,16
+19043,"Clayton County, Iowa","Light rail, streetcar or trolley",0,16
+19043,"Clayton County, Iowa",Ferryboat,0,16
+19043,"Clayton County, Iowa",Taxicab,0,16
+19043,"Clayton County, Iowa",Motorcycle,7,9
+19043,"Clayton County, Iowa",Bicycle,9,11
+19043,"Clayton County, Iowa",Walked,399,80
+19043,"Clayton County, Iowa",Other means,51,29
+19043,"Clayton County, Iowa",Worked from home,598,102
+19045,"Clinton County, Iowa",Total,23602,515
+19045,"Clinton County, Iowa","Car, truck or van",21644,553
+19045,"Clinton County, Iowa","Car, truck or van: drove alone",19668,600
+19045,"Clinton County, Iowa","Car, truck or van: carpooled",1976,307
+19045,"Clinton County, Iowa","Car, truck or van: carpooled: 2 person carpool",1446,274
+19045,"Clinton County, Iowa","Car, truck or van: carpooled: 3 person carpool",319,117
+19045,"Clinton County, Iowa","Car, truck or van: carpooled: 4 person carpool",119,74
+19045,"Clinton County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",69,52
+19045,"Clinton County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",23,29
+19045,"Clinton County, Iowa",Public transportation (excluding taxicab),181,90
+19045,"Clinton County, Iowa",Bus,181,90
+19045,"Clinton County, Iowa",Subway or elevated rail,0,21
+19045,"Clinton County, Iowa",Long distance train or commuter rail,0,21
+19045,"Clinton County, Iowa","Light rail, streetcar or trolley",0,21
+19045,"Clinton County, Iowa",Ferryboat,0,21
+19045,"Clinton County, Iowa",Taxicab,0,21
+19045,"Clinton County, Iowa",Motorcycle,38,41
+19045,"Clinton County, Iowa",Bicycle,58,45
+19045,"Clinton County, Iowa",Walked,682,154
+19045,"Clinton County, Iowa",Other means,133,72
+19045,"Clinton County, Iowa",Worked from home,866,144
+19047,"Crawford County, Iowa",Total,7771,311
+19047,"Crawford County, Iowa","Car, truck or van",7035,303
+19047,"Crawford County, Iowa","Car, truck or van: drove alone",5971,280
+19047,"Crawford County, Iowa","Car, truck or van: carpooled",1064,246
+19047,"Crawford County, Iowa","Car, truck or van: carpooled: 2 person carpool",774,200
+19047,"Crawford County, Iowa","Car, truck or van: carpooled: 3 person carpool",177,112
+19047,"Crawford County, Iowa","Car, truck or van: carpooled: 4 person carpool",49,36
+19047,"Crawford County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",43,38
+19047,"Crawford County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",21,34
+19047,"Crawford County, Iowa",Public transportation (excluding taxicab),13,28
+19047,"Crawford County, Iowa",Bus,13,28
+19047,"Crawford County, Iowa",Subway or elevated rail,0,16
+19047,"Crawford County, Iowa",Long distance train or commuter rail,0,16
+19047,"Crawford County, Iowa","Light rail, streetcar or trolley",0,16
+19047,"Crawford County, Iowa",Ferryboat,0,16
+19047,"Crawford County, Iowa",Taxicab,0,16
+19047,"Crawford County, Iowa",Motorcycle,4,6
+19047,"Crawford County, Iowa",Bicycle,3,5
+19047,"Crawford County, Iowa",Walked,210,101
+19047,"Crawford County, Iowa",Other means,49,31
+19047,"Crawford County, Iowa",Worked from home,457,101
+19049,"Dallas County, Iowa",Total,35207,693
+19049,"Dallas County, Iowa","Car, truck or van",32863,701
+19049,"Dallas County, Iowa","Car, truck or van: drove alone",30033,740
+19049,"Dallas County, Iowa","Car, truck or van: carpooled",2830,378
+19049,"Dallas County, Iowa","Car, truck or van: carpooled: 2 person carpool",2519,373
+19049,"Dallas County, Iowa","Car, truck or van: carpooled: 3 person carpool",214,86
+19049,"Dallas County, Iowa","Car, truck or van: carpooled: 4 person carpool",53,36
+19049,"Dallas County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",31,24
+19049,"Dallas County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",13,22
+19049,"Dallas County, Iowa",Public transportation (excluding taxicab),100,63
+19049,"Dallas County, Iowa",Bus,100,63
+19049,"Dallas County, Iowa",Subway or elevated rail,0,23
+19049,"Dallas County, Iowa",Long distance train or commuter rail,0,23
+19049,"Dallas County, Iowa","Light rail, streetcar or trolley",0,23
+19049,"Dallas County, Iowa",Ferryboat,0,23
+19049,"Dallas County, Iowa",Taxicab,13,22
+19049,"Dallas County, Iowa",Motorcycle,28,26
+19049,"Dallas County, Iowa",Bicycle,39,31
+19049,"Dallas County, Iowa",Walked,282,83
+19049,"Dallas County, Iowa",Other means,225,157
+19049,"Dallas County, Iowa",Worked from home,1657,274
+19051,"Davis County, Iowa",Total,3572,189
+19051,"Davis County, Iowa","Car, truck or van",2963,221
+19051,"Davis County, Iowa","Car, truck or van: drove alone",2433,222
+19051,"Davis County, Iowa","Car, truck or van: carpooled",530,146
+19051,"Davis County, Iowa","Car, truck or van: carpooled: 2 person carpool",323,135
+19051,"Davis County, Iowa","Car, truck or van: carpooled: 3 person carpool",73,51
+19051,"Davis County, Iowa","Car, truck or van: carpooled: 4 person carpool",70,41
+19051,"Davis County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",40,33
+19051,"Davis County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",24,31
+19051,"Davis County, Iowa",Public transportation (excluding taxicab),23,25
+19051,"Davis County, Iowa",Bus,23,25
+19051,"Davis County, Iowa",Subway or elevated rail,0,14
+19051,"Davis County, Iowa",Long distance train or commuter rail,0,14
+19051,"Davis County, Iowa","Light rail, streetcar or trolley",0,14
+19051,"Davis County, Iowa",Ferryboat,0,14
+19051,"Davis County, Iowa",Taxicab,15,21
+19051,"Davis County, Iowa",Motorcycle,3,5
+19051,"Davis County, Iowa",Bicycle,2,3
+19051,"Davis County, Iowa",Walked,228,76
+19051,"Davis County, Iowa",Other means,68,38
+19051,"Davis County, Iowa",Worked from home,270,96
+19053,"Decatur County, Iowa",Total,3762,214
+19053,"Decatur County, Iowa","Car, truck or van",3150,195
+19053,"Decatur County, Iowa","Car, truck or van: drove alone",2710,191
+19053,"Decatur County, Iowa","Car, truck or van: carpooled",440,96
+19053,"Decatur County, Iowa","Car, truck or van: carpooled: 2 person carpool",322,81
+19053,"Decatur County, Iowa","Car, truck or van: carpooled: 3 person carpool",97,50
+19053,"Decatur County, Iowa","Car, truck or van: carpooled: 4 person carpool",19,17
+19053,"Decatur County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",1,2
+19053,"Decatur County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",1,2
+19053,"Decatur County, Iowa",Public transportation (excluding taxicab),12,23
+19053,"Decatur County, Iowa",Bus,12,23
+19053,"Decatur County, Iowa",Subway or elevated rail,0,14
+19053,"Decatur County, Iowa",Long distance train or commuter rail,0,14
+19053,"Decatur County, Iowa","Light rail, streetcar or trolley",0,14
+19053,"Decatur County, Iowa",Ferryboat,0,14
+19053,"Decatur County, Iowa",Taxicab,0,14
+19053,"Decatur County, Iowa",Motorcycle,0,14
+19053,"Decatur County, Iowa",Bicycle,49,46
+19053,"Decatur County, Iowa",Walked,150,57
+19053,"Decatur County, Iowa",Other means,22,24
+19053,"Decatur County, Iowa",Worked from home,379,97
+19055,"Delaware County, Iowa",Total,9364,315
+19055,"Delaware County, Iowa","Car, truck or van",8149,350
+19055,"Delaware County, Iowa","Car, truck or van: drove alone",7257,338
+19055,"Delaware County, Iowa","Car, truck or van: carpooled",892,171
+19055,"Delaware County, Iowa","Car, truck or van: carpooled: 2 person carpool",682,147
+19055,"Delaware County, Iowa","Car, truck or van: carpooled: 3 person carpool",137,66
+19055,"Delaware County, Iowa","Car, truck or van: carpooled: 4 person carpool",73,42
+19055,"Delaware County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,16
+19055,"Delaware County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19055,"Delaware County, Iowa",Public transportation (excluding taxicab),12,13
+19055,"Delaware County, Iowa",Bus,12,13
+19055,"Delaware County, Iowa",Subway or elevated rail,0,16
+19055,"Delaware County, Iowa",Long distance train or commuter rail,0,16
+19055,"Delaware County, Iowa","Light rail, streetcar or trolley",0,16
+19055,"Delaware County, Iowa",Ferryboat,0,16
+19055,"Delaware County, Iowa",Taxicab,0,16
+19055,"Delaware County, Iowa",Motorcycle,3,4
+19055,"Delaware County, Iowa",Bicycle,16,15
+19055,"Delaware County, Iowa",Walked,317,107
+19055,"Delaware County, Iowa",Other means,70,45
+19055,"Delaware County, Iowa",Worked from home,797,165
+19057,"Des Moines County, Iowa",Total,18450,508
+19057,"Des Moines County, Iowa","Car, truck or van",17069,538
+19057,"Des Moines County, Iowa","Car, truck or van: drove alone",14917,473
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled",2152,254
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled: 2 person carpool",1683,231
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled: 3 person carpool",221,82
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled: 4 person carpool",103,53
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",119,88
+19057,"Des Moines County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",26,38
+19057,"Des Moines County, Iowa",Public transportation (excluding taxicab),131,92
+19057,"Des Moines County, Iowa",Bus,117,90
+19057,"Des Moines County, Iowa",Subway or elevated rail,0,21
+19057,"Des Moines County, Iowa",Long distance train or commuter rail,0,21
+19057,"Des Moines County, Iowa","Light rail, streetcar or trolley",0,21
+19057,"Des Moines County, Iowa",Ferryboat,14,21
+19057,"Des Moines County, Iowa",Taxicab,146,130
+19057,"Des Moines County, Iowa",Motorcycle,60,40
+19057,"Des Moines County, Iowa",Bicycle,125,98
+19057,"Des Moines County, Iowa",Walked,384,109
+19057,"Des Moines County, Iowa",Other means,96,76
+19057,"Des Moines County, Iowa",Worked from home,439,94
+19059,"Dickinson County, Iowa",Total,8848,266
+19059,"Dickinson County, Iowa","Car, truck or van",7818,263
+19059,"Dickinson County, Iowa","Car, truck or van: drove alone",6842,307
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled",976,198
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled: 2 person carpool",757,200
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled: 3 person carpool",182,95
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled: 4 person carpool",26,27
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",3,6
+19059,"Dickinson County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",8,11
+19059,"Dickinson County, Iowa",Public transportation (excluding taxicab),40,42
+19059,"Dickinson County, Iowa",Bus,40,42
+19059,"Dickinson County, Iowa",Subway or elevated rail,0,16
+19059,"Dickinson County, Iowa",Long distance train or commuter rail,0,16
+19059,"Dickinson County, Iowa","Light rail, streetcar or trolley",0,16
+19059,"Dickinson County, Iowa",Ferryboat,0,16
+19059,"Dickinson County, Iowa",Taxicab,0,16
+19059,"Dickinson County, Iowa",Motorcycle,33,33
+19059,"Dickinson County, Iowa",Bicycle,15,16
+19059,"Dickinson County, Iowa",Walked,337,111
+19059,"Dickinson County, Iowa",Other means,38,35
+19059,"Dickinson County, Iowa",Worked from home,567,132
+19061,"Dubuque County, Iowa",Total,49010,743
+19061,"Dubuque County, Iowa","Car, truck or van",43940,793
+19061,"Dubuque County, Iowa","Car, truck or van: drove alone",39982,790
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled",3958,301
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled: 2 person carpool",2995,289
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled: 3 person carpool",529,114
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled: 4 person carpool",273,101
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",33,23
+19061,"Dubuque County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",128,91
+19061,"Dubuque County, Iowa",Public transportation (excluding taxicab),501,219
+19061,"Dubuque County, Iowa",Bus,490,222
+19061,"Dubuque County, Iowa",Subway or elevated rail,0,23
+19061,"Dubuque County, Iowa",Long distance train or commuter rail,0,23
+19061,"Dubuque County, Iowa","Light rail, streetcar or trolley",11,16
+19061,"Dubuque County, Iowa",Ferryboat,0,23
+19061,"Dubuque County, Iowa",Taxicab,18,19
+19061,"Dubuque County, Iowa",Motorcycle,81,39
+19061,"Dubuque County, Iowa",Bicycle,98,51
+19061,"Dubuque County, Iowa",Walked,2249,286
+19061,"Dubuque County, Iowa",Other means,165,65
+19061,"Dubuque County, Iowa",Worked from home,1958,273
+19063,"Emmet County, Iowa",Total,5084,194
+19063,"Emmet County, Iowa","Car, truck or van",4296,212
+19063,"Emmet County, Iowa","Car, truck or van: drove alone",3896,204
+19063,"Emmet County, Iowa","Car, truck or van: carpooled",400,106
+19063,"Emmet County, Iowa","Car, truck or van: carpooled: 2 person carpool",272,84
+19063,"Emmet County, Iowa","Car, truck or van: carpooled: 3 person carpool",119,58
+19063,"Emmet County, Iowa","Car, truck or van: carpooled: 4 person carpool",8,8
+19063,"Emmet County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",1,2
+19063,"Emmet County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19063,"Emmet County, Iowa",Public transportation (excluding taxicab),36,47
+19063,"Emmet County, Iowa",Bus,16,20
+19063,"Emmet County, Iowa",Subway or elevated rail,0,16
+19063,"Emmet County, Iowa",Long distance train or commuter rail,0,16
+19063,"Emmet County, Iowa","Light rail, streetcar or trolley",20,41
+19063,"Emmet County, Iowa",Ferryboat,0,16
+19063,"Emmet County, Iowa",Taxicab,0,16
+19063,"Emmet County, Iowa",Motorcycle,11,18
+19063,"Emmet County, Iowa",Bicycle,276,206
+19063,"Emmet County, Iowa",Walked,193,135
+19063,"Emmet County, Iowa",Other means,34,24
+19063,"Emmet County, Iowa",Worked from home,238,69
+19065,"Fayette County, Iowa",Total,9609,277
+19065,"Fayette County, Iowa","Car, truck or van",8176,284
+19065,"Fayette County, Iowa","Car, truck or van: drove alone",7255,315
+19065,"Fayette County, Iowa","Car, truck or van: carpooled",921,181
+19065,"Fayette County, Iowa","Car, truck or van: carpooled: 2 person carpool",709,166
+19065,"Fayette County, Iowa","Car, truck or van: carpooled: 3 person carpool",112,70
+19065,"Fayette County, Iowa","Car, truck or van: carpooled: 4 person carpool",26,16
+19065,"Fayette County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",22,24
+19065,"Fayette County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",52,49
+19065,"Fayette County, Iowa",Public transportation (excluding taxicab),49,64
+19065,"Fayette County, Iowa",Bus,49,64
+19065,"Fayette County, Iowa",Subway or elevated rail,0,18
+19065,"Fayette County, Iowa",Long distance train or commuter rail,0,18
+19065,"Fayette County, Iowa","Light rail, streetcar or trolley",0,18
+19065,"Fayette County, Iowa",Ferryboat,0,18
+19065,"Fayette County, Iowa",Taxicab,0,18
+19065,"Fayette County, Iowa",Motorcycle,12,20
+19065,"Fayette County, Iowa",Bicycle,33,23
+19065,"Fayette County, Iowa",Walked,545,110
+19065,"Fayette County, Iowa",Other means,102,74
+19065,"Fayette County, Iowa",Worked from home,692,134
+19067,"Floyd County, Iowa",Total,7611,258
+19067,"Floyd County, Iowa","Car, truck or van",6708,286
+19067,"Floyd County, Iowa","Car, truck or van: drove alone",5920,305
+19067,"Floyd County, Iowa","Car, truck or van: carpooled",788,150
+19067,"Floyd County, Iowa","Car, truck or van: carpooled: 2 person carpool",584,130
+19067,"Floyd County, Iowa","Car, truck or van: carpooled: 3 person carpool",90,43
+19067,"Floyd County, Iowa","Car, truck or van: carpooled: 4 person carpool",78,79
+19067,"Floyd County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",17,19
+19067,"Floyd County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",19,34
+19067,"Floyd County, Iowa",Public transportation (excluding taxicab),29,25
+19067,"Floyd County, Iowa",Bus,29,25
+19067,"Floyd County, Iowa",Subway or elevated rail,0,16
+19067,"Floyd County, Iowa",Long distance train or commuter rail,0,16
+19067,"Floyd County, Iowa","Light rail, streetcar or trolley",0,16
+19067,"Floyd County, Iowa",Ferryboat,0,16
+19067,"Floyd County, Iowa",Taxicab,0,16
+19067,"Floyd County, Iowa",Motorcycle,16,18
+19067,"Floyd County, Iowa",Bicycle,48,40
+19067,"Floyd County, Iowa",Walked,340,116
+19067,"Floyd County, Iowa",Other means,84,68
+19067,"Floyd County, Iowa",Worked from home,386,94
+19069,"Franklin County, Iowa",Total,5328,218
+19069,"Franklin County, Iowa","Car, truck or van",4741,200
+19069,"Franklin County, Iowa","Car, truck or van: drove alone",4213,221
+19069,"Franklin County, Iowa","Car, truck or van: carpooled",528,123
+19069,"Franklin County, Iowa","Car, truck or van: carpooled: 2 person carpool",383,116
+19069,"Franklin County, Iowa","Car, truck or van: carpooled: 3 person carpool",19,28
+19069,"Franklin County, Iowa","Car, truck or van: carpooled: 4 person carpool",96,91
+19069,"Franklin County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",26,28
+19069,"Franklin County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",4,9
+19069,"Franklin County, Iowa",Public transportation (excluding taxicab),8,7
+19069,"Franklin County, Iowa",Bus,8,7
+19069,"Franklin County, Iowa",Subway or elevated rail,0,16
+19069,"Franklin County, Iowa",Long distance train or commuter rail,0,16
+19069,"Franklin County, Iowa","Light rail, streetcar or trolley",0,16
+19069,"Franklin County, Iowa",Ferryboat,0,16
+19069,"Franklin County, Iowa",Taxicab,0,16
+19069,"Franklin County, Iowa",Motorcycle,0,16
+19069,"Franklin County, Iowa",Bicycle,3,5
+19069,"Franklin County, Iowa",Walked,271,101
+19069,"Franklin County, Iowa",Other means,40,46
+19069,"Franklin County, Iowa",Worked from home,265,61
+19071,"Fremont County, Iowa",Total,3514,107
+19071,"Fremont County, Iowa","Car, truck or van",3122,105
+19071,"Fremont County, Iowa","Car, truck or van: drove alone",2825,116
+19071,"Fremont County, Iowa","Car, truck or van: carpooled",297,63
+19071,"Fremont County, Iowa","Car, truck or van: carpooled: 2 person carpool",258,65
+19071,"Fremont County, Iowa","Car, truck or van: carpooled: 3 person carpool",28,18
+19071,"Fremont County, Iowa","Car, truck or van: carpooled: 4 person carpool",3,6
+19071,"Fremont County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",2,5
+19071,"Fremont County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",6,6
+19071,"Fremont County, Iowa",Public transportation (excluding taxicab),5,5
+19071,"Fremont County, Iowa",Bus,5,5
+19071,"Fremont County, Iowa",Subway or elevated rail,0,14
+19071,"Fremont County, Iowa",Long distance train or commuter rail,0,14
+19071,"Fremont County, Iowa","Light rail, streetcar or trolley",0,14
+19071,"Fremont County, Iowa",Ferryboat,0,14
+19071,"Fremont County, Iowa",Taxicab,0,14
+19071,"Fremont County, Iowa",Motorcycle,11,10
+19071,"Fremont County, Iowa",Bicycle,4,6
+19071,"Fremont County, Iowa",Walked,88,32
+19071,"Fremont County, Iowa",Other means,57,24
+19071,"Fremont County, Iowa",Worked from home,227,58
+19073,"Greene County, Iowa",Total,4537,177
+19073,"Greene County, Iowa","Car, truck or van",3924,197
+19073,"Greene County, Iowa","Car, truck or van: drove alone",3492,184
+19073,"Greene County, Iowa","Car, truck or van: carpooled",432,121
+19073,"Greene County, Iowa","Car, truck or van: carpooled: 2 person carpool",304,94
+19073,"Greene County, Iowa","Car, truck or van: carpooled: 3 person carpool",99,54
+19073,"Greene County, Iowa","Car, truck or van: carpooled: 4 person carpool",25,22
+19073,"Greene County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19073,"Greene County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",4,6
+19073,"Greene County, Iowa",Public transportation (excluding taxicab),0,14
+19073,"Greene County, Iowa",Bus,0,14
+19073,"Greene County, Iowa",Subway or elevated rail,0,14
+19073,"Greene County, Iowa",Long distance train or commuter rail,0,14
+19073,"Greene County, Iowa","Light rail, streetcar or trolley",0,14
+19073,"Greene County, Iowa",Ferryboat,0,14
+19073,"Greene County, Iowa",Taxicab,0,14
+19073,"Greene County, Iowa",Motorcycle,32,41
+19073,"Greene County, Iowa",Bicycle,0,14
+19073,"Greene County, Iowa",Walked,165,63
+19073,"Greene County, Iowa",Other means,23,23
+19073,"Greene County, Iowa",Worked from home,393,99
+19075,"Grundy County, Iowa",Total,6137,135
+19075,"Grundy County, Iowa","Car, truck or van",5385,150
+19075,"Grundy County, Iowa","Car, truck or van: drove alone",4995,147
+19075,"Grundy County, Iowa","Car, truck or van: carpooled",390,91
+19075,"Grundy County, Iowa","Car, truck or van: carpooled: 2 person carpool",307,77
+19075,"Grundy County, Iowa","Car, truck or van: carpooled: 3 person carpool",56,39
+19075,"Grundy County, Iowa","Car, truck or van: carpooled: 4 person carpool",10,11
+19075,"Grundy County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",13,19
+19075,"Grundy County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",4,7
+19075,"Grundy County, Iowa",Public transportation (excluding taxicab),3,4
+19075,"Grundy County, Iowa",Bus,3,4
+19075,"Grundy County, Iowa",Subway or elevated rail,0,16
+19075,"Grundy County, Iowa",Long distance train or commuter rail,0,16
+19075,"Grundy County, Iowa","Light rail, streetcar or trolley",0,16
+19075,"Grundy County, Iowa",Ferryboat,0,16
+19075,"Grundy County, Iowa",Taxicab,0,16
+19075,"Grundy County, Iowa",Motorcycle,19,15
+19075,"Grundy County, Iowa",Bicycle,50,32
+19075,"Grundy County, Iowa",Walked,290,72
+19075,"Grundy County, Iowa",Other means,15,13
+19075,"Grundy County, Iowa",Worked from home,375,83
+19077,"Guthrie County, Iowa",Total,5254,181
+19077,"Guthrie County, Iowa","Car, truck or van",4653,178
+19077,"Guthrie County, Iowa","Car, truck or van: drove alone",3970,182
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled",683,144
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled: 2 person carpool",497,127
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled: 3 person carpool",85,43
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled: 4 person carpool",21,17
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",26,16
+19077,"Guthrie County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",54,39
+19077,"Guthrie County, Iowa",Public transportation (excluding taxicab),14,17
+19077,"Guthrie County, Iowa",Bus,14,17
+19077,"Guthrie County, Iowa",Subway or elevated rail,0,16
+19077,"Guthrie County, Iowa",Long distance train or commuter rail,0,16
+19077,"Guthrie County, Iowa","Light rail, streetcar or trolley",0,16
+19077,"Guthrie County, Iowa",Ferryboat,0,16
+19077,"Guthrie County, Iowa",Taxicab,0,16
+19077,"Guthrie County, Iowa",Motorcycle,7,8
+19077,"Guthrie County, Iowa",Bicycle,12,17
+19077,"Guthrie County, Iowa",Walked,179,78
+19077,"Guthrie County, Iowa",Other means,29,26
+19077,"Guthrie County, Iowa",Worked from home,360,81
+19079,"Hamilton County, Iowa",Total,7362,209
+19079,"Hamilton County, Iowa","Car, truck or van",6629,211
+19079,"Hamilton County, Iowa","Car, truck or van: drove alone",5879,290
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled",750,201
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled: 2 person carpool",604,194
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled: 3 person carpool",123,77
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled: 4 person carpool",3,4
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",19,26
+19079,"Hamilton County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",1,3
+19079,"Hamilton County, Iowa",Public transportation (excluding taxicab),1,3
+19079,"Hamilton County, Iowa",Bus,1,3
+19079,"Hamilton County, Iowa",Subway or elevated rail,0,16
+19079,"Hamilton County, Iowa",Long distance train or commuter rail,0,16
+19079,"Hamilton County, Iowa","Light rail, streetcar or trolley",0,16
+19079,"Hamilton County, Iowa",Ferryboat,0,16
+19079,"Hamilton County, Iowa",Taxicab,0,16
+19079,"Hamilton County, Iowa",Motorcycle,16,17
+19079,"Hamilton County, Iowa",Bicycle,16,23
+19079,"Hamilton County, Iowa",Walked,317,98
+19079,"Hamilton County, Iowa",Other means,90,69
+19079,"Hamilton County, Iowa",Worked from home,293,87
+19081,"Hancock County, Iowa",Total,5579,183
+19081,"Hancock County, Iowa","Car, truck or van",4814,178
+19081,"Hancock County, Iowa","Car, truck or van: drove alone",4294,203
+19081,"Hancock County, Iowa","Car, truck or van: carpooled",520,108
+19081,"Hancock County, Iowa","Car, truck or van: carpooled: 2 person carpool",450,102
+19081,"Hancock County, Iowa","Car, truck or van: carpooled: 3 person carpool",58,38
+19081,"Hancock County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,16
+19081,"Hancock County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",12,11
+19081,"Hancock County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19081,"Hancock County, Iowa",Public transportation (excluding taxicab),0,16
+19081,"Hancock County, Iowa",Bus,0,16
+19081,"Hancock County, Iowa",Subway or elevated rail,0,16
+19081,"Hancock County, Iowa",Long distance train or commuter rail,0,16
+19081,"Hancock County, Iowa","Light rail, streetcar or trolley",0,16
+19081,"Hancock County, Iowa",Ferryboat,0,16
+19081,"Hancock County, Iowa",Taxicab,0,16
+19081,"Hancock County, Iowa",Motorcycle,1,3
+19081,"Hancock County, Iowa",Bicycle,26,27
+19081,"Hancock County, Iowa",Walked,276,96
+19081,"Hancock County, Iowa",Other means,76,52
+19081,"Hancock County, Iowa",Worked from home,386,104
+19083,"Hardin County, Iowa",Total,8060,256
+19083,"Hardin County, Iowa","Car, truck or van",7070,297
+19083,"Hardin County, Iowa","Car, truck or van: drove alone",6373,287
+19083,"Hardin County, Iowa","Car, truck or van: carpooled",697,151
+19083,"Hardin County, Iowa","Car, truck or van: carpooled: 2 person carpool",589,138
+19083,"Hardin County, Iowa","Car, truck or van: carpooled: 3 person carpool",65,33
+19083,"Hardin County, Iowa","Car, truck or van: carpooled: 4 person carpool",29,31
+19083,"Hardin County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",14,17
+19083,"Hardin County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19083,"Hardin County, Iowa",Public transportation (excluding taxicab),22,18
+19083,"Hardin County, Iowa",Bus,22,18
+19083,"Hardin County, Iowa",Subway or elevated rail,0,16
+19083,"Hardin County, Iowa",Long distance train or commuter rail,0,16
+19083,"Hardin County, Iowa","Light rail, streetcar or trolley",0,16
+19083,"Hardin County, Iowa",Ferryboat,0,16
+19083,"Hardin County, Iowa",Taxicab,0,16
+19083,"Hardin County, Iowa",Motorcycle,11,12
+19083,"Hardin County, Iowa",Bicycle,72,62
+19083,"Hardin County, Iowa",Walked,441,112
+19083,"Hardin County, Iowa",Other means,55,37
+19083,"Hardin County, Iowa",Worked from home,389,85
+19085,"Harrison County, Iowa",Total,7301,213
+19085,"Harrison County, Iowa","Car, truck or van",6642,213
+19085,"Harrison County, Iowa","Car, truck or van: drove alone",5651,250
+19085,"Harrison County, Iowa","Car, truck or van: carpooled",991,161
+19085,"Harrison County, Iowa","Car, truck or van: carpooled: 2 person carpool",710,123
+19085,"Harrison County, Iowa","Car, truck or van: carpooled: 3 person carpool",214,77
+19085,"Harrison County, Iowa","Car, truck or van: carpooled: 4 person carpool",39,28
+19085,"Harrison County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",9,9
+19085,"Harrison County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",19,30
+19085,"Harrison County, Iowa",Public transportation (excluding taxicab),18,20
+19085,"Harrison County, Iowa",Bus,18,20
+19085,"Harrison County, Iowa",Subway or elevated rail,0,16
+19085,"Harrison County, Iowa",Long distance train or commuter rail,0,16
+19085,"Harrison County, Iowa","Light rail, streetcar or trolley",0,16
+19085,"Harrison County, Iowa",Ferryboat,0,16
+19085,"Harrison County, Iowa",Taxicab,0,16
+19085,"Harrison County, Iowa",Motorcycle,19,22
+19085,"Harrison County, Iowa",Bicycle,5,5
+19085,"Harrison County, Iowa",Walked,314,88
+19085,"Harrison County, Iowa",Other means,13,11
+19085,"Harrison County, Iowa",Worked from home,290,74
+19087,"Henry County, Iowa",Total,9183,357
+19087,"Henry County, Iowa","Car, truck or van",8226,347
+19087,"Henry County, Iowa","Car, truck or van: drove alone",7344,356
+19087,"Henry County, Iowa","Car, truck or van: carpooled",882,170
+19087,"Henry County, Iowa","Car, truck or van: carpooled: 2 person carpool",677,152
+19087,"Henry County, Iowa","Car, truck or van: carpooled: 3 person carpool",97,51
+19087,"Henry County, Iowa","Car, truck or van: carpooled: 4 person carpool",92,61
+19087,"Henry County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",4,5
+19087,"Henry County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",12,13
+19087,"Henry County, Iowa",Public transportation (excluding taxicab),45,40
+19087,"Henry County, Iowa",Bus,45,40
+19087,"Henry County, Iowa",Subway or elevated rail,0,18
+19087,"Henry County, Iowa",Long distance train or commuter rail,0,18
+19087,"Henry County, Iowa","Light rail, streetcar or trolley",0,18
+19087,"Henry County, Iowa",Ferryboat,0,18
+19087,"Henry County, Iowa",Taxicab,0,18
+19087,"Henry County, Iowa",Motorcycle,30,23
+19087,"Henry County, Iowa",Bicycle,6,10
+19087,"Henry County, Iowa",Walked,336,99
+19087,"Henry County, Iowa",Other means,55,67
+19087,"Henry County, Iowa",Worked from home,485,129
+19089,"Howard County, Iowa",Total,4784,171
+19089,"Howard County, Iowa","Car, truck or van",4176,172
+19089,"Howard County, Iowa","Car, truck or van: drove alone",3766,166
+19089,"Howard County, Iowa","Car, truck or van: carpooled",410,95
+19089,"Howard County, Iowa","Car, truck or van: carpooled: 2 person carpool",296,86
+19089,"Howard County, Iowa","Car, truck or van: carpooled: 3 person carpool",95,53
+19089,"Howard County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,16
+19089,"Howard County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",6,9
+19089,"Howard County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19089,"Howard County, Iowa",Public transportation (excluding taxicab),34,32
+19089,"Howard County, Iowa",Bus,34,32
+19089,"Howard County, Iowa",Subway or elevated rail,0,14
+19089,"Howard County, Iowa",Long distance train or commuter rail,0,14
+19089,"Howard County, Iowa","Light rail, streetcar or trolley",0,14
+19089,"Howard County, Iowa",Ferryboat,0,14
+19089,"Howard County, Iowa",Taxicab,0,14
+19089,"Howard County, Iowa",Motorcycle,0,14
+19089,"Howard County, Iowa",Bicycle,20,21
+19089,"Howard County, Iowa",Walked,135,57
+19089,"Howard County, Iowa",Other means,23,20
+19089,"Howard County, Iowa",Worked from home,396,121
+19091,"Humboldt County, Iowa",Total,4769,119
+19091,"Humboldt County, Iowa","Car, truck or van",4274,160
+19091,"Humboldt County, Iowa","Car, truck or van: drove alone",3869,160
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled",405,106
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled: 2 person carpool",238,62
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled: 3 person carpool",108,57
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled: 4 person carpool",36,31
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19091,"Humboldt County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",23,27
+19091,"Humboldt County, Iowa",Public transportation (excluding taxicab),20,14
+19091,"Humboldt County, Iowa",Bus,17,13
+19091,"Humboldt County, Iowa",Subway or elevated rail,0,14
+19091,"Humboldt County, Iowa",Long distance train or commuter rail,0,14
+19091,"Humboldt County, Iowa","Light rail, streetcar or trolley",0,14
+19091,"Humboldt County, Iowa",Ferryboat,3,5
+19091,"Humboldt County, Iowa",Taxicab,0,14
+19091,"Humboldt County, Iowa",Motorcycle,18,15
+19091,"Humboldt County, Iowa",Bicycle,41,39
+19091,"Humboldt County, Iowa",Walked,204,66
+19091,"Humboldt County, Iowa",Other means,15,14
+19091,"Humboldt County, Iowa",Worked from home,197,63
+19093,"Ida County, Iowa",Total,3487,147
+19093,"Ida County, Iowa","Car, truck or van",3011,142
+19093,"Ida County, Iowa","Car, truck or van: drove alone",2799,152
+19093,"Ida County, Iowa","Car, truck or van: carpooled",212,65
+19093,"Ida County, Iowa","Car, truck or van: carpooled: 2 person carpool",99,37
+19093,"Ida County, Iowa","Car, truck or van: carpooled: 3 person carpool",71,45
+19093,"Ida County, Iowa","Car, truck or van: carpooled: 4 person carpool",21,14
+19093,"Ida County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",13,15
+19093,"Ida County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",8,12
+19093,"Ida County, Iowa",Public transportation (excluding taxicab),42,36
+19093,"Ida County, Iowa",Bus,42,36
+19093,"Ida County, Iowa",Subway or elevated rail,0,14
+19093,"Ida County, Iowa",Long distance train or commuter rail,0,14
+19093,"Ida County, Iowa","Light rail, streetcar or trolley",0,14
+19093,"Ida County, Iowa",Ferryboat,0,14
+19093,"Ida County, Iowa",Taxicab,0,14
+19093,"Ida County, Iowa",Motorcycle,14,9
+19093,"Ida County, Iowa",Bicycle,18,19
+19093,"Ida County, Iowa",Walked,165,56
+19093,"Ida County, Iowa",Other means,10,11
+19093,"Ida County, Iowa",Worked from home,227,86
+19095,"Iowa County, Iowa",Total,8606,235
+19095,"Iowa County, Iowa","Car, truck or van",7680,279
+19095,"Iowa County, Iowa","Car, truck or van: drove alone",6336,279
+19095,"Iowa County, Iowa","Car, truck or van: carpooled",1344,229
+19095,"Iowa County, Iowa","Car, truck or van: carpooled: 2 person carpool",1044,228
+19095,"Iowa County, Iowa","Car, truck or van: carpooled: 3 person carpool",149,55
+19095,"Iowa County, Iowa","Car, truck or van: carpooled: 4 person carpool",30,23
+19095,"Iowa County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",50,35
+19095,"Iowa County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",71,32
+19095,"Iowa County, Iowa",Public transportation (excluding taxicab),20,20
+19095,"Iowa County, Iowa",Bus,20,20
+19095,"Iowa County, Iowa",Subway or elevated rail,0,16
+19095,"Iowa County, Iowa",Long distance train or commuter rail,0,16
+19095,"Iowa County, Iowa","Light rail, streetcar or trolley",0,16
+19095,"Iowa County, Iowa",Ferryboat,0,16
+19095,"Iowa County, Iowa",Taxicab,0,16
+19095,"Iowa County, Iowa",Motorcycle,6,10
+19095,"Iowa County, Iowa",Bicycle,26,22
+19095,"Iowa County, Iowa",Walked,367,111
+19095,"Iowa County, Iowa",Other means,17,14
+19095,"Iowa County, Iowa",Worked from home,490,127
+19097,"Jackson County, Iowa",Total,9839,246
+19097,"Jackson County, Iowa","Car, truck or van",8895,244
+19097,"Jackson County, Iowa","Car, truck or van: drove alone",7795,263
+19097,"Jackson County, Iowa","Car, truck or van: carpooled",1100,160
+19097,"Jackson County, Iowa","Car, truck or van: carpooled: 2 person carpool",736,125
+19097,"Jackson County, Iowa","Car, truck or van: carpooled: 3 person carpool",203,80
+19097,"Jackson County, Iowa","Car, truck or van: carpooled: 4 person carpool",90,45
+19097,"Jackson County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",40,36
+19097,"Jackson County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",31,35
+19097,"Jackson County, Iowa",Public transportation (excluding taxicab),55,32
+19097,"Jackson County, Iowa",Bus,55,32
+19097,"Jackson County, Iowa",Subway or elevated rail,0,16
+19097,"Jackson County, Iowa",Long distance train or commuter rail,0,16
+19097,"Jackson County, Iowa","Light rail, streetcar or trolley",0,16
+19097,"Jackson County, Iowa",Ferryboat,0,16
+19097,"Jackson County, Iowa",Taxicab,0,16
+19097,"Jackson County, Iowa",Motorcycle,17,14
+19097,"Jackson County, Iowa",Bicycle,20,22
+19097,"Jackson County, Iowa",Walked,370,85
+19097,"Jackson County, Iowa",Other means,30,23
+19097,"Jackson County, Iowa",Worked from home,452,85
+19099,"Jasper County, Iowa",Total,16884,463
+19099,"Jasper County, Iowa","Car, truck or van",15301,450
+19099,"Jasper County, Iowa","Car, truck or van: drove alone",13415,513
+19099,"Jasper County, Iowa","Car, truck or van: carpooled",1886,241
+19099,"Jasper County, Iowa","Car, truck or van: carpooled: 2 person carpool",1628,240
+19099,"Jasper County, Iowa","Car, truck or van: carpooled: 3 person carpool",92,55
+19099,"Jasper County, Iowa","Car, truck or van: carpooled: 4 person carpool",42,24
+19099,"Jasper County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",36,35
+19099,"Jasper County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",88,32
+19099,"Jasper County, Iowa",Public transportation (excluding taxicab),49,43
+19099,"Jasper County, Iowa",Bus,46,43
+19099,"Jasper County, Iowa",Subway or elevated rail,3,4
+19099,"Jasper County, Iowa",Long distance train or commuter rail,0,21
+19099,"Jasper County, Iowa","Light rail, streetcar or trolley",0,21
+19099,"Jasper County, Iowa",Ferryboat,0,21
+19099,"Jasper County, Iowa",Taxicab,42,41
+19099,"Jasper County, Iowa",Motorcycle,25,36
+19099,"Jasper County, Iowa",Bicycle,50,29
+19099,"Jasper County, Iowa",Walked,443,146
+19099,"Jasper County, Iowa",Other means,170,91
+19099,"Jasper County, Iowa",Worked from home,804,153
+19101,"Jefferson County, Iowa",Total,8055,403
+19101,"Jefferson County, Iowa","Car, truck or van",6354,422
+19101,"Jefferson County, Iowa","Car, truck or van: drove alone",5505,398
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled",849,201
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled: 2 person carpool",595,163
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled: 3 person carpool",204,112
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,16
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",26,48
+19101,"Jefferson County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",24,33
+19101,"Jefferson County, Iowa",Public transportation (excluding taxicab),43,35
+19101,"Jefferson County, Iowa",Bus,43,35
+19101,"Jefferson County, Iowa",Subway or elevated rail,0,16
+19101,"Jefferson County, Iowa",Long distance train or commuter rail,0,16
+19101,"Jefferson County, Iowa","Light rail, streetcar or trolley",0,16
+19101,"Jefferson County, Iowa",Ferryboat,0,16
+19101,"Jefferson County, Iowa",Taxicab,0,16
+19101,"Jefferson County, Iowa",Motorcycle,3,5
+19101,"Jefferson County, Iowa",Bicycle,130,90
+19101,"Jefferson County, Iowa",Walked,492,225
+19101,"Jefferson County, Iowa",Other means,84,53
+19101,"Jefferson County, Iowa",Worked from home,949,230
+19103,"Johnson County, Iowa",Total,72989,1099
+19103,"Johnson County, Iowa","Car, truck or van",56395,1304
+19103,"Johnson County, Iowa","Car, truck or van: drove alone",48704,1349
+19103,"Johnson County, Iowa","Car, truck or van: carpooled",7691,598
+19103,"Johnson County, Iowa","Car, truck or van: carpooled: 2 person carpool",6021,603
+19103,"Johnson County, Iowa","Car, truck or van: carpooled: 3 person carpool",1268,376
+19103,"Johnson County, Iowa","Car, truck or van: carpooled: 4 person carpool",264,115
+19103,"Johnson County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",81,62
+19103,"Johnson County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",57,37
+19103,"Johnson County, Iowa",Public transportation (excluding taxicab),4602,484
+19103,"Johnson County, Iowa",Bus,4547,477
+19103,"Johnson County, Iowa",Subway or elevated rail,35,54
+19103,"Johnson County, Iowa",Long distance train or commuter rail,7,11
+19103,"Johnson County, Iowa","Light rail, streetcar or trolley",13,21
+19103,"Johnson County, Iowa",Ferryboat,0,23
+19103,"Johnson County, Iowa",Taxicab,126,105
+19103,"Johnson County, Iowa",Motorcycle,439,153
+19103,"Johnson County, Iowa",Bicycle,1695,271
+19103,"Johnson County, Iowa",Walked,6770,681
+19103,"Johnson County, Iowa",Other means,360,152
+19103,"Johnson County, Iowa",Worked from home,2602,329
+19105,"Jones County, Iowa",Total,9788,353
+19105,"Jones County, Iowa","Car, truck or van",8911,368
+19105,"Jones County, Iowa","Car, truck or van: drove alone",7995,372
+19105,"Jones County, Iowa","Car, truck or van: carpooled",916,188
+19105,"Jones County, Iowa","Car, truck or van: carpooled: 2 person carpool",703,163
+19105,"Jones County, Iowa","Car, truck or van: carpooled: 3 person carpool",156,73
+19105,"Jones County, Iowa","Car, truck or van: carpooled: 4 person carpool",33,26
+19105,"Jones County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",24,30
+19105,"Jones County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,18
+19105,"Jones County, Iowa",Public transportation (excluding taxicab),11,17
+19105,"Jones County, Iowa",Bus,11,17
+19105,"Jones County, Iowa",Subway or elevated rail,0,18
+19105,"Jones County, Iowa",Long distance train or commuter rail,0,18
+19105,"Jones County, Iowa","Light rail, streetcar or trolley",0,18
+19105,"Jones County, Iowa",Ferryboat,0,18
+19105,"Jones County, Iowa",Taxicab,0,18
+19105,"Jones County, Iowa",Motorcycle,10,13
+19105,"Jones County, Iowa",Bicycle,35,32
+19105,"Jones County, Iowa",Walked,215,62
+19105,"Jones County, Iowa",Other means,53,41
+19105,"Jones County, Iowa",Worked from home,553,127
+19107,"Keokuk County, Iowa",Total,4918,148
+19107,"Keokuk County, Iowa","Car, truck or van",4463,153
+19107,"Keokuk County, Iowa","Car, truck or van: drove alone",3660,182
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled",803,113
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled: 2 person carpool",568,103
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled: 3 person carpool",123,48
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled: 4 person carpool",68,41
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",10,11
+19107,"Keokuk County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",34,20
+19107,"Keokuk County, Iowa",Public transportation (excluding taxicab),3,4
+19107,"Keokuk County, Iowa",Bus,3,4
+19107,"Keokuk County, Iowa",Subway or elevated rail,0,16
+19107,"Keokuk County, Iowa",Long distance train or commuter rail,0,16
+19107,"Keokuk County, Iowa","Light rail, streetcar or trolley",0,16
+19107,"Keokuk County, Iowa",Ferryboat,0,16
+19107,"Keokuk County, Iowa",Taxicab,2,3
+19107,"Keokuk County, Iowa",Motorcycle,2,3
+19107,"Keokuk County, Iowa",Bicycle,7,7
+19107,"Keokuk County, Iowa",Walked,117,37
+19107,"Keokuk County, Iowa",Other means,25,15
+19107,"Keokuk County, Iowa",Worked from home,299,77
+19109,"Kossuth County, Iowa",Total,7807,192
+19109,"Kossuth County, Iowa","Car, truck or van",6932,203
+19109,"Kossuth County, Iowa","Car, truck or van: drove alone",6128,226
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled",804,155
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled: 2 person carpool",576,132
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled: 3 person carpool",148,72
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled: 4 person carpool",25,21
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",33,34
+19109,"Kossuth County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",22,19
+19109,"Kossuth County, Iowa",Public transportation (excluding taxicab),51,68
+19109,"Kossuth County, Iowa",Bus,51,68
+19109,"Kossuth County, Iowa",Subway or elevated rail,0,16
+19109,"Kossuth County, Iowa",Long distance train or commuter rail,0,16
+19109,"Kossuth County, Iowa","Light rail, streetcar or trolley",0,16
+19109,"Kossuth County, Iowa",Ferryboat,0,16
+19109,"Kossuth County, Iowa",Taxicab,0,16
+19109,"Kossuth County, Iowa",Motorcycle,21,16
+19109,"Kossuth County, Iowa",Bicycle,37,26
+19109,"Kossuth County, Iowa",Walked,244,60
+19109,"Kossuth County, Iowa",Other means,39,24
+19109,"Kossuth County, Iowa",Worked from home,483,94
+19111,"Lee County, Iowa",Total,16142,401
+19111,"Lee County, Iowa","Car, truck or van",14905,406
+19111,"Lee County, Iowa","Car, truck or van: drove alone",13558,407
+19111,"Lee County, Iowa","Car, truck or van: carpooled",1347,221
+19111,"Lee County, Iowa","Car, truck or van: carpooled: 2 person carpool",1077,211
+19111,"Lee County, Iowa","Car, truck or van: carpooled: 3 person carpool",177,84
+19111,"Lee County, Iowa","Car, truck or van: carpooled: 4 person carpool",16,22
+19111,"Lee County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",57,45
+19111,"Lee County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",20,24
+19111,"Lee County, Iowa",Public transportation (excluding taxicab),19,34
+19111,"Lee County, Iowa",Bus,19,34
+19111,"Lee County, Iowa",Subway or elevated rail,0,21
+19111,"Lee County, Iowa",Long distance train or commuter rail,0,21
+19111,"Lee County, Iowa","Light rail, streetcar or trolley",0,21
+19111,"Lee County, Iowa",Ferryboat,0,21
+19111,"Lee County, Iowa",Taxicab,0,21
+19111,"Lee County, Iowa",Motorcycle,51,31
+19111,"Lee County, Iowa",Bicycle,52,41
+19111,"Lee County, Iowa",Walked,531,143
+19111,"Lee County, Iowa",Other means,60,36
+19111,"Lee County, Iowa",Worked from home,524,139
+19113,"Linn County, Iowa",Total,109997,1072
+19113,"Linn County, Iowa","Car, truck or van",99925,1236
+19113,"Linn County, Iowa","Car, truck or van: drove alone",90346,1328
+19113,"Linn County, Iowa","Car, truck or van: carpooled",9579,732
+19113,"Linn County, Iowa","Car, truck or van: carpooled: 2 person carpool",7385,619
+19113,"Linn County, Iowa","Car, truck or van: carpooled: 3 person carpool",1301,247
+19113,"Linn County, Iowa","Car, truck or van: carpooled: 4 person carpool",422,177
+19113,"Linn County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",158,94
+19113,"Linn County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",313,117
+19113,"Linn County, Iowa",Public transportation (excluding taxicab),1179,310
+19113,"Linn County, Iowa",Bus,1177,310
+19113,"Linn County, Iowa",Subway or elevated rail,0,23
+19113,"Linn County, Iowa",Long distance train or commuter rail,2,4
+19113,"Linn County, Iowa","Light rail, streetcar or trolley",0,23
+19113,"Linn County, Iowa",Ferryboat,0,23
+19113,"Linn County, Iowa",Taxicab,34,40
+19113,"Linn County, Iowa",Motorcycle,213,82
+19113,"Linn County, Iowa",Bicycle,387,120
+19113,"Linn County, Iowa",Walked,3022,369
+19113,"Linn County, Iowa",Other means,989,246
+19113,"Linn County, Iowa",Worked from home,4248,372
+19115,"Louisa County, Iowa",Total,5518,188
+19115,"Louisa County, Iowa","Car, truck or van",4984,195
+19115,"Louisa County, Iowa","Car, truck or van: drove alone",4100,183
+19115,"Louisa County, Iowa","Car, truck or van: carpooled",884,131
+19115,"Louisa County, Iowa","Car, truck or van: carpooled: 2 person carpool",661,110
+19115,"Louisa County, Iowa","Car, truck or van: carpooled: 3 person carpool",111,54
+19115,"Louisa County, Iowa","Car, truck or van: carpooled: 4 person carpool",30,21
+19115,"Louisa County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",44,37
+19115,"Louisa County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",38,25
+19115,"Louisa County, Iowa",Public transportation (excluding taxicab),2,4
+19115,"Louisa County, Iowa",Bus,2,4
+19115,"Louisa County, Iowa",Subway or elevated rail,0,16
+19115,"Louisa County, Iowa",Long distance train or commuter rail,0,16
+19115,"Louisa County, Iowa","Light rail, streetcar or trolley",0,16
+19115,"Louisa County, Iowa",Ferryboat,0,16
+19115,"Louisa County, Iowa",Taxicab,0,16
+19115,"Louisa County, Iowa",Motorcycle,29,24
+19115,"Louisa County, Iowa",Bicycle,2,3
+19115,"Louisa County, Iowa",Walked,194,69
+19115,"Louisa County, Iowa",Other means,63,41
+19115,"Louisa County, Iowa",Worked from home,244,81
+19117,"Lucas County, Iowa",Total,3735,207
+19117,"Lucas County, Iowa","Car, truck or van",3356,211
+19117,"Lucas County, Iowa","Car, truck or van: drove alone",2887,194
+19117,"Lucas County, Iowa","Car, truck or van: carpooled",469,124
+19117,"Lucas County, Iowa","Car, truck or van: carpooled: 2 person carpool",382,116
+19117,"Lucas County, Iowa","Car, truck or van: carpooled: 3 person carpool",49,32
+19117,"Lucas County, Iowa","Car, truck or van: carpooled: 4 person carpool",8,8
+19117,"Lucas County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",10,12
+19117,"Lucas County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",20,22
+19117,"Lucas County, Iowa",Public transportation (excluding taxicab),33,32
+19117,"Lucas County, Iowa",Bus,33,32
+19117,"Lucas County, Iowa",Subway or elevated rail,0,14
+19117,"Lucas County, Iowa",Long distance train or commuter rail,0,14
+19117,"Lucas County, Iowa","Light rail, streetcar or trolley",0,14
+19117,"Lucas County, Iowa",Ferryboat,0,14
+19117,"Lucas County, Iowa",Taxicab,0,14
+19117,"Lucas County, Iowa",Motorcycle,4,6
+19117,"Lucas County, Iowa",Bicycle,2,4
+19117,"Lucas County, Iowa",Walked,87,41
+19117,"Lucas County, Iowa",Other means,51,42
+19117,"Lucas County, Iowa",Worked from home,202,89
+19119,"Lyon County, Iowa",Total,5802,157
+19119,"Lyon County, Iowa","Car, truck or van",5006,172
+19119,"Lyon County, Iowa","Car, truck or van: drove alone",4551,188
+19119,"Lyon County, Iowa","Car, truck or van: carpooled",455,103
+19119,"Lyon County, Iowa","Car, truck or van: carpooled: 2 person carpool",354,86
+19119,"Lyon County, Iowa","Car, truck or van: carpooled: 3 person carpool",84,46
+19119,"Lyon County, Iowa","Car, truck or van: carpooled: 4 person carpool",16,15
+19119,"Lyon County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,16
+19119,"Lyon County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",1,2
+19119,"Lyon County, Iowa",Public transportation (excluding taxicab),9,11
+19119,"Lyon County, Iowa",Bus,9,11
+19119,"Lyon County, Iowa",Subway or elevated rail,0,16
+19119,"Lyon County, Iowa",Long distance train or commuter rail,0,16
+19119,"Lyon County, Iowa","Light rail, streetcar or trolley",0,16
+19119,"Lyon County, Iowa",Ferryboat,0,16
+19119,"Lyon County, Iowa",Taxicab,0,16
+19119,"Lyon County, Iowa",Motorcycle,0,16
+19119,"Lyon County, Iowa",Bicycle,3,5
+19119,"Lyon County, Iowa",Walked,282,76
+19119,"Lyon County, Iowa",Other means,57,38
+19119,"Lyon County, Iowa",Worked from home,445,98
+19121,"Madison County, Iowa",Total,7812,272
+19121,"Madison County, Iowa","Car, truck or van",7044,284
+19121,"Madison County, Iowa","Car, truck or van: drove alone",6007,284
+19121,"Madison County, Iowa","Car, truck or van: carpooled",1037,187
+19121,"Madison County, Iowa","Car, truck or van: carpooled: 2 person carpool",765,176
+19121,"Madison County, Iowa","Car, truck or van: carpooled: 3 person carpool",144,73
+19121,"Madison County, Iowa","Car, truck or van: carpooled: 4 person carpool",42,28
+19121,"Madison County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",12,20
+19121,"Madison County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",74,57
+19121,"Madison County, Iowa",Public transportation (excluding taxicab),9,14
+19121,"Madison County, Iowa",Bus,9,14
+19121,"Madison County, Iowa",Subway or elevated rail,0,16
+19121,"Madison County, Iowa",Long distance train or commuter rail,0,16
+19121,"Madison County, Iowa","Light rail, streetcar or trolley",0,16
+19121,"Madison County, Iowa",Ferryboat,0,16
+19121,"Madison County, Iowa",Taxicab,0,16
+19121,"Madison County, Iowa",Motorcycle,23,30
+19121,"Madison County, Iowa",Bicycle,32,38
+19121,"Madison County, Iowa",Walked,211,79
+19121,"Madison County, Iowa",Other means,0,16
+19121,"Madison County, Iowa",Worked from home,493,126
+19123,"Mahaska County, Iowa",Total,10647,407
+19123,"Mahaska County, Iowa","Car, truck or van",9340,419
+19123,"Mahaska County, Iowa","Car, truck or van: drove alone",8100,386
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled",1240,225
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled: 2 person carpool",1006,209
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled: 3 person carpool",125,77
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled: 4 person carpool",22,24
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",43,31
+19123,"Mahaska County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",44,30
+19123,"Mahaska County, Iowa",Public transportation (excluding taxicab),67,38
+19123,"Mahaska County, Iowa",Bus,67,38
+19123,"Mahaska County, Iowa",Subway or elevated rail,0,18
+19123,"Mahaska County, Iowa",Long distance train or commuter rail,0,18
+19123,"Mahaska County, Iowa","Light rail, streetcar or trolley",0,18
+19123,"Mahaska County, Iowa",Ferryboat,0,18
+19123,"Mahaska County, Iowa",Taxicab,0,18
+19123,"Mahaska County, Iowa",Motorcycle,11,16
+19123,"Mahaska County, Iowa",Bicycle,83,52
+19123,"Mahaska County, Iowa",Walked,551,157
+19123,"Mahaska County, Iowa",Other means,24,16
+19123,"Mahaska County, Iowa",Worked from home,571,106
+19125,"Marion County, Iowa",Total,16279,393
+19125,"Marion County, Iowa","Car, truck or van",14207,426
+19125,"Marion County, Iowa","Car, truck or van: drove alone",12894,470
+19125,"Marion County, Iowa","Car, truck or van: carpooled",1313,181
+19125,"Marion County, Iowa","Car, truck or van: carpooled: 2 person carpool",995,179
+19125,"Marion County, Iowa","Car, truck or van: carpooled: 3 person carpool",178,56
+19125,"Marion County, Iowa","Car, truck or van: carpooled: 4 person carpool",49,42
+19125,"Marion County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",63,56
+19125,"Marion County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",28,24
+19125,"Marion County, Iowa",Public transportation (excluding taxicab),41,37
+19125,"Marion County, Iowa",Bus,41,37
+19125,"Marion County, Iowa",Subway or elevated rail,0,21
+19125,"Marion County, Iowa",Long distance train or commuter rail,0,21
+19125,"Marion County, Iowa","Light rail, streetcar or trolley",0,21
+19125,"Marion County, Iowa",Ferryboat,0,21
+19125,"Marion County, Iowa",Taxicab,0,21
+19125,"Marion County, Iowa",Motorcycle,27,25
+19125,"Marion County, Iowa",Bicycle,38,28
+19125,"Marion County, Iowa",Walked,550,133
+19125,"Marion County, Iowa",Other means,172,85
+19125,"Marion County, Iowa",Worked from home,1244,229
+19127,"Marshall County, Iowa",Total,18643,506
+19127,"Marshall County, Iowa","Car, truck or van",17069,507
+19127,"Marshall County, Iowa","Car, truck or van: drove alone",14583,471
+19127,"Marshall County, Iowa","Car, truck or van: carpooled",2486,305
+19127,"Marshall County, Iowa","Car, truck or van: carpooled: 2 person carpool",1911,278
+19127,"Marshall County, Iowa","Car, truck or van: carpooled: 3 person carpool",369,138
+19127,"Marshall County, Iowa","Car, truck or van: carpooled: 4 person carpool",139,78
+19127,"Marshall County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",52,59
+19127,"Marshall County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",15,14
+19127,"Marshall County, Iowa",Public transportation (excluding taxicab),42,40
+19127,"Marshall County, Iowa",Bus,33,39
+19127,"Marshall County, Iowa",Subway or elevated rail,0,21
+19127,"Marshall County, Iowa",Long distance train or commuter rail,0,21
+19127,"Marshall County, Iowa","Light rail, streetcar or trolley",9,12
+19127,"Marshall County, Iowa",Ferryboat,0,21
+19127,"Marshall County, Iowa",Taxicab,18,22
+19127,"Marshall County, Iowa",Motorcycle,50,39
+19127,"Marshall County, Iowa",Bicycle,157,100
+19127,"Marshall County, Iowa",Walked,630,173
+19127,"Marshall County, Iowa",Other means,136,60
+19127,"Marshall County, Iowa",Worked from home,541,134
+19129,"Mills County, Iowa",Total,7112,322
+19129,"Mills County, Iowa","Car, truck or van",6285,313
+19129,"Mills County, Iowa","Car, truck or van: drove alone",5540,292
+19129,"Mills County, Iowa","Car, truck or van: carpooled",745,152
+19129,"Mills County, Iowa","Car, truck or van: carpooled: 2 person carpool",633,134
+19129,"Mills County, Iowa","Car, truck or van: carpooled: 3 person carpool",97,50
+19129,"Mills County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,15
+19129,"Mills County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,16
+19129,"Mills County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",2,4
+19129,"Mills County, Iowa",Public transportation (excluding taxicab),73,133
+19129,"Mills County, Iowa",Bus,73,133
+19129,"Mills County, Iowa",Subway or elevated rail,0,16
+19129,"Mills County, Iowa",Long distance train or commuter rail,0,16
+19129,"Mills County, Iowa","Light rail, streetcar or trolley",0,16
+19129,"Mills County, Iowa",Ferryboat,0,16
+19129,"Mills County, Iowa",Taxicab,0,16
+19129,"Mills County, Iowa",Motorcycle,13,23
+19129,"Mills County, Iowa",Bicycle,0,16
+19129,"Mills County, Iowa",Walked,229,97
+19129,"Mills County, Iowa",Other means,68,42
+19129,"Mills County, Iowa",Worked from home,444,104
+19131,"Mitchell County, Iowa",Total,5176,176
+19131,"Mitchell County, Iowa","Car, truck or van",4326,218
+19131,"Mitchell County, Iowa","Car, truck or van: drove alone",3881,257
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled",445,135
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled: 2 person carpool",315,96
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled: 3 person carpool",112,85
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled: 4 person carpool",5,6
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",13,17
+19131,"Mitchell County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19131,"Mitchell County, Iowa",Public transportation (excluding taxicab),3,5
+19131,"Mitchell County, Iowa",Bus,3,5
+19131,"Mitchell County, Iowa",Subway or elevated rail,0,16
+19131,"Mitchell County, Iowa",Long distance train or commuter rail,0,16
+19131,"Mitchell County, Iowa","Light rail, streetcar or trolley",0,16
+19131,"Mitchell County, Iowa",Ferryboat,0,16
+19131,"Mitchell County, Iowa",Taxicab,0,16
+19131,"Mitchell County, Iowa",Motorcycle,11,13
+19131,"Mitchell County, Iowa",Bicycle,30,32
+19131,"Mitchell County, Iowa",Walked,290,88
+19131,"Mitchell County, Iowa",Other means,44,30
+19131,"Mitchell County, Iowa",Worked from home,472,123
+19133,"Monona County, Iowa",Total,4107,191
+19133,"Monona County, Iowa","Car, truck or van",3587,194
+19133,"Monona County, Iowa","Car, truck or van: drove alone",3161,199
+19133,"Monona County, Iowa","Car, truck or van: carpooled",426,79
+19133,"Monona County, Iowa","Car, truck or van: carpooled: 2 person carpool",349,78
+19133,"Monona County, Iowa","Car, truck or van: carpooled: 3 person carpool",46,31
+19133,"Monona County, Iowa","Car, truck or van: carpooled: 4 person carpool",18,13
+19133,"Monona County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19133,"Monona County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",13,12
+19133,"Monona County, Iowa",Public transportation (excluding taxicab),14,18
+19133,"Monona County, Iowa",Bus,14,18
+19133,"Monona County, Iowa",Subway or elevated rail,0,14
+19133,"Monona County, Iowa",Long distance train or commuter rail,0,14
+19133,"Monona County, Iowa","Light rail, streetcar or trolley",0,14
+19133,"Monona County, Iowa",Ferryboat,0,14
+19133,"Monona County, Iowa",Taxicab,0,14
+19133,"Monona County, Iowa",Motorcycle,27,41
+19133,"Monona County, Iowa",Bicycle,0,14
+19133,"Monona County, Iowa",Walked,154,69
+19133,"Monona County, Iowa",Other means,72,60
+19133,"Monona County, Iowa",Worked from home,253,62
+19135,"Monroe County, Iowa",Total,3593,232
+19135,"Monroe County, Iowa","Car, truck or van",3282,245
+19135,"Monroe County, Iowa","Car, truck or van: drove alone",2926,228
+19135,"Monroe County, Iowa","Car, truck or van: carpooled",356,109
+19135,"Monroe County, Iowa","Car, truck or van: carpooled: 2 person carpool",275,97
+19135,"Monroe County, Iowa","Car, truck or van: carpooled: 3 person carpool",51,52
+19135,"Monroe County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,14
+19135,"Monroe County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",4,7
+19135,"Monroe County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",26,33
+19135,"Monroe County, Iowa",Public transportation (excluding taxicab),28,28
+19135,"Monroe County, Iowa",Bus,28,28
+19135,"Monroe County, Iowa",Subway or elevated rail,0,14
+19135,"Monroe County, Iowa",Long distance train or commuter rail,0,14
+19135,"Monroe County, Iowa","Light rail, streetcar or trolley",0,14
+19135,"Monroe County, Iowa",Ferryboat,0,14
+19135,"Monroe County, Iowa",Taxicab,0,14
+19135,"Monroe County, Iowa",Motorcycle,0,14
+19135,"Monroe County, Iowa",Bicycle,0,14
+19135,"Monroe County, Iowa",Walked,89,58
+19135,"Monroe County, Iowa",Other means,18,29
+19135,"Monroe County, Iowa",Worked from home,176,67
+19137,"Montgomery County, Iowa",Total,4672,204
+19137,"Montgomery County, Iowa","Car, truck or van",4175,211
+19137,"Montgomery County, Iowa","Car, truck or van: drove alone",3670,228
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled",505,121
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled: 2 person carpool",407,109
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled: 3 person carpool",41,24
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,16
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",40,37
+19137,"Montgomery County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",17,26
+19137,"Montgomery County, Iowa",Public transportation (excluding taxicab),12,14
+19137,"Montgomery County, Iowa",Bus,12,14
+19137,"Montgomery County, Iowa",Subway or elevated rail,0,16
+19137,"Montgomery County, Iowa",Long distance train or commuter rail,0,16
+19137,"Montgomery County, Iowa","Light rail, streetcar or trolley",0,16
+19137,"Montgomery County, Iowa",Ferryboat,0,16
+19137,"Montgomery County, Iowa",Taxicab,0,16
+19137,"Montgomery County, Iowa",Motorcycle,6,6
+19137,"Montgomery County, Iowa",Bicycle,13,21
+19137,"Montgomery County, Iowa",Walked,242,92
+19137,"Montgomery County, Iowa",Other means,41,38
+19137,"Montgomery County, Iowa",Worked from home,183,54
+19139,"Muscatine County, Iowa",Total,20539,542
+19139,"Muscatine County, Iowa","Car, truck or van",19104,583
+19139,"Muscatine County, Iowa","Car, truck or van: drove alone",16827,583
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled",2277,342
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled: 2 person carpool",1789,316
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled: 3 person carpool",243,107
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled: 4 person carpool",115,77
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",66,42
+19139,"Muscatine County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",64,51
+19139,"Muscatine County, Iowa",Public transportation (excluding taxicab),87,60
+19139,"Muscatine County, Iowa",Bus,87,60
+19139,"Muscatine County, Iowa",Subway or elevated rail,0,21
+19139,"Muscatine County, Iowa",Long distance train or commuter rail,0,21
+19139,"Muscatine County, Iowa","Light rail, streetcar or trolley",0,21
+19139,"Muscatine County, Iowa",Ferryboat,0,21
+19139,"Muscatine County, Iowa",Taxicab,14,18
+19139,"Muscatine County, Iowa",Motorcycle,64,48
+19139,"Muscatine County, Iowa",Bicycle,36,30
+19139,"Muscatine County, Iowa",Walked,534,188
+19139,"Muscatine County, Iowa",Other means,84,48
+19139,"Muscatine County, Iowa",Worked from home,616,129
+19141,"O'Brien County, Iowa",Total,7060,223
+19141,"O'Brien County, Iowa","Car, truck or van",5951,290
+19141,"O'Brien County, Iowa","Car, truck or van: drove alone",5110,281
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled",841,171
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled: 2 person carpool",633,149
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled: 3 person carpool",100,56
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled: 4 person carpool",58,58
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",42,43
+19141,"O'Brien County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",8,13
+19141,"O'Brien County, Iowa",Public transportation (excluding taxicab),3,5
+19141,"O'Brien County, Iowa",Bus,3,5
+19141,"O'Brien County, Iowa",Subway or elevated rail,0,16
+19141,"O'Brien County, Iowa",Long distance train or commuter rail,0,16
+19141,"O'Brien County, Iowa","Light rail, streetcar or trolley",0,16
+19141,"O'Brien County, Iowa",Ferryboat,0,16
+19141,"O'Brien County, Iowa",Taxicab,8,10
+19141,"O'Brien County, Iowa",Motorcycle,2,4
+19141,"O'Brien County, Iowa",Bicycle,86,67
+19141,"O'Brien County, Iowa",Walked,391,119
+19141,"O'Brien County, Iowa",Other means,136,92
+19141,"O'Brien County, Iowa",Worked from home,483,127
+19143,"Osceola County, Iowa",Total,3289,133
+19143,"Osceola County, Iowa","Car, truck or van",2828,159
+19143,"Osceola County, Iowa","Car, truck or van: drove alone",2589,160
+19143,"Osceola County, Iowa","Car, truck or van: carpooled",239,80
+19143,"Osceola County, Iowa","Car, truck or van: carpooled: 2 person carpool",134,51
+19143,"Osceola County, Iowa","Car, truck or van: carpooled: 3 person carpool",50,43
+19143,"Osceola County, Iowa","Car, truck or van: carpooled: 4 person carpool",15,14
+19143,"Osceola County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19143,"Osceola County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",40,46
+19143,"Osceola County, Iowa",Public transportation (excluding taxicab),2,6
+19143,"Osceola County, Iowa",Bus,2,6
+19143,"Osceola County, Iowa",Subway or elevated rail,0,14
+19143,"Osceola County, Iowa",Long distance train or commuter rail,0,14
+19143,"Osceola County, Iowa","Light rail, streetcar or trolley",0,14
+19143,"Osceola County, Iowa",Ferryboat,0,14
+19143,"Osceola County, Iowa",Taxicab,0,14
+19143,"Osceola County, Iowa",Motorcycle,3,4
+19143,"Osceola County, Iowa",Bicycle,12,11
+19143,"Osceola County, Iowa",Walked,210,59
+19143,"Osceola County, Iowa",Other means,0,14
+19143,"Osceola County, Iowa",Worked from home,234,72
+19145,"Page County, Iowa",Total,6915,266
+19145,"Page County, Iowa","Car, truck or van",6281,286
+19145,"Page County, Iowa","Car, truck or van: drove alone",5650,268
+19145,"Page County, Iowa","Car, truck or van: carpooled",631,150
+19145,"Page County, Iowa","Car, truck or van: carpooled: 2 person carpool",437,115
+19145,"Page County, Iowa","Car, truck or van: carpooled: 3 person carpool",85,59
+19145,"Page County, Iowa","Car, truck or van: carpooled: 4 person carpool",33,27
+19145,"Page County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",76,57
+19145,"Page County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19145,"Page County, Iowa",Public transportation (excluding taxicab),3,8
+19145,"Page County, Iowa",Bus,3,8
+19145,"Page County, Iowa",Subway or elevated rail,0,16
+19145,"Page County, Iowa",Long distance train or commuter rail,0,16
+19145,"Page County, Iowa","Light rail, streetcar or trolley",0,16
+19145,"Page County, Iowa",Ferryboat,0,16
+19145,"Page County, Iowa",Taxicab,0,16
+19145,"Page County, Iowa",Motorcycle,43,44
+19145,"Page County, Iowa",Bicycle,22,22
+19145,"Page County, Iowa",Walked,253,92
+19145,"Page County, Iowa",Other means,58,35
+19145,"Page County, Iowa",Worked from home,255,65
+19147,"Palo Alto County, Iowa",Total,4464,202
+19147,"Palo Alto County, Iowa","Car, truck or van",3937,197
+19147,"Palo Alto County, Iowa","Car, truck or van: drove alone",3615,202
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled",322,75
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled: 2 person carpool",229,66
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled: 3 person carpool",70,47
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled: 4 person carpool",5,6
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19147,"Palo Alto County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",18,16
+19147,"Palo Alto County, Iowa",Public transportation (excluding taxicab),18,21
+19147,"Palo Alto County, Iowa",Bus,18,21
+19147,"Palo Alto County, Iowa",Subway or elevated rail,0,14
+19147,"Palo Alto County, Iowa",Long distance train or commuter rail,0,14
+19147,"Palo Alto County, Iowa","Light rail, streetcar or trolley",0,14
+19147,"Palo Alto County, Iowa",Ferryboat,0,14
+19147,"Palo Alto County, Iowa",Taxicab,0,14
+19147,"Palo Alto County, Iowa",Motorcycle,18,22
+19147,"Palo Alto County, Iowa",Bicycle,23,19
+19147,"Palo Alto County, Iowa",Walked,189,52
+19147,"Palo Alto County, Iowa",Other means,23,17
+19147,"Palo Alto County, Iowa",Worked from home,256,65
+19149,"Plymouth County, Iowa",Total,13534,310
+19149,"Plymouth County, Iowa","Car, truck or van",12085,347
+19149,"Plymouth County, Iowa","Car, truck or van: drove alone",10550,359
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled",1535,242
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled: 2 person carpool",1251,201
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled: 3 person carpool",221,96
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled: 4 person carpool",46,26
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",14,17
+19149,"Plymouth County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",3,5
+19149,"Plymouth County, Iowa",Public transportation (excluding taxicab),47,30
+19149,"Plymouth County, Iowa",Bus,47,30
+19149,"Plymouth County, Iowa",Subway or elevated rail,0,18
+19149,"Plymouth County, Iowa",Long distance train or commuter rail,0,18
+19149,"Plymouth County, Iowa","Light rail, streetcar or trolley",0,18
+19149,"Plymouth County, Iowa",Ferryboat,0,18
+19149,"Plymouth County, Iowa",Taxicab,0,18
+19149,"Plymouth County, Iowa",Motorcycle,20,28
+19149,"Plymouth County, Iowa",Bicycle,38,39
+19149,"Plymouth County, Iowa",Walked,349,100
+19149,"Plymouth County, Iowa",Other means,162,77
+19149,"Plymouth County, Iowa",Worked from home,833,159
+19151,"Pocahontas County, Iowa",Total,3596,125
+19151,"Pocahontas County, Iowa","Car, truck or van",2995,146
+19151,"Pocahontas County, Iowa","Car, truck or van: drove alone",2617,148
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled",378,85
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled: 2 person carpool",312,85
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled: 3 person carpool",33,20
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled: 4 person carpool",14,19
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",11,11
+19151,"Pocahontas County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",8,11
+19151,"Pocahontas County, Iowa",Public transportation (excluding taxicab),8,8
+19151,"Pocahontas County, Iowa",Bus,0,14
+19151,"Pocahontas County, Iowa",Subway or elevated rail,0,14
+19151,"Pocahontas County, Iowa",Long distance train or commuter rail,8,8
+19151,"Pocahontas County, Iowa","Light rail, streetcar or trolley",0,14
+19151,"Pocahontas County, Iowa",Ferryboat,0,14
+19151,"Pocahontas County, Iowa",Taxicab,0,14
+19151,"Pocahontas County, Iowa",Motorcycle,0,14
+19151,"Pocahontas County, Iowa",Bicycle,31,23
+19151,"Pocahontas County, Iowa",Walked,168,46
+19151,"Pocahontas County, Iowa",Other means,51,28
+19151,"Pocahontas County, Iowa",Worked from home,343,80
+19153,"Polk County, Iowa",Total,226602,1509
+19153,"Polk County, Iowa","Car, truck or van",208331,1630
+19153,"Polk County, Iowa","Car, truck or van: drove alone",184876,1931
+19153,"Polk County, Iowa","Car, truck or van: carpooled",23455,1274
+19153,"Polk County, Iowa","Car, truck or van: carpooled: 2 person carpool",19316,1198
+19153,"Polk County, Iowa","Car, truck or van: carpooled: 3 person carpool",2365,346
+19153,"Polk County, Iowa","Car, truck or van: carpooled: 4 person carpool",774,245
+19153,"Polk County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",699,350
+19153,"Polk County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",301,144
+19153,"Polk County, Iowa",Public transportation (excluding taxicab),3484,392
+19153,"Polk County, Iowa",Bus,3453,389
+19153,"Polk County, Iowa",Subway or elevated rail,31,36
+19153,"Polk County, Iowa",Long distance train or commuter rail,0,23
+19153,"Polk County, Iowa","Light rail, streetcar or trolley",0,23
+19153,"Polk County, Iowa",Ferryboat,0,23
+19153,"Polk County, Iowa",Taxicab,222,100
+19153,"Polk County, Iowa",Motorcycle,339,89
+19153,"Polk County, Iowa",Bicycle,602,150
+19153,"Polk County, Iowa",Walked,3867,495
+19153,"Polk County, Iowa",Other means,1116,272
+19153,"Polk County, Iowa",Worked from home,8641,618
+19155,"Pottawattamie County, Iowa",Total,46444,691
+19155,"Pottawattamie County, Iowa","Car, truck or van",43143,720
+19155,"Pottawattamie County, Iowa","Car, truck or van: drove alone",38632,849
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled",4511,414
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled: 2 person carpool",3779,389
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled: 3 person carpool",473,157
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled: 4 person carpool",115,56
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",135,71
+19155,"Pottawattamie County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",9,12
+19155,"Pottawattamie County, Iowa",Public transportation (excluding taxicab),259,94
+19155,"Pottawattamie County, Iowa",Bus,259,94
+19155,"Pottawattamie County, Iowa",Subway or elevated rail,0,23
+19155,"Pottawattamie County, Iowa",Long distance train or commuter rail,0,23
+19155,"Pottawattamie County, Iowa","Light rail, streetcar or trolley",0,23
+19155,"Pottawattamie County, Iowa",Ferryboat,0,23
+19155,"Pottawattamie County, Iowa",Taxicab,0,23
+19155,"Pottawattamie County, Iowa",Motorcycle,73,40
+19155,"Pottawattamie County, Iowa",Bicycle,146,75
+19155,"Pottawattamie County, Iowa",Walked,793,171
+19155,"Pottawattamie County, Iowa",Other means,222,100
+19155,"Pottawattamie County, Iowa",Worked from home,1808,258
+19157,"Poweshiek County, Iowa",Total,9693,337
+19157,"Poweshiek County, Iowa","Car, truck or van",7656,398
+19157,"Poweshiek County, Iowa","Car, truck or van: drove alone",6839,405
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled",817,127
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled: 2 person carpool",616,124
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled: 3 person carpool",123,65
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled: 4 person carpool",27,16
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",39,38
+19157,"Poweshiek County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",12,12
+19157,"Poweshiek County, Iowa",Public transportation (excluding taxicab),57,67
+19157,"Poweshiek County, Iowa",Bus,57,67
+19157,"Poweshiek County, Iowa",Subway or elevated rail,0,16
+19157,"Poweshiek County, Iowa",Long distance train or commuter rail,0,16
+19157,"Poweshiek County, Iowa","Light rail, streetcar or trolley",0,16
+19157,"Poweshiek County, Iowa",Ferryboat,0,16
+19157,"Poweshiek County, Iowa",Taxicab,0,16
+19157,"Poweshiek County, Iowa",Motorcycle,4,6
+19157,"Poweshiek County, Iowa",Bicycle,86,56
+19157,"Poweshiek County, Iowa",Walked,772,169
+19157,"Poweshiek County, Iowa",Other means,30,27
+19157,"Poweshiek County, Iowa",Worked from home,1088,208
+19159,"Ringgold County, Iowa",Total,2214,108
+19159,"Ringgold County, Iowa","Car, truck or van",1940,137
+19159,"Ringgold County, Iowa","Car, truck or van: drove alone",1752,142
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled",188,57
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled: 2 person carpool",132,56
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled: 3 person carpool",30,19
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled: 4 person carpool",19,18
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",7,10
+19159,"Ringgold County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19159,"Ringgold County, Iowa",Public transportation (excluding taxicab),0,14
+19159,"Ringgold County, Iowa",Bus,0,14
+19159,"Ringgold County, Iowa",Subway or elevated rail,0,14
+19159,"Ringgold County, Iowa",Long distance train or commuter rail,0,14
+19159,"Ringgold County, Iowa","Light rail, streetcar or trolley",0,14
+19159,"Ringgold County, Iowa",Ferryboat,0,14
+19159,"Ringgold County, Iowa",Taxicab,0,14
+19159,"Ringgold County, Iowa",Motorcycle,2,3
+19159,"Ringgold County, Iowa",Bicycle,5,8
+19159,"Ringgold County, Iowa",Walked,60,20
+19159,"Ringgold County, Iowa",Other means,54,37
+19159,"Ringgold County, Iowa",Worked from home,153,74
+19161,"Sac County, Iowa",Total,5116,126
+19161,"Sac County, Iowa","Car, truck or van",4537,130
+19161,"Sac County, Iowa","Car, truck or van: drove alone",4110,144
+19161,"Sac County, Iowa","Car, truck or van: carpooled",427,79
+19161,"Sac County, Iowa","Car, truck or van: carpooled: 2 person carpool",277,65
+19161,"Sac County, Iowa","Car, truck or van: carpooled: 3 person carpool",88,42
+19161,"Sac County, Iowa","Car, truck or van: carpooled: 4 person carpool",46,24
+19161,"Sac County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,16
+19161,"Sac County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",16,15
+19161,"Sac County, Iowa",Public transportation (excluding taxicab),20,23
+19161,"Sac County, Iowa",Bus,20,23
+19161,"Sac County, Iowa",Subway or elevated rail,0,16
+19161,"Sac County, Iowa",Long distance train or commuter rail,0,16
+19161,"Sac County, Iowa","Light rail, streetcar or trolley",0,16
+19161,"Sac County, Iowa",Ferryboat,0,16
+19161,"Sac County, Iowa",Taxicab,0,16
+19161,"Sac County, Iowa",Motorcycle,0,16
+19161,"Sac County, Iowa",Bicycle,5,7
+19161,"Sac County, Iowa",Walked,164,55
+19161,"Sac County, Iowa",Other means,22,14
+19161,"Sac County, Iowa",Worked from home,368,55
+19163,"Scott County, Iowa",Total,80524,1007
+19163,"Scott County, Iowa","Car, truck or van",75245,1095
+19163,"Scott County, Iowa","Car, truck or van: drove alone",69479,1060
+19163,"Scott County, Iowa","Car, truck or van: carpooled",5766,512
+19163,"Scott County, Iowa","Car, truck or van: carpooled: 2 person carpool",4671,416
+19163,"Scott County, Iowa","Car, truck or van: carpooled: 3 person carpool",539,134
+19163,"Scott County, Iowa","Car, truck or van: carpooled: 4 person carpool",298,116
+19163,"Scott County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",117,53
+19163,"Scott County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",141,64
+19163,"Scott County, Iowa",Public transportation (excluding taxicab),401,119
+19163,"Scott County, Iowa",Bus,394,119
+19163,"Scott County, Iowa",Subway or elevated rail,0,23
+19163,"Scott County, Iowa",Long distance train or commuter rail,7,11
+19163,"Scott County, Iowa","Light rail, streetcar or trolley",0,23
+19163,"Scott County, Iowa",Ferryboat,0,23
+19163,"Scott County, Iowa",Taxicab,4,6
+19163,"Scott County, Iowa",Motorcycle,138,64
+19163,"Scott County, Iowa",Bicycle,228,85
+19163,"Scott County, Iowa",Walked,1564,262
+19163,"Scott County, Iowa",Other means,395,128
+19163,"Scott County, Iowa",Worked from home,2549,296
+19165,"Shelby County, Iowa",Total,5965,192
+19165,"Shelby County, Iowa","Car, truck or van",5205,196
+19165,"Shelby County, Iowa","Car, truck or van: drove alone",4704,188
+19165,"Shelby County, Iowa","Car, truck or van: carpooled",501,121
+19165,"Shelby County, Iowa","Car, truck or van: carpooled: 2 person carpool",421,116
+19165,"Shelby County, Iowa","Car, truck or van: carpooled: 3 person carpool",57,29
+19165,"Shelby County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,16
+19165,"Shelby County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",18,16
+19165,"Shelby County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",5,6
+19165,"Shelby County, Iowa",Public transportation (excluding taxicab),43,29
+19165,"Shelby County, Iowa",Bus,43,29
+19165,"Shelby County, Iowa",Subway or elevated rail,0,16
+19165,"Shelby County, Iowa",Long distance train or commuter rail,0,16
+19165,"Shelby County, Iowa","Light rail, streetcar or trolley",0,16
+19165,"Shelby County, Iowa",Ferryboat,0,16
+19165,"Shelby County, Iowa",Taxicab,0,16
+19165,"Shelby County, Iowa",Motorcycle,32,35
+19165,"Shelby County, Iowa",Bicycle,0,16
+19165,"Shelby County, Iowa",Walked,214,61
+19165,"Shelby County, Iowa",Other means,42,29
+19165,"Shelby County, Iowa",Worked from home,429,101
+19167,"Sioux County, Iowa",Total,18285,317
+19167,"Sioux County, Iowa","Car, truck or van",14607,418
+19167,"Sioux County, Iowa","Car, truck or van: drove alone",12772,436
+19167,"Sioux County, Iowa","Car, truck or van: carpooled",1835,344
+19167,"Sioux County, Iowa","Car, truck or van: carpooled: 2 person carpool",1347,301
+19167,"Sioux County, Iowa","Car, truck or van: carpooled: 3 person carpool",314,124
+19167,"Sioux County, Iowa","Car, truck or van: carpooled: 4 person carpool",41,34
+19167,"Sioux County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",109,61
+19167,"Sioux County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",24,21
+19167,"Sioux County, Iowa",Public transportation (excluding taxicab),59,48
+19167,"Sioux County, Iowa",Bus,59,48
+19167,"Sioux County, Iowa",Subway or elevated rail,0,21
+19167,"Sioux County, Iowa",Long distance train or commuter rail,0,21
+19167,"Sioux County, Iowa","Light rail, streetcar or trolley",0,21
+19167,"Sioux County, Iowa",Ferryboat,0,21
+19167,"Sioux County, Iowa",Taxicab,0,21
+19167,"Sioux County, Iowa",Motorcycle,80,58
+19167,"Sioux County, Iowa",Bicycle,122,57
+19167,"Sioux County, Iowa",Walked,850,182
+19167,"Sioux County, Iowa",Other means,122,79
+19167,"Sioux County, Iowa",Worked from home,2445,301
+19169,"Story County, Iowa",Total,48514,894
+19169,"Story County, Iowa","Car, truck or van",39262,978
+19169,"Story County, Iowa","Car, truck or van: drove alone",34504,890
+19169,"Story County, Iowa","Car, truck or van: carpooled",4758,532
+19169,"Story County, Iowa","Car, truck or van: carpooled: 2 person carpool",3903,486
+19169,"Story County, Iowa","Car, truck or van: carpooled: 3 person carpool",528,156
+19169,"Story County, Iowa","Car, truck or van: carpooled: 4 person carpool",136,62
+19169,"Story County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",64,57
+19169,"Story County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",127,67
+19169,"Story County, Iowa",Public transportation (excluding taxicab),2859,446
+19169,"Story County, Iowa",Bus,2859,446
+19169,"Story County, Iowa",Subway or elevated rail,0,23
+19169,"Story County, Iowa",Long distance train or commuter rail,0,23
+19169,"Story County, Iowa","Light rail, streetcar or trolley",0,23
+19169,"Story County, Iowa",Ferryboat,0,23
+19169,"Story County, Iowa",Taxicab,88,131
+19169,"Story County, Iowa",Motorcycle,174,94
+19169,"Story County, Iowa",Bicycle,886,201
+19169,"Story County, Iowa",Walked,3721,430
+19169,"Story County, Iowa",Other means,137,66
+19169,"Story County, Iowa",Worked from home,1387,199
+19171,"Tama County, Iowa",Total,8250,198
+19171,"Tama County, Iowa","Car, truck or van",7378,194
+19171,"Tama County, Iowa","Car, truck or van: drove alone",6498,218
+19171,"Tama County, Iowa","Car, truck or van: carpooled",880,147
+19171,"Tama County, Iowa","Car, truck or van: carpooled: 2 person carpool",683,124
+19171,"Tama County, Iowa","Car, truck or van: carpooled: 3 person carpool",135,58
+19171,"Tama County, Iowa","Car, truck or van: carpooled: 4 person carpool",45,28
+19171,"Tama County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",13,14
+19171,"Tama County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",4,7
+19171,"Tama County, Iowa",Public transportation (excluding taxicab),1,2
+19171,"Tama County, Iowa",Bus,1,2
+19171,"Tama County, Iowa",Subway or elevated rail,0,16
+19171,"Tama County, Iowa",Long distance train or commuter rail,0,16
+19171,"Tama County, Iowa","Light rail, streetcar or trolley",0,16
+19171,"Tama County, Iowa",Ferryboat,0,16
+19171,"Tama County, Iowa",Taxicab,0,16
+19171,"Tama County, Iowa",Motorcycle,15,14
+19171,"Tama County, Iowa",Bicycle,16,15
+19171,"Tama County, Iowa",Walked,421,103
+19171,"Tama County, Iowa",Other means,54,41
+19171,"Tama County, Iowa",Worked from home,365,80
+19173,"Taylor County, Iowa",Total,3000,113
+19173,"Taylor County, Iowa","Car, truck or van",2674,118
+19173,"Taylor County, Iowa","Car, truck or van: drove alone",2235,124
+19173,"Taylor County, Iowa","Car, truck or van: carpooled",439,78
+19173,"Taylor County, Iowa","Car, truck or van: carpooled: 2 person carpool",350,72
+19173,"Taylor County, Iowa","Car, truck or van: carpooled: 3 person carpool",76,31
+19173,"Taylor County, Iowa","Car, truck or van: carpooled: 4 person carpool",13,12
+19173,"Taylor County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19173,"Taylor County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19173,"Taylor County, Iowa",Public transportation (excluding taxicab),4,5
+19173,"Taylor County, Iowa",Bus,4,5
+19173,"Taylor County, Iowa",Subway or elevated rail,0,14
+19173,"Taylor County, Iowa",Long distance train or commuter rail,0,14
+19173,"Taylor County, Iowa","Light rail, streetcar or trolley",0,14
+19173,"Taylor County, Iowa",Ferryboat,0,14
+19173,"Taylor County, Iowa",Taxicab,0,14
+19173,"Taylor County, Iowa",Motorcycle,3,5
+19173,"Taylor County, Iowa",Bicycle,11,11
+19173,"Taylor County, Iowa",Walked,100,34
+19173,"Taylor County, Iowa",Other means,26,15
+19173,"Taylor County, Iowa",Worked from home,182,51
+19175,"Union County, Iowa",Total,6243,218
+19175,"Union County, Iowa","Car, truck or van",5585,220
+19175,"Union County, Iowa","Car, truck or van: drove alone",4919,251
+19175,"Union County, Iowa","Car, truck or van: carpooled",666,150
+19175,"Union County, Iowa","Car, truck or van: carpooled: 2 person carpool",526,120
+19175,"Union County, Iowa","Car, truck or van: carpooled: 3 person carpool",90,60
+19175,"Union County, Iowa","Car, truck or van: carpooled: 4 person carpool",45,35
+19175,"Union County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",5,8
+19175,"Union County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19175,"Union County, Iowa",Public transportation (excluding taxicab),78,55
+19175,"Union County, Iowa",Bus,78,55
+19175,"Union County, Iowa",Subway or elevated rail,0,16
+19175,"Union County, Iowa",Long distance train or commuter rail,0,16
+19175,"Union County, Iowa","Light rail, streetcar or trolley",0,16
+19175,"Union County, Iowa",Ferryboat,0,16
+19175,"Union County, Iowa",Taxicab,2,6
+19175,"Union County, Iowa",Motorcycle,11,11
+19175,"Union County, Iowa",Bicycle,0,16
+19175,"Union County, Iowa",Walked,213,102
+19175,"Union County, Iowa",Other means,61,44
+19175,"Union County, Iowa",Worked from home,293,89
+19177,"Van Buren County, Iowa",Total,3471,159
+19177,"Van Buren County, Iowa","Car, truck or van",2909,180
+19177,"Van Buren County, Iowa","Car, truck or van: drove alone",2393,165
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled",516,100
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled: 2 person carpool",403,97
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled: 3 person carpool",76,43
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled: 4 person carpool",15,14
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",22,21
+19177,"Van Buren County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19177,"Van Buren County, Iowa",Public transportation (excluding taxicab),51,38
+19177,"Van Buren County, Iowa",Bus,51,38
+19177,"Van Buren County, Iowa",Subway or elevated rail,0,14
+19177,"Van Buren County, Iowa",Long distance train or commuter rail,0,14
+19177,"Van Buren County, Iowa","Light rail, streetcar or trolley",0,14
+19177,"Van Buren County, Iowa",Ferryboat,0,14
+19177,"Van Buren County, Iowa",Taxicab,9,12
+19177,"Van Buren County, Iowa",Motorcycle,2,3
+19177,"Van Buren County, Iowa",Bicycle,8,8
+19177,"Van Buren County, Iowa",Walked,250,69
+19177,"Van Buren County, Iowa",Other means,4,5
+19177,"Van Buren County, Iowa",Worked from home,238,68
+19179,"Wapello County, Iowa",Total,15977,498
+19179,"Wapello County, Iowa","Car, truck or van",14600,524
+19179,"Wapello County, Iowa","Car, truck or van: drove alone",12749,540
+19179,"Wapello County, Iowa","Car, truck or van: carpooled",1851,313
+19179,"Wapello County, Iowa","Car, truck or van: carpooled: 2 person carpool",1416,286
+19179,"Wapello County, Iowa","Car, truck or van: carpooled: 3 person carpool",301,131
+19179,"Wapello County, Iowa","Car, truck or van: carpooled: 4 person carpool",58,35
+19179,"Wapello County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",8,11
+19179,"Wapello County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",68,57
+19179,"Wapello County, Iowa",Public transportation (excluding taxicab),225,102
+19179,"Wapello County, Iowa",Bus,225,102
+19179,"Wapello County, Iowa",Subway or elevated rail,0,21
+19179,"Wapello County, Iowa",Long distance train or commuter rail,0,21
+19179,"Wapello County, Iowa","Light rail, streetcar or trolley",0,21
+19179,"Wapello County, Iowa",Ferryboat,0,21
+19179,"Wapello County, Iowa",Taxicab,0,21
+19179,"Wapello County, Iowa",Motorcycle,33,27
+19179,"Wapello County, Iowa",Bicycle,75,62
+19179,"Wapello County, Iowa",Walked,373,119
+19179,"Wapello County, Iowa",Other means,161,100
+19179,"Wapello County, Iowa",Worked from home,510,153
+19181,"Warren County, Iowa",Total,24234,417
+19181,"Warren County, Iowa","Car, truck or van",22021,475
+19181,"Warren County, Iowa","Car, truck or van: drove alone",19750,517
+19181,"Warren County, Iowa","Car, truck or van: carpooled",2271,325
+19181,"Warren County, Iowa","Car, truck or van: carpooled: 2 person carpool",1919,297
+19181,"Warren County, Iowa","Car, truck or van: carpooled: 3 person carpool",225,106
+19181,"Warren County, Iowa","Car, truck or van: carpooled: 4 person carpool",40,33
+19181,"Warren County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",29,20
+19181,"Warren County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",58,33
+19181,"Warren County, Iowa",Public transportation (excluding taxicab),112,78
+19181,"Warren County, Iowa",Bus,112,78
+19181,"Warren County, Iowa",Subway or elevated rail,0,21
+19181,"Warren County, Iowa",Long distance train or commuter rail,0,21
+19181,"Warren County, Iowa","Light rail, streetcar or trolley",0,21
+19181,"Warren County, Iowa",Ferryboat,0,21
+19181,"Warren County, Iowa",Taxicab,0,21
+19181,"Warren County, Iowa",Motorcycle,50,38
+19181,"Warren County, Iowa",Bicycle,52,41
+19181,"Warren County, Iowa",Walked,542,140
+19181,"Warren County, Iowa",Other means,44,40
+19181,"Warren County, Iowa",Worked from home,1413,220
+19183,"Washington County, Iowa",Total,11183,279
+19183,"Washington County, Iowa","Car, truck or van",9707,282
+19183,"Washington County, Iowa","Car, truck or van: drove alone",8182,328
+19183,"Washington County, Iowa","Car, truck or van: carpooled",1525,206
+19183,"Washington County, Iowa","Car, truck or van: carpooled: 2 person carpool",1038,195
+19183,"Washington County, Iowa","Car, truck or van: carpooled: 3 person carpool",187,73
+19183,"Washington County, Iowa","Car, truck or van: carpooled: 4 person carpool",77,54
+19183,"Washington County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",53,33
+19183,"Washington County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",170,62
+19183,"Washington County, Iowa",Public transportation (excluding taxicab),63,52
+19183,"Washington County, Iowa",Bus,63,52
+19183,"Washington County, Iowa",Subway or elevated rail,0,18
+19183,"Washington County, Iowa",Long distance train or commuter rail,0,18
+19183,"Washington County, Iowa","Light rail, streetcar or trolley",0,18
+19183,"Washington County, Iowa",Ferryboat,0,18
+19183,"Washington County, Iowa",Taxicab,0,18
+19183,"Washington County, Iowa",Motorcycle,20,22
+19183,"Washington County, Iowa",Bicycle,37,32
+19183,"Washington County, Iowa",Walked,448,105
+19183,"Washington County, Iowa",Other means,110,55
+19183,"Washington County, Iowa",Worked from home,798,157
+19185,"Wayne County, Iowa",Total,2719,138
+19185,"Wayne County, Iowa","Car, truck or van",2449,135
+19185,"Wayne County, Iowa","Car, truck or van: drove alone",2015,116
+19185,"Wayne County, Iowa","Car, truck or van: carpooled",434,116
+19185,"Wayne County, Iowa","Car, truck or van: carpooled: 2 person carpool",318,107
+19185,"Wayne County, Iowa","Car, truck or van: carpooled: 3 person carpool",87,35
+19185,"Wayne County, Iowa","Car, truck or van: carpooled: 4 person carpool",0,14
+19185,"Wayne County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",29,32
+19185,"Wayne County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19185,"Wayne County, Iowa",Public transportation (excluding taxicab),7,9
+19185,"Wayne County, Iowa",Bus,7,9
+19185,"Wayne County, Iowa",Subway or elevated rail,0,14
+19185,"Wayne County, Iowa",Long distance train or commuter rail,0,14
+19185,"Wayne County, Iowa","Light rail, streetcar or trolley",0,14
+19185,"Wayne County, Iowa",Ferryboat,0,14
+19185,"Wayne County, Iowa",Taxicab,0,14
+19185,"Wayne County, Iowa",Motorcycle,4,6
+19185,"Wayne County, Iowa",Bicycle,3,4
+19185,"Wayne County, Iowa",Walked,84,29
+19185,"Wayne County, Iowa",Other means,25,14
+19185,"Wayne County, Iowa",Worked from home,147,55
+19187,"Webster County, Iowa",Total,17679,390
+19187,"Webster County, Iowa","Car, truck or van",16042,464
+19187,"Webster County, Iowa","Car, truck or van: drove alone",14639,471
+19187,"Webster County, Iowa","Car, truck or van: carpooled",1403,232
+19187,"Webster County, Iowa","Car, truck or van: carpooled: 2 person carpool",1169,210
+19187,"Webster County, Iowa","Car, truck or van: carpooled: 3 person carpool",116,50
+19187,"Webster County, Iowa","Car, truck or van: carpooled: 4 person carpool",105,70
+19187,"Webster County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",13,22
+19187,"Webster County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,21
+19187,"Webster County, Iowa",Public transportation (excluding taxicab),64,52
+19187,"Webster County, Iowa",Bus,64,52
+19187,"Webster County, Iowa",Subway or elevated rail,0,21
+19187,"Webster County, Iowa",Long distance train or commuter rail,0,21
+19187,"Webster County, Iowa","Light rail, streetcar or trolley",0,21
+19187,"Webster County, Iowa",Ferryboat,0,21
+19187,"Webster County, Iowa",Taxicab,0,21
+19187,"Webster County, Iowa",Motorcycle,83,47
+19187,"Webster County, Iowa",Bicycle,86,77
+19187,"Webster County, Iowa",Walked,568,135
+19187,"Webster County, Iowa",Other means,93,54
+19187,"Webster County, Iowa",Worked from home,743,153
+19189,"Winnebago County, Iowa",Total,5543,161
+19189,"Winnebago County, Iowa","Car, truck or van",4764,191
+19189,"Winnebago County, Iowa","Car, truck or van: drove alone",4141,206
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled",623,158
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled: 2 person carpool",510,145
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled: 3 person carpool",66,38
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled: 4 person carpool",21,27
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",3,4
+19189,"Winnebago County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",23,27
+19189,"Winnebago County, Iowa",Public transportation (excluding taxicab),7,11
+19189,"Winnebago County, Iowa",Bus,7,11
+19189,"Winnebago County, Iowa",Subway or elevated rail,0,16
+19189,"Winnebago County, Iowa",Long distance train or commuter rail,0,16
+19189,"Winnebago County, Iowa","Light rail, streetcar or trolley",0,16
+19189,"Winnebago County, Iowa",Ferryboat,0,16
+19189,"Winnebago County, Iowa",Taxicab,11,15
+19189,"Winnebago County, Iowa",Motorcycle,14,18
+19189,"Winnebago County, Iowa",Bicycle,19,13
+19189,"Winnebago County, Iowa",Walked,403,90
+19189,"Winnebago County, Iowa",Other means,38,33
+19189,"Winnebago County, Iowa",Worked from home,287,70
+19191,"Winneshiek County, Iowa",Total,11578,263
+19191,"Winneshiek County, Iowa","Car, truck or van",8362,336
+19191,"Winneshiek County, Iowa","Car, truck or van: drove alone",7462,293
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled",900,166
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled: 2 person carpool",676,147
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled: 3 person carpool",116,51
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled: 4 person carpool",63,38
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",36,34
+19191,"Winneshiek County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",9,14
+19191,"Winneshiek County, Iowa",Public transportation (excluding taxicab),16,16
+19191,"Winneshiek County, Iowa",Bus,16,16
+19191,"Winneshiek County, Iowa",Subway or elevated rail,0,18
+19191,"Winneshiek County, Iowa",Long distance train or commuter rail,0,18
+19191,"Winneshiek County, Iowa","Light rail, streetcar or trolley",0,18
+19191,"Winneshiek County, Iowa",Ferryboat,0,18
+19191,"Winneshiek County, Iowa",Taxicab,5,8
+19191,"Winneshiek County, Iowa",Motorcycle,32,26
+19191,"Winneshiek County, Iowa",Bicycle,113,55
+19191,"Winneshiek County, Iowa",Walked,1907,254
+19191,"Winneshiek County, Iowa",Other means,70,35
+19191,"Winneshiek County, Iowa",Worked from home,1073,218
+19193,"Woodbury County, Iowa",Total,50569,862
+19193,"Woodbury County, Iowa","Car, truck or van",45691,878
+19193,"Woodbury County, Iowa","Car, truck or van: drove alone",40808,948
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled",4883,520
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled: 2 person carpool",3732,461
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled: 3 person carpool",764,273
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled: 4 person carpool",225,101
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",125,61
+19193,"Woodbury County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",37,37
+19193,"Woodbury County, Iowa",Public transportation (excluding taxicab),499,141
+19193,"Woodbury County, Iowa",Bus,499,141
+19193,"Woodbury County, Iowa",Subway or elevated rail,0,23
+19193,"Woodbury County, Iowa",Long distance train or commuter rail,0,23
+19193,"Woodbury County, Iowa","Light rail, streetcar or trolley",0,23
+19193,"Woodbury County, Iowa",Ferryboat,0,23
+19193,"Woodbury County, Iowa",Taxicab,39,40
+19193,"Woodbury County, Iowa",Motorcycle,25,23
+19193,"Woodbury County, Iowa",Bicycle,45,30
+19193,"Woodbury County, Iowa",Walked,930,176
+19193,"Woodbury County, Iowa",Other means,1332,285
+19193,"Woodbury County, Iowa",Worked from home,2008,340
+19195,"Worth County, Iowa",Total,3901,151
+19195,"Worth County, Iowa","Car, truck or van",3398,173
+19195,"Worth County, Iowa","Car, truck or van: drove alone",3112,184
+19195,"Worth County, Iowa","Car, truck or van: carpooled",286,82
+19195,"Worth County, Iowa","Car, truck or van: carpooled: 2 person carpool",271,81
+19195,"Worth County, Iowa","Car, truck or van: carpooled: 3 person carpool",10,10
+19195,"Worth County, Iowa","Car, truck or van: carpooled: 4 person carpool",5,6
+19195,"Worth County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",0,14
+19195,"Worth County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,14
+19195,"Worth County, Iowa",Public transportation (excluding taxicab),4,6
+19195,"Worth County, Iowa",Bus,1,2
+19195,"Worth County, Iowa",Subway or elevated rail,0,14
+19195,"Worth County, Iowa",Long distance train or commuter rail,3,6
+19195,"Worth County, Iowa","Light rail, streetcar or trolley",0,14
+19195,"Worth County, Iowa",Ferryboat,0,14
+19195,"Worth County, Iowa",Taxicab,0,14
+19195,"Worth County, Iowa",Motorcycle,0,14
+19195,"Worth County, Iowa",Bicycle,12,11
+19195,"Worth County, Iowa",Walked,125,46
+19195,"Worth County, Iowa",Other means,6,6
+19195,"Worth County, Iowa",Worked from home,356,86
+19197,"Wright County, Iowa",Total,6271,236
+19197,"Wright County, Iowa","Car, truck or van",5536,245
+19197,"Wright County, Iowa","Car, truck or van: drove alone",4869,272
+19197,"Wright County, Iowa","Car, truck or van: carpooled",667,181
+19197,"Wright County, Iowa","Car, truck or van: carpooled: 2 person carpool",489,146
+19197,"Wright County, Iowa","Car, truck or van: carpooled: 3 person carpool",155,122
+19197,"Wright County, Iowa","Car, truck or van: carpooled: 4 person carpool",6,10
+19197,"Wright County, Iowa","Car, truck or van: carpooled: 5 or 6 person carpool",17,25
+19197,"Wright County, Iowa","Car, truck or van: carpooled: 7 or more person carpool",0,16
+19197,"Wright County, Iowa",Public transportation (excluding taxicab),29,30
+19197,"Wright County, Iowa",Bus,29,30
+19197,"Wright County, Iowa",Subway or elevated rail,0,16
+19197,"Wright County, Iowa",Long distance train or commuter rail,0,16
+19197,"Wright County, Iowa","Light rail, streetcar or trolley",0,16
+19197,"Wright County, Iowa",Ferryboat,0,16
+19197,"Wright County, Iowa",Taxicab,0,16
+19197,"Wright County, Iowa",Motorcycle,31,45
+19197,"Wright County, Iowa",Bicycle,77,42
+19197,"Wright County, Iowa",Walked,285,95
+19197,"Wright County, Iowa",Other means,30,32
+19197,"Wright County, Iowa",Worked from home,283,99
