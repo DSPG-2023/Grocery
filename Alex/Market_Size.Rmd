@@ -9,3 +9,28 @@ quadrant_area <- function(user_area) {
 }
 print(quadrant_area(2))
 ```
+
+```{r}
+total_area <- function(north_quad,east_quad,south_quad,west_quad) {
+  sum(north_quad,east_quad,south_quad,west_quad)
+}
+```
+
+
+# Main Function
+```{r}
+north_quad <- readline("Enter distance to closest Northern store (Miles): ")
+east_quad <- readline("Enter distance to closest Eastern store (Miles): ")
+south_quad <- readline("Enter distance to closest Southern store (Miles): ")
+west_quad <- readline("Enter distance to closest Western store (Miles): ")
+
+north_quad = as.numeric(north_quad)
+east_quad = as.numeric(east_quad)
+south_quad = as.numeric(south_quad)
+west_quad = as.numeric(west_quad)
+
+
+
+print(total_area(north_quad,east_quad,south_quad,west_quad))
+
+```
