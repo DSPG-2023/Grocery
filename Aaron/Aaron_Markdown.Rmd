@@ -9,22 +9,82 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Estimating Expenses Calculator
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
+#Loading libraries
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+library(tidyverse)
+library(scales)
 ```
 
-## Including Plots
+## Estimated Revenue, Cost of Goods Sold and Gross Margin
 
-You can also embed plots, for example:
+```{r}
+#Taking Total Revenue as input (prompt is temporary)
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+Total_Estimated_Revenue <- readline(prompt = "Enter Total Estimated Revenue: ")
+Total_Estimated_Revenue <- as.numeric(Total_Estimated_Revenue)
+
+#Taking the percentage (proportion) of the cost of goods sold relative to total revenue (this will need to be updated; figure taken from Bizminer)
+
+Cost_of_Goods_Percentage <- .7816
+
+Cost_of_Goods_Sold <- Total_Estimated_Revenue * Cost_of_Goods_Percentage
+
+#Getting gross margin percentage (100 - cost of goods percentage)
+
+Gross_Margin_Percentage <- 1 - Cost_of_Goods_Percentage
+
+#Getting gross margin (revenue - cost of goods)
+
+Gross_Margin <- Total_Estimated_Revenue - Cost_of_Goods_Sold
+
+Table_1 <- data.frame("Total_Estimated_Revenue" = Total_Estimated_Revenue, "Cost_of_Goods Sold" = Cost_of_Goods_Sold, "Gross_Margin" = Gross_Margin)
+
+Table_1
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Expenses
+
+```{r}
+#Getting Officer Compensation Percentage (from Bizminer)
+
+Officer_Compensation_Percentage <- .0158
+
+Officer_Compensation <- Total_Estimated_Revenue * Officer_Compensation_Percentage
+
+#Getting Employee Wage Percentage (from Bizminer)
+
+Employee_Wage_Percentage <- .0751
+
+#Getting Total Employee Wages
+
+Employee_Wages <- Total_Estimated_Revenue * Employee_Wage_Percentage
+
+#Getting Other Operating Expense Percentage (Unsure of where this is from)
+
+Other_Operating_Expense_percentage <- .1230
+
+#Getting Other Operating Expense amount
+
+Other_Operating_Expense <- Total_Estimated_Revenue * .1230
+
+#Calculating Operating Income (Loss) [note: The variable name may need to be changed here; this ]
+
+Operating_Income_Loss <- Total_Estimated_Revenue - Cost_of_Goods_Sold - Officer_Compensation -
+  Employee_Wages - Other_Operating_Expense
+
+#Calculating Operating Income (Loss) Percentage
+
+Operating_Income_Loss_Percentage <- Operating_Income_Loss / Total_Estimated_Revenue
+
+# Note: There is a value listed on the sheet but there is no corresponding formula
+Depreciation_Amortization <- NULL
+
+Expenses <- data.frame("Officer_Compensation" = Officer_Compensation, "Employee_Wages" = Employee_Wages,
+                      "Other_Operating_Expense" = Other_Operating_Expense, 
+                      "Operating_Income_Loss" = Operating_Income_Loss)
+
+Expenses
+```
