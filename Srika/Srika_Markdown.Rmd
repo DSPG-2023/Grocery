@@ -22,7 +22,7 @@ Avg_Capita_Grocery_Spending(population = 4000000000)
 ```{r}
 Adj_Capita_Grocery_Spend <- function(est_per_price_increase){
   Avg_Spend <- Avg_Capita_Grocery_Spending()
-  Avg_Spend * (1+(estimated_cumulative_price_increase/100))
+  Avg_Spend * (1+(est_per_price_increase/100))
 }
 ```
 
@@ -33,4 +33,31 @@ State_Adj_Capita_Grocery_Spend<- function(state_index){
 }
 ```
 
+```{r}
+Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=0.6){
+  per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
+  num_shoppers<-number_of_shoppers()
+  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
+  #change number of shoppers according to the already formed function
+}
+Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=0.25){
+  per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
+  num_shoppers<-number_of_shoppers()
+  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
+  #change number of shoppers according to the already formed function
+}
+Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=0.05){
+  per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
+  num_shoppers<-number_of_shoppers()
+  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
+  #change number of shoppers according to the already formed function
+}
+```
+
+```{r}
+  primary_spend<-Total_Spend_Primary_Shoppers
+  secondary_spend<-Total_Spend_Secondary_Shoppers
+  rare_spend<-Total_Spend_Rare_Shoppers
+  Total_Estimate_Revenue=sum(primary_spend,secondary_spend,rare_spend)
+```
 
