@@ -47,6 +47,9 @@ stores_df <- left_join(stores, tig_fips)
 assistance_df <- left_join(assistance, tig_fips)
 insecurity_df <- left_join(insecurity, tig_fips)
 head(access_df)
+
+
+
 ```
 ```{r}
 #needs geometry
