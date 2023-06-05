@@ -6,6 +6,9 @@
 #' @examples
 #' Avg_Capita_Grocery_Spending(grocery_sales = 811541000000, population = 334233854)
 #'
+#' @details
+#' This function is taken from the Estimating_Revenue.xlsx and calculated in Step One.
+#'
 #' @export
 
 Avg_Capita_Grocery_Spending <- function(grocery_sales = 811541000000, population = 334233854) {

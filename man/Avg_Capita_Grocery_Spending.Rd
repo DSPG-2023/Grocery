@@ -20,6 +20,9 @@ Outputs average grocery spending per capita.
 \description{
 Calculates the average grocery spending per capita.
 }
+\details{
+This function is taken from the Estimating_Revenue.xlsx and calculated in Step One.
+}
 \examples{
 Avg_Capita_Grocery_Spending(grocery_sales = 811541000000, population = 334233854)
 
