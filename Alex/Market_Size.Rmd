@@ -1,17 +1,55 @@
 ```{r}
 library(ggplot2)
 library(dplyr)
+library(DSPGGrocery)
+library(tidycensus)
+```
+
+
+```{r}
+TotalArea <- function(north_quad,east_quad,south_quad,west_quad) {
+  sum(QuadrantArea(north_quad),QuadrantArea(east_quad),QuadrantArea(south_quad),QuadrantArea(west_quad))
+}
 ```
 ```{r}
-quadrant_area <- function(user_area) {
+CityPopulations <- function(){
   
-  output_area <- pi * ((user_area * user_area) /4)
+  print("Enter populations for each city in the radius (Enter -1 to exit)")
+  user_in =""
+  counter = 1
+  sum = 0
+  while(user_in != -1) {
+    sum = sum + as.integer(readline("Enter city population: "))
+    print(sum)
+  }
+  return(sum)
 }
 ```
 
+
 ```{r}
-total_area <- function(north_quad,east_quad,south_quad,west_quad) {
-  sum(quadrant_area(north_quad),quadrant_area(east_quad),quadrant_area(south_quad),quadrant_area(west_quad))
+GetPop <- function(fips) {
+  #Broken
+  pop <- get_decennial(fips)
+  return(pop)
+}
+```
+```{r}
+GetArea <- function(fips) {
+  area <- select(tig_fips$ALAND, where(tig_fips$FIPS == fips))
+  
+  
+  
+}
+```
+
+
+```{r}
+percent_county_pop <- function(total_area, fips) {
+  #Broken
+ 
+   
+  
 }
 ```
 
@@ -19,6 +57,7 @@ total_area <- function(north_quad,east_quad,south_quad,west_quad) {
 # Main Function
 Takes the input from user and computes the area of each quadrant.
 ```{r}
+
 north_quad <- readline("Enter distance to closest Northern store (Miles): ")
 east_quad <- readline("Enter distance to closest Eastern store (Miles): ")
 south_quad <- readline("Enter distance to closest Southern store (Miles): ")
@@ -30,7 +69,12 @@ south_quad = as.numeric(south_quad)
 west_quad = as.numeric(west_quad)
 
 
+#THIS IS ONLY FOR TESTING
+north_quad = 4
+east_quad = 0
+south_quad = 0
+west_quad = 0
 
-print(total_area(north_quad,east_quad,south_quad,west_quad))
+print(TotalArea(north_quad,east_quad,south_quad,west_quad))
 
 ```
