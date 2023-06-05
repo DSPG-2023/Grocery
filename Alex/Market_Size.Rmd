@@ -13,10 +13,10 @@ GetPop <- function(fips) {
   return(pop)
 }
 ```
+
 ```{r}
 GetArea <- function(fips) {
   area <- select(tig_fips$ALAND, where(tig_fips$FIPS == fips))
-  
   
   
 }
@@ -24,10 +24,10 @@ GetArea <- function(fips) {
 
 
 ```{r}
-percent_county_pop <- function(total_area, fips) {
+PercentCountyPop <- function(total_area, fips) {
   #Broken
- 
-   
+  #Takes in county area and the area in the quadrants, calculates a decimal proportion of 
+  #the county, and then determines how many people are in that area, assuming uniform distribution
   
 }
 ```
