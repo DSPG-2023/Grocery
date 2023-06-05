@@ -13,5 +13,5 @@
 #'
 Adj_Capita_Grocery_Spend <- function(est_per_price_increase){
   Avg_Spend <- Avg_Capita_Grocery_Spending()
-  Avg_Spend * (1+(estimated_cumulative_price_increase/100))
+  Avg_Spend * (1+(est_per_price_increase/100))
 }
