@@ -1,4 +1,10 @@
-
+#'Calculation for a quarter circle.
+#'
+#'@param pop population inside quadrants, gotten from the City_Populations method
+#'@param pct_primary,pct_secondary percentage of the county that is a primary and secondary shopper
+#'@return sets values for the number of primary and secondary shoppers
+#'
+#'@export
 
 
 
