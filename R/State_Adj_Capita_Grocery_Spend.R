@@ -9,7 +9,7 @@
 #'State_Adj_Capita_Grocery_Spend(99)
 #'
 #'@details
-#'This function is taken from the Estimating_Revenue.xlsx and calculated in Step two. This function calls `Adj_Capita_Grocery_Spend()`.
+#'This function is taken from the Estimating_Revenue.xlsx and calculated in Step three. This function calls `Adj_Capita_Grocery_Spend()`.
 #'
 #'@export
 
