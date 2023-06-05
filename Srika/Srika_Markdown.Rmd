@@ -19,5 +19,18 @@ Avg_Capita_Grocery_Spending <- function(grocery_sales = 811541000000, population
 Avg_Capita_Grocery_Spending(population = 4000000000)
 ```
 
+```{r}
+Adj_Capita_Grocery_Spend <- function(est_per_price_increase){
+  Avg_Spend <- Avg_Capita_Grocery_Spending()
+  Avg_Spend * (1+(estimated_cumulative_price_increase/100))
+}
+```
+
+```{r}
+State_Adj_Capita_Grocery_Spend<- function(state_index){
+  Adj_Avg_Spend<-Adj_Capita_Grocery_Spend
+  Adj_Avg_Spend*(state_index/100)
+}
+```
 
 
