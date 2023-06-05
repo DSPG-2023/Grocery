@@ -5,19 +5,19 @@ library(dplyr)
 ```{r}
 quadrant_area <- function(user_area) {
   
-  output_area <- (pi * (user_area * user_area)) * 1/4
+  output_area <- pi * ((user_area * user_area) /4)
 }
-print(quadrant_area(2))
 ```
 
 ```{r}
 total_area <- function(north_quad,east_quad,south_quad,west_quad) {
-  sum(north_quad,east_quad,south_quad,west_quad)
+  sum(quadrant_area(north_quad),quadrant_area(east_quad),quadrant_area(south_quad),quadrant_area(west_quad))
 }
 ```
 
 
 # Main Function
+Takes the input from user and computes the area of each quadrant.
 ```{r}
 north_quad <- readline("Enter distance to closest Northern store (Miles): ")
 east_quad <- readline("Enter distance to closest Eastern store (Miles): ")

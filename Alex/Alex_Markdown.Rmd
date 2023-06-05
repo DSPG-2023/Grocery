@@ -23,11 +23,11 @@ library(dplyr)
 ```{r}
 #TODO: Add file path for usda atlas
 #Opens each of the sheets and adds them to a variable
-file.path()
-access <- read_xlsx(path = "usda_table_atlas.xlsx", sheet="ACCESS")
-stores <- read_xlsx(path = "usda_table_atlas.xlsx", sheet="STORES")
-assistance <- read_xlsx(path = "usda_table_atlas.xlsx", sheet="ASSISTANCE")
-insecurity <- read_xlsx(path = "usda_table_atlas.xlsx", sheet="INSECURITY")
+
+access <- read_xlsx(path = "../ProjectData/usda_table_atlas.xlsx", sheet="ACCESS")
+stores <- read_xlsx(path = "../ProjectData/usda_table_atlas.xlsx", sheet="STORES")
+assistance <- read_xlsx(path = "../ProjectData/usda_table_atlas.xlsx", sheet="ASSISTANCE")
+insecurity <- read_xlsx(path = "../ProjectData/usda_table_atlas.xlsx", sheet="INSECURITY")
 
 
 head(access)
@@ -43,7 +43,9 @@ head(tig_fips)
 ```
 ```{r}
 access_df <- left_join(access, tig_fips)
-stores_df <- leftjoin()
+stores_df <- left_join(stores, tig_fips)
+assistance_df <- left_join(assistance, tig_fips)
+insecurity_df <- left_join(insecurity, tig_fips)
 head(access_df)
 ```
 ```{r}
@@ -53,4 +55,8 @@ access_df %>% ggplot(aes(fill = access_df$LACCESS_POP15)) +
   geom_sf(mapping = access_df$geometry) +
   scale_fill_viridis_c(option = "E")  
 ```
+
+
+
+
 
