@@ -12,17 +12,8 @@ TotalArea <- function(north_quad,east_quad,south_quad,west_quad) {
 }
 ```
 ```{r}
-CityPopulations <- function(){
-  
-  print("Enter populations for each city in the radius (Enter -1 to exit)")
-  user_in =""
-  counter = 1
-  sum = 0
-  while(user_in != -1) {
-    sum = sum + as.integer(readline("Enter city population: "))
-    print(sum)
-  }
-  return(sum)
+CityPopulations <- function(list){
+  return(sum(unlist(lapply(list, length))))
 }
 ```
 
