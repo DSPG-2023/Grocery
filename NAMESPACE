@@ -2,8 +2,11 @@
 
 export(Adj_Capita_Grocery_Spend)
 export(Avg_Capita_Grocery_Spending)
+export(CityPopulations)
 export(Cost_of_Goods_Sold)
 export(Gross_Margin)
 export(Officer_Compensation)
+export(Primary_Secondary_Shoppers)
+export(QuadrantArea)
 export(State_Adj_Capita_Grocery_Spend)
-export(quadrant_area)
+export(TotalArea)

@@ -16,7 +16,7 @@ outputs the average per capita grocery spend after adjusting for the expected pr
 Calculates the average per capita spend adjusting the estimated price increase and state index
 }
 \details{
-This function is taken from the Estimating_Revenue.xlsx and calculated in Step two. This function calls \code{Adj_Capita_Grocery_Spend()}.
+This function is taken from the Estimating_Revenue.xlsx and calculated in Step three. This function calls \code{Adj_Capita_Grocery_Spend()}.
 }
 \examples{
 State_Adj_Capita_Grocery_Spend(99)
