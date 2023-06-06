@@ -7,7 +7,7 @@
 #'quadrant_area(user_area = 4)
 #'@export
 
-QuadrantArea <- function(user_area) {
+Quadrant_Area <- function(user_area) {
 
   output_area <- (pi * (user_area * user_area)) * 1/4
 }

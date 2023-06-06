@@ -9,7 +9,7 @@
 
 
 
-CityPopulations <- function(list){
+City_Populations <- function(list){
   return(sum(unlist(lapply(list, length))))
 
   #TODO: Make function to find rural population by taking county population - city population
