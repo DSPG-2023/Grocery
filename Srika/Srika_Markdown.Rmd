@@ -56,9 +56,9 @@ Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=0.05){
 
 ```{r}
 Total_Estimate_Revenue<- function(){
-  primary_spend<-Total_Spend_Primary_Shoppers
-  secondary_spend<-Total_Spend_Secondary_Shoppers
-  rare_spend<-Total_Spend_Rare_Shoppers
+  primary_spend<-Total_Spend_Primary_Shoppers()
+  secondary_spend<-Total_Spend_Secondary_Shoppers()
+  rare_spend<-Total_Spend_Rare_Shoppers()
   Total_Estimate_Revenue<-primary_spend+secondary_spend+rare_spend
 }
 ```
