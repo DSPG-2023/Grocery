@@ -8,7 +8,7 @@
 
 
 
-Primary_Secondary_Rare_Shoppers <- function(pct_primary, pct_secondary,pct_rare) {
+Shoppers_Category_Count <- function(pct_primary, pct_secondary,pct_rare) {
   #Takes in pop (calculated by City_Populations), and pct primary and secondary
   #as defined by the user
   pop<-City_Populations()
