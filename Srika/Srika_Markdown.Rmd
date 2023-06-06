@@ -34,6 +34,10 @@ State_Adj_Capita_Grocery_Spend<- function(state_index){
 ```
 
 ```{r}
+
+```
+
+```{r}
 Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=0.6){
   per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
   num_shoppers<-number_of_shoppers()
