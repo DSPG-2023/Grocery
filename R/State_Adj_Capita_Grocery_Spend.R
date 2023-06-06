@@ -14,6 +14,6 @@
 #'@export
 
 State_Adj_Capita_Grocery_Spend<- function(state_index){
-  Adj_Avg_Spend<-Adj_Capita_Grocery_Spend
+  Adj_Avg_Spend<-Adj_Capita_Grocery_Spend()
   Adj_Avg_Spend*(state_index/100)
 }
