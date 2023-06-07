@@ -7,9 +7,3 @@
 #'CityPopulations(list)
 #'@export
 
-
-
-City_Populations <- function(list){
-  return(sum(unlist(lapply(list, length))))
-
-}

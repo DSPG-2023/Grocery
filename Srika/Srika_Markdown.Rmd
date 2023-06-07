@@ -16,7 +16,7 @@ Avg_Capita_Grocery_Spending <- function(grocery_sales = 811541000000, population
 ```
 
 ```{r}
-Avg_Capita_Grocery_Spending(population = 4000000000)
+Avg_Capita_Grocery_Spending()
 ```
 
 ```{r}
@@ -27,39 +27,48 @@ Adj_Capita_Grocery_Spend <- function(est_per_price_increase){
 ```
 
 ```{r}
-State_Adj_Capita_Grocery_Spend<- function(state_index){
-  Adj_Avg_Spend<-Adj_Capita_Grocery_Spend
+Adj_Capita_Grocery_Spend(7)
+```
+
+```{r}
+State_Adj_Capita_Grocery_Spend<- function(state_index,est_per_price_increase){
+  Adj_Avg_Spend<-Adj_Capita_Grocery_Spend(est_per_price_increase)
   Adj_Avg_Spend*(state_index/100)
 }
 ```
 
 ```{r}
+State_Adj_Capita_Grocery_Spend(99,7)
+```
+
+```{r}
 # Not sure if the metro_pop and town_pop are correct
 
-Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30){
-  rural_pop<-Rural_Population()
-  metro_pop<-City_populations()
-  town_pop<-City_populations()
+Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,county_pop, towns_pop, pct_county,list_1,list_2){
+  rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
+  metro_pop<-City_Populations(list_1)
+  town_pop<-City_Populations(list_2)
   (metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+(town_pop*(pct_town_prim/100))
 }
 
-Secondary_Shopper_Count<-function(pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50){
-  rural_pop<-Rural_Population()
-  metro_pop<-City_populations()
-  town_pop<-City_populations()
+Secondary_Shopper_Count<-function(pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,county_pop, towns_pop, pct_county,list){
+  rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
+  metro_pop<-City_Populations(list)
+  town_pop<-City_Populations(list)
   (metro_pop*(pct_metro_sec/100))+(rural_pop*(pct_rural_sec/100))+(town_pop*(pct_town_sec/100))
 }
 
-Rare_Shopper_Count<-function(pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20){
-  rural_pop<-Rural_Population()
-  metro_pop<-City_populations()
-  town_pop<-City_populations()
+Rare_Shopper_Count<-function(pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,county_pop, towns_pop, pct_county,list){
+  rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
+  metro_pop<-City_Populations(list)
+  town_pop<-City_Populations(list)
   (metro_pop*(pct_metro_rare/100))+(rural_pop*(pct_rural_rare/100))+(town_pop*(pct_town_rare/100))
 }
 ```
 
 ```{r}
-Primary_shopper_count()
+Primary_Shopper_Count(county_pop=18000,towns_pop=9786,
+                      pct_county=17.7,list_1=c(2,650),list_2=c(77))
 ```
 
 
