@@ -34,27 +34,48 @@ State_Adj_Capita_Grocery_Spend<- function(state_index){
 ```
 
 ```{r}
+# Not sure if the metro_pop and town_pop are correct
 
+Primary_shopper_count<-function(pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30){
+  rural_pop<-Rural_Population()
+  metro_pop<-City_populations()
+  town_pop<-City_populations()
+  (metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+(town_pop*(pct_town_prim/100))
+}
+
+Secondary_shopper_count<-function(pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50){
+  rural_pop<-Rural_Population()
+  metro_pop<-City_populations()
+  town_pop<-City_populations()
+  (metro_pop*(pct_metro_sec/100))+(rural_pop*(pct_rural_sec/100))+(town_pop*(pct_town_sec/100))
+}
+
+Rare_shopper_count<-function(pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20){
+  rural_pop<-Rural_Population()
+  metro_pop<-City_populations()
+  town_pop<-City_populations()
+  (metro_pop*(pct_metro_rare/100))+(rural_pop*(pct_rural_rare/100))+(town_pop*(pct_town_rare/100))
+}
 ```
 
 ```{r}
 Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=0.6){
   per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
-  num_shoppers<-number_of_shoppers()
-  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
-  #change number of shoppers according to the already formed function
+  num_prim_shoppers<-Primary_shopper_count()
+  per_capita_grocery_spend*per_of_grocery_spend*num_prim_shoppers
+  
 }
 Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=0.25){
   per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
-  num_shoppers<-number_of_shoppers()
-  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
-  #change number of shoppers according to the already formed function
+  num_sec_shoppers<-Secondary_shopper_count()
+  per_capita_grocery_spend*per_of_grocery_spend*num_sec_shoppers
+ 
 }
 Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=0.05){
   per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
-  num_shoppers<-number_of_shoppers()
-  per_capita_grocery_spend*per_of_grocery_spend*num_shoppers
-  #change number of shoppers according to the already formed function
+  num_rare_shoppers<-Rare_shopper_count()
+  per_capita_grocery_spend*per_of_grocery_spend*num_rare_shoppers
+  
 }
 ```
 
