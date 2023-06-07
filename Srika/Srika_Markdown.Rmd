@@ -44,31 +44,36 @@ State_Adj_Capita_Grocery_Spend(99,7)
 ```{r}
 # Not sure if the metro_pop and town_pop are correct
 
-Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,county_pop, towns_pop, pct_county,list_1,list_2){
+Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,county_pop, towns_pop, pct_county,metro_list,town_list){
   rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
-  metro_pop<-City_Populations(list_1)
-  town_pop<-City_Populations(list_2)
+  metro_pop<-City_Populations(metro_list)
+  town_pop<-City_Populations(town_list)
   (metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+(town_pop*(pct_town_prim/100))
 }
 
-Secondary_Shopper_Count<-function(pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,county_pop, towns_pop, pct_county,list){
+Secondary_Shopper_Count<-function(pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,county_pop, towns_pop, pct_county,metro_list,town_list){
   rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
-  metro_pop<-City_Populations(list)
-  town_pop<-City_Populations(list)
+  metro_pop<-City_Populations(metro_list)
+  town_pop<-City_Populations(town_list)
   (metro_pop*(pct_metro_sec/100))+(rural_pop*(pct_rural_sec/100))+(town_pop*(pct_town_sec/100))
 }
 
-Rare_Shopper_Count<-function(pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,county_pop, towns_pop, pct_county,list){
+Rare_Shopper_Count<-function(pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,county_pop, towns_pop, pct_county,metro_list,town_list){
   rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
-  metro_pop<-City_Populations(list)
-  town_pop<-City_Populations(list)
+  metro_pop<-City_Populations(metro_list)
+  town_pop<-City_Populations(town_list)
   (metro_pop*(pct_metro_rare/100))+(rural_pop*(pct_rural_rare/100))+(town_pop*(pct_town_rare/100))
 }
 ```
 
 ```{r}
 Primary_Shopper_Count(county_pop=18000,towns_pop=9786,
-                      pct_county=17.7,list_1=c(2,650),list_2=c(77))
+                      pct_county=17.7,town_list=list(77),metro_list=list(2650))
+
+Secondary_Shopper_Count(county_pop=18000,towns_pop=9786,
+                      pct_county=17.7,town_list=list(77),metro_list=list(2650))
+Rare_Shopper_Count(county_pop=18000,towns_pop=9786,
+                      pct_county=17.7,town_list=list(77),metro_list=list(2650))
 ```
 
 

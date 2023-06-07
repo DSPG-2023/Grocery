@@ -4,7 +4,7 @@
 #'@return outputs sum of town populations
 #'
 #'@examples
-#'CityPopulations(list)
+#'City_Populations(list(77))
 #'@export
 
 
@@ -13,3 +13,5 @@ City_Populations <- function(list_in){
   return(Reduce('+', list_in))
 
 }
+
+
