@@ -1,4 +1,4 @@
-#'Calculation for a quarter circle.
+#'Calculation for population of the cities in region.
 #'
 #'@param list user defined list of the population of towns
 #'@return outputs sum of town populations
@@ -9,7 +9,7 @@
 
 
 
-City_Populations <- function(list){
-  return(sum(unlist(lapply(list, length))))
+City_Populations <- function(list_in){
+  return(Reduce('+', list_in))
 
 }
