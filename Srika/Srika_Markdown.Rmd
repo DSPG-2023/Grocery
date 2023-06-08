@@ -79,7 +79,7 @@ Rare_Shopper_Count(county_pop=18000,towns_pop=9786,
 
 
 ```{r}
-Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=60,                      pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,
+Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend_prim=60,                      pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,
             county_pop,towns_pop,pct_county,metro_list,town_list,
             state_index,est_per_price_increase,
             grocery_sales = 811541000000,population = 334233854){
@@ -93,13 +93,13 @@ Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=60,                 
                             county_pop,towns_pop,pct_county,
                             metro_list,town_list)
   
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_prim_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_prim/100)*num_prim_shoppers
   
 }
 
 
 
-Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=25,
+Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend_sec=25,
                   pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,
                   county_pop,towns_pop,pct_county,metro_list,town_list,
                     state_index,est_per_price_increase,
@@ -112,30 +112,53 @@ Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=25,
   num_sec_shoppers<-Secondary_Shopper_Count()
   
   
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_sec_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_sec/100)*num_sec_shoppers
  
 }
 
 
 
-Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=5,
+Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend_rare=5,
                     pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,
                     county_pop,towns_pop,pct_county,metro_list,town_list,
                     state_index,est_per_price_increase,
                     grocery_sales = 811541000000,population = 334233854){
   per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend()
   num_rare_shoppers<-Rare_Shopper_Count()
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_rare_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_rare/100)*num_rare_shoppers
   
 }
 ```
 
 ```{r}
-Total_Estimate_Revenue<- function(){
-  primary_spend<-Total_Spend_Primary_Shoppers()
-  secondary_spend<-Total_Spend_Secondary_Shoppers()
-  rare_spend<-Total_Spend_Rare_Shoppers()
-  Total_Estimate_Revenue<-primary_spend+secondary_spend+rare_spend
+Total_Estimate_Revenue<- function(  per_of_grocery_spend_rare=5,
+                                    per_of_grocery_spend_sec=25,
+                                    per_of_grocery_spend_prim=60,                                    pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,
+                    pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,
+                    pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,
+                    county_pop,towns_pop,pct_county,metro_list,town_list,
+                    state_index,est_per_price_increase,
+                    grocery_sales = 811541000000,population = 334233854){
+  
+  primary_spend<-Total_Spend_Primary_Shoppers(per_of_grocery_spend_prim,                      pct_metro_prim,pct_rural_prim,pct_town_prim,
+            county_pop,towns_pop,pct_county,metro_list,town_list,
+            state_index,est_per_price_increase,
+            grocery_sales,population)
+  
+  secondary_spend<-Total_Spend_Secondary_Shoppers(per_of_grocery_spend_sec,
+                  pct_metro_sec,pct_rural_sec,pct_town_sec,
+                  county_pop,towns_pop,pct_county,metro_list,town_list,
+                    state_index,est_per_price_increase,
+                    grocery_sales,population)
+  
+  rare_spend<-Total_Spend_Rare_Shoppers(per_of_grocery_spend_rare,
+                    pct_metro_rare,pct_rural_rare,pct_town_rare,
+                    county_pop,towns_pop,pct_county,metro_list,town_list,
+                    state_index,est_per_price_increase,
+                    grocery_sales,population)
+  
+  
+  primary_spend+secondary_spend+rare_spend
 }
 ```
 

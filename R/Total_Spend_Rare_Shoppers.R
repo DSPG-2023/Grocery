@@ -1,6 +1,6 @@
 #'Calculates the money spent by rare shoppers
 #'
-#'@param per_of_grocery_spend the percentage of groceries rare
+#'@param per_of_grocery_spend_rare the percentage of groceries rare
 #'shoppers will spend at the proposed store
 #'@param pct_metro_rare,pct_rural_rare,pct_town_rare The percentage of
 #'rare shoppers in metro,rural and town markets default taken as
@@ -22,7 +22,7 @@
 #'@export
 
 
-Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=5,
+Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend_rare=5,
                                     pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,
                                     county_pop,towns_pop,pct_county,metro_list,town_list,
                                     state_index,est_per_price_increase,
@@ -37,6 +37,6 @@ Total_Spend_Rare_Shoppers<-function(per_of_grocery_spend=5,
                                         pct_county,metro_list,town_list)
 
 
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_rare_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_rare/100)*num_rare_shoppers
 
 }

@@ -1,6 +1,6 @@
 #'Calculates the money spent by primary shoppers
 #'
-#'@param per_of_grocery_spend the percentage of groceries primary
+#'@param per_of_grocery_spend_prim the percentage of groceries primary
 #'shopper will spend at the proposed store
 #'@param pct_metro_prim,pct_rural_prim,pct_town_prim The percentage of
 #'primary shoppers in metro,rural and town markets default taken as
@@ -22,7 +22,7 @@
 #'@export
 
 
-Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=60,
+Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend_prim=60,
                                        pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,
                                        county_pop,towns_pop,pct_county,metro_list,town_list,
                                        state_index,est_per_price_increase,
@@ -35,6 +35,6 @@ Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend=60,
                                            pct_county,metro_list,town_list)
 
 
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_prim_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_prim/100)*num_prim_shoppers
 
 }

@@ -1,6 +1,6 @@
 #'Calculates the money spent by secondary shoppers
 #'
-#'@param per_of_grocery_spend the percentage of groceries secondary
+#'@param per_of_grocery_spend_sec the percentage of groceries secondary
 #'shoppers will spend at the proposed store
 #'@param pct_metro_sec,pct_rural_sec,pct_town_sec The percentage of
 #'secondary shoppers in metro,rural and town markets default taken as
@@ -22,7 +22,7 @@
 #'@export
 
 
-Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=25,
+Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend_sec=25,
                                          pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,
                                          county_pop,towns_pop,pct_county,metro_list,town_list,
                                          state_index,est_per_price_increase,
@@ -37,6 +37,6 @@ Total_Spend_Secondary_Shoppers<-function(per_of_grocery_spend=25,
                                             pct_county,metro_list,town_list)
 
 
-  per_capita_grocery_spend*(per_of_grocery_spend/100)*num_sec_shoppers
+  per_capita_grocery_spend*(per_of_grocery_spend_sec/100)*num_sec_shoppers
 
 }
