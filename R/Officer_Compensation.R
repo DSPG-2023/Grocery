@@ -8,6 +8,14 @@
 #'@export
 
 
-Officer_Compensation <- function(Total_Estimated_Revenue, Percentage = .0158) {
-  Total_Estimated_Revenue * Percentage
+Officer_Compensation <- function(Total_Estimated_Revenue) {
+  ifelse(Total_Estimated_Revenue < 500000, stop("error: no data for this revenue range"),
+         percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .0278,
+                              ifelse(Total_Estimated_Revenue < 2499999.99, .0103,
+                                     ifelse(Total_Estimated_Revenue < 4999999.99, .0158,
+                                            ifelse(Total_Estimated_Revenue < 24999999.99, .0687, .031)))))
+
+
+
+    Total_Estimated_Revenue * percentage
 }
