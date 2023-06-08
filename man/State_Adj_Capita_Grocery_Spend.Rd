@@ -4,10 +4,21 @@
 \alias{State_Adj_Capita_Grocery_Spend}
 \title{Calculates the average per capita spend adjusting the estimated price increase and state index}
 \usage{
-State_Adj_Capita_Grocery_Spend(state_index)
+State_Adj_Capita_Grocery_Spend(
+  state_index,
+  est_per_price_increase,
+  grocery_sales = 8.11541e+11,
+  population = 334233854
+)
 }
 \arguments{
 \item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+
+\item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
+
+\item{population}{Total US population. Default value is 334233854.}
 }
 \value{
 outputs the average per capita grocery spend after adjusting for the expected price increase and state index
@@ -19,6 +30,6 @@ Calculates the average per capita spend adjusting the estimated price increase a
 This function is taken from the Estimating_Revenue.xlsx and calculated in Step three. This function calls \code{Adj_Capita_Grocery_Spend()}.
 }
 \examples{
-State_Adj_Capita_Grocery_Spend(99)
+State_Adj_Capita_Grocery_Spend(99,7)
 
 }
