@@ -13,6 +13,10 @@
 #'@param pct_county percentage of county in our market
 #'@param metro_list lists of population of store location
 #'@param town_list list of population of towns in the neighborhood
+#'@param state_index the ratio of the current price of the basket to the price of the basket during the base year
+#'@param est_per_price_increase Estimated increase in price of grocery in cumulative percent.
+#'@param grocery_sales Total US grocery sales annually. Default value is 811541000000.
+#'@param population Total US population. Default value is 334233854.
 #'
 #'@return
 #'outputs the total spending by secondary Shoppers at the proposed store
