@@ -7,7 +7,7 @@
 City_Populations(list_in)
 }
 \arguments{
-\item{list}{user defined list of the population of towns}
+\item{list_in}{user defined list of the population of towns}
 }
 \value{
 outputs sum of town populations

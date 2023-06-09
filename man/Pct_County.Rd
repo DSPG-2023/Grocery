@@ -7,7 +7,15 @@
 Pct_County(north_quad, east_quad, south_quad, west_quad, county_size)
 }
 \arguments{
-\item{north_quad, east_quad, south_quad, west_quad}{user defined quadrant sizes}
+\item{north_quad}{user defined size of north quadrant}
+
+\item{east_quad}{user defined size of east quadrant}
+
+\item{south_quad}{user defined size of south quadrant}
+
+\item{west_quad}{user defined size of west quadrant}
+
+\item{county_size}{User defined Size of county}
 }
 \value{
 outputs sum of quadrant areas

@@ -16,5 +16,5 @@ outputs output_area
 Calculation for a quarter circle.
 }
 \examples{
-quadrant_area(user_area = 4)
+Quadrant_Area(user_area = 4)
 }

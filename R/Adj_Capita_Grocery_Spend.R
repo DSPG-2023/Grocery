@@ -17,4 +17,3 @@ Adj_Capita_Grocery_Spend <- function(est_per_price_increase,grocery_sales = 8115
   Avg_Spend <- Avg_Capita_Grocery_Spending(grocery_sales,population)
   Avg_Spend * (1+(est_per_price_increase/100))
 }
-Adj_Capita_Grocery_Spend(7)
