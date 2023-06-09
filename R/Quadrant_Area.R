@@ -4,7 +4,7 @@
 #'@return outputs output_area
 #'
 #'@examples
-#'quadrant_area(user_area = 4)
+#'Quadrant_Area(user_area = 4)
 #'@export
 
 Quadrant_Area <- function(user_area) {

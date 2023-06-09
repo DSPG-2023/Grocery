@@ -1,6 +1,6 @@
 #'Calculation for population of the cities in region.
 #'
-#'@param list user defined list of the population of towns
+#'@param list_in user defined list of the population of towns
 #'@return outputs sum of town populations
 #'
 #'@examples

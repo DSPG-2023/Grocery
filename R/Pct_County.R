@@ -1,7 +1,10 @@
 #'Calculation for a quarter circle.
 #'
-#'@param north_quad,east_quad,south_quad,west_quad user defined quadrant sizes
-#'@param
+#'@param north_quad user defined size of north quadrant
+#'@param east_quad user defined size of east quadrant
+#'@param south_quad user defined size of south quadrant
+#'@param west_quad user defined size of west quadrant
+#'@param county_size User defined Size of county
 #'@return outputs sum of quadrant areas
 #'
 #'@export
