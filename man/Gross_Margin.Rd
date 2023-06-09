@@ -10,13 +10,14 @@ Gross_Margin(Total_Estimated_Revenue)
 \item{Total_Estimated_Revenue}{Output of a total estimated revenue calculation}
 }
 \value{
-Outputs Gross Margin (Total Estimated Revenue - Cost of Goods Sold) (in dollars)
+Outputs Gross Margin depending on which one of the 4 revenue ranges
+the input "Total_Estimated_Revenue" falls into (in dollars)
 }
 \description{
 Calculation of Gross Margin
 }
 \details{
-This function is taken from the "Estimating Expense" excel sheet
+This function is taken from the "Estimating Expense" excel sheet (step six)
 }
 \examples{
 # Gross_Margin(Total_Estimated_Revenue = 2000000)
