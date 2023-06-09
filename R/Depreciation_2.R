@@ -13,7 +13,7 @@
 #'@return Outputs total estimated loss from depreciation for leasers
 #'@details This function is taken from the "Estimating Expense" excel sheet (step three)
 #'@examples
-#'# Gross_Margin(Total_Estimated_Revenue = 2000000)
+#'#
 #'
 #'@export
 

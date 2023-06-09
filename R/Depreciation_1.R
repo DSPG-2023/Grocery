@@ -14,7 +14,7 @@
 #'@return Outputs total estimated loss from depreciation for property owners
 #'@details This function is taken from the "Estimating Expense" excel sheet (step two)
 #'@examples
-#'# Gross_Margin(Total_Estimated_Revenue = 2000000)
+#'
 #'
 #'@export
 
