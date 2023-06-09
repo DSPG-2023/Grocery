@@ -24,17 +24,32 @@ Total_Spend_Secondary_Shoppers(
 \item{per_of_grocery_spend_sec}{the percentage of groceries secondary
 shoppers will spend at the proposed store}
 
-\item{pct_metro_sec, pct_rural_sec, pct_town_sec}{The percentage of
-secondary shoppers in metro,rural and town markets default taken as
-40\%,50\%,50\% respectively unless specified otherwise.}
+\item{pct_metro_sec}{The percentage of secondary shoppers in metro market
+default taken as 40\% unless specified otherwise.}
 
-\item{county_pop, towns_pop}{population of the county and population of
-all towns in the county}
+\item{pct_rural_sec}{The percentage of secondary shoppers in rural market
+default taken as 50\% unless specified otherwise.}
+
+\item{pct_town_sec}{The percentage of secondary shoppers in town market
+default taken as 50\% unless specified otherwise.}
+
+\item{county_pop}{population of the county}
+
+\item{towns_pop}{population of all towns in the county}
 
 \item{pct_county}{percentage of county in our market}
 
-\item{metro_list, town_list}{lists of population of store location and
-populations of towns in the neighborhood}
+\item{metro_list}{lists of population of store location}
+
+\item{town_list}{list of population of towns in the neighborhood}
+
+\item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+
+\item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
+
+\item{population}{Total US population. Default value is 334233854.}
 }
 \value{
 outputs the total spending by secondary Shoppers at the proposed store

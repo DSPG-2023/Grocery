@@ -16,17 +16,24 @@ Primary_Shopper_Count(
 )
 }
 \arguments{
-\item{pct_metro_prim, pct_rural_prim, pct_town_prim}{The percentage of
-primary shoppers in metro,rural and town markets default taken as
-50\%,30\%,30\% respectively unless specified otherwise.}
+\item{pct_metro_prim}{The percentage of primary shoppers in metro market
+default taken as 50\% unless specified otherwise.}
 
-\item{county_pop, towns_pop}{population of the county and population of
-all towns in the county}
+\item{pct_rural_prim}{The percentage of primary shoppers in rural market
+default taken as 30\% unless specified otherwise.}
 
-\item{pct_county}{percentage of county in our market}
+\item{pct_town_prim}{The percentage of primary shoppers in town market
+default taken as 30\% unless specified otherwise.}
 
-\item{metro_list, town_list}{lists of population of store location and
-populations of towns in the neighborhood}
+\item{county_pop}{population of the county.}
+
+\item{towns_pop}{population of all towns in the county.}
+
+\item{pct_county}{percentage of county in our market.}
+
+\item{metro_list}{lists of population of store location.}
+
+\item{town_list}{list of population of towns in the neighborhood.}
 }
 \value{
 outputs the total number of primary shoppers for the store
