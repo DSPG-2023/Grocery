@@ -1,13 +1,16 @@
 #'Calculates the number of primary shoppers in each marker
 #'
-#'@param pct_metro_prim,pct_rural_prim,pct_town_prim The percentage of
-#'primary shoppers in metro,rural and town markets default taken as
-#'50%,30%,30% respectively unless specified otherwise.
-#'@param county_pop,towns_pop population of the county and population of
-#'all towns in the county
-#'@param pct_county percentage of county in our market
-#'@param metro_list,town_list lists of population of store location and
-#'populations of towns in the neighborhood
+#'@param pct_metro_prim The percentage of primary shoppers in metro market
+#' default taken as 50% unless specified otherwise.
+#'@param pct_rural_prim The percentage of primary shoppers in rural market
+#'default taken as 30% unless specified otherwise.
+#'@param pct_town_prim The percentage of primary shoppers in town market
+#'default taken as 30% unless specified otherwise.
+#'@param county_pop population of the county.
+#'@param towns_pop population of all towns in the county.
+#'@param pct_county percentage of county in our market.
+#'@param metro_list lists of population of store location.
+#'@param town_list list of population of towns in the neighborhood.
 #'
 #'@return
 #'outputs the total number of primary shoppers for the store

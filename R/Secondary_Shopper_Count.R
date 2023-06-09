@@ -1,13 +1,16 @@
 #'Calculates the number of secondary shoppers in each marker
 #'
-#'@param pct_metro_sec,pct_rural_sec,pct_town_sec The percentage of
-#'secondary shoppers in metro,rural and town markets default taken as
-#'40%,50%,50% respectively unless specified otherwise.
-#'@param county_pop,towns_pop population of the county and population of
-#'all towns in the county
-#'@param pct_county percentage of county in our market
-#'@param metro_list,town_list lists of population of store location and
-#'populations of towns in the neighborhood
+#'@param pct_metro_sec The percentage of secondary shoppers in metro market
+#' default taken as 40% unless specified otherwise.
+#'@param pct_rural_sec The percentage of secondary shoppers in rural market
+#'default taken as 50% unless specified otherwise.
+#'@param pct_town_sec The percentage of secondary shoppers in town market
+#'default taken as 50% unless specified otherwise.
+#'@param county_pop population of the county.
+#'@param towns_pop population of all towns in the county.
+#'@param pct_county percentage of county in our market.
+#'@param metro_list lists of population of store location.
+#'@param town_list list of population of towns in the neighborhood.
 #'
 #'@return
 #'outputs the total number of secondary shoppers for the store

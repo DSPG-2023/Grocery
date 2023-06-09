@@ -24,17 +24,32 @@ Total_Spend_Rare_Shoppers(
 \item{per_of_grocery_spend_rare}{the percentage of groceries rare
 shoppers will spend at the proposed store}
 
-\item{pct_metro_rare, pct_rural_rare, pct_town_rare}{The percentage of
-rare shoppers in metro,rural and town markets default taken as
-10\%,20\%,20\% respectively unless specified otherwise.}
+\item{pct_metro_rare}{The percentage of rare shoppers in metro market
+default taken as 10\% unless specified otherwise.}
 
-\item{county_pop, towns_pop}{population of the county and population of
-all towns in the county}
+\item{pct_rural_rare}{The percentage of rare shoppers in rural market
+default taken as 20\% unless specified otherwise.}
+
+\item{pct_town_rare}{The percentage of rare shoppers in town market
+default taken as 20\% unless specified otherwise.}
+
+\item{county_pop}{population of the county}
+
+\item{towns_pop}{population of all towns in the county}
 
 \item{pct_county}{percentage of county in our market}
 
-\item{metro_list, town_list}{lists of population of store location and
-populations of towns in the neighborhood}
+\item{metro_list}{lists of population of store location}
+
+\item{town_list}{list of population of towns in the neighborhood}
+
+\item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+
+\item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
+
+\item{population}{Total US population. Default value is 334233854.}
 }
 \value{
 outputs the total spending by rare Shoppers at the proposed store
