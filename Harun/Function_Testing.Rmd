@@ -1,0 +1,14 @@
+---
+title: "Function_Testing"
+author: "Harun Celik"
+date: "2023-06-12"
+output: html_document
+---
+
+Add any of the test variables in the excel file below to be able to run function tests.
+
+```{r}
+
+
+```
+
