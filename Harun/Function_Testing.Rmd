@@ -17,3 +17,26 @@ state_index=99
 est_per_price_increase=7
 ```
 
+```{r}
+Total_Estimated_Revenue= 4041453 
+Monthly_Rent=3642
+Loan_Amount=1500000
+Interest_Rate=.06
+
+
+# Depreciation Arguments (functions do not run yet)
+Building_Remodeling=900000
+Leasehold_Improvements=300000 #randomly chosen
+Parking_Lot_Improvements=100000 #randomly chosen
+Shelving_Check_Out_Counters=60000
+Computer_Equipment_POS=15000
+Vehicles=12000
+Display_Cases=15000
+Refrigeration=20000
+Freezers=20000
+Meat_Cutting_Equipment=10000
+Miscellaneous_Assets_1=8000 #randomly chosen
+Miscellaneous_Assets_2=8000 #randomly chosen
+Miscellaneous_Assets_3=8000 #randomly chosen
+```
+
