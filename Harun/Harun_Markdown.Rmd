@@ -6,7 +6,36 @@ output: html_document
 ---
 
 ```{r}
-#To Do
-## Read in the SalesGenie data to create a report of the information.
+library(googleway)
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(leaflet)
 ```
+
+```{r, include=FALSE}
+key <- Sys.getenv("PLACES_KEY")
+set_key(key = key)
+```
+
+```{r}
+# Trying to find dollar stores in a 4 mile radius.
+
+ames_dollar_stores <- google_places(search_string = "dollar", location = c(42.034534, -93.620369), radius = 6500, keyword = "store")
+```
+
+```{r}
+results <- ames_dollar_stores$results
+
+spatial_results <- results %>% 
+  transmute(name = name, lat = geometry$location$lat, lng = geometry$location$lng)
+```
+
+```{r}
+leaflet(spatial_results) %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addMarkers(lng = spatial_results$lng, lat = spatial_results$lat, popup = spatial_results$name) %>%
+  setView(-98.5795, 39.8282, zoom=3)
+```
+
 
