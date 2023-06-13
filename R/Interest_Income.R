@@ -3,7 +3,7 @@
 #'@details This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Eight.
 #'@return Outputs first-year interest income (in dollars)
 #'@examples
-#'# Interest_Expense(Total_Estimated_Revenue = 2000000)
+#'# Interest_Income(Total_Estimated_Revenue = 2000000)
 #'
 #'@export
 
