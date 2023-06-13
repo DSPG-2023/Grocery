@@ -11,6 +11,7 @@ library(sf)
 library(dplyr)
 library(ggplot2)
 library(leaflet)
+library(ggvoronoi)
 ```
 
 ```{r, include=FALSE}
@@ -30,6 +31,13 @@ results <- ames_dollar_stores$results
 spatial_results <- results %>% 
   transmute(name = name, lat = geometry$location$lat, lng = geometry$location$lng)
 ```
+
+```{r}
+ggplot(spatial_results, aes(lat, lng)) +
+  stat_voronoi(geom = "path") +
+  geom_point(mapping = aes(lat, lng))
+```
+
 
 ```{r}
 leaflet(spatial_results) %>%
