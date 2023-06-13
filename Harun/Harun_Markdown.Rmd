@@ -38,12 +38,60 @@ ggplot(spatial_results, aes(lat, lng)) +
   geom_point(mapping = aes(lat, lng))
 ```
 
-
 ```{r}
 leaflet(spatial_results) %>%
   addProviderTiles("CartoDB.Positron") %>%
   addMarkers(lng = spatial_results$lng, lat = spatial_results$lat, popup = spatial_results$name) %>%
   setView(-98.5795, 39.8282, zoom=3)
+```
+
+```{r}
+cities <- c("Ames", "Des Moines", "Waterloo", "Chicago")
+lat <- c(42.034534, 41.619549, 42.499504, 41.881832)
+lng <- c(-93.620369, -93.598022, -92.358665, -87.623177)
+
+test_cities <- data.frame(cities, lat, lng)
+```
+
+```{r}
+places_multiloc_pull <- function(df, name = NULL, 
+                                 search_string = NULL, 
+                                 keyword = NULL, 
+                                 lat = c(df[,2]),
+                                 lng = df[,3],
+                                 radius = 6500, 
+                                 type = NULL, 
+                                 api_key = Sys.getenv("PLACES_KEY"), 
+                                 place_type = NULL) {
+  
+  result_list <- list()
+  
+  for (i in 1:dim(test_cities)[1]) {
+    
+    string <- sprintf("df_%f", i)
+    
+    spring <- noquote(string) 
+    
+    spring <- googleway::google_places(search_string = search_string, 
+                                   name = name, 
+                                   location = c(lat[i], lng[i]), 
+                                   radius = radius, 
+                                   keyword = keyword, 
+                                   key = api_key)
+    
+    
+    Sys.sleep(30)
+    
+    result_list <- append(result_list, list(spring$results))
+  }
+  
+  return(result_list)
+  
+}
+```
+
+```{r}
+all_list <- places_multiloc_pull(df = test_cities, search_string = "dollar")
 ```
 
 
