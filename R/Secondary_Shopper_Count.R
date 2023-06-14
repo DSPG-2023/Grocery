@@ -32,6 +32,7 @@ Secondary_Shopper_Count<-function(pct_metro_sec=40,pct_rural_sec=50,
   rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
   metro_pop<-City_Populations(metro_list)
   town_pop<-City_Populations(town_list)
-  (metro_pop*(pct_metro_sec/100))+(rural_pop*(pct_rural_sec/100))+
-    (town_pop*(pct_town_sec/100))
+  floor((metro_pop*(pct_metro_sec/100))+(rural_pop*(pct_rural_sec/100))+
+    (town_pop*(pct_town_sec/100)))
 }
+

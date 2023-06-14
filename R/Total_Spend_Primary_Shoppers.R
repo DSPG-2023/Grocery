@@ -25,6 +25,9 @@
 #'This function is taken from the estimating Revenue.xlsx and calculated
 #'in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 #'and Primary_Shopper_Count()
+#'@exmaples Total_Spend_Primary_Shoppers(county_pop=18000,towns_pop=9786,
+#'          pct_county=17.7,town_list=list(77),metro_list=list(2650),
+#'          est_per_price_increase=7,state_index=99)
 #'
 #'@export
 

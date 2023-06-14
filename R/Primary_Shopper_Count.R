@@ -32,7 +32,7 @@ Primary_Shopper_Count<-function(pct_metro_prim=50,pct_rural_prim=30
   rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
   metro_pop<-City_Populations(metro_list)
   town_pop<-City_Populations(town_list)
-  (metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+
-    (town_pop*(pct_town_prim/100))
+  floor((metro_pop*(pct_metro_prim/100))+(rural_pop*(pct_rural_prim/100))+
+    (town_pop*(pct_town_prim/100)))
 }
 
