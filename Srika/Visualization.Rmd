@@ -10,6 +10,14 @@ dollar_store_data=read_excel("C:/Users/srika/Downloads/salesgenie_dollar_stores.
 ```
 
 ```{r}
+p <- ggplot(data = dollar_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
+```
 
+```{r}
+l <- ggplot(data = dollar_store_data, aes(x = Company_Name)) +
+            geom_bar(position = "dodge")
+ggplotly(l)
 ```
 
