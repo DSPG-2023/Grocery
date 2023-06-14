@@ -15,8 +15,7 @@ library(ggvoronoi)
 ```
 
 ```{r, include=FALSE}
-key <- Sys.getenv("PLACES_KEY")
-set_key(key = key)
+set_key(key = Sys.getenv("PLACES_KEY"))
 ```
 
 ```{r}
@@ -68,6 +67,8 @@ places_multiloc_pull <- function(df, name = NULL,
   
   for (i in 1:dim(test_cities)[1]) {
     
+    start_time <- Sys.time()
+    
     string <- sprintf("df_%f", i)
     
     spring <- noquote(string) 
@@ -80,9 +81,13 @@ places_multiloc_pull <- function(df, name = NULL,
                                    key = api_key)
     
     
-    Sys.sleep(30)
+    Sys.sleep(2)
     
     result_list <- append(result_list, list(spring$results))
+    
+    end_time <- Sys.time()
+    total_time <- end_time - start_time
+    print(sprintf("Execution time for iteration %d is %.2f", i, total_time))
   }
   
   return(result_list)
@@ -93,5 +98,12 @@ places_multiloc_pull <- function(df, name = NULL,
 ```{r}
 all_list <- places_multiloc_pull(df = test_cities, search_string = "dollar")
 ```
+
+```{r}
+test_distance <- google_distance(origins = c(42.034534, 41.619549,  "Cedar Rapids, IA"),
+                destinations = c("Nevada, IA", "Des Moines, IA"),
+                mode = "driving")
+```
+
 
 
