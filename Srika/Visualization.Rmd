@@ -1,0 +1,15 @@
+```{r}
+library(ggplot2)
+library(plotly)
+library(readxl)
+```
+
+
+```{r}
+dollar_store_data=read_excel("C:/Users/srika/Downloads/salesgenie_dollar_stores.xlsx")
+```
+
+```{r}
+
+```
+
