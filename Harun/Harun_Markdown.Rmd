@@ -99,8 +99,34 @@ places_multiloc_pull <- function(df, name = NULL,
 all_list <- places_multiloc_pull(df = test_cities, search_string = "dollar")
 ```
 
+```{r, eval=FAlSE}
+combined_df_new <- bind_rows(all_list[[1]], 
+                             all_list[[2]], 
+                             all_list[[3]], 
+                             all_list[[4]]) %>%
+  tidyr::unnest(cols = c(geometry, 
+                         opening_hours, 
+                         photos, 
+                         plus_code)) %>%
+  saveRDS(file = "Google_Places_DollarStores.rds")
+```
+
 ```{r}
-test_distance <- google_distance(origins = c(42.034534, 41.619549,  "Cedar Rapids, IA"),
+flat_df <- all_list[] %>%
+  mapply(bind_rows) %>%
+  purrr::flatten_df()
+```
+
+
+```{r}
+test_distance_names <- google_distance(origins = c("Ames, IA",  "Cedar Rapids, IA"),
+                destinations = c("Nevada, IA", "Des Moines, IA"),
+                mode = "driving")
+```
+
+```{r}
+test_distance_loc <- google_distance(origins = c("42.034534, -93.620369",  
+                                                 "Cedar Rapids, IA"),
                 destinations = c("Nevada, IA", "Des Moines, IA"),
                 mode = "driving")
 ```
