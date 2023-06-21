@@ -13,5 +13,5 @@
 Rural_Population<-function(county_pop, towns_pop, pct_county) {
   #This function subtracts the sum of all the towns populations from the county and multiplies it
   #by the percent of the county that the area covers to find the # of rural people there are
-  return((county_pop - towns_pop)*pct_county/100)
+  return(floor((county_pop - towns_pop)*pct_county/100))
 }
