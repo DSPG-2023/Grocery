@@ -70,20 +70,83 @@ Other_Operating_Expense <- Other_Operating_Expense(Total_Estimated_Revenue)
 
 Operating_Income_Loss <- Operating_Income_Loss(Total_Estimated_Revenue)
 
-# Depreciation: Scenario One user inputs
+# Depreciation
 
-Building_Remodeling <- 900
-Parking_Lot_Improvements <- 
-Shelving_Check_Out_Counters <- 
-Computer_Equipment_POS
-Vehicles
-Display_Cases
-Refrigeration
-Freezers
-Meat_Cutting_Equipment
-Miscellaneous_Assets_1
-Miscellaneous_Assets_2
-Miscellaneous_Assets_3
+Building_Remodeling <- 900000
 
+# Note: Building/Remodeling is Scenario 1 only
+
+Parking_Lot_Improvements <- 50000
+Shelving_Check_Out_Counters <- 60000
+Computer_Equipment_POS <- 15000
+Vehicles <- 12000
+Display_Cases <- 15000
+Refrigeration <- 20000
+Freezers <- 20000
+Meat_Cutting_Equipment <- 10000
+
+Leasehold_Improvements <- 50000
+
+# Note: Leasehold Improvements is Scenario 2 only
+
+# Scenario One:
+
+Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
+               Parking_Lot_Improvements = 50000,
+               Shelving_Check_Out_Counters = 60000,
+               Computer_Equipment_POS = 15000,
+               Vehicles = 12000,
+               Display_Cases = 15000,
+               Refrigeration = 20000,
+               Freezers = 20000,
+               Meat_Cutting_Equipment = 10000,
+               Miscellaneous_Assets_1 = 10000,
+               Miscellaneous_Assets_1_Use_Life = 10,
+               Miscellaneous_Assets_2 = 10000,
+               Miscellaneous_Assets_2_Use_Life = 10,
+               Miscellaneous_Assets_3 = 10000,
+               Miscellaneous_Assets_3_Use_Life = 10)
+
+# Scenario 2
+
+Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
+               Parking_Lot_Improvements = 50000,
+               Shelving_Check_Out_Counters = 60000,
+               Computer_Equipment_POS = 15000,
+               Vehicles = 12000,
+               Display_Cases = 15000,
+               Refrigeration = 20000,
+               Freezers = 20000,
+               Meat_Cutting_Equipment = 10000,
+               Miscellaneous_Assets_1 = 10000,
+               Miscellaneous_Assets_1_Use_Life = 10,
+               Miscellaneous_Assets_2 = 10000,
+               Miscellaneous_Assets_2_Use_Life = 10,
+               Miscellaneous_Assets_3 = 10000,
+               Miscellaneous_Assets_3_Use_Life = 10)
+
+
+# Loan Interest Expense
+
+Interest_Expense <- Interest_Expense(Loan_Amount, Interest_Rate)
+
+# Annual Rent (Scenario 2)
+
+Annual_Rent <- Annual_Rent(Monthly_Rent)
+
+# Interest Income
+
+Interest_Income <- Interest_Income(Total_Estimated_Revenue)
+
+# Other Income 
+
+Other_Income <- Other_Income(Total_Estimated_Revenue)
+
+
+# Expenses <- Cost_of_Goods_Sold - Employee_Wages - Officer_Compensation - Other_Operating_Expense - Interest_Expense - Annual_Rent - Depreciation_1 
+
+# Secondary_Income <- Other_Income + Interest_Income
+
+# Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
 ```
 
