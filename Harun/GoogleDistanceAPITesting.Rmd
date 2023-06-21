@@ -1,0 +1,25 @@
+---
+title: "Google Distance API Testing"
+author: "Harun Celik"
+date: "2023-06-21"
+output: html_document
+---
+
+# Testing Google Distance API
+
+## Testing Distances by Name
+
+```{r}
+test_distance_names <- google_distance(origins = c("Ames, IA",  "Cedar Rapids, IA"),
+                destinations = c("Nevada, IA", "Des Moines, IA"),
+                mode = "driving")
+```
+
+## Testing Distances by Location
+
+```{r}
+test_distance_loc <- google_distance(origins = c("42.034534, -93.620369",  
+                                                 "Cedar Rapids, IA"),
+                destinations = c("Nevada, IA", "Des Moines, IA"),
+                mode = "driving")
+```
