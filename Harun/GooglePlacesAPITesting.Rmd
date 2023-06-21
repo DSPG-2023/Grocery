@@ -1,0 +1,135 @@
+---
+title: "Google Places API Testing"
+author: "Harun Celik"
+date: "2023-06-21"
+output: html_document
+---
+
+# Load Library
+
+```{r}
+library(googleway)
+library(sf)
+library(dplyr)
+library(ggplot2)
+library(leaflet)
+library(ggvoronoi)
+```
+
+# Add Google Places Key
+
+```{r, include=FALSE}
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# Ames Google Places API
+
+## Testing Pull for Ames
+
+```{r}
+# Trying to find dollar stores in a 4 mile radius.
+
+ames_dollar_stores <- google_places(search_string = "dollar", location = c(42.034534, -93.620369), radius = 6500, keyword = "store")
+```
+
+## Extract Results from API Pul into `results`
+
+```{r}
+results <- ames_dollar_stores$results
+```
+
+## Wrangle Data to Extract Latitude and Longitude
+
+```{r}
+spatial_results <- results %>% 
+  transmute(name = name, lat = geometry$location$lat, lng = geometry$location$lng)
+```
+
+## Display a Leaflet Map with Markers from `spatial_results`
+
+```{r}
+leaflet(spatial_results) %>%
+  addProviderTiles("CartoDB.Positron") %>%
+  addMarkers(lng = spatial_results$lng, lat = spatial_results$lat, popup = spatial_results$name) %>%
+  setView(-98.5795, 39.8282, zoom=3)
+```
+
+# Mock Dataset
+
+## Making a Mock Dataset
+
+```{r}
+cities <- c("Ames", "Des Moines", "Waterloo", "Chicago")
+lat <- c(42.034534, 41.619549, 42.499504, 41.881832)
+lng <- c(-93.620369, -93.598022, -92.358665, -87.623177)
+
+test_cities <- data.frame(cities, lat, lng)
+```
+
+## Create a Function for Multiple Location Pull
+
+```{r}
+places_multiloc_pull <- function(df, name = NULL, 
+                                 search_string = NULL, 
+                                 keyword = NULL, 
+                                 lat = c(df[,2]),
+                                 lng = df[,3],
+                                 radius = 6500, 
+                                 type = NULL, 
+                                 api_key = Sys.getenv("PLACES_KEY"), 
+                                 place_type = NULL) {
+  
+  result_list <- list()
+  
+  for (i in 1:dim(test_cities)[1]) {
+    
+    start_time <- Sys.time()
+    
+    string <- sprintf("df_%f", i)
+    
+    spring <- noquote(string) 
+    
+    spring <- googleway::google_places(search_string = search_string, 
+                                   name = name, 
+                                   location = c(lat[i], lng[i]), 
+                                   radius = radius, 
+                                   keyword = keyword, 
+                                   key = api_key)
+    
+    
+    Sys.sleep(2)
+    
+    result_list <- append(result_list, list(spring$results))
+    
+    end_time <- Sys.time()
+    total_time <- end_time - start_time
+    print(sprintf("Execution time for iteration %d is %.2f", i, total_time))
+  }
+  
+  return(result_list)
+  
+}
+```
+
+## Use `places_multiloc_pull()` with Mock Dataset 
+
+```{r}
+all_list <- places_multiloc_pull(df = test_cities, search_string = "dollar")
+```
+
+## Flatten the Data for Saving as RDS 
+
+```{r, eval=FAlSE}
+combined_df_new <- bind_rows(all_list[[1]], 
+                             all_list[[2]], 
+                             all_list[[3]], 
+                             all_list[[4]]) %>%
+  tidyr::unnest(cols = c(geometry, 
+                         opening_hours, 
+                         photos, 
+                         plus_code))
+
+
+# The following saves the datgframe as an RDS.
+## saveRDS(object = combined_df_new, file = "Google_Places_DollarStores.rds")
+```

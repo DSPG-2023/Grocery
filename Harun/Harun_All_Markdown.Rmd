@@ -16,13 +16,15 @@ library(leaflet)
 library(ggvoronoi)
 ```
 
-# Add Places Key
+# Add Google Places Key
 
 ```{r, include=FALSE}
 set_key(key = Sys.getenv("PLACES_KEY"))
 ```
 
-# Testing Pull for Ames
+# Ames Google Places API
+
+## Testing Pull for Ames
 
 ```{r}
 # Trying to find dollar stores in a 4 mile radius.
@@ -30,18 +32,20 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 ames_dollar_stores <- google_places(search_string = "dollar", location = c(42.034534, -93.620369), radius = 6500, keyword = "store")
 ```
 
+## Extract Results from API Pul into `results`
+
 ```{r}
 results <- ames_dollar_stores$results
+```
 
+## Wrangle Data to Extract Latitude and Longitude
+
+```{r}
 spatial_results <- results %>% 
   transmute(name = name, lat = geometry$location$lat, lng = geometry$location$lng)
 ```
 
-```{r}
-ggplot(spatial_results, aes(lat, lng)) +
-  stat_voronoi(geom = "path") +
-  geom_point(mapping = aes(lat, lng))
-```
+## Display a Leaflet Map with Markers from `spatial_results`
 
 ```{r}
 leaflet(spatial_results) %>%
@@ -50,6 +54,10 @@ leaflet(spatial_results) %>%
   setView(-98.5795, 39.8282, zoom=3)
 ```
 
+# Mock Dataset
+
+## Making a Mock Dataset
+
 ```{r}
 cities <- c("Ames", "Des Moines", "Waterloo", "Chicago")
 lat <- c(42.034534, 41.619549, 42.499504, 41.881832)
@@ -57,6 +65,8 @@ lng <- c(-93.620369, -93.598022, -92.358665, -87.623177)
 
 test_cities <- data.frame(cities, lat, lng)
 ```
+
+## Create a Function for Multiple Location Pull
 
 ```{r}
 places_multiloc_pull <- function(df, name = NULL, 
@@ -101,9 +111,13 @@ places_multiloc_pull <- function(df, name = NULL,
 }
 ```
 
+## Use `places_multiloc_pull()` with Mock Dataset 
+
 ```{r}
 all_list <- places_multiloc_pull(df = test_cities, search_string = "dollar")
 ```
+
+## Flatten the Data for Saving as RDS 
 
 ```{r, eval=FAlSE}
 combined_df_new <- bind_rows(all_list[[1]], 
@@ -113,22 +127,24 @@ combined_df_new <- bind_rows(all_list[[1]],
   tidyr::unnest(cols = c(geometry, 
                          opening_hours, 
                          photos, 
-                         plus_code)) %>%
-  saveRDS(file = "Google_Places_DollarStores.rds")
+                         plus_code))
+
+
+## The following saves the datgframe as an RDS.
+# saveRDS(object = combined_df_new, file = "Google_Places_DollarStores.rds")
 ```
 
-```{r}
-flat_df <- all_list[] %>%
-  mapply(bind_rows) %>%
-  purrr::flatten_df()
-```
+# Testing Google Distance API
 
+## Testing Distances by Name
 
 ```{r}
 test_distance_names <- google_distance(origins = c("Ames, IA",  "Cedar Rapids, IA"),
                 destinations = c("Nevada, IA", "Des Moines, IA"),
                 mode = "driving")
 ```
+
+## Testing Distances by Location
 
 ```{r}
 test_distance_loc <- google_distance(origins = c("42.034534, -93.620369",  
@@ -137,5 +153,14 @@ test_distance_loc <- google_distance(origins = c("42.034534, -93.620369",
                 mode = "driving")
 ```
 
+
+
+# Basic Voronoi Testing
+
+```{r}
+ggplot(spatial_results, aes(lat, lng)) +
+  stat_voronoi(geom = "path") +
+  geom_point(mapping = aes(lat, lng))
+```
 
 
