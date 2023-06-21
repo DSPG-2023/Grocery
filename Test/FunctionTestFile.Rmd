@@ -15,16 +15,18 @@ library(DSPGGrocery)
 ## Alex's Section
 
 ```{r}
+#Gets distance between stores
 north_dist <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718",key = Sys.getenv("GOOGLE_KEY"))
 east_dist <- googleway::google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576",key = Sys.getenv("GOOGLE_KEY"))
 south_dist <- googleway::google_distance("42.3053733, -95.0621664","42.258085,-95.223378",key = Sys.getenv("GOOGLE_KEY"))
 west_dist <- googleway::google_distance("42.3053733, -95.0621664","42.3113755,-95.6832781",key = Sys.getenv("GOOGLE_KEY"))
+#Converts to miles and integers.
 north_val <- as.integer(north_dist$rows$elements[[1]]$distance$value * 0.00062137)
 east_val <- as.integer(east_dist$rows$elements[[1]]$distance$value * 0.00062137)
 south_val <- as.integer(south_dist$rows$elements[[1]]$distance$value * 0.00062137)
 west_val <- as.integer(west_dist$rows$elements[[1]]$distance$value * 0.00062137)
 
-#$rows$elements[[1]]$distance$value
+#Function calls and saves to variables
 city_list = list(1117,994, 222, 19, 86, 265)
 rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119))
 town_pop <- City_Populations(city_list)
