@@ -41,7 +41,7 @@ GoogleGroceryDistance <- function(address = "23 Main St, Lake View, IA, United S
   df_places_binded <- bind_rows(df_places_grocery, df_places_dollar)
 
 
-  # Convert `df_places_binded` to include only lat/lng values
+  # Convert `df_places_binded` to include only lat/long values
   Spatial_places <- df_places_binded %>%
     transmute(lat = geometry$location$lat, lon = geometry$location$lng) %>%
     slice(1:25)

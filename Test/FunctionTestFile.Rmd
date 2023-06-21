@@ -42,7 +42,6 @@ Total_Estimated_Revenue <- Total_Estimate_Revenue(county_pop=9752,
                                                                         south_val,
                                                                         west_val, 
                                                                         1500*.62137119),
-                                
                                                   town_list=list(1117,994,222, 19, 86, 265),
                                                   metro_list=list(1117),
                                                   state_index=89.568)
