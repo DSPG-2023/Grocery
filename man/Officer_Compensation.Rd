@@ -16,7 +16,7 @@ Outputs dollars spent (Total Estimated Revenue * Percentage) (in dollars)
 Calculation of Officer Compensation
 }
 \details{
-This function was taken from the "Estimateing_Expenses.xlsx" sheet in Step 6.
+This function was taken from the "Estimating_Expenses.xlsx" sheet in Step 6.
 }
 \examples{
 # Officer_Compensation(Total_Estimated_Revenue = 2000000)

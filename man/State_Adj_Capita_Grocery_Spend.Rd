@@ -6,7 +6,7 @@
 \usage{
 State_Adj_Capita_Grocery_Spend(
   state_index,
-  est_per_price_increase,
+  est_per_price_increase = 7,
   grocery_sales = 8.11541e+11,
   population = 334233854
 )
@@ -14,7 +14,8 @@ State_Adj_Capita_Grocery_Spend(
 \arguments{
 \item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
 
-\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
+default taken as 7 for 2023.}
 
 \item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
 

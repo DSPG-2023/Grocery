@@ -5,13 +5,14 @@
 \title{Calculates the average per capita spend adjusting the estimated price increase}
 \usage{
 Adj_Capita_Grocery_Spend(
-  est_per_price_increase,
+  est_per_price_increase = 7,
   grocery_sales = 8.11541e+11,
   population = 334233854
 )
 }
 \arguments{
-\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
+default taken as 7 for 2023}
 
 \item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
 

@@ -5,13 +5,16 @@ date: "2023-06-21"
 output: html_document
 ---
 
+# Load library
+
+```{r}
+library(DSPGGrocery)
+```
+
 
 ## Alex's Section
 
 ```{r}
-library(DSPGGrocery)
-
-
 north_dist <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718",key = Sys.getenv("GOOGLE_KEY"))
 east_dist <- googleway::google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576",key = Sys.getenv("GOOGLE_KEY"))
 south_dist <- googleway::google_distance("42.3053733, -95.0621664","42.258085,-95.223378",key = Sys.getenv("GOOGLE_KEY"))
@@ -27,6 +30,8 @@ rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(nort
 town_pop <- City_Populations(city_list)
 ```
 
+
+# COMMENT CODE PLEASE :D
 ```{r}
 df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718", key = Sys.getenv("GOOGLE_KEY"))
 ```
@@ -120,7 +125,6 @@ Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
 # Scenario 2 (Owner rents the building)
 
 Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
-               Parking_Lot_Improvements = 50000,
                Shelving_Check_Out_Counters = 60000,
                Computer_Equipment_POS = 15000,
                Vehicles = 12000,

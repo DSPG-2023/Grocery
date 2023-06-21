@@ -2,7 +2,8 @@
 #'
 #' @description The function uses the Google GeoCode, Places, and Distance Matrix APIs to provide distances to grocery and dollar stores after being provided with an address.
 #'
-#' @importFrom googleway set_key, google_geocode
+#' @importFrom googleway set_key, google_geocode, google_places, google_distance
+#' @importFrom dplyr %>%, transmute, slice
 
 GoogleGroceryDistance <- function(address = "23 Main St, Lake View, IA, United States, Iowa",
                                   api_key = Sys.getenv("PLACES_KEY")) {

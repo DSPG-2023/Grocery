@@ -23,7 +23,7 @@ Total_Estimate_Revenue(
   metro_list,
   town_list,
   state_index,
-  est_per_price_increase,
+  est_per_price_increase = 7,
   grocery_sales = 8.11541e+11,
   population = 334233854
 )
@@ -77,7 +77,8 @@ default taken as 20\% unless specified otherwise.}
 
 \item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
 
-\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
+default taken as 7 for 2023.}
 
 \item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
 
@@ -93,4 +94,10 @@ Calculate the Estimated total Revenue
 This function is taken from the estimating Revenue.xlsx and calculated
 in step 4. This function calls Total_Spend_Primary_Shoppers(),
 Total_Spend_Secondary_Shoppers() and Total_Spend_Rare_Shoppers()
+}
+\examples{
+Total_Estimate_Revenue(county_pop=18000,towns_pop=9786,pct_county=17.7,
+                                 town_list=list(77),metro_list=list(2650),
+                                  est_per_price_increase=7,state_index=99)
+
 }

@@ -12,7 +12,7 @@
 Other_Operating_Expense <- function(Total_Estimated_Revenue) {
 
   ifelse(Total_Estimated_Revenue < 500000, stop("error: no data for this revenue range"),
-         percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .11,
+         Percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .11,
                               ifelse(Total_Estimated_Revenue < 2499999.99, .12,
                                      ifelse(Total_Estimated_Revenue < 4999999.99, .11,
                                             ifelse(Total_Estimated_Revenue < 24999999.99, .11, .10)))))
