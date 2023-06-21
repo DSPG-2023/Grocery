@@ -30,7 +30,8 @@
 #'@param metro_list lists of population of store location.
 #'@param town_list list of population of towns in the neighborhood.
 #'@param state_index the ratio of the current price of the basket to the price of the basket during the base year
-#'@param est_per_price_increase Estimated increase in price of grocery in cumulative percent.
+#'@param est_per_price_increase Estimated increase in price of grocery in cumulative percent
+#'default taken as 7 for 2023.
 #'@param grocery_sales Total US grocery sales annually. Default value is 811541000000.
 #'@param population Total US population. Default value is 334233854.
 #'
@@ -57,7 +58,7 @@ Total_Estimate_Revenue<- function(  per_of_grocery_spend_rare=5,
                                     pct_metro_sec=40,pct_rural_sec=50,pct_town_sec=50,
                                     pct_metro_rare=10,pct_rural_rare=20,pct_town_rare=20,
                                     county_pop,towns_pop,pct_county,metro_list,town_list,
-                                    state_index,est_per_price_increase,
+                                    state_index,est_per_price_increase=7,
                                     grocery_sales = 811541000000,population = 334233854){
 
   primary_spend<-Total_Spend_Primary_Shoppers(per_of_grocery_spend_prim,                      pct_metro_prim,pct_rural_prim,pct_town_prim,
