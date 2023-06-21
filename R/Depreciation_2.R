@@ -20,7 +20,7 @@
 #'
 #'@export
 
-Depreciation_1 <- function(Leasehold_Improvements, Leasehold_Improvements_Use_Life, Shelving_Check_Out_Counters, Computer_Equipment_POS,
+Depreciation_2 <- function(Leasehold_Improvements, Leasehold_Improvements_Use_Life, Shelving_Check_Out_Counters, Computer_Equipment_POS,
                            Vehicles, Display_Cases, Refrigeration, Freezers, Meat_Cutting_Equipment,
                            Miscellaneous_Assets_1, Miscellaneous_Assets_1_Use_Life,
                            Miscellaneous_Assets_2, Miscellaneous_Assets_2_Use_Life,
