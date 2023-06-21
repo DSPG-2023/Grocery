@@ -72,7 +72,8 @@ Spatial_places <- df_places_binded %>%
 df_distances <- google_distance(origins = "23 Main St, Lake View, IA, United States, Iowa", 
                                 destinations = Spatial_places, mode = "driving") %>%
   .$rows %>%
-  .$elements
+  .$elements %>%
+  .[[1]]
 ```
 
 
