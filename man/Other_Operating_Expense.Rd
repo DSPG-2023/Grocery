@@ -4,12 +4,13 @@
 \alias{Other_Operating_Expense}
 \title{Calculation of other operating expenses (miscellaneous)}
 \usage{
-Other_Operating_Expense(Total_Estimated_Revenue, Percentage = 0.123)
+Other_Operating_Expense(Total_Estimated_Revenue)
 }
 \arguments{
 \item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
 
-\item{Percentage}{Percentage of total estimated revenue spent on other operating expenses. Default value is .1230 (needs clarification)}
+\item{Percentage}{Percentage of total estimated revenue spent on other operating expenses.
+Percentages are taken from Bizminer.}
 }
 \value{
 Outputs other operating expenses (in dollars)
@@ -21,6 +22,6 @@ Calculation of other operating expenses (miscellaneous)
 This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
 }
 \examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = 0.123)
+# Employee_Wages(Total_Estimated_Revenue = 2000000)
 
 }

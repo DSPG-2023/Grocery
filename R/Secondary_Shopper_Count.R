@@ -16,8 +16,7 @@
 #'outputs the total number of secondary shoppers for the store
 #'
 #'@examples
-#'Secondary_Shopper_Count(county_pop=18000,towns_pop=9786,
-#'             pct_county=17.7,town_list=list(77),metro_list=list(2650))
+#'Secondary_Shopper_Count(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650))
 #'
 #'@details
 #'This function is taken from the estimating Market Size.xlsx

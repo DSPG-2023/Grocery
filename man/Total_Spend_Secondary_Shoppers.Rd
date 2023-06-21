@@ -15,7 +15,7 @@ Total_Spend_Secondary_Shoppers(
   metro_list,
   town_list,
   state_index,
-  est_per_price_increase,
+  est_per_price_increase = 7,
   grocery_sales = 8.11541e+11,
   population = 334233854
 )
@@ -45,7 +45,8 @@ default taken as 50\% unless specified otherwise.}
 
 \item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
 
-\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent.}
+\item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
+default taken as 7 for 2023.}
 
 \item{grocery_sales}{Total US grocery sales annually. Default value is 811541000000.}
 
@@ -61,4 +62,8 @@ Calculates the money spent by secondary shoppers
 This function is taken from the estimating Revenue.xlsx and calculated
 in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 and Secondary_Shopper_Count()
+}
+\examples{
+Total_Spend_Secondary_Shoppers(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650),est_per_price_increase=7,state_index=99)
+
 }

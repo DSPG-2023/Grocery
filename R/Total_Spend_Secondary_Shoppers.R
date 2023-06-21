@@ -22,9 +22,8 @@
 #'@return
 #'outputs the total spending by secondary Shoppers at the proposed store
 #'
-#'@examples Total_Spend_Secondary_Shoppers(county_pop=18000,towns_pop=9786,
-#'          pct_county=17.7,town_list=list(77),metro_list=list(2650),
-#'          est_per_price_increase=7,state_index=99)
+#'@examples
+#'Total_Spend_Secondary_Shoppers(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650),est_per_price_increase=7,state_index=99)
 #'
 #'@details
 #'This function is taken from the estimating Revenue.xlsx and calculated

@@ -8,7 +8,7 @@
 #'@return
 #'Outputs the average per capita grocery spend after adjusting for the expected price increase.
 #'@examples
-#'Adj_Capita_Grocery_Spend(7)
+#'Adj_Capita_Grocery_Spend()
 #'@details
 #'This function is taken from the Estimating_Revenue.xlsx and calculated in Step two. This function calls `Avg_Capita_Grocery_Spending()`.
 #'

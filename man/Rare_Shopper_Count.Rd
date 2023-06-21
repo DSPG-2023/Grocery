@@ -47,7 +47,6 @@ and calculated in step 6. This function calls Rural_Population() and
 City_Populations()
 }
 \examples{
-Rare_Shopper_Count(county_pop=18000,towns_pop=9786,
-pct_county=17.7,town_list=list(77),metro_list=list(2650))
+Rare_Shopper_Count(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650))
 
 }
