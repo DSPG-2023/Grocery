@@ -53,14 +53,26 @@ df_places_dollar <- google_places(search_string = "dollar",
 ## Bind the Output of Places API
 
 ```{r}
-
+df_places_binded <- bind_rows(df_places_grocery, df_places_dollar)
 ```
 
+## Convert `df_places_binded` to include only lat/lng values
+
+```{r}
+Spatial_places <- df_places_binded %>%
+  transmute(lat = geometry$location$lat, lon = geometry$location$lng) %>% 
+  slice(1:25)
+
+#'*This currently takes the first 25 rows of the data frame since the distance API can only calculate that much with our license*
+```
 
 ## Format the Places API data frames to 
 
 ```{r}
-df_distances <- google_distance(origins = c())
+df_distances <- google_distance(origins = "23 Main St, Lake View, IA, United States, Iowa", 
+                                destinations = Spatial_places, mode = "driving") %>%
+  .$rows %>%
+  .$elements
 ```
 
 
