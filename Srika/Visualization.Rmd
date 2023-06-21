@@ -11,48 +11,47 @@ dollar_store_data=read_excel("C:/Users/srika/Downloads/salesgenie_dollar_stores.
 
 ```{r}
 p <- ggplot(data = dollar_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range)) +
-            geom_bar(position = "dodge")
+            geom_bar(position = "dodge")+
+  ggtitle("Location Sales Volume distribution") +
+  xlab("Dollar Store Chain Name") + ylab("Number of Stores")
 ggplotly(p)
 ```
+
 ```{r}
 p <- ggplot(data = dollar_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range))+
-  geom_bar()
+  geom_bar()+
+  ggtitle("Location Sales Volume distribution") +
+  xlab("Dollar Store Chain Name") + ylab("Number of Stores")
 ggplotly(p)%>% 
   layout(barmode = "stack")
 ```
 
 ```{r}
 companyname_by_count <- ggplot(data = dollar_store_data, aes(x = Company_Name)) +
-            geom_bar(position = "dodge")
+            geom_bar(position = "dodge")+
+  ggtitle("Dollar Store Distribution by Store Name") +
+  xlab("Store Name") + ylab("Number of Stores")
 ggplotly(companyname_by_count)
 ```
 ```{r}
 companyname_by_count_google <- ggplot(data = Google_Places_DollarStores, aes(x = name)) +
             geom_bar(position = "dodge")+
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  ggtitle("Dollar Store Distribution by Chain Name") +
+  xlab("Chain Name") + ylab("Number of Stores")
 ggplotly(companyname_by_count_google)
   
 ```
-```{r}
-library(dplyr)
 
-num_dollar_stores <- dollar_store_data %>%
-  group_by(Mailing_City) %>%
-  summarise(count = n()) %>%
-  filter(count > 1)
-
-ggplot(num_dollar_stores, aes(x = Mailing_City)) +
-  geom_bar(position = "dodge")
-
-ggplotly()
-```
 
 ```{r}
 num_dollar_stores<-dollar_store_data%>%
 ggplot(aes(x = Mailing_City)) +
             geom_bar(position = "dodge")+
 
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Dollar Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
 ggplotly(num_dollar_stores)
 ```
 ```{r}
@@ -64,7 +63,9 @@ num_dollar_stores <- dollar_store_data %>%
   filter(count > 1) %>%
   ggplot(aes(x = Mailing_City, y = count)) +
   geom_bar(stat = "identity", position = "dodge") +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Dollar Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
 
 ggplotly(num_dollar_stores)
 ```
