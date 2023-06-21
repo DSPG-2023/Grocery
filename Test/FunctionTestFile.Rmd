@@ -31,11 +31,6 @@ town_pop <- City_Populations(city_list)
 ```
 
 
-# COMMENT CODE PLEASE :D
-```{r}
-df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718", key = Sys.getenv("GOOGLE_KEY"))
-```
-
 
 ## Srika's Section
 
