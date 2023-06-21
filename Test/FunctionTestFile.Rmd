@@ -120,7 +120,7 @@ Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
 # Scenario 2 (Owner rents the building)
 
 Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
-               Parking_Lot_Improvements = 50000,
+               Leasehold_Improvements_Use_Life = 10,
                Shelving_Check_Out_Counters = 60000,
                Computer_Equipment_POS = 15000,
                Vehicles = 12000,
@@ -154,12 +154,11 @@ Other_Income <- Other_Income(Total_Estimated_Revenue)
 
 # Possible final calculations below:
 
-# Expenses <- Cost_of_Goods_Sold - Employee_Wages - Officer_Compensation - Other_Operating_Expense - Interest_Expense - Annual_Rent - Depreciation_1 
+Expenses <- Cost_of_Goods_Sold + Employee_Wages + Officer_Compensation + Other_Operating_Expense + Interest_Expense + Annual_Rent + Depreciation_1 
 
-# Secondary_Income <- Other_Income + Interest_Income
+Secondary_Income <- Other_Income + Interest_Income
 
-# Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
+Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
 
-# Pre_Tax_Profit
+Pre_Tax_Profit
 ```
-
