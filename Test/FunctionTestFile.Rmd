@@ -26,6 +26,7 @@ city_list = list(1117,994, 222, 19, 86, 265)
 rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119))
 town_pop <- City_Populations(city_list)
 ```
+
 ```{r}
 df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718", key = Sys.getenv("GOOGLE_KEY"))
 ```
@@ -34,9 +35,17 @@ df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.150871
 ## Srika's Section
 
 ```{r}
-Total_Estimated_Revenue<-Total_Estimate_Revenue(county_pop=9752,towns_pop=City_Populations(city_list),pct_county=Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119),
-                                town_list=list(1117,994,222, 19, 86, 265),metro_list=list(1117),
-                                est_per_price_increase,state_index=89.568)
+Total_Estimated_Revenue <- Total_Estimate_Revenue(county_pop=9752,
+                                                  towns_pop=City_Populations(city_list),
+                                                  pct_county=Pct_County(north_val,
+                                                                        east_val,
+                                                                        south_val,
+                                                                        west_val, 
+                                                                        1500*.62137119),
+                                
+                                                  town_list=list(1117,994,222, 19, 86, 265),
+                                                  metro_list=list(1117),
+                                                  state_index=89.568)
 
 ```
 
