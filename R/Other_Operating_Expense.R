@@ -18,6 +18,6 @@ Other_Operating_Expense <- function(Total_Estimated_Revenue) {
                                             ifelse(Total_Estimated_Revenue < 24999999.99, .11, .10)))))
 
 
-  Total_Estimated_Revenue * Percentage
+  Total_Estimated_Revenue * percentage
 }
 
