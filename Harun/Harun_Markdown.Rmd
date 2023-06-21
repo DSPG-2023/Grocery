@@ -5,6 +5,8 @@ date: "2023-06-02"
 output: html_document
 ---
 
+# Load Library
+
 ```{r}
 library(googleway)
 library(sf)
@@ -14,9 +16,13 @@ library(leaflet)
 library(ggvoronoi)
 ```
 
+# Add Places Key
+
 ```{r, include=FALSE}
 set_key(key = Sys.getenv("PLACES_KEY"))
 ```
+
+# Testing Pull for Ames
 
 ```{r}
 # Trying to find dollar stores in a 4 mile radius.
