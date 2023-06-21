@@ -22,7 +22,7 @@ south_val <- as.integer(south_dist$rows$elements[[1]]$distance$value * 0.0006213
 west_val <- as.integer(west_dist$rows$elements[[1]]$distance$value * 0.00062137)
 
 #$rows$elements[[1]]$distance$value
-city_list = list(994, 222, 19, 86, 265)
+city_list = list(1117,994, 222, 19, 86, 265)
 rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119))
 town_pop <- City_Populations(city_list)
 ```
@@ -35,7 +35,7 @@ df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.150871
 
 ```{r}
 Total_Estimated_Revenue<-Total_Estimate_Revenue(county_pop=9752,towns_pop=City_Populations(city_list),pct_county=Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119),
-                                town_list=list(1,117,994,222, 19, 86, 265),metro_list=list(1,117),
+                                town_list=list(1117,994,222, 19, 86, 265),metro_list=list(1117),
                                 est_per_price_increase,state_index=89.568)
 
 ```
