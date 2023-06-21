@@ -44,33 +44,35 @@ Total_Estimated_Revenue<-Total_Estimate_Revenue(county_pop=9752,towns_pop=City_P
 ## Aaron's Section
 
 ```{r}
+# These are User Inputs
+
 Monthly_Rent <- 3642
 Loan_Amount <- 1500000
 Interest_Rate <- .06
 
-# Cost of Goods Function Chain
+# Cost of Goods Function Chain: Gross Margin is subtracted from Total Estimated Revenue to get Cost of Goods Sold (Expense)
 
 Gross_Margin <- Gross_Margin(Total_Estimated_Revenue)
 
 Cost_of_Goods_Sold <- Cost_of_Goods_Sold(Total_Estimated_Revenue)
 
-# Employee Wages
+# Employee Wages (Expense)
 
 Employee_Wages <- Employee_Wages(Total_Estimated_Revenue)
 
-# Officer Compensation
+# Officer Compensation (Expense)
 
 Officer_Compensation <- Officer_Compensation(Total_Estimated_Revenue)
 
-# Other Operating Expenses
+# Other Operating Expenses (Expense)
 
 Other_Operating_Expense <- Other_Operating_Expense(Total_Estimated_Revenue)
 
-# Interim Result: "Operating Income (Loss)"
+# Interim Result: "Operating Income (Loss)" (Doesn't factor into final calculation)
 
 Operating_Income_Loss <- Operating_Income_Loss(Total_Estimated_Revenue)
 
-# Depreciation
+# Asset variables for depreciation (used as arguments in the depreciation functions; default values)
 
 Building_Remodeling <- 900000
 
@@ -89,7 +91,7 @@ Leasehold_Improvements <- 50000
 
 # Note: Leasehold Improvements is Scenario 2 only
 
-# Scenario One:
+# Scenario One (Owner owns the bulding):
 
 Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
                Parking_Lot_Improvements = 50000,
@@ -107,7 +109,7 @@ Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
                Miscellaneous_Assets_3 = 10000,
                Miscellaneous_Assets_3_Use_Life = 10)
 
-# Scenario 2
+# Scenario 2 (Owner rents the building)
 
 Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
                Parking_Lot_Improvements = 50000,
@@ -126,27 +128,30 @@ Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
                Miscellaneous_Assets_3_Use_Life = 10)
 
 
-# Loan Interest Expense
+# Loan Interest Expense (Interest rate and loan amount determined by a user's situation)
 
 Interest_Expense <- Interest_Expense(Loan_Amount, Interest_Rate)
 
-# Annual Rent (Scenario 2)
+# Annual Rent (Scenario 2) (How much rent the user pays for their lease per year; function can be called multiple times for multiple properties)
 
 Annual_Rent <- Annual_Rent(Monthly_Rent)
 
-# Interest Income
+# Interest Income (Income)
 
 Interest_Income <- Interest_Income(Total_Estimated_Revenue)
 
-# Other Income 
+# Other Income (Income) (from miscellaneous sources such as delivery services etc.)
 
 Other_Income <- Other_Income(Total_Estimated_Revenue)
 
+# Possible final calculations below:
 
 # Expenses <- Cost_of_Goods_Sold - Employee_Wages - Officer_Compensation - Other_Operating_Expense - Interest_Expense - Annual_Rent - Depreciation_1 
 
 # Secondary_Income <- Other_Income + Interest_Income
 
 # Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
+
+# Pre_Tax_Profit
 ```
 
