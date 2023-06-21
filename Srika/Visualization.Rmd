@@ -54,6 +54,8 @@ ggplot(aes(x = Mailing_City)) +
   xlab("Mailing City") + ylab("Number of Stores")
 ggplotly(num_dollar_stores)
 ```
+
+
 ```{r}
 library(dplyr)
 
