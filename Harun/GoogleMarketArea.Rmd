@@ -27,6 +27,13 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 
 # Building each function individually
 
+## Setting an address variable
+
+```{r}
+address <- "23 Main St, Lake View, IA, United States, Iowa"
+```
+
+
 ## Formatting the Geocode API output to return a latitude and longitude
 
 ```{r}
@@ -66,7 +73,7 @@ Spatial_places <- df_places_binded %>%
 #'*This currently takes the first 25 rows of the data frame since the distance API can only calculate that much with our license*
 ```
 
-## Format the Places API data frames to 
+## Format the Places API data frames to output distance calculations
 
 ```{r}
 df_distances <- google_distance(origins = "23 Main St, Lake View, IA, United States, Iowa", 
