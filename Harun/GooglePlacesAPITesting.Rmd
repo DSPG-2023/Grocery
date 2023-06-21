@@ -130,6 +130,8 @@ combined_df_new <- bind_rows(all_list[[1]],
                          plus_code))
 
 
-# The following saves the datgframe as an RDS.
+#'*The following saves the data frame as an RDS.*
 ## saveRDS(object = combined_df_new, file = "Google_Places_DollarStores.rds")
 ```
+
+

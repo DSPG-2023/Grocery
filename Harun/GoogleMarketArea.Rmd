@@ -1,0 +1,67 @@
+---
+title: "Google Market Area"
+author: "Harun Celik"
+date: "2023-06-21"
+output: html_document
+---
+
+```{r}
+#'*Tasks for the Google APIs to Complete*
+#'
+#'*Take an address and return a longitude and latitude value*
+#'*Call multiple Google places API to find the nearest `grocery`, `dollar`, `convenience stores`?*
+#'*Bind all of the outputs for places together and format for distance matrix*
+#'*Call the Google Distance API from origin lat/long to the store locations*
+#'*Format the output of the Distance Matrix to create a polygon*
+```
+
+
+# Load Libraries
+
+```{r}
+library(googleway)
+library(dplyr)
+
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# Building each function individually
+
+## Formatting the Geocode API output to return a latitude and longitude
+
+```{r}
+df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+  .$results %>%
+  .$geometry %>%
+  .$location
+```
+
+## Formatting the Places API to return a dataframe of locations
+
+```{r}
+df_places_grocery <- google_places(search_string = "grocery", 
+                           place_type = "store", 
+                           location = c(df_geocode$lat, df_geocode$lng)) %>%
+  .$results
+
+df_places_dollar <- google_places(search_string = "dollar", 
+                           place_type = "store", 
+                           location = c(df_geocode$lat, df_geocode$lng)) %>%
+  .$results
+```
+
+## Bind the Output of Places API
+
+```{r}
+
+```
+
+
+## Format the Places API data frames to 
+
+```{r}
+df_distances <- google_distance(origins = c())
+```
+
+
+
