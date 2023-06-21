@@ -16,10 +16,10 @@ north_dist <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-9
 east_dist <- googleway::google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576",key = Sys.getenv("GOOGLE_KEY"))
 south_dist <- googleway::google_distance("42.3053733, -95.0621664","42.258085,-95.223378",key = Sys.getenv("GOOGLE_KEY"))
 west_dist <- googleway::google_distance("42.3053733, -95.0621664","42.3113755,-95.6832781",key = Sys.getenv("GOOGLE_KEY"))
-north_val <- north_dist$rows$elements[[1]]$distance$value
-east_val <- east_dist$rows$elements[[1]]$distance$value
-south_val <- south_dist$rows$elements[[1]]$distance$value
-west_val <- west_dist$rows$elements[[1]]$distance$value
+north_val <- as.integer(north_dist$rows$elements[[1]]$distance$value)
+east_val <- as.integer(east_dist$rows$elements[[1]]$distance$value)
+south_val <- as.integer(south_dist$rows$elements[[1]]$distance$value)
+west_val <- as.integer(west_dist$rows$elements[[1]]$distance$value)
 Pct_County(north_val,east_val,south_val,west_val, 1500)
 
 #$rows$elements[[1]]$distance$value
