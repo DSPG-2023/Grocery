@@ -1,23 +1,36 @@
 #'Calculation of Depreciation (for Leasing)
-#'@param Leasehold_Improvements
-#'@param Shelving_Check_Out_Counters
-#'@param Computer_Equipment_POS
-#'@param Vehicles
-#'@param Display_Cases
-#'@param Refrigeration
-#'@param Freezers
-#'@param Meat_Cutting_Equipment
-#'@param Miscellaneous_Assets_1
-#'@param Miscellaneous_Assets_1_Use_Life
-#'@param Miscellaneous_Assets_2
-#'@param Miscellaneous_Assets_2_Use_Life
-#'@param Miscellaneous_Assets_3
-#'@param Miscellaneous_Assets_3_Use_Life
-#'@return Outputs total estimated loss from depreciation for leasers
-#'@details This function is taken from the "Estimating Expense" excel sheet (step three)
+#'@param Leasehold_Improvements Cost of Leasehold Improvements
+#'@param Shelving_Check_Out_Counters Depreciation of Shelving/Check Out Counters
+#'@param Computer_Equipment_POS Cost of Computer System/POS
+#'@param Vehicles Cost of Vehicles
+#'@param Display_Cases Cost of Display cases
+#'@param Refrigeration Cost of Refrigeration
+#'@param Freezers Cost of Freezers
+#'@param Meat_Cutting_Equipment Cost of Meat-cutting Equipment
+#'@param Miscellaneous_Assets_1 (Optional) Cost of Miscellaneous Asset (1)
+#'@param Miscellaneous_Assets_1_Use_Life (Optional) Use Life of Miscellaneous Asset (1)
+#'@param Miscellaneous_Assets_2 (Optional) Cost of Miscellaneous Asset (2)
+#'@param Miscellaneous_Assets_2_Use_Life (Optional) Use Life of Miscellaneous Asset (2)
+#'@param Miscellaneous_Assets_3 (Optional) Cost of Miscellaneous Asset (3)
+#'@param Miscellaneous_Assets_3_Use_Life (Optional) Use life of Miscellaneous Asset (3)
+#'@return Outputs total estimated loss from depreciation for property owners
+#'@details This function is taken from the "Estimating Expense" excel sheet (step two)
 #'@examples
-#'#
-#'
+#'Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
+#'Leasehold_Improvements_Use_Life = 10,
+#'Shelving_Check_Out_Counters = 60000,
+#'Computer_Equipment_POS = 15000,
+#'Vehicles = 12000,
+#'Display_Cases = 15000,
+#'Refrigeration = 20000,
+#'Freezers = 20000,
+#'Meat_Cutting_Equipment = 10000,
+#'Miscellaneous_Assets_1 = 10000,
+#'Miscellaneous_Assets_1_Use_Life = 10,
+#'Miscellaneous_Assets_2 = 10000,
+#'Miscellaneous_Assets_2_Use_Life = 10,
+#'Miscellaneous_Assets_3 = 10000,
+#'Miscellaneous_Assets_3_Use_Life = 10)
 #'@export
 
 Depreciation_2 <- function(Leasehold_Improvements, Leasehold_Improvements_Use_Life, Shelving_Check_Out_Counters, Computer_Equipment_POS,

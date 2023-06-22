@@ -17,7 +17,21 @@
 #'@return Outputs total estimated loss from depreciation for property owners
 #'@details This function is taken from the "Estimating Expense" excel sheet (step two)
 #'@examples
-#'
+#'Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
+#'Parking_Lot_Improvements = 50000,
+#'Shelving_Check_Out_Counters = 60000,
+#'Computer_Equipment_POS = 15000,
+#'Vehicles = 12000,
+#'Display_Cases = 15000,
+#'Refrigeration = 20000,
+#'Freezers = 20000,
+#'Meat_Cutting_Equipment = 10000,
+#'Miscellaneous_Assets_1 = 10000,
+#'Miscellaneous_Assets_1_Use_Life = 10,
+#'Miscellaneous_Assets_2 = 10000,
+#'Miscellaneous_Assets_2_Use_Life = 10,
+#'Miscellaneous_Assets_3 = 10000,
+#'Miscellaneous_Assets_3_Use_Life = 10)
 #'
 #'@export
 
