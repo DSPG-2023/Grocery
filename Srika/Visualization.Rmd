@@ -2,6 +2,7 @@
 library(ggplot2)
 library(plotly)
 library(readxl)
+library(dplyr)
 ```
 
 # Pathing
@@ -62,7 +63,6 @@ ggplotly(num_dollar_stores)
 
 
 ```{r}
-library(dplyr)
 
 num_dollar_stores <- dollar_store_data %>%
   group_by(Mailing_City) %>%
