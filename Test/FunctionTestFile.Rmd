@@ -11,24 +11,22 @@ output: html_document
 ```{r}
 library(DSPGGrocery)
 
-
+#Finds distance to points, assigns them to variables
 north_dist <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718",key = Sys.getenv("GOOGLE_KEY"))
 east_dist <- googleway::google_distance("42.3053733, -95.0621664", "42.2669247,-95.0038576",key = Sys.getenv("GOOGLE_KEY"))
 south_dist <- googleway::google_distance("42.3053733, -95.0621664","42.258085,-95.223378",key = Sys.getenv("GOOGLE_KEY"))
 west_dist <- googleway::google_distance("42.3053733, -95.0621664","42.3113755,-95.6832781",key = Sys.getenv("GOOGLE_KEY"))
+
+#Assigns the distance to a variables, ond converts them to integer miles
 north_val <- as.integer(north_dist$rows$elements[[1]]$distance$value * 0.00062137)
 east_val <- as.integer(east_dist$rows$elements[[1]]$distance$value * 0.00062137)
 south_val <- as.integer(south_dist$rows$elements[[1]]$distance$value * 0.00062137)
 west_val <- as.integer(west_dist$rows$elements[[1]]$distance$value * 0.00062137)
 
-#$rows$elements[[1]]$distance$value
+#Makes sample list of cities around Lakeview, calls functions, and assigns them to variables
 city_list = list(1117,994, 222, 19, 86, 265)
 rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119))
 town_pop <- City_Populations(city_list)
-```
-
-```{r}
-df <- googleway::google_distance("42.3053733, -95.0621664","42.373296,-95.1508718", key = Sys.getenv("GOOGLE_KEY"))
 ```
 
 
@@ -120,7 +118,7 @@ Depreciation_1 <- Depreciation_1(Building_Remodeling = 900000,
 # Scenario 2 (Owner rents the building)
 
 Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
-               Parking_Lot_Improvements = 50000,
+               Leasehold_Improvements_Use_Life = 10,
                Shelving_Check_Out_Counters = 60000,
                Computer_Equipment_POS = 15000,
                Vehicles = 12000,
@@ -154,12 +152,11 @@ Other_Income <- Other_Income(Total_Estimated_Revenue)
 
 # Possible final calculations below:
 
-# Expenses <- Cost_of_Goods_Sold - Employee_Wages - Officer_Compensation - Other_Operating_Expense - Interest_Expense - Annual_Rent - Depreciation_1 
+Expenses <- Cost_of_Goods_Sold + Employee_Wages + Officer_Compensation + Other_Operating_Expense + Interest_Expense + Annual_Rent + Depreciation_1 
 
-# Secondary_Income <- Other_Income + Interest_Income
+Secondary_Income <- Other_Income + Interest_Income
 
-# Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
+Pre_Tax_Profit <- Total_Estimated_Revenue + Secondary_Income - Expenses
 
-# Pre_Tax_Profit
+Pre_Tax_Profit
 ```
-

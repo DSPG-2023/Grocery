@@ -1,0 +1,19 @@
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+
+```
+
+```{r}
+
+#For each loop
+#Compare the GPS coordinates to the origin to determine which direction it is to origin
+#Compare new store to current nearest store in that direction
+#How to handle diagonals?
+#
+
+
+```
