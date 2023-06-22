@@ -4,9 +4,14 @@ library(plotly)
 library(readxl)
 ```
 
+# Pathing
 
 ```{r}
-dollar_store_data=read_excel("C:/Users/srika/Downloads/salesgenie_dollar_stores.xlsx")
+#'*File Directory*
+path <- Sys.getenv("SalesGenie")
+excel_file <- "salesgenie_dollar_stores.xlsx"
+
+dollar_store_data <- read_excel(file.path(path, excel_file))
 ```
 
 ```{r}
