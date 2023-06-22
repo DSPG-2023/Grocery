@@ -10,10 +10,10 @@
 Employee_Wages <- function(Total_Estimated_Revenue) {
 
   ifelse(Total_Estimated_Revenue < 500000, stop("error: no data for this revenue range"),
-         percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .08,
-                              ifelse(Total_Estimated_Revenue < 2499999.99, .10,
-                                     ifelse(Total_Estimated_Revenue < 4999999.99, .08,
-                                            ifelse(Total_Estimated_Revenue < 24999999.99, .10, .11)))))
+         percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .0789,
+                              ifelse(Total_Estimated_Revenue < 2499999.99, .0934,
+                                     ifelse(Total_Estimated_Revenue < 4999999.99, .0751,
+                                            ifelse(Total_Estimated_Revenue < 24999999.99, .0975, .1083)))))
 
 
 
