@@ -2,11 +2,17 @@
 library(ggplot2)
 library(plotly)
 library(readxl)
+library(dplyr)
 ```
 
+# Pathing
 
 ```{r}
-dollar_store_data=read_excel("C:/Users/srika/Downloads/salesgenie_dollar_stores.xlsx")
+#'*File Directory*
+path <- Sys.getenv("SalesGenie")
+excel_file <- "salesgenie_dollar_stores.xlsx"
+
+dollar_store_data <- read_excel(file.path(path, excel_file))
 ```
 
 ```{r}
@@ -57,7 +63,6 @@ ggplotly(num_dollar_stores)
 
 
 ```{r}
-library(dplyr)
 
 num_dollar_stores <- dollar_store_data %>%
   group_by(Mailing_City) %>%

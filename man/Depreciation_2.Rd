@@ -22,16 +22,58 @@ Depreciation_2(
   Miscellaneous_Assets_3_Use_Life
 )
 }
+\arguments{
+\item{Leasehold_Improvements}{Cost of Leasehold Improvements}
+
+\item{Shelving_Check_Out_Counters}{Depreciation of Shelving/Check Out Counters}
+
+\item{Computer_Equipment_POS}{Cost of Computer System/POS}
+
+\item{Vehicles}{Cost of Vehicles}
+
+\item{Display_Cases}{Cost of Display cases}
+
+\item{Refrigeration}{Cost of Refrigeration}
+
+\item{Freezers}{Cost of Freezers}
+
+\item{Meat_Cutting_Equipment}{Cost of Meat-cutting Equipment}
+
+\item{Miscellaneous_Assets_1}{(Optional) Cost of Miscellaneous Asset (1)}
+
+\item{Miscellaneous_Assets_1_Use_Life}{(Optional) Use Life of Miscellaneous Asset (1)}
+
+\item{Miscellaneous_Assets_2}{(Optional) Cost of Miscellaneous Asset (2)}
+
+\item{Miscellaneous_Assets_2_Use_Life}{(Optional) Use Life of Miscellaneous Asset (2)}
+
+\item{Miscellaneous_Assets_3}{(Optional) Cost of Miscellaneous Asset (3)}
+
+\item{Miscellaneous_Assets_3_Use_Life}{(Optional) Use life of Miscellaneous Asset (3)}
+}
 \value{
-Outputs total estimated loss from depreciation for leasers
+Outputs total estimated loss from depreciation for property owners
 }
 \description{
 Calculation of Depreciation (for Leasing)
 }
 \details{
-This function is taken from the "Estimating Expense" excel sheet (step three)
+This function is taken from the "Estimating Expense" excel sheet (step two)
 }
 \examples{
-#
-
+Depreciation_2 <- Depreciation_2(Leasehold_Improvements = 900000,
+Leasehold_Improvements_Use_Life = 10,
+Shelving_Check_Out_Counters = 60000,
+Computer_Equipment_POS = 15000,
+Vehicles = 12000,
+Display_Cases = 15000,
+Refrigeration = 20000,
+Freezers = 20000,
+Meat_Cutting_Equipment = 10000,
+Miscellaneous_Assets_1 = 10000,
+Miscellaneous_Assets_1_Use_Life = 10,
+Miscellaneous_Assets_2 = 10000,
+Miscellaneous_Assets_2_Use_Life = 10,
+Miscellaneous_Assets_3 = 10000,
+Miscellaneous_Assets_3_Use_Life = 10)
 }

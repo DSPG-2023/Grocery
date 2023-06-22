@@ -9,7 +9,7 @@ Other_Operating_Expense(Total_Estimated_Revenue)
 \arguments{
 \item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
 
-\item{Percentage}{Percentage of total estimated revenue spent on other operating expenses.
+\item{percentage}{Percentage of total estimated revenue spent on other operating expenses.
 Percentages are taken from Bizminer.}
 }
 \value{
