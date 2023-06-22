@@ -8,6 +8,16 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(readxl)
+
+#'*File Directory*
+path <- Sys.getenv("SalesGenie")
+excel_file <- "salesgenie_dollar_stores.xlsx"
+
+dollar_store_data <- read_excel(file.path(path, excel_file))
 ```
 
 Column {data-width=650}
@@ -16,7 +26,11 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-
+p <- ggplot(data = dollar_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range)) +
+            geom_bar(position = "dodge")+
+  ggtitle("Location Sales Volume distribution") +
+  xlab("Dollar Store Chain Name") + ylab("Number of Stores")
+ggplotly(p)
 ```
 
 Column {data-width=350}
@@ -25,12 +39,27 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+p <- ggplot(data = dollar_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range))+
+  geom_bar()+
+  ggtitle("Location Sales Volume distribution") +
+  xlab("Dollar Store Chain Name") + ylab("Number of Stores")
+ggplotly(p)%>% 
+  layout(barmode = "stack")
 ```
 
 ### Chart C
 
 ```{r}
+num_dollar_stores <- dollar_store_data %>%
+  group_by(Mailing_City) %>%
+  summarize(count = n()) %>%
+  filter(count > 1) %>%
+  ggplot(aes(x = Mailing_City, y = count)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Dollar Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
 
+ggplotly(num_dollar_stores)
 ```
 
