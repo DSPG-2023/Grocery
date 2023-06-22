@@ -16,9 +16,7 @@ Gross_Margin <- function(Total_Estimated_Revenue) {
                                 ifelse(Total_Estimated_Revenue < 4999999.99, .21,
                                       ifelse(Total_Estimated_Revenue < 24999999.99, .2418, .23)))))
 
-  if (Total_Estimated_Revenue > 500000) {
     Total_Estimated_Revenue * percentage
-  }
 }
 
 
