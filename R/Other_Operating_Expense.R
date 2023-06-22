@@ -1,6 +1,6 @@
 #'Calculation of other operating expenses (miscellaneous)
 #'@param Total_Estimated_Revenue Output of total estimated revenue calculation sheet
-#'@param Percentage Percentage of total estimated revenue spent on other operating expenses.
+#'@param percentage Percentage of total estimated revenue spent on other operating expenses.
 #'Percentages are taken from Bizminer.
 #'@details This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
 #'@return Outputs other operating expenses (in dollars)
