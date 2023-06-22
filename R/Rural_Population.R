@@ -10,10 +10,16 @@
 
 
 
-Rural_Population<-function(county_pop, county, pct_county) {
+Rural_Population<-function(county_pop, x, pct_county) {
   #This function subtracts the sum of all the towns populations from the county and multiplies it
   #by the percent of the county that the area covers to find the # of rural people there are
 
+  city_in_county <- get_cities_in_county(city_df[1,])
+  county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
+  sum = 0
+  for(i in length(county_cities_list)) {
+    sum = sum + tidycensus::get_decennial(county_cities_list[i], city_df$state)
+  }
 
   return(floor((county_pop - sum(tidycensus::get_decennial(get_cities_in_county(county)))*pct_county/100)))
 
