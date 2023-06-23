@@ -11,8 +11,11 @@ library(dplyr)
 #'*File Directory*
 path <- Sys.getenv("SalesGenie")
 excel_file <- "salesgenie_dollar_stores.xlsx"
-
+excel_file_1<-"salesgenie_all_grocery.xlsx"
+excel_file_2<-"salesgenie_large_chain_grocery_stores.xlsx"
 dollar_store_data <- read_excel(file.path(path, excel_file))
+grocery_store_data<-read_excel(file.path(path,excel_file_1))
+chain_grocery_store_data<-read_excel(file.path(path,excel_file_2))
 ```
 
 ```{r}
@@ -75,5 +78,69 @@ num_dollar_stores <- dollar_store_data %>%
   xlab("Mailing City") + ylab("Number of Stores")
 
 ggplotly(num_dollar_stores)
+```
+
+```{r}
+g <- ggplot(data = chain_grocery_store_data, aes(x = Company_Name, fill = Location_Sales_Volume_Range)) +
+            geom_bar(position = "dodge")+
+  ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
+  xlab("Grocery Store Chain Name") + ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(g)
+```
+
+
+```{r}
+num_grocery_stores <- grocery_store_data %>%
+  group_by(Mailing_City) %>%
+  summarize(count = n()) %>%
+  filter(count > 2) %>%
+  ggplot(aes(x = Mailing_City, y = count)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Grocery Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
+
+ggplotly(num_grocery_stores)
+```
+
+```{r}
+num_chain_grocery_stores <- chain_grocery_store_data %>%
+  group_by(Mailing_City) %>%
+  summarize(count = n()) %>%
+  filter(count > 1) %>%
+  ggplot(aes(x = Mailing_City, y = count)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Grocery Chain Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
+
+ggplotly(num_chain_grocery_stores)
+```
+
+```{r}
+non_chain_grocery_store_data<-anti_join(grocery_store_data, chain_grocery_store_data)
+```
+```{r}
+num_chain_grocery_stores <- non_chain_grocery_store_data %>%
+  group_by(Mailing_City) %>%
+  summarize(count = n()) %>%
+  filter(count > 1) %>%
+  ggplot(aes(x = Mailing_City, y = count)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Non Chain Grocery Store Distribution by Mailing City") +
+  xlab("Mailing City") + ylab("Number of Stores")
+
+ggplotly(num_chain_grocery_stores)
+```
+
+```{r}
+
+
+```
+
+```{r}
+
 ```
 
