@@ -274,20 +274,11 @@ v20 <- load_variables(2020, "dp")
 
 # Load population + geometry for all Iowa towns. Note the last parameters which
 # allow usage of higher-resolution TIGER/Line data instead of cartographic
-# boundary data
-ia_towns <- get_decennial(geography = "place",
-                          state="Iowa",
-                          variables  = "DP1_0001C",
-                          sumfile = "dp",
-                          geometry = TRUE,
-                          cb=FALSE,
-                          keep_geo_vars = TRUE
-                          )
 
 # Doing so gives us a way to filter out towns of certain sizes
 pop_cutoff <- 1000
 
-big_towns <- ia_towns %>% filter(value>=pop_cutoff)
+big_towns <- ia_towns %>% filter(DP1_0001C>=pop_cutoff)
 big_towns
 
 big_towns %>% st_geometry() %>% plot()
@@ -325,7 +316,7 @@ plot(st_geometry(four_county_towns), col='black', add=TRUE)
 # (This might be happening in the green triangle, too. But I don't know my eastern
 # Iowa cities well enough to pick out if anything is being clipped.)
 
-# Make a vector of just the town names, with no geometry
+# Make a vector of just the town names, no geometry
 four_county_towns %>% pull(NAME.x) -> four_county_towns_names
 four_county_towns_names
 
@@ -335,10 +326,125 @@ ia_towns %>%
   st_geometry() %>% 
   plot(col="black", add=TRUE)
 
-# Now, the southern portion of Des Moines, which falls outside of the red zone,
+# Now the southern portion of Des Moines, which falls outside of the red zone,
 # will display properly. We should probably do the same for the other areas, 
-# in case there are some boundary-crossing towns, but for this example, it's good 
+# in case there some boundary-crossing towns, but for this example, it's good 
 # enough. 
 
+
+# Voronoi Polygons ----
+
+# First example found here:
+# https://gis.stackexchange.com/questions/362134/i-want-to-create-a-voronoi-diagram-while-retaining-the-data-in-the-data-frame
+
+st_voronoi_point <- function(points){
+  ## points must be POINT geometry
+  # check for point geometry and execute if true
+  if(!all(st_geometry_type(points) == "POINT")){
+    stop("Input not  POINT geometries")
+  }
+  g = st_combine(st_geometry(points)) # make multipoint
+  v = st_voronoi(g)
+  v = st_collection_extract(v)
+  return(v[unlist(st_intersects(points, v))])
+}
+
+p = st_as_sf(data.frame(x=runif(10),y=runif(10),A=letters[1:10]),coords=1:2)
+v = st_voronoi_point(p)
+
+p
+v
+
+class(p)
+class(v)   
+# Note the different class types between the two objects
+# As best as I can tell, sfc is a more primtive type of spatial object
+# It can have a CRS, but only has geometry -- there is no attribute data
+# attached to the sfc. But an sfc can be turned into an sf object
+
+p %>% st_geometry() %>% plot()
+v %>% st_geometry() %>% plot(add=TRUE)
+
+v[[1]] %>% st_geometry() %>% plot(col='red', add=TRUE)
+p[1,] %>% st_geometry() %>% plot(col='blue', pch=3,add=TRUE)
+
+# This is not working  :-(
+# I think it is supposed to apply the geometry of v to the object p
+pv = st_set_geometry(p, v)
+
+
+# Can we make a voronoi diagram from the centroids of the Iowa counties?
+
+# Quick exam of the ia_counties layer
+glimpse(ia_counties)
+class(ia_counties)
+
+# get county centroids
+p_counties <- ia_counties %>% st_centroid()
+
+# Plot centroids for inspection
+plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia_counties), add=TRUE)
+plot(st_geometry(p_counties), pch=3, add=TRUE)
+
+# use the custom function to turn centroids into voronoi polygons
+# this produces an error message, but the results look fairly accurate?
+v_counties <- st_voronoi_point(p_counties)
+
+# Visualize the results
+plot(ia)
+plot(st_geometry(p_counties), pch=3, add=TRUE)
+plot(v_counties, add=TRUE)
+
+
+
+# Can we make a Voronoi output for CITIES of a certain POPULATION?
+
+pop_cutoff <- 2000
+
+big_towns <- ia_towns %>% filter(DP1_0001C>=pop_cutoff)
+big_towns
+
+
+plot(ia)
+big_towns %>% st_geometry() %>% plot(add=TRUE)
+
+# Make voronoi polygon layers
+v_big_towns <- big_towns %>% st_centroid() %>% st_voronoi_point()
+
+
+# Let's plot and see how it looks
+plot(ia)
+plot(v_big_towns, add=TRUE)
+plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
+
+# That looks pretty good.
+# Can we get rid of the voronoi lines that extend beyond Iowa's border?
+
+v_big_towns_clipped <- st_intersection(v_big_towns, ia)
+
+plot(v_big_towns_clipped)
+plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
+# Remember, the crosses are not the centroid of the voronoi polygon
+# the cross is the location of a TOWN with a certain population size
+
+
+
+# Bailey asked about towns with less than 2500 populatoin
+# because there are a lot of towns in that catagory, there will be 
+# a lot of voronoi polygons
+
+pop_cutoff2 <- 2500
+
+small_towns <- ia_towns %>% filter(DP1_0001C<pop_cutoff2)
+v_small_towns <- small_towns %>% st_centroid() %>% st_voronoi_point()
+
+# Here is a list of all the towns less than 2500
+small_towns %>% pull(NAME.x)
+
+# Plot
+plot(ia)
+plot(v_small_towns, add=TRUE)
+plot(small_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
 
 
