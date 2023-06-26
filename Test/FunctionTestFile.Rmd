@@ -33,7 +33,13 @@ west_val <- as.integer(west_dist$rows$elements[[1]]$distance$value * 0.00062137)
 
 # Makes sample list of cities around Lakeview, calls functions, and assigns them to variables
 city_list = list(1117,994, 222, 19, 86, 265)
-rural_pop <- Rural_Population(9814, City_Populations(city_list), Pct_County(north_val,east_val,south_val,west_val, 1500*.62137119))
+rural_pop <- Rural_Population(9814, 
+                              City_Populations(city_list),
+                              Pct_County(north_val,
+                                         east_val,
+                                         south_val,
+                                         west_val, 
+                                         1500*.62137119))
 town_pop <- City_Populations(city_list)
 ```
 

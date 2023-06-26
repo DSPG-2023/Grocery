@@ -4,6 +4,7 @@
 library(sf)
 library(dplyr)
 library(tigris)
+library(tidycensus)
 options(tigris_use_cache=TRUE)
 
 
@@ -11,7 +12,7 @@ get_county <- function(x) {
   #input: a single-row data frame, columns 1, 2 = lon, lat
   #                                column 3 = state name
   #output: x with extra column for county name
-  counties <- counties(state=x[[3]])
+  counties <- counties(state=x[["state"]])
   
   point <- st_as_sf(x, coords = c("lon", "lat"), crs=st_crs(counties))
   
@@ -33,7 +34,7 @@ get_city <- function(x) {
   # (does not require county column)
   # output: x with extra column for city name
 
-  cities <- places(state=x[[3]])
+  cities <- places(state=x[["state"]])
   
   point <- st_as_sf(x, coords = c("lon", "lat"), crs=st_crs(cities))
   
@@ -152,11 +153,61 @@ list_of_cities_df
 View(list_of_cities_df)
 
 
+# Using the distances in the RDS file from gitHub ----
+d <- readRDS("dspg/distance_latlong_test.Rds")
+
+# Convert the points data frame into a spatial object
+d_sf <- st_as_sf(d, coords = c("lon", "lat"), crs=st_crs(states))
+d_sf
+
+
+d_states <- d_sf %>%
+  st_join(states, join=st_intersects) %>%
+  mutate(state = NAME) %>%
+  select(state) %>%
+  st_drop_geometry()
+
+
+d_states <- cbind(d, d_states)
+d_states
 
 
 
+d_counties <- data.frame()
 
 
+# Loop through every row in states_df, adds a column for county
+for(i in 1:nrow(d_states)) {
+  d_counties <- rbind(d_counties, get_county(d_states[i,]))  
+}
+
+d_counties
+
+
+d_cities <- data.frame()
+for(i in 1:nrow(counties_df)) {
+  d_cities <- rbind(d_cities, get_city(d_counties[i,]))  
+}
+
+d_cities
+
+d_city_list <- data.frame()
+
+# Loop through every row in city_df, adding a column for the list of cities in the county
+# this does not require the existence of the city column to function. 
+# I am just doing this in a sequence
+for(i in 1:nrow(city_df)) {
+  d_city_list <- rbind(d_city_list, get_cities_in_county(d_cities[i,]))  
+}
+
+# This data frame reads ugly in the console
+d_city_list
+
+View(d_city_list)
+
+
+
+# -----------------------------------------------------------------------------
 # Working with Geographic Areas ----
 
 # Get all counties using tigris
@@ -216,11 +267,14 @@ triangle <- tri_county_coords %>%
 # It's a triangle!
 plot(st_geometry(triangle))
 
+# We can add the plot axes and see that this object has spatial information
+plot(st_geometry(triangle), axes=TRUE)
+
 class(triangle)
 st_crs(triangle)
 
 # Plot multiple layers together to view
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(four_county_area), col='red', add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
@@ -242,7 +296,7 @@ cherokee_buffer <- cherokee_centroid %>%
 cherokee_buffer %>% st_geometry() %>% plot()
 
 # Plot multiple layers together to view
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(four_county_area), col='red', add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
@@ -270,10 +324,25 @@ four_county_area %>%
 
 
 library(tidycensus)
-v20 <- load_variables(2020, "dp")
+# Examine the cencus variable available
+#v20 <- load_variables(2020, "dp")
 
 # Load population + geometry for all Iowa towns. Note the last parameters which
 # allow usage of higher-resolution TIGER/Line data instead of cartographic
+
+ia_towns <- get_decennial(geography = "place",
+                          state="Iowa",
+                          variables  = "DP1_0001C",
+                          sumfile = "dp",
+                          output = "wide",
+                          geometry = TRUE,
+                          cb=FALSE,
+                          keep_geo_vars = TRUE
+)
+
+
+
+
 
 # Doing so gives us a way to filter out towns of certain sizes
 pop_cutoff <- 1000
@@ -288,7 +357,7 @@ big_towns %>% st_geometry() %>% plot()
 
 triangle %>% st_intersection(big_towns) -> triangle_towns
 
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
 plot(st_geometry(triangle_towns), col='black', add=TRUE)
@@ -371,8 +440,8 @@ p[1,] %>% st_geometry() %>% plot(col='blue', pch=3,add=TRUE)
 # This is not working  :-(
 # I think it is supposed to apply the geometry of v to the object p
 pv = st_set_geometry(p, v)
-
-
+pv
+plot(pv)
 # Can we make a voronoi diagram from the centroids of the Iowa counties?
 
 # Quick exam of the ia_counties layer
@@ -428,6 +497,22 @@ plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
 # Remember, the crosses are not the centroid of the voronoi polygon
 # the cross is the location of a TOWN with a certain population size
 
+
+
+# Let's apply the geometry from v_big_towns (voronoi polygons) to the big_towns
+# spatial layer (town attributes & geometry). This will let us keep all the 
+# attributes from the big_towns layer, but apply the geometry from the v_big_towns
+# (voronoi polygons) to the big_towns layer. 
+big_towns_voronai <- st_set_geometry(big_towns, v_big_towns)
+test <- st_intersection(big_towns_voronai, ia)
+
+plot(ia)
+plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
+plot(st_geometry(test), add=TRUE)
+
+# Now we can pick out individiual points and their associated voronoi polygon
+plot(test %>% filter(NAME.x == "Sac City"), col='green', add=TRUE)
+plot(big_towns %>% filter(NAME.x == "Sac City") %>% st_centroid() ,pch=7, col='black', add=TRUE )
 
 
 # Bailey asked about towns with less than 2500 populatoin
