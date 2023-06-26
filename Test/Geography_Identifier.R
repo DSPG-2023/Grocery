@@ -4,6 +4,7 @@
 library(sf)
 library(dplyr)
 library(tigris)
+library(tidycensus)
 options(tigris_use_cache=TRUE)
 
 
@@ -266,11 +267,14 @@ triangle <- tri_county_coords %>%
 # It's a triangle!
 plot(st_geometry(triangle))
 
+# We can add the plot axes and see that this object has spatial information
+plot(st_geometry(triangle), axes=TRUE)
+
 class(triangle)
 st_crs(triangle)
 
 # Plot multiple layers together to view
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(four_county_area), col='red', add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
@@ -292,7 +296,7 @@ cherokee_buffer <- cherokee_centroid %>%
 cherokee_buffer %>% st_geometry() %>% plot()
 
 # Plot multiple layers together to view
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(four_county_area), col='red', add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
@@ -353,7 +357,7 @@ big_towns %>% st_geometry() %>% plot()
 
 triangle %>% st_intersection(big_towns) -> triangle_towns
 
-plot(st_geometry(ia), lwd=2)
+plot(st_geometry(ia), lwd=2, axes=TRUE)
 plot(st_geometry(ia_counties), add=TRUE)
 plot(st_geometry(triangle), col='green', add=TRUE)
 plot(st_geometry(triangle_towns), col='black', add=TRUE)
@@ -437,7 +441,7 @@ p[1,] %>% st_geometry() %>% plot(col='blue', pch=3,add=TRUE)
 # I think it is supposed to apply the geometry of v to the object p
 pv = st_set_geometry(p, v)
 pv
-
+plot(pv)
 # Can we make a voronoi diagram from the centroids of the Iowa counties?
 
 # Quick exam of the ia_counties layer
@@ -493,6 +497,22 @@ plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
 # Remember, the crosses are not the centroid of the voronoi polygon
 # the cross is the location of a TOWN with a certain population size
 
+
+
+# Let's apply the geometry from v_big_towns (voronoi polygons) to the big_towns
+# spatial layer (town attributes & geometry). This will let us keep all the 
+# attributes from the big_towns layer, but apply the geometry from the v_big_towns
+# (voronoi polygons) to the big_towns layer. 
+big_towns_voronai <- st_set_geometry(big_towns, v_big_towns)
+test <- st_intersection(big_towns_voronai, ia)
+
+plot(ia)
+plot(big_towns %>% st_centroid(), pch=3, col='red', add=TRUE)
+plot(st_geometry(test), add=TRUE)
+
+# Now we can pick out individiual points and their associated voronoi polygon
+plot(test %>% filter(NAME.x == "Sac City"), col='green', add=TRUE)
+plot(big_towns %>% filter(NAME.x == "Sac City") %>% st_centroid() ,pch=7, col='black', add=TRUE )
 
 
 # Bailey asked about towns with less than 2500 populatoin
