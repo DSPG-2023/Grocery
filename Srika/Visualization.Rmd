@@ -3,6 +3,7 @@ library(ggplot2)
 library(plotly)
 library(readxl)
 library(dplyr)
+library(tidyverse)
 ```
 
 # Pathing
@@ -91,19 +92,66 @@ ggplotly(g)
 #TODO: Arrange the x axis cateories in ascending order.
 
 ```{r}
-sales_chain_grocery <- ggplot(data = chain_grocery_store_data, aes(x = Location_Sales_Volume_Range, fill = Company_Name)) +
-            geom_bar(position = "stack")+
+sales_chain_grocery <- ggplot(data = chain_grocery_store_data, 
+                              aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')),
+                              fill = Company_Name)) +
+            geom_bar(position = "stack") +
   ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
-  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(sales_chain_grocery)
 ```
 
 ```{r}
-sales_chain_grocery_dodge <- ggplot(data = chain_grocery_store_data, aes(x = Location_Sales_Volume_Range, fill = Company_Name)) +
-            geom_bar(position = "dodge")+
+sales_chain_grocery <- chain_grocery_store_data%>%
+                      filter(Location_Sales_Volume_Range!="NA")%>%
+                      ggplot(aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')),
+                              fill = Company_Name)) +
+            geom_bar(position = "stack") +
   ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
-  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_chain_grocery)
+```
+
+
+```{r}
+sales_chain_grocery_dodge <- ggplot(data = chain_grocery_store_data, 
+                                    aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), 
+                                     fill = Company_Name)) +
+  geom_bar(position = "dodge") +
+  ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(sales_chain_grocery_dodge)
 ```
@@ -155,15 +203,154 @@ ggplotly(num_chain_grocery_stores)
 ```
 
 ```{r}
-sales_non_chain_grocery <- ggplot(data = non_chain_grocery_store_data, aes(x = Location_Sales_Volume_Range)) +
-            geom_bar(position = "stack")+
+sales_non_chain_grocery <- non_chain_grocery_store_data%>%
+                      filter(Location_Sales_Volume_Range!="NA")%>%
+                      ggplot(aes((x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million'))))) +
+            geom_bar(position = "stack") +
   ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
-  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(sales_non_chain_grocery)
 ```
 
 ```{r}
+library(readr)
+cities <- read_csv("C:\\Users\\srika\\Documents\\GitHub\\Grocery\\ProjectData\\cities.csv")
+colnames(cities)[1] <- "Mailing_City"
+colnames(cities)[5]<-"County_Name"
+```
 
+```{r}
+#RUCC
+ruralurbancodes2013 <- read_excel("C:\\Users\\srika\\Documents\\GitHub\\Grocery\\ProjectData\\Rural-Urban Continuum Codes\\ruralurbancodes2013.xls")
+ruralurbancodes2013_iowa<-ruralurbancodes2013[,-c(4,6)]%>%
+                           filter(State=="IA")%>%
+                           mutate(County_Name = trimws(str_remove_all(County_Name, "County")))
+```
+
+
+
+```{r}
+df_non_chain_grocery_county<-merge(non_chain_grocery_store_data ,cities, by='Mailing_City')
+df_non_chain_grocery_county_clean<-df_non_chain_grocery_county[,c(1,4,19,27)]
+df_rucc_non_chain_grocery<-merge(ruralurbancodes2013_iowa,
+                                 df_non_chain_grocery_county_clean,
+                                 by="County_Name")
+```
+
+```{r}
+df_chain_grocery_county<-merge(chain_grocery_store_data ,cities, by='Mailing_City')
+df_chain_grocery_county_clean<-df_chain_grocery_county[,c(1,4,19,27)]
+df_rucc_chain_grocery<-merge(ruralurbancodes2013_iowa,
+                                 df_chain_grocery_county_clean,
+                                 by="County_Name")
+```
+
+```{r}
+df_dollar_county<-merge(dollar_store_data ,cities, by='Mailing_City')
+df_dollar_county_clean<-df_dollar_county[,c(1,4,19,27)]
+df_rucc_dollar_store<-merge(ruralurbancodes2013_iowa,
+                                 df_dollar_county_clean,
+                                 by="County_Name")
+```
+
+
+```{r}
+sales_non_chain_grocery_RUCC <- df_rucc_non_chain_grocery%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                ggplot(aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), 
+                                     fill = factor(RUCC_2013 ))) +
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  scale_fill_discrete(name="RUCC",
+                      breaks=c("Counties in metro areas of 250,000 to 1 million population", 
+                               "Counties in metro areas of fewer than 250,000 population",
+                               "Population of 20,000 or more, adjacent to a metro area",
+                               "Population of 20,000 or more, not adjacent to a metro area",
+                               "Population of 2,500 to 19,999, adjacent to a metro area",
+                               "Population of 2,500 to 19,999, not adjacent to a metro area",
+                               "Less than 2,500 population, adjacent to a metro area",
+                               "Less than 2,500 urban population, not adjacent to a metro area"))
+ggplotly(sales_non_chain_grocery_RUCC)
+```
+```{r}
+sales_non_chain_grocery_RUCC <- df_rucc_non_chain_grocery%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                ggplot(aes(x =factor(RUCC_2013, 
+                                     level=c(1,2,3,4,5,6,7,8,9)), 
+                                     fill = Location_Sales_Volume_Range)) +
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  xlab("RUCC Code") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_non_chain_grocery_RUCC)
+```
+
+```{r}
+city_group<-read_csv("C:\\Users\\srika\\Box\\DSPG 2023\\Projects\\FFED Grocery Store\\Resources\\CityGroupClassifications-geomaster\\geomaster.csv")
+colnames(city_group)[2]<-"Mailing_City"
+city_group<-city_group[,c(1,2,3,4,5)]
+```
+```{r}
+city_group_chain_grocery<-merge(chain_grocery_store_data ,city_group, by='Mailing_City')
+city_group_chain_grocery_clean<-city_group_chain_grocery[,c(1,4,19,25,26)]
+```
+
+
+```{r}
+city_group_chain_sales <- city_group_chain_grocery_clean%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                ggplot(aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), 
+                                     fill = factor(GrpCode ))) +
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(city_group_chain_sales)
+```
+
+```{r}
+city_group_chain_sales <- city_group_chain_grocery_clean%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                ggplot(aes(x =factor(GrpCode))) +
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(city_group_chain_sales)
 ```
 

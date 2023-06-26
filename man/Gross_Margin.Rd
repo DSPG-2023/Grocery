@@ -4,14 +4,15 @@
 \alias{Gross_Margin}
 \title{Calculation of Gross Margin}
 \usage{
-Gross_Margin(Total_Estimated_Revenue)
+Gross_Margin(Total_Estimated_Revenue, Percentage = 0.2446)
 }
 \arguments{
 \item{Total_Estimated_Revenue}{Output of a total estimated revenue calculation}
+
+\item{Percentage}{Percentage of Revenue as Gross Margin (Revenue - Cost of Goods)}
 }
 \value{
-Outputs Gross Margin depending on which one of the 4 revenue ranges
-the input "Total_Estimated_Revenue" falls into (in dollars)
+Outputs Gross Margin (in dollars) depending on the percentage provided (default from Bizminer)
 }
 \description{
 Calculation of Gross Margin
@@ -20,6 +21,6 @@ Calculation of Gross Margin
 This function is taken from the "Estimating Expense" excel sheet (step six)
 }
 \examples{
-# Gross_Margin(Total_Estimated_Revenue = 2000000)
+# Gross_Margin(Total_Estimated_Revenue = 2000000, Percentage = .2446)
 
 }
