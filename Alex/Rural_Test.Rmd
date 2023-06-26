@@ -11,17 +11,6 @@ Rural_Population<-function(county_pop, x, pct_county) {
   
   
   
-  
-  
-  for(i in length(county_cities_list[[1]])) {
-    
-  }
-  
-
-
-  return(floor((county_pop - sum(tidycensus::get_decennial(get_cities_in_county(county)))*pct_county/100)))
-
-
 }
 ```
 
@@ -34,20 +23,6 @@ library(tidyr)
 ```
 
 ```{r}
-test_df <- data.frame (state  = c("ia"),
-                  county = c("polk")
-                  )
-
-```
-
-
-```{r}
-pop <- get_decennial(year = 2020, 
-                     geography = "place", 
-                     variables = "DP1_0001C", 
-                     sumfile = "dp",
-                     state = 19)
-pop
 #This gives us the name of city and the population. We need to separate city
 #and state name, and then remove the city and CDP from the NAME so we can join
 #with the county_cities_list
@@ -66,8 +41,6 @@ place_pop
 #Convert County cities list to a data frame in the correct shape and name
 #to join with place_pop
 county_cities_df <- data.frame(unlist(county_cities_list))
-county_cities_df <- colnames(counties_df)[1] <- "City"
-colnames(county_cities_list) <- c("City")
 lookup <- c(City = "unlist.county_cities_list.")
 county_cities_df <- rename(county_cities_df, all_of(lookup))
 
