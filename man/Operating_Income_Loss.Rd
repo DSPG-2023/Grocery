@@ -4,10 +4,15 @@
 \alias{Operating_Income_Loss}
 \title{Calculation of the operating income (loss)}
 \usage{
-Operating_Income_Loss(Total_Estimated_Revenue)
+Operating_Income_Loss(
+  Total_Estimated_Revenue,
+  Gross_Margin_Percentage = 0.2446
+)
 }
 \arguments{
 \item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
+
+\item{Gross_Margin_Percentage}{Percentage of revenue as gross margin (default from Bizminer)}
 }
 \value{
 Outputs difference between total estimated revenue and aggregated expenses (in dollars)
@@ -20,6 +25,6 @@ This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated 
 Functions called: Cost_of_Goods_Sold, Officer_Compensation, Employee_Wages, Other_Operating_Expense
 }
 \examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000)
+# Employee_Wages(Total_Estimated_Revenue = 2000000, Gross_Margin_Percentage = .2446)
 
 }

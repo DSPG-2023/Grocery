@@ -4,10 +4,12 @@
 \alias{Interest_Income}
 \title{Calculation of Interest Income}
 \usage{
-Interest_Income(Total_Estimated_Revenue)
+Interest_Income(Total_Estimated_Revenue, Percentage = 4e-04)
 }
 \arguments{
 \item{Total_Estimated_Revenue}{Calculation of Total_Estimated Revenue}
+
+\item{Percentage}{Percentage of revenue of the estimated income from interest}
 }
 \value{
 Outputs first-year interest income (in dollars)
@@ -19,6 +21,6 @@ Calculation of Interest Income
 This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Eight.
 }
 \examples{
-# Interest_Income(Total_Estimated_Revenue = 2000000)
+# Interest_Income(Total_Estimated_Revenue = 2000000, Percentage = .0004)
 
 }
