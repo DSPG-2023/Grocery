@@ -88,6 +88,25 @@ g <- ggplot(data = chain_grocery_store_data, aes(x = Company_Name, fill = Locati
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(g)
 ```
+#TODO: Arrange the x axis cateories in ascending order.
+
+```{r}
+sales_chain_grocery <- ggplot(data = chain_grocery_store_data, aes(x = Location_Sales_Volume_Range, fill = Company_Name)) +
+            geom_bar(position = "stack")+
+  ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
+  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_chain_grocery)
+```
+
+```{r}
+sales_chain_grocery_dodge <- ggplot(data = chain_grocery_store_data, aes(x = Location_Sales_Volume_Range, fill = Company_Name)) +
+            geom_bar(position = "dodge")+
+  ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
+  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_chain_grocery_dodge)
+```
 
 
 ```{r}
@@ -136,8 +155,12 @@ ggplotly(num_chain_grocery_stores)
 ```
 
 ```{r}
-
-
+sales_non_chain_grocery <- ggplot(data = non_chain_grocery_store_data, aes(x = Location_Sales_Volume_Range)) +
+            geom_bar(position = "stack")+
+  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  xlab("Sales Volume Range") + ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_non_chain_grocery)
 ```
 
 ```{r}
