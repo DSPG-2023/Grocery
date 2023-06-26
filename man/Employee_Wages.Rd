@@ -4,13 +4,15 @@
 \alias{Employee_Wages}
 \title{Calculation of Employee Wages}
 \usage{
-Employee_Wages(Total_Estimated_Revenue)
+Employee_Wages(Total_Estimated_Revenue, Percentage = 0.0942)
 }
 \arguments{
 \item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
+
+\item{Percentage}{Percentage of revenue spent on employee wages (default taken from Bizminer)}
 }
 \value{
-Outputs dollars spent on employee wages (in dollars based off of percentages taken from Bizminer)
+Outputs dollars spent on employee wages (based off of provided percentage)
 }
 \description{
 Calculation of Employee Wages
@@ -19,6 +21,6 @@ Calculation of Employee Wages
 This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
 }
 \examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000)
+# Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = .0942)
 
 }
