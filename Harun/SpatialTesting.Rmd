@@ -10,6 +10,7 @@ output: html_document
 library(googleway)
 library(dplyr)
 library(sf)
+library(ggplot2)
 ```
 
 ```{r, include=FALSE}
@@ -39,18 +40,41 @@ df_grocery <- google_places(location = c(df_geocode$lat
 ```
 
 # Turn store locations into an sf object
+## Making a polygon method one
 ```{r}
-sf_grocery_polygon <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326) %>%
+# Make a list of lng and lat
+sf_grocery_polygon <- cbind(df_grocery$lng, df_grocery$lat)
+
+# Close shape and make polygon
+sf_grocery_polygon <- rbind(sf_grocery_polygon, sf_grocery_polygon[1, ]) %>%
+  list() %>%
+  st_polygon()
+```
+
+## Making a polygon method two
+```{r}
+sf_grocery_polygon_union <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326) %>%
   summarise(geometry = st_union(geometry)) %>%
   st_cast("POLYGON")
+```
 
+## Making store points
+```{r}
 sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326)
 ```
 
-# Plotting overlaps
+## Creating a bounding box from points
 ```{r}
-plot(sf_grocery_polygon, col='green')
-plot(sf_grocery_points, add=TRUE, col='black')
+sf_bounds <- st_bbox(sf_grocery_points) %>% 
+  st_as_sfc()
+```
+
+# Plotting overlaps
+```{r, warning=FALSE}
+plot(sf_bounds, col='purple')
+plot(sf_grocery_polygon, col='green', add=TRUE)
+plot(sf_grocery_polygon_union, col='blue', add=TRUE)
+plot(sf_grocery_points, col='black', add=TRUE)
 ```
 
 
