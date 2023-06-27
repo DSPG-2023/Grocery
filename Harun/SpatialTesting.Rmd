@@ -67,7 +67,6 @@ sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326)
 ```{r}
 sf_bounds <- st_bbox(sf_grocery_points) %>% 
   st_as_sfc()
-
 ```
 
 # Plotting overlaps
