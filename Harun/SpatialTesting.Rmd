@@ -1,0 +1,57 @@
+---
+title: "Spatial Testing"
+author: "Harun Celik"
+date: "2023-06-26"
+output: html_document
+---
+
+
+```{r}
+library(googleway)
+library(dplyr)
+library(sf)
+```
+
+```{r, include=FALSE}
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# Convert the address of LakeView to a lat/long 
+```{r}
+df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+  .$results %>%
+  .$geometry %>%
+  .$location
+```
+
+# Pull the stores in LakeView with the API call
+```{r}
+df_grocery <- google_places(location = c(df_geocode$lat
+, df_geocode$lng), 
+                                    keyword = "grocery", 
+                                    rankby = "distance") %>%
+  .$results %>%
+  transmute(name, 
+            lat = .$geometry$location$lat, 
+            lng = .$geometry$location$lng, 
+            types,
+            vicinity)
+```
+
+# Turn store locations into an sf object
+```{r}
+sf_grocery_polygon <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326) %>%
+  summarise(geometry = st_union(geometry)) %>%
+  st_cast("POLYGON")
+
+sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326)
+```
+
+# Plotting overlaps
+```{r}
+plot(sf_grocery_polygon, col='green')
+plot(sf_grocery_points, add=TRUE, col='black')
+```
+
+
+
