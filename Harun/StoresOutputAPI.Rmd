@@ -1,0 +1,44 @@
+---
+title: "AlexGoogleAPI"
+author: "Harun Celik"
+date: "2023-06-27"
+output: html_document
+---
+
+# Returns stores by distance for a given address.
+
+## Load Libraries
+
+```{r}
+library(googleway)
+library(dplyr)
+
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+## Building each function individually
+
+### Setting an address variable
+
+```{r}
+address <- "23 Main St, Lake View, IA, United States, Iowa"
+```
+
+
+### Formatting the Geocode API output to return a latitude and longitude
+
+```{r}
+df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+  .$results %>%
+  .$geometry %>%
+  .$location
+```
+
+### Formatting the Places API to return a dataframe of locations
+
+```{r}
+df_places_grocery <- google_places(place_type = "store",
+                                   location = c(df_geocode$lat, df_geocode$lng), 
+                                   rankby = 'distance') %>%
+  .$results
+```
