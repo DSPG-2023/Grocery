@@ -72,7 +72,7 @@ num_dollar_stores <- dollar_store_data %>%
   group_by(Mailing_City) %>%
   summarize(count = n()) %>%
   filter(count > 1) %>%
-  ggplot(aes(x = Mailing_City, y = count)) +
+  ggplot(aes(x = reorder(Mailing_City,-count), y = count)) +
   geom_bar(stat = "identity", position = "dodge") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle("Dollar Store Distribution by Mailing City") +
@@ -162,7 +162,7 @@ num_grocery_stores <- grocery_store_data %>%
   group_by(Mailing_City) %>%
   summarize(count = n()) %>%
   filter(count > 2) %>%
-  ggplot(aes(x = Mailing_City, y = count)) +
+  ggplot(aes(x = reorder(Mailing_City,-count), y = count)) +
   geom_bar(stat = "identity", position = "dodge") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle("Grocery Store Distribution by Mailing City") +
@@ -176,7 +176,7 @@ num_chain_grocery_stores <- chain_grocery_store_data %>%
   group_by(Mailing_City) %>%
   summarize(count = n()) %>%
   filter(count > 1) %>%
-  ggplot(aes(x = Mailing_City, y = count)) +
+  ggplot(aes(x = reorder(Mailing_City,-count), y = count)) +
   geom_bar(stat = "identity", position = "dodge") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle("Grocery Chain Store Distribution by Mailing City") +
@@ -193,7 +193,7 @@ num_chain_grocery_stores <- non_chain_grocery_store_data %>%
   group_by(Mailing_City) %>%
   summarize(count = n()) %>%
   filter(count > 1) %>%
-  ggplot(aes(x = Mailing_City, y = count)) +
+  ggplot(aes(x = reorder(Mailing_City,-count), y = count)) +
   geom_bar(stat = "identity", position = "dodge") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   ggtitle("Non Chain Grocery Store Distribution by Mailing City") +
@@ -222,6 +222,11 @@ sales_non_chain_grocery <- non_chain_grocery_store_data%>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(sales_non_chain_grocery)
 ```
+
+```{r}
+
+```
+
 
 ```{r}
 library(readr)
@@ -313,6 +318,9 @@ ggplotly(sales_non_chain_grocery_RUCC)
 city_group<-read_csv("C:\\Users\\srika\\Box\\DSPG 2023\\Projects\\FFED Grocery Store\\Resources\\CityGroupClassifications-geomaster\\geomaster.csv")
 colnames(city_group)[2]<-"Mailing_City"
 city_group<-city_group[,c(1,2,3,4,5)]
+city_group$GrpCode <- str_replace(city_group$GrpCode, "PG8", "Rest_of_the_State")
+city_group$GrpCode <- str_replace(city_group$GrpCode, "PG9", "Rest_of_the_State")
+county<-c("PGCO1","PGCO2","PGCO3","PGCO4","PGCO5")
 ```
 ```{r}
 city_group_chain_grocery<-merge(chain_grocery_store_data ,city_group, by='Mailing_City')
@@ -345,12 +353,126 @@ ggplotly(city_group_chain_sales)
 ```{r}
 city_group_chain_sales <- city_group_chain_grocery_clean%>%
                                 filter(Location_Sales_Volume_Range!="NA")%>%
-                                ggplot(aes(x =factor(GrpCode))) +
+                                ggplot(aes(x =GrpCode)) +
   geom_bar(position = "stack") +
-  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
-  xlab("Sales Volume Range") + 
+  ggtitle("Number of chain grocery Stores in different classification groups") +
+  xlab("City group Classification code") + 
   ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_chain_sales)
+```
+
+```{r}
+city_group_chain_sales <- city_group_chain_grocery_clean%>%
+                                ggplot(aes(x = GrpCode)) +
+  geom_bar(position = "stack") +
+  ggtitle("Number of chain grocery Stores in different classification groups") +
+  xlab("City group Classification code") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(city_group_chain_sales)
+```
+
+
+
+```{r}
+#number of non chain grocery store by city
+nonchaingrocery_count<-non_chain_grocery_store_data %>%
+                        count(Mailing_City, sort=TRUE)
+colnames(nonchaingrocery_count)[2]<-"NCG_count"
+#number of chain grocery store by city
+chaingrocery_count<-chain_grocery_store_data%>%
+                    count(Mailing_City,sort=TRUE)
+colnames(chaingrocery_count)[2]<-"CG_count"
+#number of dollar store by city
+dollarstore_count<-dollar_store_data%>%
+                      count(Mailing_City,sort=TRUE)
+colnames(dollarstore_count)[2]<-"DS_count"
+#Merge all into one data frame and add population with city group data set
+ncg_cg_counts<-merge(nonchaingrocery_count,chaingrocery_count,all=TRUE)
+ncg_cg_ds_counts<-merge(ncg_cg_counts,dollarstore_count,all=TRUE)
+ncg_cg_ds_counts[is.na(ncg_cg_ds_counts)] <- 0
+storetype_grp_pop<-merge(ncg_cg_ds_counts,city_group)
+storetype_grp_pop$total_grocery<-storetype_grp_pop$NCG_count+storetype_grp_pop$CG_count
+storetype_grp_pop$pop_store_ratio<-storetype_grp_pop$Pop20/storetype_grp_pop$total_grocery
+```
+
+```{r}
+storetype_rucc_pop <-merge(cities,storetype_grp_pop,by="Mailing_City")
+storetype_rucc_pop<-merge(storetype_rucc_pop,ruralurbancodes2013_iowa,by="County_Name")
+storetype_rucc_pop$GrpCode <- str_replace(storetype_rucc_pop$GrpCode, "PG8", "Rest_of_the_State")
+storetype_rucc_pop$GrpCode <- str_replace(storetype_rucc_pop$GrpCode, "PG9", "Rest_of_the_State")
+storetype_rucc_pop<-storetype_rucc_pop[,-c(6,7,8,9,10,21,20)]
+```
+
+
+```{r}
+#Cities with population store ratio more than 5000"
+popratio<-storetype_grp_pop%>%
+  filter(pop_store_ratio!=Inf)%>%
+  filter(pop_store_ratio>5000)%>%
+   filter(!(GrpCode %in% county))%>%
+  ggplot(aes(x = reorder(Mailing_City,-pop_store_ratio), y =pop_store_ratio,fill=GrpCode)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Cities with population- grocery store ratio more than 5000") +
+  xlab("Mailing City") + 
+  ylab("Population/store ratio")
+ggplotly(popratio)
+
+```
+
+```{r}
+#This graph shows the cities in Iowa which has 1 grocery store for every 500 or less customers.
+popratio<-storetype_grp_pop%>%
+  filter(pop_store_ratio!=Inf)%>%
+  filter(pop_store_ratio<500)%>%
+  filter(!(GrpCode %in% county))%>%
+  ggplot(aes(x = reorder(Mailing_City,-pop_store_ratio), y =pop_store_ratio,fill=GrpCode)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Cities with Population-grocery store ration less than 500") +
+  xlab("Mailing City") + 
+  ylab("Population/store ratio")
+ggplotly(popratio)
+```
+
+```{r}
+#Population by number of grocery stores
+scatter_pop_num_grocery <-storetype_grp_pop%>%
+  filter(total_grocery>0)%>%
+  filter(!(GrpCode %in% county))%>%
+  plot_ly(x =~Pop20, y =~total_grocery,color=~GrpCode)
+  scatter_pop_num_grocery<-scatter_pop_num_grocery %>% layout(title = 'Number of grocery stores by population')
+scatter_pop_num_grocery
+```
+
+
+```{r}
+rucc_pop_num_grocery <-storetype_rucc_pop%>%
+  filter(total_grocery>0)%>%
+  ggplot(aes(x = Pop20, y = total_grocery, color = factor(RUCC_2013))) +
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+  labs(title = "Number of grocery stores by population")
+ggplotly(rucc_pop_num_grocery)
+```
+
+```{r}
+ncg_ds_cg_plot <-storetype_rucc_pop%>%
+  filter(total_grocery>2)%>%
+  pivot_longer(cols =c(NCG_count,CG_count,DS_count),
+                               names_to = "Zone",
+                               values_to = "Count")
+
+  ggplot(ncg_ds_cg_plot, aes(x = Mailing_City, y = Count, fill = Zone)) +
+  geom_bar(position="dodge", stat="identity")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  ggplotly()
+```
+
+
+```{r}
+county<-c("PGCO1","PGCO2","PGCO3","PGCO4","PGCO5")
 ```
 
