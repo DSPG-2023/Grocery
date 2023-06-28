@@ -1,7 +1,13 @@
 #'@author Alex Cory
-#'@params address must be in the standard google maps form
+#'@params address must be in the standard Google maps form
 #'
-#'@example Pop_Binder(""23 Main St, Lake View, IA, Unites States, Iowa")
+#'@example Pop_Binder("23 Main St, Lake View, IA, Unites States, Iowa")
+
+library(stringr)
+library(ggmap)
+library(tidyr)
+ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
+
 
 Pop_Binder <- function(address) {
   splt_addr <- as.list(strsplit(address, ", ")[[1]])
