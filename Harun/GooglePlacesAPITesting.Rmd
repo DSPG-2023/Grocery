@@ -27,21 +27,24 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 ## Testing Pull for Ames
 
 ```{r}
-# Trying to find dollar stores in a 4 mile radius.
+# Trying to find dollar stores only in the given coordinates
 
-ames_dollar_stores <- google_places(search_string = "dollar", location = c(42.034534, -93.620369), radius = 6500, keyword = "store")
-```
+ames_grocery_stores <- google_places(location = c(42.034534, -93.620369), 
+                                    keyword = "grocery", 
+                                    rankby = "distance") %>%
+  .$results
 
-## Extract Results from API Pul into `results`
-
-```{r}
-results <- ames_dollar_stores$results
+lakeview_grocery_stores <- google_places(location = c(42.30421
+, -95.052), 
+                                    keyword = "grocery", 
+                                    rankby = "distance") %>%
+  .$results
 ```
 
 ## Wrangle Data to Extract Latitude and Longitude
 
 ```{r}
-spatial_results <- results %>% 
+spatial_results <- ames_grocery_stores %>% 
   transmute(name = name, lat = geometry$location$lat, lng = geometry$location$lng)
 ```
 

@@ -1,0 +1,90 @@
+---
+title: "Spatial Testing"
+author: "Harun Celik"
+date: "2023-06-26"
+output: html_document
+---
+
+
+```{r}
+library(googleway)
+library(dplyr)
+library(sf)
+library(ggplot2)
+```
+
+```{r, include=FALSE}
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# Convert the address of LakeView to a lat/long 
+```{r}
+df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+  .$results %>%
+  .$geometry %>%
+  .$location
+```
+
+# Pull the stores in LakeView with the API call
+```{r}
+df_grocery <- google_places(location = c(df_geocode$lat
+, df_geocode$lng), 
+                                    keyword = "grocery", 
+                                    rankby = "distance") %>%
+  .$results %>%
+  transmute(name, 
+            lat = .$geometry$location$lat, 
+            lng = .$geometry$location$lng, 
+            types,
+            vicinity)
+```
+
+# Turn store locations into an sf object
+## Making a polygon method one
+```{r}
+# Make a list of lng and lat
+sf_grocery_polygon <- cbind(df_grocery$lng, df_grocery$lat)
+
+# Close shape and make polygon
+sf_grocery_polygon <- rbind(sf_grocery_polygon, sf_grocery_polygon[1, ]) %>%
+  list() %>%
+  st_polygon()
+```
+
+## Making a polygon method two
+```{r}
+sf_grocery_polygon_union <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326) %>%
+  summarise(geometry = st_union(geometry)) %>%
+  st_cast("POLYGON")
+```
+
+## Making store points
+```{r}
+sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326)
+```
+
+## Creating a bounding box from points
+```{r}
+sf_bounds <- st_bbox(sf_grocery_points) %>% 
+  st_as_sfc()
+```
+
+```{r}
+sf_hull <- df_grocery %>%
+  select(lng, lat) %>%
+  st_as_sf(coords = c("lng", "lat")) %>%
+  st_union() %>%
+  st_convex_hull()
+
+```
+
+# Plotting overlaps
+```{r, warning=FALSE}
+plot(sf_bounds, col='purple')
+plot(sf_hull, col='darkgreen', add=TRUE)
+#plot(sf_grocery_polygon, col='green', add=TRUE)
+#plot(sf_grocery_polygon_union, col='blue', add=TRUE)
+plot(sf_grocery_points, col='white', add=TRUE)
+```
+
+
