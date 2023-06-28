@@ -325,6 +325,8 @@ county<-c("PGCO1","PGCO2","PGCO3","PGCO4","PGCO5")
 ```{r}
 city_group_chain_grocery<-merge(chain_grocery_store_data ,city_group, by='Mailing_City')
 city_group_chain_grocery_clean<-city_group_chain_grocery[,c(1,4,19,25,26)]
+city_group_all_grocery<-merge(grocery_store_data,city_group,by="Mailing_City")
+city_group_all_grocery_clean<-city_group_all_grocery[,c(1,4,19,25,26)]
 ```
 
 
@@ -353,6 +355,7 @@ ggplotly(city_group_chain_sales)
 ```{r}
 city_group_chain_sales <- city_group_chain_grocery_clean%>%
                                 filter(Location_Sales_Volume_Range!="NA")%>%
+                                filter(!(GrpCode %in% county))%>%
                                 ggplot(aes(x =GrpCode)) +
   geom_bar(position = "stack") +
   ggtitle("Number of chain grocery Stores in different classification groups") +
@@ -360,6 +363,19 @@ city_group_chain_sales <- city_group_chain_grocery_clean%>%
   ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_chain_sales)
+```
+
+```{r}
+city_group_all_sales <- city_group_all_grocery_clean%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                filter(!(GrpCode %in% county))%>%
+                                ggplot(aes(x =GrpCode)) +
+  geom_bar(position = "stack") +
+  ggtitle("Number of grocery Stores in different classification groups") +
+  xlab("City group Classification code") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(city_group_all_sales)
 ```
 
 ```{r}
@@ -462,17 +478,48 @@ ggplotly(rucc_pop_num_grocery)
 ncg_ds_cg_plot <-storetype_rucc_pop%>%
   filter(total_grocery>2)%>%
   pivot_longer(cols =c(NCG_count,CG_count,DS_count),
-                               names_to = "Zone",
+                               names_to = "Store_Type",
                                values_to = "Count")
 
-  ggplot(ncg_ds_cg_plot, aes(x = Mailing_City, y = Count, fill = Zone)) +
+  ggplot(ncg_ds_cg_plot, aes(x = Mailing_City, y = Count, fill = Store_Type)) +
   geom_bar(position="dodge", stat="identity")+
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    ggtitle("Distribution of diferrent type of store") +
+    labs(subtitle = "By Mailing City")+
+    xlab("Mailing_City") + 
+    ylab("Number_Of Stores")
   ggplotly()
 ```
 
 
 ```{r}
-county<-c("PGCO1","PGCO2","PGCO3","PGCO4","PGCO5")
+ncg_ds_cg_grpcode_plot <-storetype_rucc_pop%>%
+  pivot_longer(cols =c(NCG_count,CG_count,DS_count),
+                               names_to = "Store_Type",
+                               values_to = "Count")
+
+  ggplot(ncg_ds_cg_grpcode_plot, aes(x = GrpCode, y = Count, fill = Store_Type)) +
+  geom_bar(position="dodge", stat="identity")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    ggtitle("Distribution of diferrent type of store") +
+    labs(subtitle = "By City group Classification")+
+    xlab("Group_Code") + 
+    ylab("Number_Of Stores")
+  ggplotly()
 ```
 
+```{r}
+ncg_ds_cg_rucc_plot <-storetype_rucc_pop%>%
+  pivot_longer(cols =c(NCG_count,CG_count,DS_count),
+                               names_to = "Store_Type",
+                               values_to = "Count")
+
+  ggplot(ncg_ds_cg_rucc_plot, aes(x = factor(RUCC_2013), y = Count, fill = Store_Type)) +
+  geom_bar(position="dodge", stat="identity")+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    ggtitle("Distribution of diferrent type of store") +
+    labs(subtitle = "By RUCC Classification")+
+    xlab("RUCC_Code") + 
+    ylab("Number_Of Stores")
+  ggplotly()
+```
