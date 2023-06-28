@@ -1,5 +1,5 @@
 #'@author Alex Cory
-#'@params address must be in the standard Google maps form
+#'@params address the address must be in the standard Google maps form
 #'
 #'@example Pop_Binder("23 Main St, Lake View, IA, Unites States, Iowa")
 
