@@ -12,12 +12,12 @@ ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
 
 
 address <- "23 Main St, Lake View, IA, Unites States, Iowa"
-splt_addr <- as.list(tidyr::strsplit(address, ", ")[[1]])
+splt_addr <- as.list(strsplit(address, ", ")[[1]])
 names(splt_addr) <- c("street", "city", "state_abbv", "country", "state")
 
 
 geocoded_address <- geocode(location = address, output = "all")
-geo_county <- ggmap::geocoded_address[["results"]][[1]][["address_components"]][[4]][["long_name"]]
+geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[4]][["long_name"]]
 geo_county <- gsub( " County", "", as.character(geo_county))
 
 city_df <- data.frame(state = splt_addr[5], county = geo_county, city = splt_addr[2])
