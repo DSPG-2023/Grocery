@@ -1,5 +1,8 @@
 #'@author Alex Cory
 #'@params address the address must be in the standard Google maps form
+#'@description
+#'Function that takes in an address and returns a dataframe with data on county
+#'cities and populations
 #'
 #'@example Pop_Binder("23 Main St, Lake View, IA, Unites States, Iowa")
 
