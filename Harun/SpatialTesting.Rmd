@@ -69,13 +69,22 @@ sf_bounds <- st_bbox(sf_grocery_points) %>%
   st_as_sfc()
 ```
 
+```{r}
+sf_hull <- df_grocery %>%
+  select(lng, lat) %>%
+  st_as_sf(coords = c("lng", "lat")) %>%
+  st_union() %>%
+  st_convex_hull()
+
+```
+
 # Plotting overlaps
 ```{r, warning=FALSE}
 plot(sf_bounds, col='purple')
-plot(sf_grocery_polygon, col='green', add=TRUE)
-plot(sf_grocery_polygon_union, col='blue', add=TRUE)
-plot(sf_grocery_points, col='black', add=TRUE)
+plot(sf_hull, col='darkgreen', add=TRUE)
+#plot(sf_grocery_polygon, col='green', add=TRUE)
+#plot(sf_grocery_polygon_union, col='blue', add=TRUE)
+plot(sf_grocery_points, col='white', add=TRUE)
 ```
-
 
 
