@@ -1,11 +1,12 @@
-##################################################################################################
+########################################################################################
 ### Getting Multiple Variables for Multiple Counties (Within and Across State Lines) ###
-##################################################################################################
+########################################################################################
 
 
 ### NOTE: this version of the function outputs WIDE data frames ###
 
 # Make mock dataframe (3 Iowa counties, 2 Illinois counties):
+
 
 county <- c("Muscatine", "Cedar", "Johnson", "Menard", "Lake")
 
@@ -14,7 +15,6 @@ state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
 df <- cbind.data.frame(county, state)
 
 var_vector <- c("B19013_001", "B23025_002", "C16001_001", "C16001_002")
-
 
 
 
@@ -83,7 +83,7 @@ get_census_vars <- function(df, geography, var_vector = var_vector) {
 
   # Adding variable label column
 
-  big_df_2 <- merge(result_df, var_codes)
+  big_df_2 <- merge(big_df, var_codes)
 
   # Arranging by GEOID
 
