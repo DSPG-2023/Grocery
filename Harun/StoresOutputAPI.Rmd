@@ -12,6 +12,7 @@ output: html_document
 ```{r}
 library(googleway)
 library(dplyr)
+library(leaflet)
 
 set_key(key = Sys.getenv("PLACES_KEY"))
 ```
@@ -38,7 +39,18 @@ df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States
 
 ```{r}
 df_places_grocery <- google_places(place_type = "store",
+                                   keyword = 'grocery',
                                    location = c(df_geocode$lat, df_geocode$lng), 
                                    rankby = 'distance') %>%
   .$results
 ```
+
+
+Plotting Store Points
+```{r}
+leaflet(df_places_grocery) %>%
+  addProviderTiles(providers$OpenStreetMap) %>%
+  addCircleMarkers(lng = df_places_grocery$geometry$location$lng, lat = df_places_grocery$geometry$location$lat) %>%
+  addMarkers(lng = df_geocode$lng, lat = df_geocode$lat, options = )
+```
+
