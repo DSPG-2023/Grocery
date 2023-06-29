@@ -327,6 +327,8 @@ city_group_chain_grocery<-merge(chain_grocery_store_data ,city_group, by='Mailin
 city_group_chain_grocery_clean<-city_group_chain_grocery[,c(1,4,19,25,26)]
 city_group_all_grocery<-merge(grocery_store_data,city_group,by="Mailing_City")
 city_group_all_grocery_clean<-city_group_all_grocery[,c(1,4,19,25,26)]
+city_group_non_chain_grocery<-merge(non_chain_grocery_store_data,city_group,by="Mailing_City")
+city_group_non_chain_grocery_clean<-city_group_non_chain_grocery[,c(1,4,19,25,26)]
 ```
 
 
@@ -345,14 +347,16 @@ city_group_chain_sales <- city_group_chain_grocery_clean%>%
                                       '$100-500 Million')), 
                                      fill = factor(GrpCode ))) +
   geom_bar(position = "stack") +
-  ggtitle("Location Sales Volume distribution for non Chain Grocery Stores") +
+  ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
   xlab("Sales Volume Range") + 
   ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_chain_sales)
 ```
 
+
 ```{r}
+#Something is wrong with this plot
 city_group_chain_sales <- city_group_chain_grocery_clean%>%
                                 filter(Location_Sales_Volume_Range!="NA")%>%
                                 filter(!(GrpCode %in% county))%>%
@@ -459,7 +463,8 @@ scatter_pop_num_grocery <-storetype_grp_pop%>%
   filter(total_grocery>0)%>%
   filter(!(GrpCode %in% county))%>%
   plot_ly(x =~Pop20, y =~total_grocery,color=~GrpCode)
-  scatter_pop_num_grocery<-scatter_pop_num_grocery %>% layout(title = 'Number of grocery stores by population')
+  scatter_pop_num_grocery<-scatter_pop_num_grocery %>% 
+    layout(title = 'Number of grocery stores by population')
 scatter_pop_num_grocery
 ```
 
@@ -469,7 +474,7 @@ rucc_pop_num_grocery <-storetype_rucc_pop%>%
   filter(total_grocery>0)%>%
   ggplot(aes(x = Pop20, y = total_grocery, color = factor(RUCC_2013))) +
   geom_point()+
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "lm", se = FALSE)+
   labs(title = "Number of grocery stores by population")
 ggplotly(rucc_pop_num_grocery)
 ```
@@ -491,14 +496,62 @@ ncg_ds_cg_plot <-storetype_rucc_pop%>%
   ggplotly()
 ```
 
+```{r}
+PG1 <- storetype_rucc_pop %>%
+  filter(GrpCode == "PG1") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG1")
+PG2<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG2") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG2")
+PG3<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG3") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG3")
+PG4<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG4") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG4")
+PG5A<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG5A") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG5A")
+PG5N<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG5N") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG5N")
+PG6<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG6") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG6")
+PG7<-storetype_rucc_pop %>%
+  filter(GrpCode == "PG7") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PG7")
+Rest_of_the_State<-storetype_rucc_pop %>%
+  filter(GrpCode == "Rest_of_the_State") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="Rest_of_the_State")
+PGCO1<-storetype_rucc_pop %>%
+  filter(GrpCode == "PGCO1") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO1")
+PGCO2<-storetype_rucc_pop %>%
+  filter(GrpCode == "PGCO2") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO2")
+PGCO3<-storetype_rucc_pop %>%
+  filter(GrpCode == "PGCO3") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO3")
+PGCO4<-storetype_rucc_pop %>%
+  filter(GrpCode == "PGCO4") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO4")
+PGCO5<-storetype_rucc_pop %>%
+  filter(GrpCode == "PGCO5") %>%
+  summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO5")
+PGs<-rbind(PG1,PG2,PG3,PG4,PG5A,PG5N,PG6,PG7,Rest_of_the_State,PGCO1,PGCO2,PGCO3,PGCO4,PGCO5)
+PGs<-PGs%>%
+  mutate(sum=CG_count+NCG_count+DS_count)
+```
+
 
 ```{r}
-ncg_ds_cg_grpcode_plot <-storetype_rucc_pop%>%
+PGs_plot <-PGs%>%
   pivot_longer(cols =c(NCG_count,CG_count,DS_count),
                                names_to = "Store_Type",
                                values_to = "Count")
 
-  ggplot(ncg_ds_cg_grpcode_plot, aes(x = GrpCode, y = Count, fill = Store_Type)) +
+  ggplot(PGs_plot, aes(x = GrpCode, y = Count, fill = Store_Type)) +
   geom_bar(position="dodge", stat="identity")+
     theme(axis.text.x = element_text(angle = 90, hjust = 1))+
     ggtitle("Distribution of diferrent type of store") +
@@ -508,18 +561,3 @@ ncg_ds_cg_grpcode_plot <-storetype_rucc_pop%>%
   ggplotly()
 ```
 
-```{r}
-ncg_ds_cg_rucc_plot <-storetype_rucc_pop%>%
-  pivot_longer(cols =c(NCG_count,CG_count,DS_count),
-                               names_to = "Store_Type",
-                               values_to = "Count")
-
-  ggplot(ncg_ds_cg_rucc_plot, aes(x = factor(RUCC_2013), y = Count, fill = Store_Type)) +
-  geom_bar(position="dodge", stat="identity")+
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
-    ggtitle("Distribution of diferrent type of store") +
-    labs(subtitle = "By RUCC Classification")+
-    xlab("RUCC_Code") + 
-    ylab("Number_Of Stores")
-  ggplotly()
-```
