@@ -19,6 +19,3 @@ outputs the rural population
 \description{
 Calculation for a quarter circle.
 }
-\examples{
-Rural_Population(18000,9786,17.7)
-}

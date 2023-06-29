@@ -1,6 +1,6 @@
-#'@author Alex Cory
-#'@params store_address in a valid Google maps format (23 Main St, Lake View, IA, Unites States, Iowa)
-#'@params pct_county the percentage of county in the range
+#' @author Alex Cory
+#' @param store_address in a valid Google maps format (23 Main St, Lake View, IA, Unites States, Iowa)
+#' @param pct_county the percentage of county in the range
 
 Rural_Population<-function(store_address, pct_county) {
   #TODO: Calculate Pct_County automatically

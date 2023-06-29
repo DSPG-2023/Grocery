@@ -14,3 +14,4 @@ Address_Parser <- function(address) {
   names(splt_addr) <- c("street", "city", "state_abbv", "country", "state")
   return(splt_addr)
 }
+
