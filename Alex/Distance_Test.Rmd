@@ -40,10 +40,6 @@ View(api_stores)
 #TODO: Error checking for in case there are no stores in one quadrant
 
 df_geocode
-#api_stores$UTM <- with(api_stores, oce::lonlat2utm(longitude = df_geocode$lng, 
-#                                                   latitude = df_geocode$lat,
-#                                                   zone = UTM_Zoner(lng = df_geocode$lng)))
-
 UTM_df <- oce::lonlat2utm(longitude = api_stores$Long, 
                 latitude = api_stores$Lat,
                 zone = UTM_Zoner(abs(api_stores$Long[1])))
@@ -51,17 +47,32 @@ UTM_df <- oce::lonlat2utm(longitude = api_stores$Long,
 api_stores <- cbind(api_stores, UTM_df)
 
 
+
+
+
+#Testing values 
+df_geocode$lat <- 42.30791
+df_geocode$lng <- -95.05114
+
+
+
+
+UTM_geo <- oce::lonlat2utm(longitude = df_geocode$lng, 
+                latitude = df_geocode$lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+df_geocode <- cbind(df_geocode, UTM_geo)
+print(df_geocode)
 #This is adding the columns with the difference, but with Lake view Foods, 
 #it only has one negative value
-df_geocode
-api_stores$Lat_Diff <- with(api_stores, as.numeric(api_stores$Lat) -
-                              as.numeric(df_geocode$lat))
-api_stores$Long_Diff <- with(api_stores, as.numeric(api_stores$Long) - 
-                               as.numeric(df_geocode$lng))
-print(api_stores)
 
-print(api_stores$Lat[1] - df_geocode$lat[1])
+api_stores$Lat_Diff <- with(api_stores, as.numeric(api_stores$easting) -
+                              as.numeric(df_geocode$easting))
+api_stores$Long_Diff <- with(api_stores, as.numeric(api_stores$northing) - 
+                               as.numeric(df_geocode$northing))
+#Now that I have these points, I can figure out how far away each other point is
+#using the Pythagorean theorem
+api_stores
 
-print(min(api_stores$Lat))
+
 
 ```
