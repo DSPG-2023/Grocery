@@ -13,10 +13,9 @@ ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
 
 
 Pop_Binder <- function(address) {
-  splt_addr <<- as.list(strsplit(address, ", ")[[1]])
-  names(splt_addr) <<- c("street", "city", "state_abbv", "country", "state")
+
   #Doing this because I want to use this variable in Metro_Pop
-  splt_addr <<- splt_addr
+  splt_addr <- Address_Parser(address)
 
 
   geocoded_address <- geocode(location = address, output = "all")
