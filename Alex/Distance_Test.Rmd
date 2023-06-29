@@ -4,7 +4,8 @@ library(dplyr)
 ```
 
 ```{r}
-
+#This is the DF from the Google API call. Can be found in Harun/StoresOutputAPI.rmd
+df_places_grocery
 ```
 
 ```{r}
@@ -13,7 +14,40 @@ library(dplyr)
 #Compare the GPS coordinates to the origin to determine which direction it is to origin
 #Compare new store to current nearest store in that direction
 #How to handle diagonals?
-#
+#What if there are more or less than four closest stores
+#Should this just use Voronoi
 
+
+#Creates a new dataframe with the Lat, Long, and Name columns
+#This step is completely unnecessary, but the original DF
+#had awful column names and I didn't want to have to look at all 
+#the other columns
+api_stores <- data.frame(Lat = df_places_grocery$geometry$location$lat, Long = df_places_grocery$geometry$location$lng, Name = df_places_grocery$name)
+
+View(api_stores)
+
+
+#I want to subtract each lat and long from the given lat and long
+#the difference will tell me how far away in what direction each store is
+#then I can use the min and max functions to figure out the closest store
+#in each cardinal direction
+#I also need to specifically look at only positive and only negative values
+#Depending on which direction I'm looking in
+
+#TODO: Error checking for in case there are no stores in one quadrant
+#This should literally never happen in the real world but it's good to be safe
+
+
+#I need to add a new column to api_stores for the differences in the lat and
+#long, but based on math from existing columns
+
+#This is adding the columns with the difference, but with Lake view Foods, 
+#it only has one negative value
+df_geocode
+api_stores$Lat_Diff <- with(api_stores, as.numeric(api_stores$Lat) - as.numeric(df_geocode$lat))
+api_stores$Long_Diff <- with(api_stores, as.numeric(api_stores$Long-df_geocode$lng))
+print(api_stores)
+
+print(min(api_stores$Lat))
 
 ```

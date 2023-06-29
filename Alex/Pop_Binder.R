@@ -1,11 +1,22 @@
 #'@author Alex Cory
-#'@params address must be in the standard google maps form
+#'@params address the address must be in the standard Google maps form
+#'@description
+#'Function that takes in an address and returns a dataframe with data on county
+#'cities and populations
 #'
-#'@example Pop_Binder(""23 Main St, Lake View, IA, Unites States, Iowa")
+#'@example Pop_Binder("23 Main St, Lake View, IA, Unites States, Iowa")
+
+library(stringr)
+library(ggmap)
+library(tidyr)
+ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
+
 
 Pop_Binder <- function(address) {
-  splt_addr <- as.list(strsplit(address, ", ")[[1]])
-  names(splt_addr) <- c("street", "city", "state_abbv", "country", "state")
+  splt_addr <<- as.list(strsplit(address, ", ")[[1]])
+  names(splt_addr) <<- c("street", "city", "state_abbv", "country", "state")
+  #Doing this because I want to use this variable in Metro_Pop
+  splt_addr <<- splt_addr
 
 
   geocoded_address <- geocode(location = address, output = "all")
@@ -31,6 +42,9 @@ Pop_Binder <- function(address) {
   place_pop$NAME <- gsub( " city", "", as.character(place_pop$NAME))
   place_pop$NAME <- gsub( " CDP", "", as.character(place_pop$NAME))
   place_pop <- separate(data = place_pop, col = NAME, into = c("City", "State"), sep = ";")
+
+
+
 
 
 
