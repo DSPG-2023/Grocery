@@ -6,7 +6,7 @@
 
 
 Address_Parser <- function(address) {
-  splt_addr <<- as.list(strsplit(address, ", ")[[1]])
-  names(splt_addr) <<- c("street", "city", "state_abbv", "country", "state")
+  splt_addr <- as.list(strsplit(address, ", ")[[1]])
+  names(splt_addr) <- c("street", "city", "state_abbv", "country", "state")
   return(splt_addr)
 }
