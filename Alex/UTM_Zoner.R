@@ -3,15 +3,16 @@
 #'UTM zone
 #'
 #'@params lng longitude
+#'@return zone the UTM zone
 
 
 UTM_Zoner <- function(lng) {
   counter = 180
-
-  i <- 0
+  zone <- 0
   while(counter > lng)
   {
-    i = i + 1
+    zone = zone + 1
     counter = counter - 6
   }
+  return(zone)
 }

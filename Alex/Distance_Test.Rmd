@@ -1,6 +1,7 @@
 
 ```{r}
 library(dplyr)
+library(oce)
 ```
 
 ```{r}
@@ -22,7 +23,9 @@ df_places_grocery
 #This step is completely unnecessary, but the original DF
 #had awful column names and I didn't want to have to look at all 
 #the other columns
-api_stores <- data.frame(Lat = df_places_grocery$geometry$location$lat, Long = df_places_grocery$geometry$location$lng, Name = df_places_grocery$name)
+api_stores <- data.frame( Name = df_places_grocery$name, 
+                          Lat = df_places_grocery$geometry$location$lat,
+                          Long = df_places_grocery$geometry$location$lng)
 
 View(api_stores)
 
@@ -35,18 +38,29 @@ View(api_stores)
 #Depending on which direction I'm looking in
 
 #TODO: Error checking for in case there are no stores in one quadrant
-#This should literally never happen in the real world but it's good to be safe
 
+df_geocode
+#api_stores$UTM <- with(api_stores, oce::lonlat2utm(longitude = df_geocode$lng, 
+#                                                   latitude = df_geocode$lat,
+#                                                   zone = UTM_Zoner(lng = df_geocode$lng)))
 
-#I need to add a new column to api_stores for the differences in the lat and
-#long, but based on math from existing columns
+UTM_df <- oce::lonlat2utm(longitude = api_stores$Long, 
+                latitude = api_stores$Lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+#This works, but we lose accuracy every 6 degrees of longitude. This is because we are just using the zone from the first store instead of using a different longitude for each store.
+api_stores <- cbind(api_stores, UTM_df)
+
 
 #This is adding the columns with the difference, but with Lake view Foods, 
 #it only has one negative value
 df_geocode
-api_stores$Lat_Diff <- with(api_stores, as.numeric(api_stores$Lat) - as.numeric(df_geocode$lat))
-api_stores$Long_Diff <- with(api_stores, as.numeric(api_stores$Long-df_geocode$lng))
+api_stores$Lat_Diff <- with(api_stores, as.numeric(api_stores$Lat) -
+                              as.numeric(df_geocode$lat))
+api_stores$Long_Diff <- with(api_stores, as.numeric(api_stores$Long) - 
+                               as.numeric(df_geocode$lng))
 print(api_stores)
+
+print(api_stores$Lat[1] - df_geocode$lat[1])
 
 print(min(api_stores$Lat))
 
