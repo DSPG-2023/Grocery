@@ -34,27 +34,51 @@ api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocod
   
 ```
 
-```{r}
-origin_var = c(df_geocode$lat, df_geocode$lng)
-end_var = matrix(c(api_stores$Lat, api_stores$Long), ncol = 2)
 
-euc_test <- function(origin = origin_var, end = end_var) {
-  sqrt(sum((end - origin)^2)) 
+## Function Calculation Euclidean Distance From a Single Origin Point
+### FUNCTION - Distance_Euclidean()
+```{r}
+#' Calculates Euclidean Distance from an Origin point to End Points
+#' 
+#' @description The function calculates the euclidian distance from a provided origin
+#' point to provided end points. The origin and param parameters should be provided
+#' in a vector format. 
+#' 
+#' @param df this is the data frame containing the latitude and longitude points
+#' to which the distance column will be binded to.
+#' @param origin this is a vector containing a single latitude and longitude point
+#' to be used as the origin point.
+#' @param end this is a matrix of latitude and longitude points to be used as the 
+#' end points.
+#' 
+#' @returns The function returns df_new, a data frame that has the distance calculations
+#' appended in the distance_vector column.
+
+Distance_Euclidean <- function(df, origin, end) {
+
+  end_matrix = matrix(end, ncol = 2)
+  
+  distance_vector <- apply(end_matrix, 1, function(origin, end) {
+    sqrt(sum((end_matrix - origin)^2))
+  })
+  
+  df_new <<- cbind(df, distance_vector)
 }
-
-distance_vector <- apply(end_var, 1, euc_test)
 ```
 
+#### FUNCTION TEST - Assign Test Variables
 ```{r}
-cbind(end_var, distance_vector)
+# Save variables for testing.
+
+origin_test <- c(df_geocode$lat, df_geocode$lng)
+end_test <- matrix(c(api_stores$Lat, api_stores$Long), ncol = 2)
 ```
 
-
+#### FUNCTION TEST - Call Function
 ```{r}
-Dist_Test <- Calculate_Distance(api_stores, 
-                   origin = c(df_geocode$lat, df_geocode$lng),  
-                   end = c(api_stores$Lat, api_stores$Long))
+Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
 ```
+
 
 
 
