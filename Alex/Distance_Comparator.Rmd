@@ -1,0 +1,34 @@
+```{r}
+library(dplyr)
+```
+```{r}
+#This is the DF from the Google API call. Can be found in Harun/StoresOutputAPI.rmd
+df_places_grocery
+```
+```{r}
+#Algorithm:
+#four variables, nearest NESW
+#for loop 
+#four if else statements, compares lat long to origin
+#check if distance is smaller than the nearest point in that direction
+#how to deal with no stores in quadrant
+
+
+
+#Creates a new dataframe with the Lat, Long, and Name columns
+#This step is completely unnecessary, but the original DF
+#had awful column names and I didn't want to have to look at all 
+#the other columns
+api_stores <- data.frame( Name = df_places_grocery$name, 
+                          Lat = df_places_grocery$geometry$location$lat,
+                          Long = df_places_grocery$geometry$location$lng)
+
+View(api_stores)
+
+
+api_stores %>% mutate(Distance = dist(method = "euclidean", diag = TRUE, x=api_stores$Lat))
+
+
+
+
+```
