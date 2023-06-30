@@ -4,6 +4,7 @@ library(dplyr)
 ```{r}
 #This is the DF from the Google API call. Can be found in Harun/StoresOutputAPI.rmd
 df_places_grocery
+head(df_geocode)
 ```
 ```{r}
 #Algorithm:
@@ -25,9 +26,15 @@ api_stores <- data.frame( Name = df_places_grocery$name,
 
 View(api_stores)
 
+#Defines euclidean distance function
+euclidean <- function(a, b) sqrt(sum((a - b)^2))
 
-api_stores %>% mutate(Distance = dist(method = "euclidean", diag = TRUE, x=api_stores$Lat))
 
+api_stores %>% mutate(Distance = euclidean(a <- c(Lat, Long), b<- c(df_geocode$lat, df_geocode$lng)))
+  
+
+  
+  
 
 
 
