@@ -35,15 +35,27 @@ api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocod
 ```
 
 ```{r}
-test <- function(a, b) {
-  sqrt(sum((a - b)^2))
+origin_var = c(df_geocode$lat, df_geocode$lng)
+end_var = matrix(c(api_stores$Lat, api_stores$Long), ncol = 2)
+
+euc_test <- function(origin = origin_var, end = end_var) {
+  sqrt(sum((end - origin)^2)) 
 }
 
-v_test <- Vectorize(test)
+distance_vector <- apply(end_var, 1, euc_test)
 ```
 
 ```{r}
-api_stores %>% mutate(Distance = v_test(a = api_stores$Lat, b = api_stores$Long))
+cbind(end_var, distance_vector)
 ```
+
+
+```{r}
+Dist_Test <- Calculate_Distance(api_stores, 
+                   origin = c(df_geocode$lat, df_geocode$lng),  
+                   end = c(api_stores$Lat, api_stores$Long))
+```
+
+
 
 
