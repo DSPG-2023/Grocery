@@ -30,12 +30,20 @@ View(api_stores)
 euclidean <- function(a, b) sqrt(sum((a - b)^2))
 
 
-api_stores %>% mutate(Distance = euclidean(a <- c(Lat, Long), b<- c(df_geocode$lat, df_geocode$lng)))
+api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
   
-
-  
-  
-
-
-
 ```
+
+```{r}
+test <- function(a, b) {
+  sqrt(sum((a - b)^2))
+}
+
+v_test <- Vectorize(test)
+```
+
+```{r}
+api_stores %>% mutate(Distance = v_test(a = api_stores$Lat, b = api_stores$Long))
+```
+
+
