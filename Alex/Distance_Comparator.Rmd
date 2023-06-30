@@ -26,9 +26,22 @@ api_stores <- data.frame( Name = df_places_grocery$name,
 
 View(api_stores)
 
-#Defines euclidean distance function
-euclidean <- function(a, b) sqrt(sum((a - b)^2))
 
+#Add Northing and Easting Columns
+UTM_geo <- oce::lonlat2utm(longitude = df_geocode$lng, 
+                latitude = df_geocode$lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+df_geocode <- cbind(df_geocode, UTM_geo)
+
+UTM_df <- oce::lonlat2utm(longitude = api_stores$Long, 
+                latitude = api_stores$Lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+api_stores <- cbind(api_stores, UTM_df)
+
+
+#Defines euclidean distance function
+#euclidean <- function(a, b) sqrt(sum((a - b)^2))
+#Depriciated, use Harun's function
 
 api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
   
@@ -70,13 +83,20 @@ Distance_Euclidean <- function(df, origin, end) {
 ```{r}
 # Save variables for testing.
 
-origin_test <- c(df_geocode$lat, df_geocode$lng)
-end_test <- matrix(c(api_stores$Lat, api_stores$Long), ncol = 2)
+origin_test <- c(df_geocode$easting, df_geocode$northing)
+end_test <- matrix(c(api_stores$easting, api_stores$northing), ncol = 2)
 ```
 
 #### FUNCTION TEST - Call Function
 ```{r}
 Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
+head(df_new)
+```
+```{r}
+
+#oh my god why does this not filter anything
+northeast_dist <- df_new %>% filter(df_new$northing[1] > df_geocode$northing && df_new$easting[1] > df_geocode$easting)
+
 ```
 
 
