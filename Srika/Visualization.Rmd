@@ -223,9 +223,6 @@ sales_non_chain_grocery <- non_chain_grocery_store_data%>%
 ggplotly(sales_non_chain_grocery)
 ```
 
-```{r}
-
-```
 
 
 ```{r}
@@ -375,9 +372,9 @@ city_group_all_sales <- city_group_all_grocery_clean%>%
                                 filter(!(GrpCode %in% county))%>%
                                 ggplot(aes(x =GrpCode)) +
   geom_bar(position = "stack") +
-  ggtitle("Number of grocery Stores in different classification groups") +
+  ggtitle("Number of Cities in different classification groups") +
   xlab("City group Classification code") + 
-  ylab("Number of Stores")+
+  ylab("Number of Cities")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_all_sales)
 ```
@@ -388,7 +385,7 @@ city_group_chain_sales <- city_group_chain_grocery_clean%>%
   geom_bar(position = "stack") +
   ggtitle("Number of chain grocery Stores in different classification groups") +
   xlab("City group Classification code") + 
-  ylab("Number of Stores")+
+  ylab("Number of Cities")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_chain_sales)
 ```
@@ -462,10 +459,11 @@ ggplotly(popratio)
 scatter_pop_num_grocery <-storetype_grp_pop%>%
   filter(total_grocery>0)%>%
   filter(!(GrpCode %in% county))%>%
-  plot_ly(x =~Pop20, y =~total_grocery,color=~GrpCode)
-  scatter_pop_num_grocery<-scatter_pop_num_grocery %>% 
-    layout(title = 'Number of grocery stores by population')
-scatter_pop_num_grocery
+  ggplot(aes(x = Pop20, y = total_grocery, color = factor(GrpCode))) +
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+ggplotly(scatter_pop_num_grocery)
 ```
 
 
@@ -481,7 +479,7 @@ ggplotly(rucc_pop_num_grocery)
 
 ```{r}
 ncg_ds_cg_plot <-storetype_rucc_pop%>%
-  filter(total_grocery>2)%>%
+  filter(total_grocery>3)%>%
   pivot_longer(cols =c(NCG_count,CG_count,DS_count),
                                names_to = "Store_Type",
                                values_to = "Count")
@@ -489,8 +487,8 @@ ncg_ds_cg_plot <-storetype_rucc_pop%>%
   ggplot(ncg_ds_cg_plot, aes(x = Mailing_City, y = Count, fill = Store_Type)) +
   geom_bar(position="dodge", stat="identity")+
     theme(axis.text.x = element_text(angle = 90, hjust = 1))+
-    ggtitle("Distribution of diferrent type of store") +
-    labs(subtitle = "By Mailing City")+
+    ggtitle("Distribution of diferrent type of stores By Mailing City") +
+    labs(subtitle = "Chain,Non chain Grocery stores and Dollar Stores")+
     xlab("Mailing_City") + 
     ylab("Number_Of Stores")
   ggplotly()
@@ -547,6 +545,7 @@ PGs<-PGs%>%
 
 ```{r}
 PGs_plot <-PGs%>%
+  filter(!(GrpCode %in% county))%>%
   pivot_longer(cols =c(NCG_count,CG_count,DS_count),
                                names_to = "Store_Type",
                                values_to = "Count")
@@ -554,7 +553,7 @@ PGs_plot <-PGs%>%
   ggplot(PGs_plot, aes(x = GrpCode, y = Count, fill = Store_Type)) +
   geom_bar(position="dodge", stat="identity")+
     theme(axis.text.x = element_text(angle = 90, hjust = 1))+
-    ggtitle("Distribution of diferrent type of store") +
+    ggtitle("Distribution of diferrent type of stores") +
     labs(subtitle = "By City group Classification")+
     xlab("Group_Code") + 
     ylab("Number_Of Stores")
