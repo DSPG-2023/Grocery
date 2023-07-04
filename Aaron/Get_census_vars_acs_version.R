@@ -14,7 +14,11 @@ state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
 
 df <- cbind.data.frame(county, state)
 
-var_vector <- c("B19013_001", "B23025_002", "C16001_001", "C16001_002")
+var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001", "C16001_002",
+                "C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018",
+                "C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036")
+
+
 
 # Variable list:
 # Median Household Income: B19013
@@ -102,12 +106,7 @@ get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
 ### Test Function ###
 
 
-result_df <- get_census_vars(df, "tract", var_vector)
+result_df <- get_census_vars_acs(df, "county", var_vector)
 
 View(result_df)
-
-library(ggplot2)
-library(tidycensus)
-
-vary <- load_variables(2021, "acs5")
 
