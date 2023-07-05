@@ -1,0 +1,105 @@
+```{r}
+library(dplyr)
+```
+```{r}
+#This is the DF from the Google API call. Can be found in Harun/StoresOutputAPI.rmd
+df_places_grocery
+head(df_geocode)
+```
+```{r}
+#Algorithm:
+#four variables, nearest NESW
+#for loop 
+#four if else statements, compares lat long to origin
+#check if distance is smaller than the nearest point in that direction
+#how to deal with no stores in quadrant
+
+
+
+#Creates a new dataframe with the Lat, Long, and Name columns
+#This step is completely unnecessary, but the original DF
+#had awful column names and I didn't want to have to look at all 
+#the other columns
+api_stores <- data.frame( Name = df_places_grocery$name, 
+                          Lat = df_places_grocery$geometry$location$lat,
+                          Long = df_places_grocery$geometry$location$lng)
+
+View(api_stores)
+
+
+#Add Northing and Easting Columns
+UTM_geo <- oce::lonlat2utm(longitude = df_geocode$lng, 
+                latitude = df_geocode$lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+df_geocode <- cbind(df_geocode, UTM_geo)
+
+UTM_df <- oce::lonlat2utm(longitude = api_stores$Long, 
+                latitude = api_stores$Lat,
+                zone = UTM_Zoner(abs(api_stores$Long[1])))
+api_stores <- cbind(api_stores, UTM_df)
+
+
+#Defines euclidean distance function
+#euclidean <- function(a, b) sqrt(sum((a - b)^2))
+#Depriciated, use Harun's function
+
+api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
+  
+```
+
+
+## Function Calculation Euclidean Distance From a Single Origin Point
+### FUNCTION - Distance_Euclidean()
+```{r}
+#' Calculates Euclidean Distance from an Origin point to End Points
+#' 
+#' @description The function calculates the euclidian distance from a provided origin
+#' point to provided end points. The origin and param parameters should be provided
+#' in a vector format. 
+#' 
+#' @param df this is the data frame containing the latitude and longitude points
+#' to which the distance column will be binded to.
+#' @param origin this is a vector containing a single latitude and longitude point
+#' to be used as the origin point.
+#' @param end this is a matrix of latitude and longitude points to be used as the 
+#' end points.
+#' 
+#' @returns The function returns df_new, a data frame that has the distance calculations
+#' appended in the distance_vector column.
+
+Distance_Euclidean <- function(df, origin, end) {
+
+  end_matrix = matrix(end, ncol = 2)
+  
+  distance_vector <- apply(end_matrix, 1, function(origin, end) {
+    sqrt(sum((end_matrix - origin)^2))
+  })
+  
+  df_new <<- cbind(df, distance_vector)
+}
+```
+
+#### FUNCTION TEST - Assign Test Variables
+```{r}
+# Save variables for testing.
+
+origin_test <- c(df_geocode$easting, df_geocode$northing)
+end_test <- matrix(c(api_stores$easting, api_stores$northing), ncol = 2)
+```
+
+#### FUNCTION TEST - Call Function
+```{r}
+Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
+head(df_new)
+```
+```{r}
+
+#oh my god why does this not filter anything
+northeast_dist <- df_new %>% filter(df_new$northing[1] > df_geocode$northing && df_new$easting[1] > df_geocode$easting)
+
+```
+
+
+
+
+

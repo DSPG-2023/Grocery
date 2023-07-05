@@ -11,7 +11,7 @@ Address_Parser(address)
 }
 \value{
 splt_addr a data frame with columns street, city,
-state abbreviation, county, and state\
+state abbreviation, county, and state
 }
 \description{
 takes in an address string separated by commas and returns the

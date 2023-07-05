@@ -64,7 +64,7 @@ sf_grocery_polygon_union <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs =
 
 ## Making store points
 ```{r}
-sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"), crs = 4326)
+sf_grocery_points <- st_as_sf(df_grocery, coords = c("lng", "lat"))
 ```
 
 ## Creating a bounding box from points
@@ -217,7 +217,22 @@ leaflet() %>%
   addCircleMarkers(lng = df_grocery$lng, lat = df_grocery$lat, color= 'green', popup = df_grocery$name, radius = 10)
 ```
 
+# Test
+```{r}
+Grocery_Store_Map()
+```
 
+```{r}
+leaflet() %>%
+  addProviderTiles(providers$OpenStreetMap) %>%
+  addPolygons(data = StoreInfo$grocery_counties_inter, 
+              fillOpacity = 0.05, 
+              fillColor = 'darkred', 
+              color = 'black',
+              opacity = .5) %>%
+  addPolygons(data = StoreInfo$grocery_cities_inter, fillColor = 'blue', popup = StoreInfo$grocery_cities_inter$NAME.x) %>%
+  addCircleMarkers(lng = StoreInfo$df_grocery$lng, lat = StoreInfo$df_grocery$lat, color= 'green', popup = StoreInfo$df_grocery$name, radius = 10)
+```
 
 
 
