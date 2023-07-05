@@ -11,7 +11,7 @@ library(tidycensus)
 ########################################################################################
 
 
-### NOTE: this version of the function outputs WIDE data frames ###
+### NOTE: this version of the function outputs decennial data ###
 
 # Make mock dataframe (3 Iowa counties, 2 Illinois counties):
 
@@ -24,18 +24,9 @@ df <- cbind.data.frame(county, state)
 
 # Created variable list
 
-raceList = c("White" = "P1_003N", "Black" = "P1_004N", "American Indian/Alaskan Native" = "P1_005N", "Asian" = "P1_006N", "Native Hawaiian/Pacific Islander" = "P1_007N", "Other" = "P1_008N")
-
-race_counties <- get_decennial(geography = "county",
-                               variables = raceList,
-                               state = "IA",
-                               county = c("Buchanan County", "Chickasaw County", "Grundy County", "Story County"),
-                               year = 2020)
-
-race_counties
-
-# Variable list:
-# Median Household Income: B19013
+decennialList = c("White" = "P1_003N", "Black" = "P1_004N", "American Indian/Alaskan Native" = "P1_005N",
+                  "Asian" = "P1_006N", "Native Hawaiian/Pacific Islander" = "P1_007N", "Other" = "P1_008N",
+                  "Total" = "P2_001N", "Hispanic/Latino" = "P2_002N", "Not_Hispanic/Latino" = "P2_003N")
 
 
 
@@ -97,6 +88,6 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 ## Test Function ##
 
 
-race_df <- get_census_vars_decennial(df, "county", var_vector = raceList)
+decennial_df <- get_census_vars_decennial(df, "county", var_vector = decennialList)
 
-View(race_df)
+View(decennial_df)
