@@ -7,11 +7,11 @@
 Address_Parser(address)
 }
 \arguments{
-\item{address}{address the address as a character to be parsed.}
+\item{address}{the address as a character to be parsed.}
 }
 \value{
-splt_addr a data frame with columns street, city,
-state abbreviation, county, and state
+split_addr a data frame with columns street, city,
+state abbreviation, county, and state.
 }
 \description{
 takes in an address string separated by commas and returns the

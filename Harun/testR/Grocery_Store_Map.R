@@ -25,7 +25,7 @@ library(tidycensus)
 library(tigris)
 library(DSPGGrocery)
 
-Grocery_Store_Map <- function(address = "23 Main St, Lake View, IA, United States, Iowa",
+Grocery_Store_Map <- function(address = "23 Main St, Lake View, Iowa",
                          api_key = Sys.getenv("PLACES_KEY"),
                          keyword = "grocery") {
 
@@ -100,13 +100,11 @@ Grocery_Store_Map <- function(address = "23 Main St, Lake View, IA, United State
 
   # Determining polygon intersections
   ## Hull and County intersection
-  grocery_counties_inter <- grocery_hull %>%
-    st_intersection(all_state_counties)
+  grocery_counties_inter <- st_intersection(all_state_counties, grocery_hull)
 
 
   ## Hull and Cities intersection
-  grocery_cities_inter <- grocery_hull %>%
-    st_intersection(all_state_cities)
+  grocery_cities_inter <-st_intersection(all_state_cities, grocery_hull)
 
 
 

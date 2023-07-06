@@ -1,16 +1,19 @@
+#'@author Alex Cory
+#'@description
+#'Determines population that does not live in a town or a city that would likely
+#'shop at the proposed store
+#'@param
+#'
+#'
+#'@return Count of people who would shop at the store who do not live in a city
 
-```{r}
-library(tidycensus)
-library(dplyr)
-library(tidyr)
 
-```
 
-```{r}
-#This function subtracts the sum of all the towns populations from the county and multiplies it
-  #by the percent of the county that the area covers to find the # of rural people there are
+Auto_Rural <- function() {
 
-  city_df <- data.frame(state = "Iowa", county = "Sac")
+  #Jay's function takes a two value dataframe with state and county.
+  #Take the values from bound_df
+  city_df <- data.frame(state = bound_df$State, county = bound_df$County)
   city_in_county <- get_cities_in_county(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
@@ -37,15 +40,27 @@ library(tidyr)
 
   bound_df <- merge(county_cities_df, place_pop, by='City')
   sum_val = 0
-  county_pop <- 9814
+
+  #NEED COUNTY_POP TODO
+
+  county_pop_df <- get_decennial(year = 2020,
+                  geography = "county",
+                  variables = "DP1_0001C",
+                  sumfile = "dp",
+                  state = bound_df$State)
+  #String cleaning
+  county_pop_df$NAME <- gsub( " County", "", as.character(county_pop_df$NAME))
+  county_pop_df <- separate(data = county_pop_df, col = NAME, into = c("County", "State"), sep = ", ")
+  county_pop_df <- county_pop_df %>% filter(county_pop_df$County == bound_df$County[1])
+  county_pop <- county_pop_df$value
+
   pct_county <- Pct_County(north_val, east_val, south_val, west_val, 1500*.62137119)
   for(i in 1:nrow(bound_df)) {
     sum_val = sum_val + as.numeric(bound_df$value[i])
   }
-  rural <- ((sum_val / county_pop) * pct_county)
-  
-```
-
+  rural <- ((county_pop - sum_val) * pct_county)
+  return(rural)
+}
 
 
 

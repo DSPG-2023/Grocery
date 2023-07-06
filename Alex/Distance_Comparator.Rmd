@@ -24,7 +24,7 @@ api_stores <- data.frame( Name = df_places_grocery$name,
                           Lat = df_places_grocery$geometry$location$lat,
                           Long = df_places_grocery$geometry$location$lng)
 
-View(api_stores)
+#View(api_stores)
 
 
 #Add Northing and Easting Columns
@@ -40,9 +40,6 @@ api_stores <- cbind(api_stores, UTM_df)
 
 
 #Defines euclidean distance function
-#euclidean <- function(a, b) sqrt(sum((a - b)^2))
-#Depriciated, use Harun's function
-
 api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
   
 ```
@@ -92,14 +89,29 @@ end_test <- matrix(c(api_stores$easting, api_stores$northing), ncol = 2)
 Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
 head(df_new)
 ```
+
+# Create Dataframes with stores in each quadrant
 ```{r}
+#Creates a new dataframe with all of the stores in each quadrant
+northeast_stores <- df_new %>% filter(as.numeric(df_new$northing) > as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) > as.numeric(df_geocode$easting[1]))
 
-#oh my god why does this not filter anything
-northeast_dist <- df_new %>% filter(df_new$northing[1] > df_geocode$northing && df_new$easting[1] > df_geocode$easting)
+northwest_stores <- df_new %>% filter(as.numeric(df_new$northing) > as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) < as.numeric(df_geocode$easting[1]))
 
+
+southeast_stores <- df_new %>% filter(as.numeric(df_new$northing) < as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) > as.numeric(df_geocode$easting[1]))
+
+southwest_stores <- df_new %>% filter(as.numeric(df_new$northing) < as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) < as.numeric(df_geocode$easting[1]))
 ```
 
+# Find distance to nearest in each quadrant
+```{r}
+#I guess in a convertion somewhere the value is being squared. Square rooting
+#Makes this correct. 
+#Using %/%1 to remove decimal point
+northeast_dist <- sqrt(min(northeast_stores$distance_vector))%/%1
+northwest_dist <-sqrt(min(northwest_stores$distance_vector))%/%1
+southeast_dist <- sqrt(min(southeast_stores$distance_vector))%/%1
+southwest_dist <- sqrt(min(southwest_stores$distance_vector))%/%1
 
 
-
-
+```

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Operating_Income_Loss.R
 \name{Operating_Income_Loss}
 \alias{Operating_Income_Loss}
-\title{Calculation of the operating income (loss)}
+\title{Calculation of the Operating Income (loss)}
 \usage{
 Operating_Income_Loss(
   Total_Estimated_Revenue,
@@ -15,16 +15,19 @@ Operating_Income_Loss(
 \item{Gross_Margin_Percentage}{Percentage of revenue as gross margin (default from Bizminer)}
 }
 \value{
-Outputs difference between total estimated revenue and aggregated expenses (in dollars)
+Outputs difference between total estimated revenue and aggregated expenses
+(in dollars)
 }
 \description{
-Calculation of the operating income (loss)
+Calculation of the Operating Income (loss)
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
-Functions called: Cost_of_Goods_Sold, Officer_Compensation, Employee_Wages, Other_Operating_Expense
+This function is taken from the "Estimating_Expenses.xlsx" sheet and
+calculated in Step Six)
+Functions called: Cost_of_Goods_Sold, Officer_Compensation, Employee_Wages,
+Other_Operating_Expense
 }
 \examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000, Gross_Margin_Percentage = .2446)
+Employee_Wages(Total_Estimated_Revenue = 2000000)
 
 }

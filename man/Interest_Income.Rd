@@ -18,9 +18,10 @@ Outputs first-year interest income (in dollars)
 Calculation of Interest Income
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Eight.
+This function is taken from the "Estimating_Expenses.xlsx" sheet and
+calculated in Step Eight.
 }
 \examples{
-# Interest_Income(Total_Estimated_Revenue = 2000000, Percentage = .0004)
+Interest_Income(Total_Estimated_Revenue = 2000000, Percentage = .0004)
 
 }

@@ -2,19 +2,24 @@
 % Please edit documentation in R/Rural_Shoppers_Count.R
 \name{Rural_Shoppers_Count}
 \alias{Rural_Shoppers_Count}
-\title{Calculation for a shoppers from Primary secondary and rare categories in a Rural Market}
+\title{Calculates Count of Rare Shoppers for a Rural Market}
 \usage{
 Rural_Shoppers_Count(pct_primary = 30, pct_secondary = 50, pct_rare = 20)
 }
 \arguments{
-\item{pct_primary, pct_secondary, pct_rare}{percentage of the county that is a primary,
-secondary and rare shopper default taken as 30,50,20\% unless specified otherwise}
+\item{pct_primary}{percentage of the county that is a primary shopper defaulted
+to 30\%.}
 
-\item{pop}{population in rural market, gotten from the Rural_Populations method}
+\item{pct_secondary}{percentage of the county that is a secondary shopper defaulted
+to 50\%.}
+
+\item{pct_rare}{percentage of the county that is a rare shopper defaulted
+to 20\%.}
 }
 \value{
-sets values for the number of primary, secondary, and rare shoppers
+number of shoppers rural shoppers based on the number of primary,
+secondary, and rare shoppers
 }
 \description{
-Calculation for a shoppers from Primary secondary and rare categories in a Rural Market
+Calculates Count of Rare Shoppers for a Rural Market
 }
