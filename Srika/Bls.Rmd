@@ -1,0 +1,30 @@
+```{r}
+library(blsR)
+```
+
+```{r}
+percent_price_increase<-function(base_year=2022,current_year=2023){
+    series <- get_series(
+    "CUUR0000SA0",
+    start_year = base_year,
+    end_year = current_year,
+    year_limit = NULL,
+    span = TRUE
+    )
+    #get_series('CUUR0000SA0')
+    cpi <- data_as_table(series$data)
+  
+    cpi_latest<-cpi[1,4]
+    cpi_base<-296.963
+    cpi_increase<-cpi_latest-cpi_base
+    pct_price_increase<-cpi_increase[1,1]
+    pct_price_increase
+}
+```
+
+
+```{r}
+percent_price_increase(2022,2023)
+```
+
+
