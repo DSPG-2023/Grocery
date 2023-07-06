@@ -12,7 +12,8 @@ Gross_Margin(Total_Estimated_Revenue, Percentage = 0.2446)
 \item{Percentage}{Percentage of Revenue as Gross Margin (Revenue - Cost of Goods)}
 }
 \value{
-Outputs Gross Margin (in dollars) depending on the percentage provided (default from Bizminer)
+Outputs Gross Margin (in dollars) depending on the percentage provided
+(default from Bizminer)
 }
 \description{
 Calculation of Gross Margin

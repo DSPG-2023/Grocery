@@ -3,7 +3,8 @@
 #'@param county_pop the population of the whole county
 #'@param towns_pop the sum of all the towns populations in the county
 #'@param pct_county the percent of the county in the area
-#'@return outputs the rural population
+#'
+#'@returns outputs the rural population
 #'
 #'@export
 

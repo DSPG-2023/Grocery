@@ -2,7 +2,7 @@
 % Please edit documentation in R/Adj_Capita_Grocery_Spend.R
 \name{Adj_Capita_Grocery_Spend}
 \alias{Adj_Capita_Grocery_Spend}
-\title{Calculates the average per capita spend adjusting the estimated price increase}
+\title{Calculates Average per Capita Spending Adjusted by Estimated Price Increase}
 \usage{
 Adj_Capita_Grocery_Spend(
   est_per_price_increase = 7,
@@ -22,11 +22,13 @@ default taken as 7 for 2023}
 Outputs the average per capita grocery spend after adjusting for the expected price increase.
 }
 \description{
-Calculates the average per capita spend adjusting the estimated price increase
+Calculates Average per Capita Spending Adjusted by Estimated Price Increase
 }
 \details{
-This function is taken from the Estimating_Revenue.xlsx and calculated in Step two. This function calls \code{Avg_Capita_Grocery_Spending()}.
+This function is taken from the Estimating_Revenue.xlsx and calculated in Step two.
+This function calls \code{Avg_Capita_Grocery_Spending()}.
 }
 \examples{
 Adj_Capita_Grocery_Spend()
+
 }

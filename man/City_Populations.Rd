@@ -2,7 +2,7 @@
 % Please edit documentation in R/City_Populations.R
 \name{City_Populations}
 \alias{City_Populations}
-\title{Calculation for population of the cities in region.}
+\title{Calculation for Population of Cities in Quarter Circle.}
 \usage{
 City_Populations(list_in)
 }
@@ -13,8 +13,9 @@ City_Populations(list_in)
 outputs sum of town populations
 }
 \description{
-Calculation for population of the cities in region.
+Calculation for Population of Cities in Quarter Circle.
 }
 \examples{
 City_Populations(list(77))
+
 }

@@ -43,7 +43,8 @@ default taken as 30\% unless specified otherwise.}
 
 \item{town_list}{list of population of towns in the neighborhood.}
 
-\item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+\item{state_index}{the ratio of the current price of the basket to the price of
+the basket during the base year}
 
 \item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
 default taken as 7 for 2023.}
@@ -64,6 +65,12 @@ in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 and Primary_Shopper_Count()
 }
 \examples{
-Total_Spend_Primary_Shoppers(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650),est_per_price_increase=7,state_index=99)
+Total_Spend_Primary_Shoppers(county_pop=18000,
+                             towns_pop=9786,
+                             pct_county=17.7,
+                             town_list=list(77),
+                             metro_list=list(2650),
+                             est_per_price_increase=7,
+                             state_index=99)
 
 }

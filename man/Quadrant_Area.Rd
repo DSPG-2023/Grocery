@@ -2,7 +2,7 @@
 % Please edit documentation in R/Quadrant_Area.R
 \name{Quadrant_Area}
 \alias{Quadrant_Area}
-\title{Calculation for a quarter circle.}
+\title{Calculates the Area for a  Quarter Circle.}
 \usage{
 Quadrant_Area(user_area)
 }
@@ -13,8 +13,9 @@ Quadrant_Area(user_area)
 outputs output_area
 }
 \description{
-Calculation for a quarter circle.
+Calculates the Area for a  Quarter Circle.
 }
 \examples{
 Quadrant_Area(user_area = 4)
+
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Interest_Expense.R
 \name{Interest_Expense}
 \alias{Interest_Expense}
-\title{Calculation of first-year interest on a loan}
+\title{Calculation of First-Year Interest on a Loan}
 \usage{
 Interest_Expense(Loan_Amount, Interest_Rate)
 }
@@ -15,12 +15,13 @@ Interest_Expense(Loan_Amount, Interest_Rate)
 Outputs first-year loan interest (in dollars)
 }
 \description{
-Calculation of first-year interest on a loan
+Calculation of First-Year Interest on a Loan
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Five.
+This function is taken from the "Estimating_Expenses.xlsx" sheet and
+calculated in Step Five.
 }
 \examples{
-# Interest_Expense(Loan_Amount = 1000000, Interest_Rate = .06)
+Interest_Expense(Loan_Amount = 1000000, Interest_Rate = .06)
 
 }

@@ -25,7 +25,7 @@ library(tidycensus)
 library(tigris)
 library(DSPGGrocery)
 
-Grocery_Store_Map <- function(address = "23 Main St, Lake View, IA, United States, Iowa",
+Grocery_Store_Map <- function(address = "23 Main St, Lake View, Iowa",
                          api_key = Sys.getenv("PLACES_KEY"),
                          keyword = "grocery") {
 

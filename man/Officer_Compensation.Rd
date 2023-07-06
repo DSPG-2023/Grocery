@@ -12,7 +12,8 @@ Officer_Compensation(Total_Estimated_Revenue, Percentage = 0.0118)
 \item{Percentage}{Percentage of revenue spent on officer compensation (default from Bizminer)}
 }
 \value{
-Outputs dollars spent on officer compensation (Total Estimated Revenue * Percentage) (in dollars)
+Outputs dollars spent on officer compensation (Total Estimated Revenue * Percentage)
+(in dollars)
 }
 \description{
 Calculation of Officer Compensation
@@ -21,6 +22,6 @@ Calculation of Officer Compensation
 This function was taken from the "Estimating_Expenses.xlsx" sheet in Step 6.
 }
 \examples{
-# Officer_Compensation(Total_Estimated_Revenue = 2000000, Percentage = .0118)
+Officer_Compensation(Total_Estimated_Revenue = 2000000, Percentage = .0118)
 
 }
