@@ -1,8 +1,3 @@
-
-
-## Function Calculation Euclidean Distance From a Single Origin Point
-### FUNCTION - Distance_Euclidean()
-
 #' Calculates Euclidean Distance from an Origin point to End Points
 #'
 #' @description The function calculates the euclidian distance from a provided origin

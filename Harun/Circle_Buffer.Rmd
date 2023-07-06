@@ -1,0 +1,72 @@
+---
+title: "Circle Buffer Function"
+author: "Harun Celik"
+date: "2023-07-06"
+output: html_document
+---
+
+```{r}
+library(googleway)
+library(dplyr)
+library(sf)
+library(tidycensus)
+library(tigris)
+library(DSPGGrocery)
+library(oce)
+```
+
+```{r, include=FALSE, eval=FALSE}
+set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# Convert the address of LakeView to a lat/long 
+```{r}
+df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+  .$results %>%
+  .$geometry %>%
+  .$location
+```
+
+# Pull the stores in LakeView with the API call
+```{r}
+df_grocery_all <- google_places(location = c(df_geocode$lat
+, df_geocode$lng), 
+                                    keyword = "grocery", 
+                                    rankby = "distance") %>%
+  .$results %>%
+  transmute(name, 
+            lat = .$geometry$location$lat, 
+            lng = .$geometry$location$lng, 
+            types,
+            vicinity)
+  
+```
+
+# Change types column from list to just first item
+```{r}
+for (item in 1:nrow(df_grocery_all)) {
+  df_grocery_all$types[item] <- df_grocery_all$types[[item]][1]
+}
+
+rm(item)
+```
+
+# Filter by the first item in types
+```{r}
+df_grocery_only <- df_grocery_all %>%
+  filter(types == "grocery_or_supermarket")
+```
+
+# Start Circling
+
+## Get dataframe of four closest points
+```{r}
+source(file = "../Alex/Distance_Comparator.R")
+source(file = "../Alex/UTM_Zoner.R")
+source(file = "../Alex/Distance_Euclidean.R")
+
+Distance_Comparator(df_places_grocery = df_grocery_only)
+```
+
+
+

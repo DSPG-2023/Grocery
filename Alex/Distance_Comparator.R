@@ -17,30 +17,20 @@ Distance_Comparator <- function(df_places_grocery) {
   #had awful column names and I didn't want to have to look at all
   #the other columns
   api_stores <- data.frame( Name = df_places_grocery$name,
-                            Lat = df_places_grocery$geometry$location$lat,
-                            Long = df_places_grocery$geometry$location$lng)
+                            Lat = df_places_grocery$lat,
+                            Long = df_places_grocery$lng)
 
   #Add Northing and Easting Columns
-  UTM_geo <- oce::lonlat2utm(longitude = df_geocode$lng,
+  UTM_geo <- lonlat2utm(longitude = df_geocode$lng,
                              latitude = df_geocode$lat,
                              zone = UTM_Zoner(abs(api_stores$Long[1])))
   df_geocode <- cbind(df_geocode, UTM_geo)
 
-  UTM_df <- oce::lonlat2utm(longitude = api_stores$Long,
+  UTM_df <- lonlat2utm(longitude = api_stores$Long,
                             latitude = api_stores$Lat,
                             zone = UTM_Zoner(abs(api_stores$Long[1])))
   api_stores <- cbind(api_stores, UTM_df)
 
-
-  #Defines euclidean distance function
-  api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
-
-
-
-
-
-
-  #### FUNCTION TEST - Assign Test Variables
 
   # Save variables for testing.
   #this is not a test I need this
