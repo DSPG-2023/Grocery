@@ -1,11 +1,11 @@
 
 
 
-#'@author Alex Cory
-#'@description
-#'Finds the distance to the nearest store in each quadrant.
-#'No return, just sets four global variables
-#'@param df_places_grocery API call with nearby stores
+#' @author Alex Cory
+#' @description
+#' Finds the distance to the nearest store in each quadrant.
+#' No return, just sets four global variables
+#' @param df_places_grocery API call with nearby stores
 
 Distance_Comparator <- function(df_places_grocery) {
 
@@ -40,13 +40,14 @@ Distance_Comparator <- function(df_places_grocery) {
   #### FUNCTION TEST - Assign Test Variables
 
   # Save variables for testing.
-
+  #this is not a test I need this
   origin_test <- c(df_geocode$easting, df_geocode$northing)
   end_test <- matrix(c(api_stores$easting, api_stores$northing), ncol = 2)
 
 
   #### FUNCTION TEST - Call Function
-
+  #this is not a test function, this is integral to the program functionality
+  #this saves a global variable named df_new with the distance appended
   Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
 
 
