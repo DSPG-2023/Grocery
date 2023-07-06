@@ -17,3 +17,58 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(DSPGGrocery)
 ```
+
+# Estimating Expenses
+
+One essential element of the calculation for store profitability is the estimation for the various expenses that a potential store owner might have to deal with when they open. Categories of expenses include:
+
+-   Cost of Goods Sold
+    -   How much of the total estimated revenue is spent on the cost of goods (inventory)?
+-   Operating Expenses
+    -   Covers expenses such as compensation for company officers, employee wages and other common operating expenses of grocery stores
+-   Asset Depreciation
+    -   Covers the annual loss from the depreciation of various assets required to own and operate a grocery store
+-   Loan Interest
+    -   Annual interest of loan payments (if a loan was taken out)
+-   Rent (if leasing building)
+    -   Annual cost of rent for a leased building
+
+Another important factor to consider is secondary sources of income. These sources may include:
+
+-   Income from interest
+
+    -   Income collected from interest-bearing assets.
+
+-   Other Income
+
+    -   This could include special services outside the revenue from sold goods alone, such as special grocery delivery services
+
+For our project, we have decided to give freedom to the user to determine the individual percentage of total estimated revenue that will be spent on each kind of expense, while also giving the user a default value to guide them. This default value is taken from Bizminer, a business data reporting platform that supplies us with the industry average percentages for each category of expense. Users will be able to:
+
+-   Switch between multiple ownership scenarios
+
+    -   3 different scenarios:
+
+        -   User owns a building.
+
+        -   User rents a building.
+
+        -   User establishes another holding company that owns a building, then rents from that company.
+
+Input their own expense percentages with interactive sliders
+
+Sliders will contain a "Bizminer Default" as a tick mark
+
+Enter in a custom list of assets to calculate the cost of depreciation
+
+Default assets are listed along with multiple boxes for custom assets
+
+Users will enter in custom dollar values for these assets
+
+Enter in custom loan and rent information
+
+Users can calculate annual interest on a loan
+
+Users can calculate annual rent from a given rate of monthly rent
+
+Ultimately, the estimated expenses will be subtracted from the total estimated revenue and the estimated secondary income will be added. This will give the user an estimate of pre-tax profit for a given store location that we hope will help them in coming to a decision.
