@@ -1,12 +1,10 @@
-#' Calculates the Area for a  Quarter Circle.
+#' Calculation for a quarter circle.
 #'
 #' @param user_area user defined area circle
-#'
-#' @returns outputs output_area
+#' @return outputs output_area
 #'
 #' @examples
 #' Quadrant_Area(user_area = 4)
-#'
 #' @export
 
 Quadrant_Area <- function(user_area) {

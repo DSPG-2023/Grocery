@@ -1,6 +1,6 @@
 #'@author Alex Cory
 #'@description Allows the user to enter a longitude and have it return the
-#'UTM zone
+#'UTM zone. Do not use this ever, because implementing this is terrible.
 #'
 #'@params lng longitude
 #'@return zone the UTM zone

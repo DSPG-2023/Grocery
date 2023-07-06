@@ -1,11 +1,9 @@
-#'@author Alex Cory
-#'@description
-#'Determines population that does not live in a town or a city that would likely
-#'shop at the proposed store
-#'@param
+#' @author Alex Cory
+#' @description
+#' Determines population that does not live in a town or a city that would likely
+#' shop at the proposed store
 #'
-#'
-#'@return Count of people who would shop at the store who do not live in a city
+#' @return Count of people who would shop at the store who do not live in a city
 
 
 

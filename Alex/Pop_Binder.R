@@ -4,7 +4,7 @@
 #'Function that takes in an address and returns a dataframe with data on county
 #'cities and populations
 #'
-#'@example Pop_Binder("23 Main St, Lake View, IA, Unites States, Iowa")
+#'@example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
 
 library(stringr)
 library(ggmap)
