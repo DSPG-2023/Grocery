@@ -1,11 +1,13 @@
-
-
-
-#'@author Alex Cory
-#'@description
-#'Finds the distance to the nearest store in each quadrant.
-#'No return, just sets four global variables
-#'@param df_places_grocery API call with nearby stores
+#'
+#' @author Alex Cory
+#'
+#' @description
+#' Finds the distance to the nearest store in each quadrant.
+#' No return, just sets four global variables
+#'
+#' @param df_places_grocery API call with nearby stores
+#'
+#' @importFrom oce lonlat2ut
 
 Distance_Comparator <- function(df_places_grocery) {
 
