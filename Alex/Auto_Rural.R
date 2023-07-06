@@ -15,6 +15,9 @@ Auto_Rural <- function() {
   city_in_county <- get_cities_in_county(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
+
+  county_name <- bound_df$County
+
   #This gives us the name of city and the population. We need to separate city
   #and state name, and then remove the city and CDP from the NAME so we can join
   #with the county_cities_list
@@ -48,11 +51,23 @@ Auto_Rural <- function() {
                   state = bound_df$State)
   #String cleaning
   county_pop_df$NAME <- gsub( " County", "", as.character(county_pop_df$NAME))
-  county_pop_df <- separate(data = county_pop_df, col = NAME, into = c("County", "State"), sep = ", ")
-  county_pop_df <- county_pop_df %>% filter(county_pop_df$County == bound_df$County[1])
+  county_pop_df <- separate(data = county_pop_df, col = NAME,
+                            into = c("County", "State"), sep = ", ")
+  #print(county_pop_df)
+  print(county_name)
+  county_pop_df <- county_pop_df %>% filter(county_pop_df$County
+                                            == county_name[1])
   county_pop <- county_pop_df$value
 
-  pct_county <- Pct_County(north_val, east_val, south_val, west_val, 1500*.62137119)
+
+#This is broken currently
+  county_tigris <- counties(state = bound_df$State)
+  county_tigris <- county_tigris %>% filter(county_tigris$NAME[1] == county_name)
+  county_size = county_tigris$ALAND + county_tigris$AWATER
+
+  pct_county <- Pct_County(northeast_dist, northwest_dist,
+                           southeast_dist, southwest_dist,
+                           county_size)
   for(i in 1:nrow(bound_df)) {
     sum_val = sum_val + as.numeric(bound_df$value[i])
   }
