@@ -2,7 +2,7 @@
 % Please edit documentation in R/Total_Estimate_Revenue.R
 \name{Total_Estimate_Revenue}
 \alias{Total_Estimate_Revenue}
-\title{Calculate the Estimated total Revenue}
+\title{Calculates the Estimated Total Revenue}
 \usage{
 Total_Estimate_Revenue(
   per_of_grocery_spend_rare = 5,
@@ -75,7 +75,8 @@ default taken as 20\% unless specified otherwise.}
 
 \item{town_list}{list of population of towns in the neighborhood.}
 
-\item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+\item{state_index}{the ratio of the current price of the basket to the price
+of the basket during the base year}
 
 \item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
 default taken as 7 for 2023.}
@@ -88,7 +89,7 @@ default taken as 7 for 2023.}
 outputs the estimated total revenue at the proposed store
 }
 \description{
-Calculate the Estimated total Revenue
+Calculates the Estimated Total Revenue
 }
 \details{
 This function is taken from the estimating Revenue.xlsx and calculated
@@ -96,6 +97,11 @@ in step 4. This function calls Total_Spend_Primary_Shoppers(),
 Total_Spend_Secondary_Shoppers() and Total_Spend_Rare_Shoppers()
 }
 \examples{
-Total_Estimate_Revenue(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650),state_index=99)
+Total_Estimate_Revenue(county_pop=18000,
+                       towns_pop=9786,
+                       pct_county=17.7,
+                       town_list=list(77),
+                       metro_list=list(2650),
+                       state_index=99)
 
 }

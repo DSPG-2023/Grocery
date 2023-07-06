@@ -82,8 +82,38 @@ num_dollar_stores <- dollar_store_data %>%
 ggplotly(num_dollar_stores)
 ```
 
+
 ```{r}
-chain_grocery_store_data$Company_Name <- str_replace(chain_grocery_store_data$Company_Name, "Hv-Vee", "Hy-Vee")
+sales_dollar <- dollar_store_data%>%
+                      filter(Location_Sales_Volume_Range!="NA")%>%
+                      ggplot(aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')),
+                              fill = Company_Name)) +
+  coord_flip()+
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for Dollar Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(sales_dollar)
+```
+
+
+```{r}
+chain_grocery_store_data$Company_Name <- str_replace_all(
+  chain_grocery_store_data$Company_Name,
+  c("Hv-Vee"= "Hy-Vee","A Hy-Vee Co"="Hy-Vee",
+    "Hy-Vee Inc"="Hy-Vee","Hy-Vee Mainstreet"="Hy-Vee",
+    "Fareway Grocery"="Fareway","Fareway Stores Inc-Meat Market"="Fareway",
+    "Fresh Thyme Farmers Market"="Fareway"))
 ```
 
 ```{r}
@@ -109,6 +139,7 @@ sales_chain_grocery <- ggplot(data = chain_grocery_store_data,
                                       '$50-100 Million',
                                       '$100-500 Million')),
                               fill = Company_Name)) +
+  coord_flip()+
             geom_bar(position = "stack") +
   ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
   xlab("Sales Volume Range") + 
@@ -131,7 +162,8 @@ sales_chain_grocery <- chain_grocery_store_data%>%
                                       '$50-100 Million',
                                       '$100-500 Million')),
                               fill = Company_Name)) +
-            geom_bar(position = "stack") +
+  coord_flip()+
+  geom_bar(position = "stack") +
   ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
   xlab("Sales Volume Range") + 
   ylab("Number of Stores")+
@@ -154,6 +186,7 @@ sales_chain_grocery_dodge <- ggplot(data = chain_grocery_store_data,
                                       '$100-500 Million')), 
                                      fill = Company_Name)) +
   geom_bar(position = "dodge") +
+  coord_flip()+
   ggtitle("Location Sales Volume distribution for Chain Grocery Stores") +
   xlab("Sales Volume Range") + 
   ylab("Number of Stores")+
@@ -220,6 +253,7 @@ sales_non_chain_grocery <- non_chain_grocery_store_data%>%
                                       '$20-50 Million',
                                       '$50-100 Million',
                                       '$100-500 Million'))))) +
+  coord_flip()+
             geom_bar(position = "stack") +
   ggtitle("Location Sales Volume Distribution for Non Chain Grocery Stores") +
   xlab("Sales Volume Range") + 
@@ -337,6 +371,7 @@ city_group_non_chain_grocery_clean<-city_group_non_chain_grocery[,c(1,4,19,25,26
 ```{r}
 city_group_chain_sales <- city_group_chain_grocery_clean%>%
                                 filter(Location_Sales_Volume_Range!="NA")%>%
+                                filter(!(GrpCode %in% county))%>%
                                 ggplot(aes(x =factor(Location_Sales_Volume_Range, 
                                      level=c('Less Than $500,000',
                                       '$500,000-1 Million',
@@ -354,6 +389,58 @@ city_group_chain_sales <- city_group_chain_grocery_clean%>%
   ylab("Number of Stores")+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ggplotly(city_group_chain_sales)
+```
+```{r}
+# Calculate the percentage for each group
+city_group_non_chain_sales <- city_group_non_chain_grocery_clean %>%
+  filter(Location_Sales_Volume_Range != "NA") %>%
+  filter(!(GrpCode %in% county)) %>%
+  group_by(Location_Sales_Volume_Range, GrpCode) %>%
+  summarise(Count = n()) %>%
+  mutate(Percentage = Count / sum(Count) * 100)
+
+# Plot the percentage
+ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), y = Percentage, fill = factor(GrpCode))) +
+  geom_bar(stat = "identity", position = "stack") +
+  coord_flip()+
+  ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
+  xlab("Sales Volume Range") +
+  ylab("Percentage of Stores") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly()
+```
+
+
+```{r}
+city_group_non_chain_sales <- city_group_non_chain_grocery_clean%>%
+                                filter(Location_Sales_Volume_Range!="NA")%>%
+                                filter(!(GrpCode %in% county))%>%
+                                ggplot(aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), 
+                                     fill = factor(GrpCode ))) +
+  geom_bar(position = "stack") +
+  ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
+  xlab("Sales Volume Range") + 
+  ylab("Number of Stores")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(city_group_non_chain_sales)
 ```
 
 
@@ -460,6 +547,23 @@ ggplotly(popratio)
 ```
 
 ```{r}
+#This graph shows the cities in Iowa which has 1 grocery store for every 500 or less customers.
+popratiobox<-storetype_grp_pop%>%
+  filter(pop_store_ratio!=Inf)%>%
+  filter(!(GrpCode %in% county))%>%
+  ggplot(aes(x = reorder(GrpCode,-pop_store_ratio), y =pop_store_ratio,fill=GrpCode)) +
+  geom_boxplot() +
+  coord_flip()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+  ggtitle("Population Grocery Store Ratio By Group Code") +
+  xlab("City Group") + 
+  ylab("Population / Number Of Stores")
+ggplotly(popratiobox)
+```
+
+
+
+```{r}
 #Population by number of grocery stores
 scatter_pop_num_grocery <-storetype_grp_pop%>%
   filter(total_grocery>0)%>%
@@ -544,8 +648,14 @@ PGCO5<-storetype_rucc_pop %>%
   filter(GrpCode == "PGCO5") %>%
   summarise(CG_count = sum(CG_count),NCG_count=sum(NCG_count),DS_count=sum(DS_count),GrpCode="PGCO5")
 PGs<-rbind(PG1,PG2,PG3,PG4,PG5A,PG5N,PG6,PG7,Rest_of_the_State,PGCO1,PGCO2,PGCO3,PGCO4,PGCO5)
-PGs<-PGs%>%
-  mutate(sum=CG_count+NCG_count+DS_count)
+PGs_filtered<-PGs%>%
+  filter(!(GrpCode %in% county))%>%
+  mutate(sum=CG_count+NCG_count+DS_count)%>%
+  mutate(grocery_alone=CG_count+NCG_count)%>%
+  mutate(CG_total=CG_count/sum(CG_count),
+         NCG_total=NCG_count/sum(NCG_count),
+         DS_total=DS_count/sum(DS_count))
+
 ```
 
 
@@ -558,11 +668,60 @@ PGs_plot <-PGs%>%
 
   ggplot(PGs_plot, aes(x = GrpCode, y = Count, fill = Store_Type)) +
   geom_bar(position="dodge", stat="identity")+
+    scale_x_discrete(labels=c("PG1" = "PG1: >=10,000 Core county of a MSA",
+                              "PG2" = "PG2: >=10,000 Non-core MSA county",
+                              "PG3" = "PG3: 2,500 to 9,999 Non-metro county",
+                              "PG4"="PG4: 2,500 to 9,999 Metro county",
+                              "PG5A"="500 to 2,499 Non-metro, 
+                              adjacent to a MSA  ",
+                              "PG5N"="500 to 2,499 Non-metro,
+                              not adjacent to a MSA  ",
+                              "PG6"="500 to 2,499 Metro county",
+                              "PG7"="250 to 499 Any county",
+                              "Rest_of_the_State"))+
     theme(axis.text.x = element_text(angle = 90, hjust = 1))+
     ggtitle("Distribution Of Different Type Of Stores") +
     labs(subtitle = "By City Group Classification")+
     xlab("Group Code") + 
     ylab("Number Of Stores")
   ggplotly()
+```
+```{r}
+PGs_pct <-PGs_filtered%>%
+  filter(!(GrpCode %in% county))%>%
+  pivot_longer(cols =c(NCG_total,CG_total,DS_total),
+                               names_to = "Store_Type",
+                               values_to = "Count")
+
+  ggplot(PGs_pct, aes(x = Store_Type, y = Count, fill =GrpCode)) +
+  geom_bar(position="stack", stat="identity")+
+    scale_x_discrete(labels=c("CG_total"="Chain_Grocery_Stores",
+                              "NCG_total"="Non_Chain_Grocery_Stores",
+                              "DS_total"="Dollar_Stores"))+
+    coord_flip()+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
+    ggtitle("Distribution Of Different Type Of Stores") +
+    labs(subtitle = "By City Group Classification")+
+    xlab("Store Type") + 
+    ylab("Percentage Of Stores")
+  ggplotly()
+```
+
+
+```{r}
+
+column_totals <- colSums(PGs[, sapply(PGs, is.numeric)])
+total_row <- data.frame(t(column_totals))
+total_row <- data.frame(Non_numeric_Column = "Total", total_row, stringsAsFactors = FALSE)
+total_row$Non_numeric_Column==total_row$GrpCode
+total_row<-total_row%>%
+  rename(GrpCode = 1)
+              
+PGs_total<-rbind(PGs,total_row)
+PGs_total
+```
+
+```{r}
+
 ```
 

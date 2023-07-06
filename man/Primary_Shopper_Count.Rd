@@ -2,7 +2,7 @@
 % Please edit documentation in R/Primary_Shopper_Count.R
 \name{Primary_Shopper_Count}
 \alias{Primary_Shopper_Count}
-\title{Calculates the number of primary shoppers in each marker}
+\title{Calculates the Number of Primary Shoppers in Each Marker}
 \usage{
 Primary_Shopper_Count(
   pct_metro_prim = 50,
@@ -39,7 +39,7 @@ default taken as 30\% unless specified otherwise.}
 outputs the total number of primary shoppers for the store
 }
 \description{
-Calculates the number of primary shoppers in each marker
+Calculates the Number of Primary Shoppers in Each Marker
 }
 \details{
 This function is taken from the estimating Market Size.xlsx
@@ -47,6 +47,10 @@ and calculated in step 6. This function calls Rural_Population() and
 City_Populations()
 }
 \examples{
-Primary_Shopper_Count(county_pop=18000,towns_pop=9786,pct_county=17.7,town_list=list(77),metro_list=list(2650))
+Primary_Shopper_Count(county_pop=18000,
+                     towns_pop=9786,
+                     pct_county=17.7,
+                     town_list=list(77),
+                     metro_list=list(2650))
 
 }

@@ -16,9 +16,6 @@ Outputs Annual Rent (in dollars)
 Calculation of Annual Rent
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Four
-}
-\examples{
-# Annual_Rent(Monthly_Building_Rent, Other_Rent_1, Other_Rent_2)
-
+This function is taken from the "Estimating_Expenses.xlsx" sheet and
+calculated in Step Four
 }

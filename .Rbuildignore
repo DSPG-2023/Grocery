@@ -5,3 +5,9 @@ Harun/
 Srika/
 Alex/
 ProjectData/
+Test/
+^LICENSE\.md$
+^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

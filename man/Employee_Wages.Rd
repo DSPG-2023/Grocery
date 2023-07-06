@@ -18,9 +18,10 @@ Outputs dollars spent on employee wages (based off of provided percentage)
 Calculation of Employee Wages
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
+This function is taken from the "Estimating_Expenses.xlsx" sheet and
+calculated in Step Six.
 }
 \examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = .0942)
+Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = .0942)
 
 }

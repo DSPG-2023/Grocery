@@ -2,7 +2,7 @@
 % Please edit documentation in R/State_Adj_Capita_Grocery_Spend.R
 \name{State_Adj_Capita_Grocery_Spend}
 \alias{State_Adj_Capita_Grocery_Spend}
-\title{Calculates the average per capita spend adjusting the estimated price increase and state index}
+\title{Calculates Average per Capita Spending Adjusted by Estimated Price Increase and State Index}
 \usage{
 State_Adj_Capita_Grocery_Spend(
   state_index,
@@ -12,7 +12,8 @@ State_Adj_Capita_Grocery_Spend(
 )
 }
 \arguments{
-\item{state_index}{the ratio of the current price of the basket to the price of the basket during the base year}
+\item{state_index}{the ratio of the current price of the basket to the price of the
+basket during the base year}
 
 \item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
 default taken as 7 for 2023.}
@@ -22,13 +23,15 @@ default taken as 7 for 2023.}
 \item{population}{Total US population. Default value is 334233854.}
 }
 \value{
-outputs the average per capita grocery spend after adjusting for the expected price increase and state index
+outputs the average per capita grocery spend after adjusting for the expected
+price increase and state index
 }
 \description{
-Calculates the average per capita spend adjusting the estimated price increase and state index
+Calculates Average per Capita Spending Adjusted by Estimated Price Increase and State Index
 }
 \details{
-This function is taken from the Estimating_Revenue.xlsx and calculated in Step three. This function calls \code{Adj_Capita_Grocery_Spend()}.
+This function is taken from the Estimating_Revenue.xlsx and calculated in Step three.
+This function calls \code{Adj_Capita_Grocery_Spend()}.
 }
 \examples{
 State_Adj_Capita_Grocery_Spend(99,7)
