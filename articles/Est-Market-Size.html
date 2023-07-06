@@ -82,13 +82,47 @@
 <div class="section level2">
 <h2 id="dspggrocery-current-operations">DSPGGrocery Current Operations<a class="anchor" aria-label="anchor" href="#dspggrocery-current-operations"></a>
 </h2>
+<p>Estimating market size has three main components. Metro population,
+population, and rural population. Metro population is the number of
+people who live in the town the proposed grocery store will be in.
+Determining this is as simple as parsing the name of the town and using
+tidycensus to get the population. Next is the populations of the towns
+around where we are building the store. This is more complicated, we are
+using a buffer around the city to figure out the names of these towns,
+and then from there we can use a loop and tidycensus. Rural population
+is the people who don’t live in a city. We can figure this out very
+roughly by figuring out all the people who live in the county, and then
+subtracting all the people that live in all the cities in that county.
+We then multiply this by the percentage of the area of the county
+covered by our market area. This is constricted by counties, and gives a
+very rough estimate.</p>
+<p>For our calculations we are estimating the area covered by our trade
+area by finding the distance to the nearest store in each quadrant (NE,
+NW, SE, SW). We use that distance as the radius of a quarter circle to
+figure out how much reach our store has. This is a very bad way of
+determining the market region as the only thing it takes into account is
+distance to the closest store, and also ignores the radius that the
+other store would have. A more elegant solution to this would be Voronoi
+polygons or Reilly’s law of Retail Gravitation.</p>
 </div>
 <div class="section level2">
 <h2 id="alternates">Alternates<a class="anchor" aria-label="anchor" href="#alternates"></a>
 </h2>
 <div class="section level3">
-<h3 id="reillys">Reillys<a class="anchor" aria-label="anchor" href="#reillys"></a>
+<h3 id="voronoi">Voronoi<a class="anchor" aria-label="anchor" href="#voronoi"></a>
 </h3>
+<p>A Voronoi Polygon is a polygon defined where all points in a region
+would be closer to a parent node than any other nodes. This would show
+us a more accurate estimate of the market area because it would take the
+other store into account because people who live nearer to that store
+than our store would most likely choose to shop at that one instead. ##
+Reillys Law Reilly’s law is an economic principle that states that
+people are more drawn to areas with a higher population than those with
+smaller populations. This is an excellent way to estimate market area,
+but is the most involved of the three. Maps are usually edited by hand
+to account for geographic barriers such as rivers, and there are various
+limitations such as the populations of the two cities having to be
+relatively similar.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DSPGGrocery</span><span class="op">)</span></span></code></pre></div>
 </div>
