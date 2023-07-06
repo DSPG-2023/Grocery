@@ -33,7 +33,7 @@ Distance_Comparator <- function(df_places_grocery) {
 
 
   #Defines euclidean distance function
-  api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
+  #api_stores %>% mutate(Distance = c(euclidean(a <- c(Lat, Long), b <- c(df_geocode$lat, df_geocode$lng))))
 
 
 
