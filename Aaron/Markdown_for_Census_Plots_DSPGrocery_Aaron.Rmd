@@ -1,0 +1,385 @@
+---
+title: "Grocery_plots_census_data"
+author: "Aaron Null"
+date: "2023-07-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Plots for Grocery App: Census data
+
+## Loading the data
+
+### Loading libraries
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(scales)
+library(plotly)
+library(tidycensus)
+library(DT)
+library(forcats)
+library(ggokabeito)
+library(tidyr)
+```
+
+### ACS5:
+
+```{r}
+# Make mock dataframe (3 Iowa counties, 2 Illinois counties):
+
+
+county <- c("Muscatine", "Cedar", "Johnson", "Menard", "Lake")
+
+state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
+
+df <- cbind.data.frame(county, state)
+
+var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001", "C16001_002",
+                "C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018",
+                "C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036")
+
+
+var_list <- c("Median_Household_Income" = "B19013_001", "Total" = "B23025_003", 
+"Employed_in_Civilian_Labor_Force" = "B23025_004", "Unemployed_in_Civilian_Labor_Force" = "B23025_005",
+"Total" = "C16001_001","Speak_only_English" = "C16001_002",
+               "Spanish"="C16001_003", "French_Haitian_or_Cajun" = "C16001_006", 
+               "Russian, Polish or other Slavic languages" = "C16001_009", "Other Indo-European languages" = "C16001_012", 
+               "Other Indo-European languages" = "C16001_015", "Korean" = "C16001_018",
+               "Chinese_incl_Mandarin_Cantonese" = "C16001_021","Vietnamese" = "C16001_024",
+               "Tagalog_incl_Filipino" = "C16001_027", "Other_Asian_and_Pacific_Island_Languages" = "C16001_030",
+               "Arabic" = "C16001_033", "Other_and_unspecified_languages" = "C16001_036")
+
+
+
+
+
+
+
+get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
+
+  library(dplyr)
+
+  state_df_list <- list()
+
+  # Get vector of states
+
+  state_vector <- unique(df$state)
+
+  # Iterate through that vector of states
+
+  for (my_state in state_vector) {
+
+    # Getting state abbreviation for TidyCensus call
+
+    state_abb <- state.abb[match(my_state,state.name)]
+
+    # Subsetting based on current state in the loop
+
+    state_df <- df[df$state==my_state,]
+
+    # Getting a vector of the counties for the current state in the loop
+
+    county_vector <- unique(state_df$county)
+
+    # Calling TidyCensus to get a data frame of the variables for the counties of the state
+    # in the loop
+
+
+    census_geos_df <- tidycensus::get_acs(geography = geography,
+                                          variables = var_vector,
+                                          state = my_state,
+                                          county = county_vector)
+
+    # Adding this data frame to the empty state_df_list above
+
+    state_df_list[[my_state]] <- census_geos_df
+
+  }
+
+  # Joining the data frames of each state in the list together into a single data frame
+
+  big_df <- bind_rows(state_df_list)
+  
+  # output big df
+  
+  return(big_df)
+
+}
+
+
+### Test Function ###
+
+
+acs_df <- get_census_vars_acs(df, "county", var_vector)
+
+acs_df
+```
+
+### Decennial:
+
+```{r}
+decennialList = c("White" = "P1_003N", "White (Not Hispanic)" = "P2_005N", 
+                  "Black" = "P1_004N", "American Indian/Alaskan Native" = "P1_005N",
+                  "Asian" = "P1_006N", "Native Hawaiian/Pacific Islander" = "P1_007N", "Other" = "P1_008N",
+                  "Two or More Races" = "P1_009N", "Hispanic/Latino" = "P2_002N")
+
+
+
+get_census_vars_decennial <- function(df, geography, var_vector) {
+
+  # Load dplyr
+
+  library(dplyr)
+
+  # Create empty list for the output data frames of each state
+
+  state_df_list <- list()
+
+  # Get vector of states
+
+  state_vector <- unique(df$state)
+
+  # Iterate through that vector of states
+
+  for (my_state in state_vector) {
+
+    # Getting state abbreviation for TidyCensus call
+
+    state_abb <- state.abb[match(my_state,state.name)]
+
+    # Subsetting based on current state in the loop
+
+    state_df <- df[df$state==my_state,]
+
+    # Getting a vector of the counties for the current state in the loop
+
+    county_vector <- unique(state_df$county)
+
+    # Calling TidyCensus to get a data frame of the variables for the counties of the state
+    # in the loop
+
+
+    census_geos_df <- tidycensus::get_decennial(geography = geography,
+                                          variables = var_vector,
+                                          state = my_state,
+                                          county = county_vector,
+                                          year = 2020,
+                                          summary_var = "P1_001N")
+
+    # Adding this data frame to the empty state_df_list above
+
+    state_df_list[[my_state]] <- census_geos_df
+
+  }
+
+  # Joining the data frames of each state in the list together into a single data frame
+
+  big_df <- bind_rows(state_df_list)
+
+  return(big_df)
+
+}
+
+## Test Function ##
+
+
+decennial_df <- get_census_vars_decennial(df, "county", var_vector = decennialList)
+
+decennial_df
+```
+
+### Median Household Income
+
+```{r}
+reduced_df_acs1 <- acs_df %>% filter(variable=="B19013_001")
+ 
+# For moe bar in plot
+
+  ymin <- reduced_df_acs1$estimate - reduced_df_acs1$moe
+  ymax <- reduced_df_acs1$estimate + reduced_df_acs1$moe
+
+## Make plot object
+
+p <- reduced_df_acs1 %>%
+  ggplot(aes(x = NAME, y = estimate, fill = NAME)) +
+  geom_bar(stat = 'identity') +
+  geom_errorbar(ymin = ymin, ymax = ymax) +
+  ggtitle("Median Household Income") +
+  scale_y_continuous(labels = scales::dollar_format()) +
+  scale_fill_okabe_ito() +
+  labs(x = NULL, y = NULL) +
+  coord_flip()
+  
+
+## Convert to plotly object
+
+plot <- plotly::ggplotly(p)
+
+plot <- plot %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+
+plot
+```
+
+### Employment Status
+
+```{r}
+
+## Filter vars from acs table
+
+Employment_status_df <- acs_df %>% filter(variable %in% c("B23025_003", "B23025_004", "B23025_005"))
+
+## Convert to wide format
+  
+Emploment_status_df_wide <- Employment_status_df %>% pivot_wider(names_from = "variable", values_from = c("estimate", "moe"))
+
+## Rename columns
+
+employment_df <- Emploment_status_df_wide %>% rename("Total" = "estimate_B23025_003", 
+  "Employed_in_Civilian_Labor_Force" = "estimate_B23025_004", 
+  "Unemployed_in_Civilian_Labor_Force" = "estimate_B23025_005",
+  "Total_moe" = "moe_B23025_003",
+  "Employed_in_Civilian_Labor_Force_moe" = "moe_B23025_004", 
+  "Unemployed_in_Civilian_Labor_Force_moe" = "moe_B23025_005")
+
+## Calculate percentage and margin of error (mutated into two new columns)
+  
+employment_df2 <- employment_df %>% 
+  mutate(Unemployment_rate = 100 * (Unemployed_in_Civilian_Labor_Force/Total), Unemployment_rate_moe = 100 * moe_prop(Unemployed_in_Civilian_Labor_Force, Total, Unemployed_in_Civilian_Labor_Force_moe, Total_moe))
+  
+## For moe bar in plot
+
+ymin2 <- employment_df2$Unemployment_rate - employment_df2$Unemployment_rate_moe
+ymax2 <- employment_df2$Unemployment_rate + employment_df2$Unemployment_rate_moe
+
+## Make plot object
+
+p2 <- employment_df2 %>%
+  ggplot(aes(x = NAME, y = Unemployment_rate, fill = NAME)) +
+  geom_bar(stat = 'identity') +
+  geom_errorbar(ymin = ymin2, ymax = ymax2, width = .2) +
+  ggtitle("Unemployment Rate") +
+  scale_fill_okabe_ito() +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.01, scale = 1),
+                     n.breaks = 8) +
+  labs(x = NULL) +
+  ylab(NULL) +
+  coord_flip()
+
+## Convert to plotly object
+
+plot2 <- plotly::ggplotly(p2)
+
+plot2 <- plot2 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+
+## Show plot
+
+plot2
+
+```
+
+## Option 2: Employment rate
+```{r}
+## Employment rate percentages ##
+
+employment_df3 <- employment_df %>% 
+  mutate(Employment_rate = 100 * (Employed_in_Civilian_Labor_Force/Total), Employment_rate_moe = 100 * moe_prop(Employed_in_Civilian_Labor_Force, Total, Employed_in_Civilian_Labor_Force_moe, Total_moe))
+  
+## For moe bar in plot
+
+ymin5 <- employment_df3$Employment_rate - employment_df3$Employment_rate_moe
+ymax5 <- employment_df3$Employment_rate + employment_df3$Employment_rate_moe
+
+## Make plot object
+
+p5 <- employment_df3 %>%
+  ggplot(aes(x = NAME, y = Employment_rate, fill = NAME)) +
+  geom_bar(stat = 'identity') +
+  geom_errorbar(ymin = ymin5, ymax = ymax5, width = .2) +
+  ggtitle("Employment Rate") +
+  scale_fill_okabe_ito() +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
+  xlab("County") +
+  ylab(NULL) +
+  coord_flip(ylim = c(80,100))
+
+## Convert to plotly object
+
+plot5 <- plotly::ggplotly(p5)
+
+plot5 <- plot5 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+
+## Show Plot
+
+plot5
+
+```
+
+### Languages Spoken:
+
+```{r}
+language_df <- acs_df %>% filter(variable %in% c("C16001_001",
+"C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018",
+"C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036"))
+
+  ## Renaming Variables
+
+language_df$variable <- forcats::fct_recode(language_df$variable, Total = "C16001_001", Spanish = "C16001_003", French_Haitian_or_Cajun = "C16001_006", German_or_other_West_Germanic_languages = "C16001_009",  Russian_Polish_or_other_Slavic_languages = "C16001_012", Other_Indo_European_languages = "C16001_015", Korean = "C16001_018", Chinese_incl_Mandarin_Cantonese = "C16001_021", Vietnamese = "C16001_024", Tagalog_incl_Filipino = "C16001_027", Other_Asian_and_Pacific_Island_Languages = "C16001_030", Arabic = "C16001_033", Other_and_unspecified_languages = "C16001_036")
+
+language_df <- language_df %>% rename(Language_Spoken = variable)
+
+
+## Pre_processing
+
+
+small_df2 <- language_df %>% group_by(NAME) %>% slice_max(estimate, n = 4)
+  
+small_df2 <- small_df2 %>% mutate(Total = estimate[Language_Spoken=="Total"], 
+Total_moe = moe[Language_Spoken=="Total"]) %>% subset(Language_Spoken != "Total") %>%       mutate(Percentage = 100 * (estimate/Total),                                                 Percentage_moe = 100 * moe_prop(estimate, Total,   moe, Total_moe))
+  
+  
+ymin4 <- small_df2$Percentage - small_df2$Percentage_moe
+ymax4 <- small_df2$Percentage + small_df2$Percentage_moe
+  
+
+### GROUPED BAR APPROACH ###
+
+p3 <- small_df2 %>% 
+  ggplot(aes(fill = Language_Spoken, y = Percentage, x = NAME)) +
+  geom_bar(position = "dodge", stat = "identity") + 
+  geom_errorbar(ymin = ymin4, ymax = ymax4, width = .2, position = position_dodge(.9)) + 
+  ggtitle("Languages Spoken by County (other than English)") +
+  scale_fill_okabe_ito() +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
+  xlab("County") +
+  ylab(NULL) +
+  coord_flip()
+  
+  
+plot3 <- plotly::ggplotly(p3)
+
+plot3 <- plot3 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+
+plot3
+```
+
+## Race/Ethnicity Table
+
+```{r}
+decennial_table <- decennial_df %>% 
+  mutate(Percentage = percent((value/summary_value), accuracy = .01)) %>% 
+  select(-value, -summary_value, -GEOID) %>% arrange(NAME) %>% rename("Race/Ethnicity" = "variable", "County" = "NAME")
+
+dec_data_table <- DT::datatable(decennial_table, options = list(group = "NAME",
+                                                                pageLength = 9),
+                                caption = htmltools::tags$caption(style = "caption-side: bottom; text-align: left;", "Source: US Decennial Census (2020)"))
+
+dec_data_table
+
+## County as title per page?
+
+```
