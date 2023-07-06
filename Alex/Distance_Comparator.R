@@ -55,14 +55,26 @@ Distance_Comparator <- function(df_places_grocery) {
   # Create Dataframes with stores in each quadrant
 
   #Creates a new dataframe with all of the stores in each quadrant
-  northeast_stores <- df_new %>% filter(as.numeric(df_new$northing) > as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) > as.numeric(df_geocode$easting[1]))
+  northeast_stores <- df_new %>% filter(as.numeric(df_new$northing)
+                                        > as.numeric(df_geocode$northing[1])
+                                        & as.numeric(df_new$easting)
+                                        > as.numeric(df_geocode$easting[1]))
 
-  northwest_stores <- df_new %>% filter(as.numeric(df_new$northing) > as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) < as.numeric(df_geocode$easting[1]))
+  northwest_stores <- df_new %>% filter(as.numeric(df_new$northing)
+                                        > as.numeric(df_geocode$northing[1])
+                                        & as.numeric(df_new$easting)
+                                        < as.numeric(df_geocode$easting[1]))
 
 
-  southeast_stores <- df_new %>% filter(as.numeric(df_new$northing) < as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) > as.numeric(df_geocode$easting[1]))
+  southeast_stores <- df_new %>% filter(as.numeric(df_new$northing)
+                                        < as.numeric(df_geocode$northing[1])
+                                        & as.numeric(df_new$easting)
+                                        > as.numeric(df_geocode$easting[1]))
 
-  southwest_stores <- df_new %>% filter(as.numeric(df_new$northing) < as.numeric(df_geocode$northing[1]) & as.numeric(df_new$easting) < as.numeric(df_geocode$easting[1]))
+  southwest_stores <- df_new %>% filter(as.numeric(df_new$northing)
+                                        < as.numeric(df_geocode$northing[1])
+                                        & as.numeric(df_new$easting)
+                                        < as.numeric(df_geocode$easting[1]))
 
 
   # Find distance to nearest in each quadrant
@@ -74,5 +86,19 @@ Distance_Comparator <- function(df_places_grocery) {
   northwest_dist <<-sqrt(min(northwest_stores$distance_vector))%/%1
   southeast_dist <<- sqrt(min(southeast_stores$distance_vector))%/%1
   southwest_dist <<- sqrt(min(southwest_stores$distance_vector))%/%1
+
+
+  #df_new but with only closest stores named df_circle_buffer
+  NE_min <- northeast_stores %>% filter(northeast_stores$distance_vector
+                                        ==min(northeast_stores$distance_vector))
+  NW_min <- northwest_stores %>% filter(northwest_stores$distance_vector
+                                        ==min(northwest_stores$distance_vector))
+  SE_min <- southeast_stores %>% filter(southeast_stores$distance_vector
+                                        ==min(southeast_stores$distance_vector))
+  SW_min <- southwest_stores %>% filter(southwest_stores$distance_vector
+                                        ==min(southwest_stores$distance_vector))
+  return(df_circle_buffer <- rbind(NE_min,NW_min,SE_min,SW_min))
+  #add NESW labels
+
 
 }
