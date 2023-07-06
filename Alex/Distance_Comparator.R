@@ -31,7 +31,6 @@ Distance_Comparator <- function(df_places_grocery) {
                             zone = UTM_Zoner(abs(api_stores$Long[1])))
   api_stores <- cbind(api_stores, UTM_df)
 
-
   # Save variables for testing.
   #this is not a test I need this
   origin_test <- c(df_geocode$easting, df_geocode$northing)
