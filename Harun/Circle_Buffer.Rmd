@@ -65,7 +65,7 @@ source(file = "../Alex/Distance_Comparator.R")
 source(file = "../Alex/UTM_Zoner.R")
 source(file = "../Alex/Distance_Euclidean.R")
 
-Distance_Comparator(df_places_grocery = df_grocery_only)
+df_grocery_circle <- Distance_Comparator(df_places_grocery = df_grocery_only)
 ```
 
 
