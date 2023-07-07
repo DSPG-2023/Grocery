@@ -33,34 +33,16 @@ library(tidyr)
 # Make mock dataframe (3 Iowa counties, 2 Illinois counties):
 
 
-county <- c("Muscatine", "Cedar", "Johnson", "Menard", "Lake")
+# county <- c("Muscatine", "Cedar", "Johnson", "Menard", "Lake")
 
-state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
+# state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
 
-df <- cbind.data.frame(county, state)
+# df <- cbind.data.frame(county, state)
 
-var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001", "C16001_002",
-                "C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018",
-                "C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036")
+var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001", "C16001_002", "C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018", "C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036")
 
 
-var_list <- c("Median_Household_Income" = "B19013_001", "Total" = "B23025_003", 
-"Employed_in_Civilian_Labor_Force" = "B23025_004", "Unemployed_in_Civilian_Labor_Force" = "B23025_005",
-"Total" = "C16001_001","Speak_only_English" = "C16001_002",
-               "Spanish"="C16001_003", "French_Haitian_or_Cajun" = "C16001_006", 
-               "Russian, Polish or other Slavic languages" = "C16001_009", "Other Indo-European languages" = "C16001_012", 
-               "Other Indo-European languages" = "C16001_015", "Korean" = "C16001_018",
-               "Chinese_incl_Mandarin_Cantonese" = "C16001_021","Vietnamese" = "C16001_024",
-               "Tagalog_incl_Filipino" = "C16001_027", "Other_Asian_and_Pacific_Island_Languages" = "C16001_030",
-               "Arabic" = "C16001_033", "Other_and_unspecified_languages" = "C16001_036")
-
-
-
-
-
-
-
-get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
+get_census_vars_acs <- function(df, geography, var_vector) {
 
   library(dplyr)
 
@@ -68,7 +50,7 @@ get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
 
   # Get vector of states
 
-  state_vector <- unique(df$state)
+  state_vector <- as.numeric(unique(df$state))
 
   # Iterate through that vector of states
 
@@ -76,7 +58,7 @@ get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
 
     # Getting state abbreviation for TidyCensus call
 
-    state_abb <- state.abb[match(my_state,state.name)]
+    # state_abb <- state.abb[match(my_state,state.name)]
 
     # Subsetting based on current state in the loop
 
@@ -84,7 +66,7 @@ get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
 
     # Getting a vector of the counties for the current state in the loop
 
-    county_vector <- unique(state_df$county)
+    county_vector <- unique(state_df$counties)
 
     # Calling TidyCensus to get a data frame of the variables for the counties of the state
     # in the loop
@@ -115,7 +97,7 @@ get_census_vars_acs <- function(df, geography, var_vector = var_vector) {
 ### Test Function ###
 
 
-acs_df <- get_census_vars_acs(df, "county", var_vector)
+acs_df <- get_census_vars_acs(city_county_state, "county", var_vector = var_vector)
 
 acs_df
 ```
@@ -142,7 +124,7 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 
   # Get vector of states
 
-  state_vector <- unique(df$state)
+  state_vector <- as.numeric(unique(df$state))
 
   # Iterate through that vector of states
 
@@ -150,7 +132,7 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 
     # Getting state abbreviation for TidyCensus call
 
-    state_abb <- state.abb[match(my_state,state.name)]
+    # state_abb <- state.abb[match(my_state,state.name)]
 
     # Subsetting based on current state in the loop
 
@@ -158,7 +140,7 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 
     # Getting a vector of the counties for the current state in the loop
 
-    county_vector <- unique(state_df$county)
+    county_vector <- unique(state_df$counties)
 
     # Calling TidyCensus to get a data frame of the variables for the counties of the state
     # in the loop
@@ -188,7 +170,7 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 ## Test Function ##
 
 
-decennial_df <- get_census_vars_decennial(df, "county", var_vector = decennialList)
+decennial_df <- get_census_vars_decennial(df = city_county_state, "county", var_vector = decennialList)
 
 decennial_df
 ```
@@ -202,6 +184,8 @@ reduced_df_acs1 <- acs_df %>% filter(variable=="B19013_001")
 
   ymin <- reduced_df_acs1$estimate - reduced_df_acs1$moe
   ymax <- reduced_df_acs1$estimate + reduced_df_acs1$moe
+  
+  max_lim1 <- max(ymax)
 
 ## Make plot object
 
@@ -213,7 +197,7 @@ p <- reduced_df_acs1 %>%
   scale_y_continuous(labels = scales::dollar_format()) +
   scale_fill_okabe_ito() +
   labs(x = NULL, y = NULL) +
-  coord_flip()
+  coord_flip(ylim = c(0, max_lim1))
   
 
 ## Convert to plotly object
@@ -228,7 +212,6 @@ plot
 ### Employment Status
 
 ```{r}
-
 ## Filter vars from acs table
 
 Employment_status_df <- acs_df %>% filter(variable %in% c("B23025_003", "B23025_004", "B23025_005"))
@@ -247,59 +230,21 @@ employment_df <- Emploment_status_df_wide %>% rename("Total" = "estimate_B23025_
   "Unemployed_in_Civilian_Labor_Force_moe" = "moe_B23025_005")
 
 ## Calculate percentage and margin of error (mutated into two new columns)
-  
+
 employment_df2 <- employment_df %>% 
-  mutate(Unemployment_rate = 100 * (Unemployed_in_Civilian_Labor_Force/Total), Unemployment_rate_moe = 100 * moe_prop(Unemployed_in_Civilian_Labor_Force, Total, Unemployed_in_Civilian_Labor_Force_moe, Total_moe))
-  
-## For moe bar in plot
-
-ymin2 <- employment_df2$Unemployment_rate - employment_df2$Unemployment_rate_moe
-ymax2 <- employment_df2$Unemployment_rate + employment_df2$Unemployment_rate_moe
-
-## Make plot object
-
-p2 <- employment_df2 %>%
-  ggplot(aes(x = NAME, y = Unemployment_rate, fill = NAME)) +
-  geom_bar(stat = 'identity') +
-  geom_errorbar(ymin = ymin2, ymax = ymax2, width = .2) +
-  ggtitle("Unemployment Rate") +
-  scale_fill_okabe_ito() +
-  scale_y_continuous(labels = scales::percent_format(accuracy = 0.01, scale = 1),
-                     n.breaks = 8) +
-  labs(x = NULL) +
-  ylab(NULL) +
-  coord_flip()
-
-## Convert to plotly object
-
-plot2 <- plotly::ggplotly(p2)
-
-plot2 <- plot2 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
-
-## Show plot
-
-plot2
-
-```
-
-## Option 2: Employment rate
-```{r}
-## Employment rate percentages ##
-
-employment_df3 <- employment_df %>% 
   mutate(Employment_rate = 100 * (Employed_in_Civilian_Labor_Force/Total), Employment_rate_moe = 100 * moe_prop(Employed_in_Civilian_Labor_Force, Total, Employed_in_Civilian_Labor_Force_moe, Total_moe))
   
 ## For moe bar in plot
 
-ymin5 <- employment_df3$Employment_rate - employment_df3$Employment_rate_moe
-ymax5 <- employment_df3$Employment_rate + employment_df3$Employment_rate_moe
+ymin2 <- employment_df2$Employment_rate - employment_df2$Employment_rate_moe
+ymax2 <- employment_df2$Employment_rate + employment_df2$Employment_rate_moe
 
 ## Make plot object
 
-p5 <- employment_df3 %>%
+p2 <- employment_df2 %>%
   ggplot(aes(x = NAME, y = Employment_rate, fill = NAME)) +
   geom_bar(stat = 'identity') +
-  geom_errorbar(ymin = ymin5, ymax = ymax5, width = .2) +
+  geom_errorbar(ymin = ymin2, ymax = ymax2, width = .2) +
   ggtitle("Employment Rate") +
   scale_fill_okabe_ito() +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
@@ -309,14 +254,13 @@ p5 <- employment_df3 %>%
 
 ## Convert to plotly object
 
-plot5 <- plotly::ggplotly(p5)
+plot2 <- plotly::ggplotly(p2)
 
-plot5 <- plot5 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+plot2 <- plot5 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 
 ## Show Plot
 
-plot5
-
+plot2
 ```
 
 ### Languages Spoken:
@@ -332,9 +276,7 @@ language_df$variable <- forcats::fct_recode(language_df$variable, Total = "C1600
 
 language_df <- language_df %>% rename(Language_Spoken = variable)
 
-
-## Pre_processing
-
+## Pre_processing and adding percentages/margins of error
 
 small_df2 <- language_df %>% group_by(NAME) %>% slice_max(estimate, n = 4)
   
@@ -342,8 +284,10 @@ small_df2 <- small_df2 %>% mutate(Total = estimate[Language_Spoken=="Total"],
 Total_moe = moe[Language_Spoken=="Total"]) %>% subset(Language_Spoken != "Total") %>%       mutate(Percentage = 100 * (estimate/Total),                                                 Percentage_moe = 100 * moe_prop(estimate, Total,   moe, Total_moe))
   
   
-ymin4 <- small_df2$Percentage - small_df2$Percentage_moe
-ymax4 <- small_df2$Percentage + small_df2$Percentage_moe
+ymin3 <- small_df2$Percentage - small_df2$Percentage_moe
+ymax3 <- small_df2$Percentage + small_df2$Percentage_moe
+
+max_lim2 <- max(ymax3)
   
 
 ### GROUPED BAR APPROACH ###
@@ -351,13 +295,13 @@ ymax4 <- small_df2$Percentage + small_df2$Percentage_moe
 p3 <- small_df2 %>% 
   ggplot(aes(fill = Language_Spoken, y = Percentage, x = NAME)) +
   geom_bar(position = "dodge", stat = "identity") + 
-  geom_errorbar(ymin = ymin4, ymax = ymax4, width = .2, position = position_dodge(.9)) + 
+  geom_errorbar(ymin = ymin3, ymax = ymax3, width = .2, position = position_dodge(.9)) + 
   ggtitle("Languages Spoken by County (other than English)") +
   scale_fill_okabe_ito() +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
   xlab("County") +
   ylab(NULL) +
-  coord_flip()
+  coord_flip(ylim = c(0, max_lim2))
   
   
 plot3 <- plotly::ggplotly(p3)
