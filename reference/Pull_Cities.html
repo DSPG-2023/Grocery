@@ -53,12 +53,20 @@ to pull all cities in the provided states.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">Pull_Cities</span><span class="op">(</span>state_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">df_grocery_all</span><span class="op">$</span><span class="va">state</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">Pull_Cities</span><span class="op">(</span></span>
+<span>  df_grocery_all <span class="op">=</span> <span class="va">df_grocery_all</span>,</span>
+<span>  state_list <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">df_grocery_all</span><span class="op">$</span><span class="va">state</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt>state_list</dt>
+    <dl><dt>df_grocery_all</dt>
+<dd><p>A data frame containing all the store locations pulled from
+the googleway::google_places API.</p></dd>
+
+
+<dt>state_list</dt>
 <dd><p>A list of unique state values to iterate through.</p></dd>
 
 </dl></div>
