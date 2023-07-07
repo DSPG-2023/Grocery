@@ -1,14 +1,25 @@
-#' Calculation of Employee Wages
+#' Calculates the Estimated Cost of Employee Wages for Grocery Stores
 #'
-#' @param Total_Estimated_Revenue Output of total estimated revenue calculation sheet
-#' @param Percentage Percentage of revenue spent on employee wages (default taken from Bizminer)
+#' @author Aaron Null
 #'
-#' @details This function is taken from the "Estimating_Expenses.xlsx" sheet and
-#' calculated in Step Six.
-#' @returns Outputs dollars spent on employee wages (based off of provided percentage)
+#' @description
+#' This function calculates the estimated cost of employee wages for a hypothetical store in
+#' a user-selected location based off of a user-selected percentage parameter. If not
+#' specified by the user, this percentage defaults to the industry average
+#' provided by Bizminer.
 #'
-#' @examples
-#' Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = .0942)
+#'
+#' @details
+#' This function employs a default percentage value from the financial analysis
+#' and market research firm Bizminer and is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Percentage Percentage of total estimated revenue spent on employee wages selected
+#' via user input (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount spent on employee wages for
+#' a hypothetical grocery store in a given location.
 #'
 #' @export
 
