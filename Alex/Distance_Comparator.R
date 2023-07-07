@@ -10,7 +10,7 @@
 #' @importFrom oce lonlat2ut
 
 
-Distance_Comparator <- function(df_places_grocery) {
+Distance_Comparator <- function(df_places_grocery, df_geocode) {
 
   #Creates a new dataframe with the Lat, Long, and Name columns
   #This step is completely unnecessary, but the original DF
