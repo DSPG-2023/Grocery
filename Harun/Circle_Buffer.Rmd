@@ -22,7 +22,7 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 
 # Convert the address of LakeView to a lat/long 
 ```{r}
-df_geocode <- google_geocode(address = "Main St, Medicine Bow, WY") %>%
+df_geocode <- google_geocode(address = "Main St, McCalsburg, IA") %>%
   .$results %>%
   .$geometry %>%
   .$location
