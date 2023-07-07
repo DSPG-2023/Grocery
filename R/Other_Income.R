@@ -7,7 +7,7 @@
 #' for a hypothetical store in a user-selected location based off of a user-selected
 #' percentage parameter. If not specified by the user, this percentage defaults
 #' to the industry average provided by Bizminer. Some examples of miscellaneous sources
-#' of income include special grocery delivery services, curbside pickup or discount
+#' of income might include special grocery delivery services, curbside pickup or discount
 #' club fees.
 #'
 #'
