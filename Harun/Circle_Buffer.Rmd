@@ -5,7 +5,7 @@ date: "2023-07-06"
 output: html_document
 ---
 
-```{r}
+```{r, eval=FALSE}
 library(googleway)
 library(dplyr)
 library(sf)
@@ -14,6 +14,7 @@ library(tigris)
 library(DSPGGrocery)
 library(oce)
 library(leaflet)
+library(cli)
 ```
 
 ```{r, include=FALSE, eval=FALSE}
@@ -22,7 +23,7 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 
 # Convert the address of LakeView to a lat/long 
 ```{r}
-df_geocode <- google_geocode(address = "Main St, McCalsburg, IA") %>%
+df_geocode <- google_geocode(address = "St, Lamoni, IA") %>%
   .$results %>%
   .$geometry %>%
   .$location
@@ -69,8 +70,14 @@ source(file = "../Alex/Distance_Comparator.R")
 source(file = "../Alex/UTM_Zoner.R")
 source(file = "../Alex/Distance_Euclidean.R")
 
-df_grocery_circle <- Distance_Comparator(df_places_grocery = df_grocery_only) %>%
+df_grocery_circle <- Distance_Comparator(df_grocery_only = df_grocery_only,
+                                         df_geocode = df_geocode) %>%
   filter(distance_vector == max(distance_vector))
+rm(df_new,
+   northeast_dist, 
+   northwest_dist,
+   southeast_dist,
+   southwest_dist)
 ```
 
 ## Create Spatial Objects
@@ -82,7 +89,9 @@ furthest_point <- st_as_sf(df_grocery_circle, coords = c("lng", "lat"), crs = "N
 
 ## Origin Point Buffer
 ```{r}
-buffer_circle <- st_buffer(buffer_point_origin, dist = as.integer(ceiling(st_distance(buffer_point_origin$geometry, furthest_point$geometry))))
+buffer_circle <- st_buffer(buffer_point_origin, 
+                           dist = as.integer(ceiling(st_distance(buffer_point_origin$geometry,
+                                                                 furthest_point$geometry))))
 ```
 
 ## Experimental
@@ -116,7 +125,7 @@ plot(store_points$geometry, col='white', add=T)
 
 # Pull Cities and County
 ## Pull_Counties function
-```{r}
+```{r, eval=FALSE}
 #' Takes a List of States and Retreives All Counties in State
 #' 
 #' @author Harun Celik
@@ -142,7 +151,7 @@ Pull_Counties <- function(state_list = unique(df_grocery_all$state)) {
 ```
 
 ## Pull_Cities function
-```{r}
+```{r, eval=FALSE}
 #' Takes a List of States and Retreives All Cities in State
 #' 
 #' @author Harun Celik
@@ -169,14 +178,22 @@ Pull_Cities <- function(state_list = unique(df_grocery_all$state)) {
 
 ## Save city and county information
 ```{r}
-all_counties <- Pull_Counties(unique(df_grocery_all$state))
-all_cities <- Pull_Cities(unique(df_grocery_all$state))
+all_counties <- Pull_Counties(state_list = unique(df_grocery_all$state))
+all_cities <- Pull_Cities(state_list = unique(df_grocery_all$state))
 ```
 
 ## Intersect Buffer with Counties and Cities
 ```{r, warning=FALSE}
 grocery_counties_inter <- st_intersection(all_counties, buffer_circle)
 grocery_cities_inter <- st_intersection(all_cities, buffer_circle)
+```
+
+## Building argument for census and market size calls
+```{r}
+df_census_call <- st_join(x = grocery_cities_inter, y = all_counties) %>%
+  transmute(cities =  NAME.x,
+            counties = NAME.y,
+            state = STATEFP.x)
 ```
 
 ## Plotting Intersections
