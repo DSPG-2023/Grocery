@@ -9,7 +9,8 @@
 #' values in the list are filtered using unique() to avoid repetitive loops.
 #'
 #' @param state_list A list of unique state values to iterate through.
-#'
+#' @param df_grocery_all A data frame containing all the store locations pulled from
+#' the googleway::google_places API.
 #'
 #' @importFrom tigris counties
 #'
@@ -17,7 +18,8 @@
 #'
 #' @export
 
-Pull_Counties <- function(state_list = unique(df_grocery_all$state)) {
+Pull_Counties <- function(df_grocery_all = df_grocery_all,
+                          state_list = unique(df_grocery_all$state)) {
   all_counties <- NULL
   for (index in 1:length(state_list)) {
     county_loop <- counties(state = state_list[index])

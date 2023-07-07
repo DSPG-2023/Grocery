@@ -4,9 +4,15 @@
 \alias{Pull_Counties}
 \title{Takes a Vector of States and Retrieves All Counties in State(s)}
 \usage{
-Pull_Counties(state_list = unique(df_grocery_all$state))
+Pull_Counties(
+  df_grocery_all = df_grocery_all,
+  state_list = unique(df_grocery_all$state)
+)
 }
 \arguments{
+\item{df_grocery_all}{A data frame containing all the store locations pulled from
+the googleway::google_places API.}
+
 \item{state_list}{A list of unique state values to iterate through.}
 }
 \value{
