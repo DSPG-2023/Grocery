@@ -1,12 +1,21 @@
-#' Takes a List of States and Retreives All Cities in State
+#' Takes a Vector of States and Retrieves All Cities in State(s)
 #'
 #' @author Harun Celik
 #'
 #' @description the function takes a list of states and passes them through a loop
 #' to pull all cities in the provided states.
 #'
-#' @param state_list A list of state values to iterate through. State values should be unique.
+#' @details
+#' values in the list are filtered using unique() to avoid repetitive loops.
 #'
+#' @param state_list A list of unique state values to iterate through.
+#'
+#'
+#' @importFrom tigris places
+#'
+#' @returns returns a data frame of all the cities in a state(s) called all_cities
+#'
+#' @export
 
 Pull_Cities <- function(state_list = unique(df_grocery_all$state)) {
   all_cities <- NULL
