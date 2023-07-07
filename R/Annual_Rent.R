@@ -1,14 +1,24 @@
-#' Calculation of Annual Rent
+#' Calculates the Annual Cost of Rent for Grocery Stores (Scenario 2)
 #'
-#' @param Monthly_Rent Monthly rent for the lease
+#' @author Aaron Null
 #'
-#' @details This function is taken from the "Estimating_Expenses.xlsx" sheet and
-#' calculated in Step Four
+#' @description
+#' This function calculates the annual cost of rent for a
+#' hypothetical store in a user-selected location based off of the user-provided
+#' monthly rate of rent on a building. This function is not employed if the user plans to
+#' own a building (scenario 1).
 #'
-#' @returns
-#' Outputs Annual Rent (in dollars)
 #'
-#' @usage Annual_Rent(Monthly_Rent)
+#' @details
+#' This function multiplies the user-provided monthly rate of rent for a building by 12 to
+#' get the annual cost of rent.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Percentage Percentage of total estimated revenue spent on miscellaneous
+#'("other") operating expenses selected via user input (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount spent on rent per year for
+#' a hypothetical grocery store in a given building.
 #'
 #' @export
 
