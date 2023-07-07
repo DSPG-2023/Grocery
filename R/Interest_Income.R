@@ -1,4 +1,4 @@
-#' Calculates the Estimated Income of from Interest-Bearing Assets for Grocery Stores
+#' Calculates the Estimated Income from Interest-Bearing Assets for Grocery Stores
 #'
 #' @author Aaron Null
 #'
