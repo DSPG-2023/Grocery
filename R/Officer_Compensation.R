@@ -1,15 +1,25 @@
-#' Calculation of Officer Compensation
+#' Calculates the Estimated Cost of Officer Compensation for Grocery Stores
 #'
-#' @param Total_Estimated_Revenue Output of total estimated revenue calculation sheet
-#' @param Percentage Percentage of revenue spent on officer compensation (default from Bizminer)
+#' @author Aaron Null
 #'
-#' @details This function was taken from the "Estimating_Expenses.xlsx" sheet in Step 6.
+#' @description
+#' This function calculates the estimated cost of officer compensation for a hypothetical
+#' store in a user-selected location based off of a user-selected percentage parameter.
+#' If not specified by the user, this percentage defaults to the industry average
+#' provided by Bizminer.
 #'
-#' @returns Outputs dollars spent on officer compensation (Total Estimated Revenue * Percentage)
-#' (in dollars)
 #'
-#' @examples
-#' Officer_Compensation(Total_Estimated_Revenue = 2000000, Percentage = .0118)
+#' @details
+#' This function employs a default percentage value from the financial analysis
+#' and market research firm Bizminer and is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Percentage Percentage of total estimated revenue spent on officer compensation
+#' selected via user input (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount spent on officer compensation for
+#' a hypothetical grocery store in a given location.
 #'
 #' @export
 
