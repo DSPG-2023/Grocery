@@ -13,9 +13,7 @@
 #' This function multiplies the user-provided monthly rate of rent for a building by 12 to
 #' get the annual cost of rent.
 #'
-#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
-#' @param Percentage Percentage of total estimated revenue spent on miscellaneous
-#'("other") operating expenses selected via user input (default from Bizminer).
+#' @param Monthly_Rent User-provided monthly rate of rent for a building.
 #'
 #' @returns The output returns the estimated dollar amount spent on rent per year for
 #' a hypothetical grocery store in a given building.
