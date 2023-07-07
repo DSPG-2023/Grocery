@@ -30,13 +30,13 @@ Distance_Comparator <- function(df_grocery_only, df_geocode) {
 
   #Add Northing and Easting Columns
   UTM_geo <- lonlat2utm(longitude = df_geocode$lng,
-                             latitude = df_geocode$lat,
-                             zone = UTM_Zoner(abs(api_stores$lng[1])))
+                        latitude = df_geocode$lat,
+                        zone = UTM_Zoner(abs(api_stores$lng[1])))
   df_geocode <- cbind(df_geocode, UTM_geo)
 
   UTM_df <- lonlat2utm(longitude = api_stores$lng,
-                            latitude = api_stores$lat,
-                            zone = UTM_Zoner(abs(api_stores$lng[1])))
+                       latitude = api_stores$lat,
+                       zone = UTM_Zoner(abs(api_stores$lng[1])))
   api_stores <- cbind(api_stores, UTM_df)
 
   # Save variables for testing.
