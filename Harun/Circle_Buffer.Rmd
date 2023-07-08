@@ -190,7 +190,7 @@ grocery_cities_inter <- st_intersection(all_cities, buffer_circle)
 
 ## Building argument for census and market size calls
 ```{r}
-df_census_call <- st_join(x = grocery_cities_inter, y = all_counties) %>%
+df_census_call <- st_join(x = grocery_cities_inter, y = all_counties, join = st_nearest_feature) %>%
   transmute(cities =  NAME.x,
             counties = NAME.y,
             state = STATEFP.x)
@@ -217,5 +217,4 @@ leaflet() %>%
   addCircleMarkers(lng = df_grocery_all$lng, lat = df_grocery_all$lat, color= 'green', popup = df_grocery_all$name, radius = 10)
   
 ```
-
 
