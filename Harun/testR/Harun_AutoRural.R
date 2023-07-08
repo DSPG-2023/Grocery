@@ -1,6 +1,6 @@
 #' Finds the Rural Population of a Given Market Size
 
-df_census_call <- readRDS(file = "Harun/nearest.RDS")
+df_census_call <- readRDS(file = "Harun/city_county_state_nearest.RDS")
 
 Auto_Rural_Pop <- function(df_census_call = df_census_call) {
 
