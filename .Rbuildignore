@@ -11,3 +11,4 @@ Test/
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+img/

@@ -1,7 +1,8 @@
-#' @author Harun Celik
 #' Returns Store Locations as Spatial Data for Mapping
 #'
-#' @param address a comma seperated character address.
+#' @author Harun Celik
+#'
+#' @param address a comma separated character address.
 #' @param api_key a google api key so be used as the key argument in googleway::set_key.
 #' @param keyword a keyword argument used by the googleway::google_places api call.
 #'

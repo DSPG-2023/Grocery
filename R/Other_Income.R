@@ -1,24 +1,33 @@
-#' Calculation of Other Income
+#' Calculates the Estimated Income from Miscellaneous Sources for Grocery Stores
 #'
-#' @param Total_Estimated_Revenue Calculation of Total_Estimated Revenue
+#' @author Aaron Null
 #'
-#' @details This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Eight.
-#' Percentages are taken from Bizminer.
+#' @description
+#' This function calculates the estimated income from miscellaneous income sources
+#' for a hypothetical store in a user-selected location based off of a user-selected
+#' percentage parameter. If not specified by the user, this percentage defaults
+#' to the industry average provided by Bizminer. Some examples of miscellaneous sources
+#' of income might include special grocery delivery services, curbside pickup or discount
+#' club fees.
 #'
-#' @returns Outputs "Other Income" (in dollars)
 #'
-#' @examples
-#' # Other_Income(Total_Estimated_Revenue = 2000000)
+#' @details
+#' This function employs a default percentage value from the financial analysis
+#' and market research firm Bizminer and is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Percentage Percentage of total estimated revenue that constitutes the added
+#' income from miscellaneous ("other") income sources selected via user input
+#' (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount earned as income from these other
+#' sources of income for a hypothetical grocery store in a given location.
 #'
 #' @export
 
-Other_Income <- function(Total_Estimated_Revenue) {
+Other_Income <- function(Total_Estimated_Revenue, Percentage = .0115) {
 
-  ifelse(Total_Estimated_Revenue < 500000, stop("error: no data for this revenue range"),
-         percentage <- ifelse(Total_Estimated_Revenue < 999999.99, .0186,
-                              ifelse(Total_Estimated_Revenue < 2499999.99, .0101,
-                                     ifelse(Total_Estimated_Revenue < 4999999.99, .008,
-                                            ifelse(Total_Estimated_Revenue < 24999999.99, .0101, .0133)))))
+  Total_Estimated_Revenue * Percentage
 
-  Total_Estimated_Revenue * percentage
 }

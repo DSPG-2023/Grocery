@@ -5,7 +5,7 @@ date: "2023-07-06"
 output: html_document
 ---
 
-```{r}
+```{r, eval=FALSE}
 library(googleway)
 library(dplyr)
 library(sf)
@@ -13,6 +13,8 @@ library(tidycensus)
 library(tigris)
 library(DSPGGrocery)
 library(oce)
+library(leaflet)
+library(cli)
 ```
 
 ```{r, include=FALSE, eval=FALSE}
@@ -21,7 +23,7 @@ set_key(key = Sys.getenv("PLACES_KEY"))
 
 # Convert the address of LakeView to a lat/long 
 ```{r}
-df_geocode <- google_geocode(address = "23 Main St, Lake View, IA, United States, Iowa") %>%
+df_geocode <- google_geocode(address = "St, Lamoni, IA") %>%
   .$results %>%
   .$geometry %>%
   .$location
@@ -38,7 +40,10 @@ df_grocery_all <- google_places(location = c(df_geocode$lat
             lat = .$geometry$location$lat, 
             lng = .$geometry$location$lng, 
             types,
-            vicinity)
+            vicinity,
+            state = strsplit(.$plus_code$compound_code, split = ", ")) %>%
+  filter(state != "NANA") %>%
+  mutate(state = sapply(.$state, "[[", 2))
   
 ```
 
@@ -65,8 +70,152 @@ source(file = "../Alex/Distance_Comparator.R")
 source(file = "../Alex/UTM_Zoner.R")
 source(file = "../Alex/Distance_Euclidean.R")
 
-df_grocery_circle <- Distance_Comparator(df_places_grocery = df_grocery_only)
+df_grocery_circle <- Distance_Comparator(df_grocery_only = df_grocery_only,
+                                         df_geocode = df_geocode) %>%
+  filter(distance_vector == max(distance_vector))
+rm(df_new,
+   northeast_dist, 
+   northwest_dist,
+   southeast_dist,
+   southwest_dist)
 ```
 
+## Create Spatial Objects
+```{r}
+buffer_point_origin <- st_as_sf(df_geocode, coords = c("lng", "lat"), crs = "NAD83")
+store_points <- st_as_sf(df_grocery_all, coords = c("lng", "lat"), crs = "NAD83")
+furthest_point <- st_as_sf(df_grocery_circle, coords = c("lng", "lat"), crs = "NAD83")
+```
+
+## Origin Point Buffer
+```{r}
+buffer_circle <- st_buffer(buffer_point_origin, 
+                           dist = as.integer(ceiling(st_distance(buffer_point_origin$geometry,
+                                                                 furthest_point$geometry))))
+```
+
+## Experimental
+### Cast Line
+```{r, eval=FALSE}
+line_coords <- matrix(c(unlist(buffer_point_origin$geometry), 
+                        unlist(furthest_point$geometry)), 
+                      ncol = 2, 
+                      byrow = T)
+  
+buffer_line <- st_linestring(line_coords) %>%
+  st_sfc(crs = 4326)
+```
+
+### Take Line Intersect
+```{r, eval=FALSE}
+trimmed_buffer <- st_intersection(buffer_point$geometry, buffer_line)
+
+## This doesn't produce the expected results, the circle is not cut out by the distance of the line. A better option is just to use the st_distance() function and set that as the argument for the circle buffer.
+```
+
+### Visualize SF Objects
+```{r, warning=FALSE, eval=FALSE}
+plot(buffer_point$geometry, col='blue')
+plot(buffer_point_origin$geometry, col='red', add=T)
+plot(furthest_point$geometry, col = 'green', add=T)
+plot(buffer_line, col='white', add=T)
+plot(store_points$geometry, col='white', add=T)
+```
+
+
+# Pull Cities and County
+## Pull_Counties function
+```{r, eval=FALSE}
+#' Takes a List of States and Retreives All Counties in State
+#' 
+#' @author Harun Celik
+#'
+#' @description the function takes a list of states and passes them through a loop
+#' to pull all counties in the provided states.
+#' 
+#' @param state_list A list of state values to iterate through. State values should be unique.
+#'
+
+Pull_Counties <- function(state_list = unique(df_grocery_all$state)) {
+  all_counties <- NULL
+  for (index in 1:length(state_list)) {
+    county_loop <- counties(state = state_list[index])
+    
+    Sys.sleep(2)
+    
+   all_counties <- rbind(all_counties, county_loop)
+  }
+  
+  return(all_counties)
+}
+```
+
+## Pull_Cities function
+```{r, eval=FALSE}
+#' Takes a List of States and Retreives All Cities in State
+#' 
+#' @author Harun Celik
+#'
+#' @description the function takes a list of states and passes them through a loop
+#' to pull all cities in the provided states.
+#' 
+#' @param state_list A list of state values to iterate through. State values should be unique.
+#'
+
+Pull_Cities <- function(state_list = unique(df_grocery_all$state)) {
+  all_cities <- NULL
+  for (index in 1:length(state_list)) {
+    city_loop <- places(state = state_list[index])
+    
+    Sys.sleep(2)
+    
+   all_cities <- rbind(all_cities, city_loop)
+  }
+  
+  return(all_cities)
+}
+```
+
+## Save city and county information
+```{r}
+all_counties <- Pull_Counties(state_list = unique(df_grocery_all$state))
+all_cities <- Pull_Cities(state_list = unique(df_grocery_all$state))
+```
+
+## Intersect Buffer with Counties and Cities
+```{r, warning=FALSE}
+grocery_counties_inter <- st_intersection(all_counties, buffer_circle)
+grocery_cities_inter <- st_intersection(all_cities, buffer_circle)
+```
+
+## Building argument for census and market size calls
+```{r}
+df_census_call <- st_join(x = grocery_cities_inter, y = all_counties) %>%
+  transmute(cities =  NAME.x,
+            counties = NAME.y,
+            state = STATEFP.x)
+```
+
+## Plotting Intersections
+```{r, eval=FALSE}
+plot(all_counties$geometry)
+plot(buffer_circle, col='gray', add=T)
+plot(grocery_counties_inter$geometry, add=T)
+plot(store_points$geometry, col='red', add=T)
+```
+# Leaflet Testing
+```{r, warning=FALSE, eval=FALSE}
+leaflet() %>%
+  addProviderTiles(providers$OpenStreetMap) %>%
+  addPolygons(data = all_counties$geometry, 
+              fillOpacity = 0.05, 
+              fillColor = 'darkred', 
+              color = 'black',
+              opacity = .5) %>%
+  addPolygons(data = buffer_circle$geometry, fillColor = 'gray') %>%
+  addPolygons(data = grocery_cities_inter$geometry, fillColor = 'blue') %>%
+  addCircleMarkers(lng = df_grocery_all$lng, lat = df_grocery_all$lat, color= 'green', popup = df_grocery_all$name, radius = 10)
+  
+```
 
 
