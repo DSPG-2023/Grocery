@@ -16,4 +16,10 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Imports: 
-    tigris
+    tigris,
+    sf,
+    tidycensus,
+    dplyr,
+    magrittr
+    
+  
