@@ -2,20 +2,27 @@
 % Please edit documentation in R/Annual_Rent.R
 \name{Annual_Rent}
 \alias{Annual_Rent}
-\title{Calculation of Annual Rent}
+\title{Calculates the Annual Cost of Rent for Grocery Stores (Scenario 2)}
 \usage{
-Annual_Rent(Monthly_Rent)
+Annual_Rent(Monthly_Rent = 0)
 }
 \arguments{
-\item{Monthly_Rent}{Monthly rent for the lease}
+\item{Monthly_Rent}{User-provided monthly rate of rent for a building.}
 }
 \value{
-Outputs Annual Rent (in dollars)
+The output returns the estimated dollar amount spent on rent per year for
+a hypothetical grocery store in a given building.
 }
 \description{
-Calculation of Annual Rent
+This function calculates the annual cost of rent for a
+hypothetical store in a user-selected location based off of the user-provided
+monthly rate of rent on a building. This function is not employed if the user plans to
+own a building (scenario 1).
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and
-calculated in Step Four
+This function multiplies the user-provided monthly rate of rent for a building by 12 to
+get the annual cost of rent.
+}
+\author{
+Aaron Null
 }

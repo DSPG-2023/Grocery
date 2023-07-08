@@ -2,26 +2,32 @@
 % Please edit documentation in R/Other_Operating_Expense.R
 \name{Other_Operating_Expense}
 \alias{Other_Operating_Expense}
-\title{Calculation of other operating expenses (miscellaneous)}
+\title{Calculates the Estimated Cost of Miscellaneous Expenses for Grocery Stores}
 \usage{
 Other_Operating_Expense(Total_Estimated_Revenue, Percentage = 0.1088)
 }
 \arguments{
-\item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
+\item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
-\item{Percentage}{Percentage of total estimated revenue spent on other operating expenses
-(default from Bizminer)}
+\item{Percentage}{Percentage of total estimated revenue spent on miscellaneous
+("other") operating expenses selected via user input (default from Bizminer).}
 }
 \value{
-Outputs other operating expenses (in dollars)
+The output returns the estimated dollar amount spent on these other expenses for
+a hypothetical grocery store in a given location.
 }
 \description{
-Calculation of other operating expenses (miscellaneous)
+This function calculates the estimated cost of miscellaneous expenses for a
+hypothetical store in a user-selected location based off of a user-selected percentage
+parameter. If not specified by the user, this percentage defaults to the industry average
+provided by Bizminer. These expenses include tax, administrative and repair costs,
+among others.
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and calculated in Step Six)
+This function employs a default percentage value from the financial analysis
+and market research firm Bizminer and is based upon calculations originally
+formulated by FFED ISU Extension and Outreach.
 }
-\examples{
-# Employee_Wages(Total_Estimated_Revenue = 2000000, Percentage = .1088)
-
+\author{
+Aaron Null
 }

@@ -2,26 +2,31 @@
 % Please edit documentation in R/Interest_Income.R
 \name{Interest_Income}
 \alias{Interest_Income}
-\title{Calculation of Interest Income}
+\title{Calculates the Estimated Income from Interest-Bearing Assets for Grocery Stores}
 \usage{
 Interest_Income(Total_Estimated_Revenue, Percentage = 4e-04)
 }
 \arguments{
-\item{Total_Estimated_Revenue}{Calculation of Total_Estimated Revenue}
+\item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
-\item{Percentage}{Percentage of revenue of the estimated income from interest}
+\item{Percentage}{Percentage of total estimated revenue that constitutes the added
+income from interest selected via user input (default from Bizminer).}
 }
 \value{
-Outputs first-year interest income (in dollars)
+The output returns the estimated dollar amount earned as income from interest for
+a hypothetical grocery store in a given location.
 }
 \description{
-Calculation of Interest Income
+This function calculates the estimated income from interest-bearing assets
+for a hypothetical store in a user-selected location based off of a user-selected
+percentage parameter. If not specified by the user, this percentage defaults
+to the industry average provided by Bizminer.
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and
-calculated in Step Eight.
+This function employs a default percentage value from the financial analysis
+and market research firm Bizminer and is based upon calculations originally
+formulated by FFED ISU Extension and Outreach.
 }
-\examples{
-Interest_Income(Total_Estimated_Revenue = 2000000, Percentage = .0004)
-
+\author{
+Aaron Null
 }
