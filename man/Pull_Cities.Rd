@@ -4,10 +4,7 @@
 \alias{Pull_Cities}
 \title{Takes a Vector of States and Retrieves All Cities in State(s)}
 \usage{
-Pull_Cities(
-  df_grocery_all = df_grocery_all,
-  state_list = unique(df_grocery_all$state)
-)
+Pull_Cities(df_grocery_all, state_list)
 }
 \arguments{
 \item{df_grocery_all}{A data frame containing all the store locations pulled from
