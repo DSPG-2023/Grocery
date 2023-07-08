@@ -18,6 +18,9 @@
 #' county, county population, and sf geographies. The data frame is returned
 #' with an attribute called "all_population" which is the sum of county populations.
 #'
+#' @importFrom dplyr %>%, filter
+#' @importFrom tidycensus get_decennial
+#'
 #' @seealso [Calc_Cities_Pop()]
 #'
 #' @export
