@@ -15,7 +15,8 @@ Calc_Counties_Pop <- function(states_unique = states_unique) {
                                           variables = "DP1_0001C",
                                           sumfile = "dp",
                                           county = counties_unique,
-                                          state = states_unique[index_state])
+                                          state = states_unique[index_state],
+                                          geometry = T)
 
     all_counties_pops <- rbind(all_counties_pops, counties_populations)
   }
