@@ -31,7 +31,6 @@
 Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
                                  api_key = Sys.getenv("PLACES_KEY"),
                                  keyword = "grocery") {
-  browser()
 
   # Timer Start
   startTime <- Sys.time()
