@@ -37,11 +37,9 @@ Auto_Rural_Pop <- function(df_buffer_loc = df_census_call) {
   states_unique <- as.integer(unique(df_buffer_loc$state))
 
   # Get population for each county in state(s)
-  source("Harun/testR/Calc_Counties_Pop.R")
   all_counties_pops <- Calc_Counties_Pop(states_unique = states_unique)
 
   # Get population for cities for each county
-  source("Harun/testR/Calc_Cities_Pop.R")
   all_cities_pops <- Calc_Cities_Pop(states_unique = states_unique,
                                      all_counties_pops = all_counties_pops)
 
