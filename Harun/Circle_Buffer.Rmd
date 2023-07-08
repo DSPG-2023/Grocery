@@ -5,7 +5,7 @@ date: "2023-07-06"
 output: html_document
 ---
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, message=FALSE, warning=FALSE}
 library(googleway)
 library(dplyr)
 library(sf)
