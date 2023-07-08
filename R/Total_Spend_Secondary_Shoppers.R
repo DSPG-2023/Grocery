@@ -1,5 +1,10 @@
 #' Calculates the Money Spent by Secondary Shoppers
 #'
+#' @author Srika Raja
+#'
+#' @description
+#' This function returns the total money spent by secondary shoppers visiting a store.
+#'
 #' @param per_of_grocery_spend_sec the percentage of groceries secondary
 #' shoppers will spend at the proposed store
 #' @param pct_metro_sec The percentage of secondary shoppers in metro market
@@ -21,7 +26,7 @@
 #' @param population Total US population. Default value is 334233854.
 #'
 #' @returns
-#' outputs the total spending by secondary Shoppers at the proposed store
+#' Outputs the total spending by secondary shoppers at the proposed store
 #'
 #' @examples
 #' Total_Spend_Secondary_Shoppers(county_pop=18000,

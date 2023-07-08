@@ -54,10 +54,10 @@ default taken as 7 for 2023.}
 \item{population}{Total US population. Default value is 334233854.}
 }
 \value{
-outputs the total spending by secondary Shoppers at the proposed store
+Outputs the total spending by secondary shoppers at the proposed store
 }
 \description{
-Calculates the Money Spent by Secondary Shoppers
+This function returns the total money spent by secondary shoppers visiting a store.
 }
 \details{
 This function is taken from the estimating Revenue.xlsx and calculated
@@ -73,4 +73,7 @@ Total_Spend_Secondary_Shoppers(county_pop=18000,
                                state_index=99,
                                est_per_price_increase=7)
 
+}
+\author{
+Srika Raja
 }

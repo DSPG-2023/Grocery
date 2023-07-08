@@ -1,7 +1,13 @@
-#' Calculates Average per Capita Spending Adjusted by Estimated Price Increase
+#' Calculates Average Per Capita Spending Adjusted by Estimated Price Increase
 #'
-#' @param est_per_price_increase Estimated increase in price of grocery in cumulative percent
-#' default taken as 7 for 2023
+#'@author Srika Raja
+#'
+#'@description
+#' This function returns the average per capita spending after adjusting for
+#' percentage price increase from the base year(2022).
+#'
+#' @param est_per_price_increase Estimated increase in price of grocery in
+#' cumulative percent default taken as 7 for 2023
 #' @param grocery_sales Total US grocery sales annually. Default value is 811541000000.
 #' @param population Total US population. Default value is 334233854.
 #'
@@ -12,7 +18,7 @@
 #'
 #' @details
 #' This function is taken from the Estimating_Revenue.xlsx and calculated in Step two.
-#' This function calls `Avg_Capita_Grocery_Spending()`.
+#' This function calls Avg_Capita_Grocery_Spending().
 #'
 #' @export
 

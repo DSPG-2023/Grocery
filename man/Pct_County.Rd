@@ -2,7 +2,7 @@
 % Please edit documentation in R/Pct_County.R
 \name{Pct_County}
 \alias{Pct_County}
-\title{Calculates Sum of Quadrant Areas.}
+\title{Calculation for a quarter circle.}
 \usage{
 Pct_County(north_quad, east_quad, south_quad, west_quad, county_size)
 }
@@ -21,5 +21,5 @@ Pct_County(north_quad, east_quad, south_quad, west_quad, county_size)
 outputs sum of quadrant areas
 }
 \description{
-Calculates Sum of Quadrant Areas.
+Calculation for a quarter circle.
 }

@@ -29,13 +29,13 @@ Total_Estimate_Revenue(
 )
 }
 \arguments{
-\item{per_of_grocery_spend_rare}{the percentage of groceries rare
+\item{per_of_grocery_spend_rare}{The percentage of groceries rare
 shoppers will spend at the proposed store}
 
-\item{per_of_grocery_spend_sec}{the percentage of groceries secondary
+\item{per_of_grocery_spend_sec}{The percentage of groceries secondary
 shoppers will spend at the proposed store}
 
-\item{per_of_grocery_spend_prim}{the percentage of groceries primary
+\item{per_of_grocery_spend_prim}{The percentage of groceries primary
 shopper will spend at the proposed store}
 
 \item{pct_metro_prim}{The percentage of primary shoppers in metro market
@@ -65,17 +65,17 @@ default taken as 20\% unless specified otherwise.}
 \item{pct_town_rare}{The percentage of rare shoppers in town market
 default taken as 20\% unless specified otherwise.}
 
-\item{county_pop}{population of the county.}
+\item{county_pop}{Population of the county.}
 
-\item{towns_pop}{population of all towns in the county.}
+\item{towns_pop}{Population of all towns in the county.}
 
-\item{pct_county}{percentage of county in our market.}
+\item{pct_county}{Percentage of county in our market.}
 
-\item{metro_list}{lists of population of store location.}
+\item{metro_list}{Lists of population of store location.}
 
-\item{town_list}{list of population of towns in the neighborhood.}
+\item{town_list}{List of population of towns in the neighborhood.}
 
-\item{state_index}{the ratio of the current price of the basket to the price
+\item{state_index}{The ratio of the current price of the basket to the price
 of the basket during the base year}
 
 \item{est_per_price_increase}{Estimated increase in price of grocery in cumulative percent
@@ -86,10 +86,11 @@ default taken as 7 for 2023.}
 \item{population}{Total US population. Default value is 334233854.}
 }
 \value{
-outputs the estimated total revenue at the proposed store
+Outputs the estimated total revenue at the proposed store.
 }
 \description{
-Calculates the Estimated Total Revenue
+This function returns the total estimated revenue calculated by taking the
+sum of money spent primary secondary and tertiary shoppers.
 }
 \details{
 This function is taken from the estimating Revenue.xlsx and calculated
@@ -104,4 +105,7 @@ Total_Estimate_Revenue(county_pop=18000,
                        metro_list=list(2650),
                        state_index=99)
 
+}
+\author{
+Srika Raja
 }

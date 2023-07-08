@@ -1,19 +1,24 @@
 #' Calculates the Number of Rare Shoppers in Each Marker
 #'
+#' @author Srika Raja
+#'
+#' @description
+#' This function calculates the number of rare shoppers given the
+#' population in each market type.
+#'
 #' @param pct_metro_rare The percentage of secondary shoppers in metro market
 #' default taken as 10% unless specified otherwise.
 #' @param pct_rural_rare The percentage of secondary shoppers in rural market
 #' default taken as 20% unless specified otherwise.
 #' @param pct_town_rare The percentage of secondary shoppers in town market
 #'default taken as 20% unless specified otherwise.
-#' @param county_pop population of the county.
-#' @param towns_pop population of all towns in the county.
-#' @param pct_county percentage of county in our market.
-#' @param metro_list lists of population of store location.
-#' @param town_list list of population of towns in the neighborhood.
+#' @param county_pop Population of the county.
+#' @param towns_pop Population of all towns in the county.
+#' @param pct_county Percentage of county in our market.
+#' @param metro_list Lists of population of store location.
+#' @param town_list List of population of towns in the neighborhood.
 #'
-#' @returns
-#' outputs the total number of Rare shoppers for the store
+#' @returns Outputs the total number of Rare shoppers for the store
 #'
 #' @examples
 #' Rare_Shopper_Count(county_pop=18000,

@@ -1,6 +1,11 @@
-#' Calculates the money spent by primary shoppers
+#' Calculates the Money Spent by Primary Shoppers
 #'
-#' @param per_of_grocery_spend_prim the percentage of groceries primary
+#' @author Srika Raja
+#'
+#' @description
+#' This function return the total money spent by primary shoppers visiting a store.
+#'
+#' @param per_of_grocery_spend_prim The percentage of groceries primary
 #' shopper will spend at the proposed store
 #' @param pct_metro_prim The percentage of primary shoppers in metro market
 #'  default taken as 50% unless specified otherwise.
@@ -8,12 +13,12 @@
 #' default taken as 30% unless specified otherwise.
 #' @param pct_town_prim The percentage of primary shoppers in town market
 #' default taken as 30% unless specified otherwise.
-#' @param county_pop population of the county.
-#' @param towns_pop population of all towns in the county.
-#' @param pct_county percentage of county in our market.
-#' @param metro_list lists of population of store location.
-#' @param town_list list of population of towns in the neighborhood.
-#' @param state_index the ratio of the current price of the basket to the price of
+#' @param county_pop Population of the county.
+#' @param towns_pop Population of all towns in the county.
+#' @param pct_county Percentage of county in our market.
+#' @param metro_list Lists of population of store location.
+#' @param town_list List of population of towns in the neighborhood.
+#' @param state_index The ratio of the current price of the basket to the price of
 #' the basket during the base year
 #' @param est_per_price_increase Estimated increase in price of grocery in cumulative percent
 #' default taken as 7 for 2023.
@@ -21,7 +26,7 @@
 #' @param population Total US population. Default value is 334233854.
 #'
 #' @returns
-#' outputs the total spending by Primary Shoppers at the proposed store
+#' Outputs the total spending by primary shoppers at the proposed store
 #'
 #' @details
 #' This function is taken from the estimating Revenue.xlsx and calculated
@@ -38,6 +43,7 @@
 #'                              state_index=99)
 #'
 #' @export
+#'
 
 
 Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend_prim=60,

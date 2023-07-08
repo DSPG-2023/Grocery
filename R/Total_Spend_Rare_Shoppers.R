@@ -1,6 +1,11 @@
 #' Calculates the Money Spent by Rare Shoppers
 #'
-#' @param per_of_grocery_spend_rare the percentage of groceries rare
+#' @author Srika Raja
+#'
+#' @description
+#' This function returns the total money spent by rare shoppers visiting a store.
+#'
+#' @param per_of_grocery_spend_rare The percentage of groceries rare
 #' shoppers will spend at the proposed store
 #' @param pct_metro_rare The percentage of rare shoppers in metro market
 #'  default taken as 10% unless specified otherwise.
@@ -8,20 +13,20 @@
 #' default taken as 20% unless specified otherwise.
 #' @param pct_town_rare The percentage of rare shoppers in town market
 #' default taken as 20% unless specified otherwise.
-#' @param county_pop population of the county
-#' @param towns_pop population of all towns in the county
+#' @param county_pop Population of the county
+#' @param towns_pop Population of all towns in the county
 #' @param pct_county percentage of county in our market
-#' @param metro_list lists of population of store location
-#' @param town_list list of population of towns in the neighborhood
-#' @param state_index the ratio of the current price of the basket to the price of
-#' the basket during the base year
-#' @param est_per_price_increase Estimated increase in price of grocery in cumulative percent
-#' default taken as 7 for 2023.
+#' @param metro_list Lists of population of store location
+#' @param town_list List of population of towns in the neighborhood
+#' @param state_index The ratio of the current price of the basket to the
+#' price of the basket during the base year.
+#' @param est_per_price_increase Estimated increase in price of grocery in
+#' cumulative percent default taken as 7 for 2023.
 #' @param grocery_sales Total US grocery sales annually. Default value is 811541000000.
 #' @param population Total US population. Default value is 334233854.
 #'
 #' @returns
-#' outputs the total spending by rare Shoppers at the proposed store
+#' Outputs the total spending by Rare Shoppers at the proposed store.
 #'
 #' @examples
 #' Total_Spend_Rare_Shoppers(county_pop=18000,
@@ -32,8 +37,8 @@
 #'                           state_index=99)
 #'
 #' @details
-#' This function is taken from the estimating Revenue.xlsx and calculated
-#' in step 4. This function calls State_Adj_Capita_Grocery_Spend()
+#' This function is taken from the estimating Revenue.xlsx and calculated in
+#' step 4. This function calls State_Adj_Capita_Grocery_Spend()
 #' and Rare_Shopper_Count()
 #'
 #' @export

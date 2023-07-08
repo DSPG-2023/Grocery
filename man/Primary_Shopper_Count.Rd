@@ -25,21 +25,22 @@ default taken as 30\% unless specified otherwise.}
 \item{pct_town_prim}{The percentage of primary shoppers in town market
 default taken as 30\% unless specified otherwise.}
 
-\item{county_pop}{population of the county.}
+\item{county_pop}{Population of the county.}
 
-\item{towns_pop}{population of all towns in the county.}
+\item{towns_pop}{Population of all towns in the county.}
 
-\item{pct_county}{percentage of county in our market.}
+\item{pct_county}{Percentage of county in our market.}
 
-\item{metro_list}{lists of population of store location.}
+\item{metro_list}{Lists of population of store location.}
 
-\item{town_list}{list of population of towns in the neighborhood.}
+\item{town_list}{List of population of towns in the neighborhood.}
 }
 \value{
-outputs the total number of primary shoppers for the store
+Outputs the total number of primary shoppers for the store
 }
 \description{
-Calculates the Number of Primary Shoppers in Each Marker
+This function calculates the number of primary shoppers given the
+population in each market type.
 }
 \details{
 This function is taken from the estimating Market Size.xlsx
@@ -53,4 +54,7 @@ Primary_Shopper_Count(county_pop=18000,
                      town_list=list(77),
                      metro_list=list(2650))
 
+}
+\author{
+Srika Raja
 }

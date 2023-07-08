@@ -2,7 +2,7 @@
 % Please edit documentation in R/Secondary_Shopper_Count.R
 \name{Secondary_Shopper_Count}
 \alias{Secondary_Shopper_Count}
-\title{Calculates the Number of Secondary Shoppers in Each Marker}
+\title{Calculates the Number of Secondary Shoppers in Each Market}
 \usage{
 Secondary_Shopper_Count(
   pct_metro_sec = 40,
@@ -25,21 +25,22 @@ default taken as 50\% unless specified otherwise.}
 \item{pct_town_sec}{The percentage of secondary shoppers in town market
 default taken as 50\% unless specified otherwise.}
 
-\item{county_pop}{population of the county.}
+\item{county_pop}{Population of the county.}
 
-\item{towns_pop}{population of all towns in the county.}
+\item{towns_pop}{Population of all towns in the county.}
 
-\item{pct_county}{percentage of county in our market.}
+\item{pct_county}{Percentage of county in our market.}
 
-\item{metro_list}{lists of population of store location.}
+\item{metro_list}{Lists of population of store location.}
 
-\item{town_list}{list of population of towns in the neighborhood.}
+\item{town_list}{List of population of towns in the neighborhood.}
 }
 \value{
-outputs the total number of secondary shoppers for the store
+Outputs the total number of secondary shoppers for the store
 }
 \description{
-Calculates the Number of Secondary Shoppers in Each Marker
+This function calculates the number of secondary shoppers given the
+population in each market type.
 }
 \details{
 This function is taken from the estimating Market Size.xlsx
@@ -53,4 +54,7 @@ Secondary_Shopper_Count(county_pop=18000,
                        town_list=list(77),
                        metro_list=list(2650))
 
+}
+\author{
+Srika Raja
 }

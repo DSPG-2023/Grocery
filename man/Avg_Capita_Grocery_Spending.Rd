@@ -2,7 +2,7 @@
 % Please edit documentation in R/Avg_Capita_Grocery_Spending.R
 \name{Avg_Capita_Grocery_Spending}
 \alias{Avg_Capita_Grocery_Spending}
-\title{Calculates Average Grocery Spending per Capita.}
+\title{Calculates Average Grocery Spending Per Capita.}
 \usage{
 Avg_Capita_Grocery_Spending(
   grocery_sales = 8.11541e+11,
@@ -18,7 +18,8 @@ Avg_Capita_Grocery_Spending(
 Outputs average grocery spending per capita.
 }
 \description{
-Calculates Average Grocery Spending per Capita.
+This function returns the average per capita spending by taking the ratio of
+grocery sales to population in the base year(2022).
 }
 \details{
 This function is taken from the Estimating_Revenue.xlsx and calculated in Step One.
@@ -26,4 +27,7 @@ This function is taken from the Estimating_Revenue.xlsx and calculated in Step O
 \examples{
 Avg_Capita_Grocery_Spending(grocery_sales = 811541000000, population = 334233854)
 
+}
+\author{
+Srika Raja
 }

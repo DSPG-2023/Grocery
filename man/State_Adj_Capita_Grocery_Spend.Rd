@@ -23,11 +23,12 @@ default taken as 7 for 2023.}
 \item{population}{Total US population. Default value is 334233854.}
 }
 \value{
-outputs the average per capita grocery spend after adjusting for the expected
+Outputs the average per capita grocery spend after adjusting for the expected
 price increase and state index
 }
 \description{
-Calculates Average per Capita Spending Adjusted by Estimated Price Increase and State Index
+This function returns the average per capita spending after adjusting for
+percentage price increase and rural price parities from the base year(2022).
 }
 \details{
 This function is taken from the Estimating_Revenue.xlsx and calculated in Step three.
@@ -36,4 +37,7 @@ This function calls \code{Adj_Capita_Grocery_Spend()}.
 \examples{
 State_Adj_Capita_Grocery_Spend(99,7)
 
+}
+\author{
+Srika Raja
 }

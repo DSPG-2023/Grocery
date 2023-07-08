@@ -1,5 +1,11 @@
 #' Calculates Average per Capita Spending Adjusted by Estimated Price Increase and State Index
 #'
+#' @author Srika Raja
+#'
+#' @description
+#' This function returns the average per capita spending after adjusting for
+#' percentage price increase and rural price parities from the base year(2022).
+#'
 #' @param state_index the ratio of the current price of the basket to the price of the
 #'  basket during the base year
 #' @param est_per_price_increase Estimated increase in price of grocery in cumulative percent
@@ -7,8 +13,7 @@
 #' @param grocery_sales Total US grocery sales annually. Default value is 811541000000.
 #' @param population Total US population. Default value is 334233854.
 #'
-#' @returns
-#' outputs the average per capita grocery spend after adjusting for the expected
+#' @returns Outputs the average per capita grocery spend after adjusting for the expected
 #' price increase and state index
 #'
 #' @examples

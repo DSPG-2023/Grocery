@@ -1,4 +1,10 @@
-#' Calculates the Number of Secondary Shoppers in Each Marker
+#' Calculates the Number of Secondary Shoppers in Each Market
+#'
+#' @author Srika Raja
+#'
+#' @description
+#' This function calculates the number of secondary shoppers given the
+#' population in each market type.
 #'
 #' @param pct_metro_sec The percentage of secondary shoppers in metro market
 #' default taken as 40% unless specified otherwise.
@@ -6,14 +12,13 @@
 #' default taken as 50% unless specified otherwise.
 #' @param pct_town_sec The percentage of secondary shoppers in town market
 #' default taken as 50% unless specified otherwise.
-#' @param county_pop population of the county.
-#' @param towns_pop population of all towns in the county.
-#' @param pct_county percentage of county in our market.
-#' @param metro_list lists of population of store location.
-#' @param town_list list of population of towns in the neighborhood.
+#' @param county_pop Population of the county.
+#' @param towns_pop Population of all towns in the county.
+#' @param pct_county Percentage of county in our market.
+#' @param metro_list Lists of population of store location.
+#' @param town_list List of population of towns in the neighborhood.
 #'
-#' @returns
-#' outputs the total number of secondary shoppers for the store
+#' @returns Outputs the total number of secondary shoppers for the store
 #'
 #' @examples
 #' Secondary_Shopper_Count(county_pop=18000,
