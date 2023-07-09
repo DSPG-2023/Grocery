@@ -1,15 +1,26 @@
-#' Calculation of Gross Margin
+#' Calculates the Expected Gross Margin for Grocery Stores
 #'
-#' @param Total_Estimated_Revenue Output of a total estimated revenue calculation
-#' @param Percentage Percentage of Revenue as Gross Margin (Revenue - Cost of Goods)
+#' @author Aaron Null
 #'
-#' @returns Outputs Gross Margin (in dollars) depending on the percentage provided
-#' (default from Bizminer)
+#' @description
+#' This function calculates the estimated portion of the total estimated revenue represented
+#' as gross margin for a hypothetical grocery store in a user-selected location
+#' based off of a user-selected percentage parameter.
+#' If not specified by the user, this percentage defaults to the industry average
+#' provided by Bizminer.
 #'
-#' @details This function is taken from the "Estimating Expense" excel sheet (step six)
 #'
-#' @examples
-#' # Gross_Margin(Total_Estimated_Revenue = 2000000, Percentage = .2446)
+#' @details
+#' This function employs a default percentage value from the financial analysis
+#' and market research firm Bizminer and is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Percentage Percentage of total estimated revenue expected as gross margin
+#' selected via user input (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount for gross margin for
+#' a hypothetical grocery store in a given location.
 #'
 #' @export
 
