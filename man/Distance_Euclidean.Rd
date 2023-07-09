@@ -25,3 +25,6 @@ The function calculates the euclidean distance from a provided origin
 point to provided end points. The origin and param parameters should be provided
 in a vector format.
 }
+\author{
+Harun Celik
+}
