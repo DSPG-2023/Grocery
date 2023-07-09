@@ -1,17 +1,23 @@
-#' Calculation of the Cost of Goods Sold
+#' Calculates the Cost of Goods Sold Based on Gross Margin for Grocery Stores
 #'
-#' @param Total_Estimated_Revenue Output of a total estimated revenue calculation
-#' @param Gross_Margin_Percentage Percentage of revenue as gross margin (default from Bizminer)
+#' @author Aaron Null
 #'
-#' @details Calls Gross_Margin() function to provide the gross margin (in dollars)
-#' which is subtracted from revenue to
-#' calculate cost of goods.
-#' This function was taken from Estimating_Expense.xlxs (Step 6)
+#' @description
+#' This function calculates the estimated cost of goods sold based on
+#' the selected gross margin percentage for a hypothetical grocery store
+#' in a user-selected location.
 #'
-#' @returns Outputs cost of goods sold (in dollars)
 #'
-#' @examples
-#' # Cost_of_Goods_Sold(Total_Estimated_Revenue = 2000000, Gross_Margin_Percentage = .2446)
+#' @details
+#' This function calls the "Gross_Margin()" function from the DSPG package in its
+#' calculations.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Gross_Margin_Percentage Percentage of total estimated revenue expected as gross margin
+#' selected via user input (default from Bizminer).
+#'
+#' @returns The output returns the estimated dollar amount for the cost of goods sold for
+#' a hypothetical grocery store in a given location.
 #'
 #' @export
 
