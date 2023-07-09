@@ -1,6 +1,6 @@
 #' Calculates Euclidean Distance from an Origin point to End Points
 #'
-#' @description The function calculates the euclidian distance from a provided origin
+#' @description The function calculates the euclidean distance from a provided origin
 #' point to provided end points. The origin and param parameters should be provided
 #' in a vector format.
 #'
@@ -22,6 +22,6 @@ Distance_Euclidean <- function(df, origin, end) {
     sqrt(sum((end_matrix - origin)^2))
   })
 
-  df_new <<- cbind(df, distance_vector)
+  df_new <- cbind(df, distance_vector)
 }
 
