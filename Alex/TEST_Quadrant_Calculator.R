@@ -1,42 +1,34 @@
-#' No Title?
-#'
+#' Determining Quadrant Areas
 #' @author Alex Cory
 #'
 #' @description
 #' Finds the distance to the nearest store in each quadrant.
 #' No return, just sets four global variables
 #'
-#' @param df_grocery_only a data frame containing only grocery store observations.
-#' Returned from a call to the googleway::google_places api.
-#' @param df_geocode a data frame containing only the lat and lng values of a geocoded
-#' address. The geocode is returned from googleway::google_geocode.
+#' @param df_places_grocery API call with nearby stores
 #'
-#'
-#' @importFrom oce lonlat2utm
-#' @importFrom dplyr %>%, filter
-#'
-#' @returns ADD RETURNED OBJECTS AND THEIR DESCRIPTION HERE
+#' @importFrom oce lonlat2ut
 
 
-Distance_Comparator <- function(df_grocery_only, df_geocode) {
+Quadrant_Calculator <- function(df_places_grocery) {
 
   #Creates a new dataframe with the Lat, Long, and Name columns
   #This step is completely unnecessary, but the original DF
   #had awful column names and I didn't want to have to look at all
   #the other columns
-  api_stores <- data.frame( Name = df_grocery_only$name,
-                            lat = df_grocery_only$lat,
-                            lng = df_grocery_only$lng)
+  api_stores <- data.frame( Name = df_places_grocery$name,
+                            lat = df_places_grocery$lat,
+                            lng = df_places_grocery$lng)
 
   #Add Northing and Easting Columns
   UTM_geo <- lonlat2utm(longitude = df_geocode$lng,
-                        latitude = df_geocode$lat,
-                        zone = UTM_Zoner(abs(api_stores$lng[1])))
+                             latitude = df_geocode$lat,
+                             zone = UTM_Zoner(abs(api_stores$lng[1])))
   df_geocode <- cbind(df_geocode, UTM_geo)
 
   UTM_df <- lonlat2utm(longitude = api_stores$lng,
-                       latitude = api_stores$lat,
-                       zone = UTM_Zoner(abs(api_stores$lng[1])))
+                            latitude = api_stores$lat,
+                            zone = UTM_Zoner(abs(api_stores$lng[1])))
   api_stores <- cbind(api_stores, UTM_df)
 
   # Save variables for testing.
