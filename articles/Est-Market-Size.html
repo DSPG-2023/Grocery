@@ -232,12 +232,12 @@ the origin point the new point is.</p>
 <span>  <span class="co">#Add Northing and Easting Columns</span></span>
 <span>  <span class="va">UTM_geo</span> <span class="op">&lt;-</span> <span class="fu">lonlat2utm</span><span class="op">(</span>longitude <span class="op">=</span> <span class="va">df_geocode</span><span class="op">$</span><span class="va">lng</span>,</span>
 <span>                             latitude <span class="op">=</span> <span class="va">df_geocode</span><span class="op">$</span><span class="va">lat</span>,</span>
-<span>                             zone <span class="op">=</span> <span class="fu">UTM_Zoner</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>                             zone <span class="op">=</span> <span class="fu"><a href="../reference/UTM_Zoner.html">UTM_Zoner</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="va">df_geocode</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">df_geocode</span>, <span class="va">UTM_geo</span><span class="op">)</span></span>
 <span></span>
 <span>  <span class="va">UTM_df</span> <span class="op">&lt;-</span> <span class="fu">lonlat2utm</span><span class="op">(</span>longitude <span class="op">=</span> <span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span>,</span>
 <span>                            latitude <span class="op">=</span> <span class="va">api_stores</span><span class="op">$</span><span class="va">lat</span>,</span>
-<span>                            zone <span class="op">=</span> <span class="fu">UTM_Zoner</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>                            zone <span class="op">=</span> <span class="fu"><a href="../reference/UTM_Zoner.html">UTM_Zoner</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="va">api_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">api_stores</span>, <span class="va">UTM_df</span><span class="op">)</span></span>
 <span></span>
 <span>  <span class="co"># Save variables for testing.</span></span>
@@ -337,7 +337,7 @@ that name.</p>
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by The package maintainer.</p>
+<p>Developed by Harun Celik.</p>
 </div>
 
 <div class="pkgdown-footer-right">
