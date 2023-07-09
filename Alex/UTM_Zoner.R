@@ -1,9 +1,11 @@
-#'@author Alex Cory
-#'@description Allows the user to enter a longitude and have it return the
-#'UTM zone. Do not use this ever, because implementing this is terrible.
+#' @author Alex Cory
 #'
-#'@params lng longitude
-#'@return zone the UTM zone
+#' @description Allows the user to enter a longitude and have it return the
+#' UTM zone. Do not use this ever, because implementing this is terrible.
+#'
+#' @params lng longitude
+#'
+#' @returns zone the UTM zone
 
 
 UTM_Zoner <- function(lng) {
