@@ -20,7 +20,6 @@
 
 Pull_Counties <- function(df_grocery_all,
                           state_list) {
-  browser()
   all_counties <- NULL
   for (index in 1:length(state_list)) {
     county_loop <- counties(state = state_list[index])
