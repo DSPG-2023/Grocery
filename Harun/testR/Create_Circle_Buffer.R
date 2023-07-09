@@ -22,15 +22,16 @@
 #' store_points, furthest_point,buffer_circle, all_counties, grocery_counties_inter,
 #' grocery_cities_inter
 #'
-#' @importFrom googleway set_key, google_geocode, google_places
-#' @importFrom dplyr %>%, transmute, select, filter
-#' @importFrom sf st_as_sf, st_buffer, st_intersection, st_distance, st_join
-#' @importFrom tigris counties, places
-#' @importFrom cli cli_h1, cli_h2, cli_alert_success
+#' @importFrom googleway set_key google_geocode google_places
+#' @importFrom dplyr transmute select filter .data
+#' @importFrom magrittr %>%
+#' @importFrom sf st_as_sf st_buffer st_intersection st_distance st_join st_nearest_feature
+#' @importFrom tigris counties places
+#' @importFrom cli cli_h1 cli_h2 cli_alert_success cli_alert_info
+#'
+#' @export
 
-Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
-                                 api_key = Sys.getenv("PLACES_KEY"),
-                                 keyword = "grocery") {
+Create_Circle_Buffer <- function(address, api_key, keyword) {
 
   # Timer Start
   startTime <- Sys.time()
@@ -89,13 +90,14 @@ Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
   cli_h1("Creating Spatial Objects")
   ## Create df_grocery_circle, a dataframe of (up to four) closest store points
   cli_h2("Building Spatial Data")
+  distance_comp_list <- Quadrant_Calculator(df_grocery_only = df_grocery_only,
+                                            df_geocode = df_geocode)
 
-  source(file = "Alex/Distance_Comparator.R")
-  source(file = "Alex/UTM_Zoner.R")
-  source(file = "Alex/Distance_Euclidean.R")
-
-  df_grocery_circle <- Distance_Comparator(df_grocery_only = df_grocery_only,
-                                           df_geocode = df_geocode) %>%
+  df_grocery_circle <- data.frame(distance_comp_list["df_circle_buffer"])
+  # Remove repeated characters in column names
+  colnames(df_grocery_circle) <- gsub("df_circle_buffer.", "", colnames(df_grocery_circle))
+  # Find store with the furthest distance from the closest stores.
+  df_grocery_circle <- df_grocery_circle %>%
     filter(distance_vector == max(distance_vector))
   cli_alert_success("Data frame of closest stores built successfully")
 
@@ -117,8 +119,10 @@ Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
   cli_h1("Pulling County and City Information for State(s)")
 
   ## Pulling all county and city information from Tigris
-  all_counties <- Pull_Counties(state_list = unique(df_grocery_all$state))
-  all_cities <- Pull_Cities(state_list = unique(df_grocery_all$state))
+  all_counties <- Pull_Counties(df_grocery_all = df_grocery_all,
+                                state_list = unique(df_grocery_all$state))
+  all_cities <- Pull_Cities(df_grocery_all = df_grocery_all,
+                            state_list = unique(df_grocery_all$state))
   cli_alert_success("Pulled county and city information successfully")
 
   ## Intersecting buffer with Tigris files
@@ -128,15 +132,16 @@ Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
   cli_alert_success("Intersected buffer and places successfully")
 
   ## Create the data frame for the census call
-  df_census_call <- st_join(x = grocery_cities_inter, y = all_counties) %>%
-    transmute(cities =  NAME.x,
-              counties = NAME.y,
-              state = STATEFP.x)
+  df_census_call <- st_join(x = grocery_cities_inter,
+                            y = all_counties, join = st_nearest_feature) %>%
+    transmute(cities =  .$NAME.x,
+              counties = .$NAME.y,
+              state = .$STATEFP.x)
 
 
 
   # Store Outputs in a list
-  Store_Info <<- list(df_grocery_all = df_grocery_all,
+  Store_Info <- list(df_grocery_all = df_grocery_all,
                       df_grocery_only = df_grocery_only,
                       df_grocery_circle = df_grocery_circle,
                       buffer_point_origin = buffer_point_origin,
@@ -154,7 +159,8 @@ Create_Circle_Buffer <- function(address = "St, Lamoni, IA",
 
   # Total Time
   TotalTime <- EndTime - startTime
+  cli_alert_info(sprintf("Run time: %.3f seconds", TotalTime))
 
   # Return Completion Time
-  return(cli_alert_info(sprintf("Run time: %.3f seconds", TotalTime)))
+  return(Store_Info)
 }
