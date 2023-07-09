@@ -21,6 +21,16 @@ library(cli)
 set_key(key = Sys.getenv("PLACES_KEY"))
 ```
 
+# Testing variables
+```{r}
+address <- "St, Lamoni, IA"
+api_key <- Sys.getenv("PLACES_KEY")
+keyword <- "grocery"
+
+# Create_Circle_Buffer(address = address, api_key = api_key, keyword = keyword)
+```
+
+
 # Convert the address of LakeView to a lat/long 
 ```{r}
 df_geocode <- google_geocode(address = "St, Lamoni, IA") %>%
