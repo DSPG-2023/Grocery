@@ -23,6 +23,8 @@ Imports:
     tidycensus,
     dplyr,
     magrittr,
-    oce (>= 1.8.1)
-Remotes:  
+    oce (>= 1.8.1),
+    cli,
+    googleway
+Remotes: 
     github::dankelley/oce
