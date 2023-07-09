@@ -8,6 +8,8 @@
 #' @param lng longitude
 #'
 #' @returns zone the UTM zone
+#'
+#' @export
 
 
 UTM_Zoner <- function(lng) {

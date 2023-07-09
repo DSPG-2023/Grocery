@@ -15,6 +15,8 @@
 #'
 #' @returns The function returns df_new, a data frame that has the distance calculations
 #' appended in the distance_vector column.
+#'
+#' @export
 
 Distance_Euclidean <- function(df, origin, end) {
 
