@@ -19,13 +19,13 @@
 #' @returns Outputs the total number of secondary shoppers for the store
 #'
 #' @examples
-#' Secondary_Shopper_Count()
+#' #Secondary_Shopper_Count()
 #'
 #' @details
 #' This function is taken from the estimating Market Size.xlsx
 #' and calculated in step 6.
 #'
-#' @seealso [Primary_Shopper_Count(),Rare_Shopper_Count()]
+#' @seealso [Primary_Shopper_Count()],[Rare_Shopper_Count()]
 #'
 #' @export
 

@@ -44,7 +44,7 @@
 #' Outputs the estimated total revenue at the proposed store.
 #'
 #' @examples
-#' Total_Estimate_Revenue(state_index=99)
+#' #Total_Estimate_Revenue(state_index=99)
 #'
 #' @details
 #' This function is taken from the estimating Revenue.xlsx and calculated
