@@ -18,8 +18,6 @@ knitr::opts_chunk$set(
 library(DSPGGrocery)
 ```
 
-# Estimating Revenue
-
 The average spending per capita and the number of shoppers in each category (Primary, Secondary, Rare) for each type of market (Metro, Rural, Town) are used for estimating the revenue of the proposed stores.
 
 ## Average Per Capita Grocery Spend
