@@ -32,49 +32,39 @@ city_county_state <- readRDS(file = "../ProjectData/city_county_state.RDS")
 ### ACS5:
 
 ```{r}
-# Make mock dataframe (3 Iowa counties, 2 Illinois counties):
 
-
-# county <- c("Muscatine", "Cedar", "Johnson", "Menard", "Lake")
-
-# state <- c("Iowa", "Iowa", "Iowa", "Illinois", "Illinois")
-
-# df <- cbind.data.frame(county, state)
-
-var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001", "C16001_002", "C16001_003", "C16001_006", "C16001_009", "C16001_012", "C16001_015","C16001_018", "C16001_021", "C16001_024", "C16001_027", "C16001_030", "C16001_033", "C16001_036")
-
-
-get_census_vars_acs <- function(df, geography, var_vector) {
-
-  library(dplyr)
+Get_Census_Vars_ACS <- function(df_locations) {
 
   state_df_list <- list()
 
   # Get vector of states
 
-  state_vector <- as.numeric(unique(df$state))
+  state_vector <- as.numeric(unique(df_locations$state))
 
   # Iterate through that vector of states
 
   for (my_state in state_vector) {
 
-    # Getting state abbreviation for TidyCensus call
-
-    # state_abb <- state.abb[match(my_state,state.name)]
-
     # Subsetting based on current state in the loop
 
-    state_df <- df[df$state==my_state,]
+    state_df <- df_locations[df_locations$state==my_state,]
 
     # Getting a vector of the counties for the current state in the loop
 
     county_vector <- unique(state_df$counties)
 
+    # Establishing Census variables to pull
+
+    var_vector <- c("B19013_001", "B23025_003", "B23025_004", "B23025_005", "C16001_001",
+                    "C16001_002", "C16001_003", "C16001_006", "C16001_009", "C16001_012",
+                    "C16001_015", "C16001_018", "C16001_021", "C16001_024", "C16001_027",
+                    "C16001_030", "C16001_033", "C16001_036")
+
     # Calling TidyCensus to get a data frame of the variables for the counties of the state
     # in the loop
 
 
-    census_geos_df <- tidycensus::get_acs(geography = geography,
+    census_geos_df <- tidycensus::get_acs(geography = "county",
                                           variables = var_vector,
                                           state = my_state,
                                           county = county_vector)
@@ -87,19 +77,18 @@ get_census_vars_acs <- function(df, geography, var_vector) {
 
   # Joining the data frames of each state in the list together into a single data frame
 
-  big_df <- bind_rows(state_df_list)
-  
+  big_df <- dplyr::bind_rows(state_df_list)
+
   # output big df
-  
+
   return(big_df)
 
 }
 
-
 ### Test Function ###
 
 
-acs_df <- get_census_vars_acs(city_county_state, "county", var_vector = var_vector)
+acs_df <- Get_Census_Vars_ACS(city_county_state)
 
 acs_df
 ```
@@ -107,18 +96,7 @@ acs_df
 ### Decennial:
 
 ```{r}
-decennialList = c("White" = "P1_003N", "White (Not Hispanic)" = "P2_005N", 
-                  "Black" = "P1_004N", "American Indian/Alaskan Native" = "P1_005N",
-                  "Asian" = "P1_006N", "Native Hawaiian/Pacific Islander" = "P1_007N", "Other" = "P1_008N",
-                  "Two or More Races" = "P1_009N", "Hispanic/Latino" = "P2_002N")
-
-
-
-get_census_vars_decennial <- function(df, geography, var_vector) {
-
-  # Load dplyr
-
-  library(dplyr)
+Get_Census_Vars_Decennial <- function(df_locations) {
 
   # Create empty list for the output data frames of each state
 
@@ -126,34 +104,38 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 
   # Get vector of states
 
-  state_vector <- as.numeric(unique(df$state))
+  state_vector <- as.numeric(unique(df_locations$state))
 
   # Iterate through that vector of states
 
   for (my_state in state_vector) {
 
-    # Getting state abbreviation for TidyCensus call
-
-    # state_abb <- state.abb[match(my_state,state.name)]
-
     # Subsetting based on current state in the loop
 
-    state_df <- df[df$state==my_state,]
+    state_df <- df_locations[df_locations$state==my_state,]
 
     # Getting a vector of the counties for the current state in the loop
 
     county_vector <- unique(state_df$counties)
 
+    # Establishing list of Census variables to pull
+
+    decennialList = c("Total Population" = "P1_001N", "White" = "P1_003N", 
+                      "White (Not Hispanic)" = "P2_005N","Black" = "P1_004N", 
+                      "American Indian/Alaskan Native" = "P1_005N",
+                      "Asian" = "P1_006N", "Native Hawaiian/Pacific Islander" = "P1_007N",                        "Other" = "P1_008N", "Two or More Races" = "P1_009N", 
+                      "Hispanic/Latino" = "P2_002N")
+
     # Calling TidyCensus to get a data frame of the variables for the counties of the state
     # in the loop
 
 
-    census_geos_df <- tidycensus::get_decennial(geography = geography,
-                                          variables = var_vector,
-                                          state = my_state,
-                                          county = county_vector,
-                                          year = 2020,
-                                          summary_var = "P1_001N")
+    census_geos_df <- tidycensus::get_decennial(geography = "county",
+                                                variables = decennialList,
+                                                state = my_state,
+                                                county = county_vector,
+                                                year = 2020,
+                                                output = "wide")
 
     # Adding this data frame to the empty state_df_list above
 
@@ -163,19 +145,46 @@ get_census_vars_decennial <- function(df, geography, var_vector) {
 
   # Joining the data frames of each state in the list together into a single data frame
 
-  big_df <- bind_rows(state_df_list)
+  big_df <- dplyr::bind_rows(state_df_list)
 
   return(big_df)
 
 }
 
+
 ## Test Function ##
 
 
-decennial_df <- get_census_vars_decennial(df = city_county_state, "county", var_vector = decennialList)
+decennial_df <- Get_Census_Vars_Decennial(city_county_state)
 
 decennial_df
 ```
+
+### Total Population
+
+```{r}
+Population_df <- decennial_df %>% select(GEOID, NAME, `Total Population`)
+
+pop_plot <- Population_df %>%
+  ggplot(aes(x = NAME, y = `Total Population`, fill = NAME)) +
+  geom_bar(stat = 'identity', show.legend = FALSE) +
+  ggtitle("Total Population (2021)") +
+  scale_fill_okabe_ito() +
+  labs(x = NULL, y = NULL) +
+  coord_flip()
+  
+
+## Convert to plotly object
+
+pop_plot <- plotly::ggplotly(pop_plot)
+
+pop_plot <- pop_plot %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+
+pop_plot
+
+```
+
+
 
 ### Median Household Income
 
@@ -193,9 +202,9 @@ reduced_df_acs1 <- acs_df %>% filter(variable=="B19013_001")
 
 p <- reduced_df_acs1 %>%
   ggplot(aes(x = NAME, y = estimate, fill = NAME)) +
-  geom_bar(stat = 'identity') +
+  geom_bar(stat = 'identity', show.legend = FALSE) +
   geom_errorbar(ymin = ymin, ymax = ymax) +
-  ggtitle("Median Household Income") +
+  ggtitle("Median Household Income (2021)") +
   scale_y_continuous(labels = scales::dollar_format()) +
   scale_fill_okabe_ito() +
   labs(x = NULL, y = NULL) +
@@ -245,12 +254,12 @@ ymax2 <- employment_df2$Employment_rate + employment_df2$Employment_rate_moe
 
 p2 <- employment_df2 %>%
   ggplot(aes(x = NAME, y = Employment_rate, fill = NAME)) +
-  geom_bar(stat = 'identity') +
+  geom_bar(stat = 'identity', show.legend = FALSE) +
   geom_errorbar(ymin = ymin2, ymax = ymax2, width = .2) +
-  ggtitle("Employment Rate") +
+  ggtitle("Employment Rate (2021)") +
   scale_fill_okabe_ito() +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
-  xlab("County") +
+  xlab(NULL) +
   ylab(NULL) +
   coord_flip(ylim = c(80,100))
 
@@ -296,12 +305,12 @@ max_lim2 <- max(ymax3)
 
 p3 <- small_df2 %>% 
   ggplot(aes(fill = Language_Spoken, y = Percentage, x = NAME)) +
-  geom_bar(position = "dodge", stat = "identity") + 
+  geom_bar(position = "dodge", stat = "identity", show.legend = FALSE) + 
   geom_errorbar(ymin = ymin3, ymax = ymax3, width = .2, position = position_dodge(.9)) + 
-  ggtitle("Languages Spoken by County (other than English)") +
+  ggtitle("Languages Spoken other than English (2021)") +
   scale_fill_okabe_ito() +
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
-  xlab("County") +
+  xlab(NULL) +
   ylab(NULL) +
   coord_flip(ylim = c(0, max_lim2))
   
@@ -316,16 +325,18 @@ plot3
 ## Race/Ethnicity Table
 
 ```{r}
-decennial_table <- decennial_df %>% 
-  mutate(Percentage = percent((value/summary_value), accuracy = .01)) %>% 
-  select(-value, -summary_value, -GEOID) %>% arrange(NAME) %>% rename("Race/Ethnicity" = "variable", "County" = "NAME")
+decennial_prop_table <- decennial_df %>%
+  mutate(White = White/`Total Population`,
+         `White (Not Hispanic)` = `White (Not Hispanic)`/`Total Population`,
+         Black = Black/`Total Population`,
+         `American Indian/Alaskan Native` = `American Indian/Alaskan Native`/`Total Population`,
+         Asian = Asian/`Total Population`,
+         `Native Hawaiian/Pacific Islander` = `Native Hawaiian/Pacific Islander`/`Total Population`,
+         Other = Other/ `Total Population`,
+         `Two or More Races` = `Two or More Races`/`Total Population`,
+         `Hispanic/Latino` = `Hispanic/Latino`/`Total Population`) %>% rename(County = NAME) %>% mutate_at(4:12, scales::percent) %>% select(-GEOID)
 
-dec_data_table <- DT::datatable(decennial_table, options = list(group = "NAME",
-                                                                pageLength = 9),
-                                caption = htmltools::tags$caption(style = "caption-side: bottom; text-align: left;", "Source: US Decennial Census (2020)"))
+dec_data_table <- DT::datatable(decennial_prop_table, caption = htmltools::tags$caption(style = "caption-side: bottom; text-align: left;", "Source: US Decennial Census (2020)"))
 
 dec_data_table
-
-## County as title per page?
-
 ```
