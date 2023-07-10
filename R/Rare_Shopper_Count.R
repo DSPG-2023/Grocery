@@ -25,7 +25,8 @@
 #' This function is taken from the estimating Market Size.xlsx
 #' and calculated in step 6.
 #'
-#' @seealso [Primary_Shoppers_Count()],[Secondary_Shoppers_Count()]
+#' @seealso [Primary_Shopper_Count()]
+#' @seealso [Secondary_Shopper_Count()]
 #'
 #' @export
 

@@ -3,7 +3,7 @@
 #' @author Harun Celik
 #'
 #' @description
-#' This is a helper function for DSPGrocery::[FILL THIS LATER] to calculate the
+#' This is a helper function for DSPGrocery::FILLTHISLATER to calculate the
 #' rural population for the buffered geographic area using
 #' DSPGrocery::Create_Circle_Buffer.The calculation for this is the difference between all county
 #' populations and city populations in those counties multiplied by the percentage
@@ -15,7 +15,7 @@
 #'
 #'
 #' @param df_buffer_loc a data frame containing the city, county and state
-#' locations of a buffered point.Inherited from the returned `df_census_call`
+#' locations of a buffered point.Inherited from the returned df_census_call
 #' data frame returned in the call DSPGrocery::Create_Circle_Buffer.
 #'
 #'
@@ -24,9 +24,7 @@
 #'
 #' @export
 
-df_census_call <- readRDS(file = "Harun/city_county_state_nearest.RDS")
-
-Auto_Rural_Pop <- function(df_buffer_loc = df_census_call) {
+Auto_Rural_Pop <- function(df_buffer_loc) {
 
 
   # Timer Start
@@ -37,14 +35,15 @@ Auto_Rural_Pop <- function(df_buffer_loc = df_census_call) {
   states_unique <- as.integer(unique(df_buffer_loc$state))
 
   # Get population for each county in state(s)
-  all_counties_pops <- Calc_Counties_Pop(states_unique = states_unique)
+  all_counties_pops <- Calc_Counties_Pop(states_unique = states_unique,
+                                         df_buffer_loc = df_buffer_loc)
 
   # Get population for cities for each county
   all_cities_pops <- Calc_Cities_Pop(states_unique = states_unique,
                                      all_counties_pops = all_counties_pops)
 
 
-  populations <<- list(cities_total = attributes(all_cities_pops)$all_population,
+  populations <- list(cities_total = attributes(all_cities_pops)$all_population,
                    counties_total = attributes(all_counties_pops)$all_population)
 
   # Timer End
@@ -52,7 +51,8 @@ Auto_Rural_Pop <- function(df_buffer_loc = df_census_call) {
 
   # Total Time
   TotalTime <- EndTime - startTime
+  print(sprintf("Run time: %.3f seconds", TotalTime))
 
   # Return Completion Time
-  return(cli_alert_info(sprintf("Run time: %.3f seconds", TotalTime)))
+  return(populations)
 }
