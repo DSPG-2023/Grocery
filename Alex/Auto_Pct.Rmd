@@ -1,7 +1,7 @@
 ```{r}
-Auto_Pct <- function(north_quad,east_quad,south_quad,west_quad) {
-  sum_val <- sum(Quadrant_Area(north_quad),Quadrant_Area(east_quad),
-                 Quadrant_Area(south_quad),Quadrant_Area(west_quad))
+Auto_Pct <- function(northeast_dist,northwest_dist,southeast_dist,southwest_dist) {
+  sum_val <- sum(Quadrant_Area(northeast_dist),Quadrant_Area(northwest_dist),
+                 Quadrant_Area(southeast_dist),Quadrant_Area(southwest_dist))
 county_tigris <- counties(state = bound_df$State)
 county_tigris <- county_tigris %>% filter(county_tigris$NAME == bound_df$County[1])
 county_size = county_tigris$ALAND + county_tigris$AWATER
