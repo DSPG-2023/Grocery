@@ -55,11 +55,9 @@
 <span>  pct_metro_rare <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  pct_rural_rare <span class="op">=</span> <span class="fl">20</span>,</span>
 <span>  pct_town_rare <span class="op">=</span> <span class="fl">20</span>,</span>
-<span>  <span class="va">county_pop</span>,</span>
-<span>  <span class="va">towns_pop</span>,</span>
-<span>  <span class="va">pct_county</span>,</span>
-<span>  <span class="va">metro_list</span>,</span>
-<span>  <span class="va">town_list</span>,</span>
+<span>  <span class="va">metro_pop</span>,</span>
+<span>  <span class="va">town_pop</span>,</span>
+<span>  <span class="va">rural_pop</span>,</span>
 <span>  <span class="va">state_index</span>,</span>
 <span>  est_per_price_increase <span class="op">=</span> <span class="fl">7</span>,</span>
 <span>  grocery_sales <span class="op">=</span> <span class="fl">8.11541e+11</span>,</span>
@@ -89,24 +87,16 @@ default taken as 20% unless specified otherwise.</p></dd>
 default taken as 20% unless specified otherwise.</p></dd>
 
 
-<dt>county_pop</dt>
-<dd><p>Population of the county</p></dd>
+<dt>metro_pop</dt>
+<dd><p>Population of the store location</p></dd>
 
 
-<dt>towns_pop</dt>
+<dt>town_pop</dt>
 <dd><p>Population of all towns in the county</p></dd>
 
 
-<dt>pct_county</dt>
-<dd><p>percentage of county in our market</p></dd>
-
-
-<dt>metro_list</dt>
-<dd><p>Lists of population of store location</p></dd>
-
-
-<dt>town_list</dt>
-<dd><p>List of population of towns in the neighborhood</p></dd>
+<dt>rural_pop</dt>
+<dd><p>Population of rural cities in our market</p></dd>
 
 
 <dt>state_index</dt>
@@ -140,19 +130,18 @@ step 4. This function calls State_Adj_Capita_Grocery_Spend()
 and Rare_Shopper_Count()</p>
     </div>
     <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><code>Total_Spend_Primary_Shoppers(),Total_Spend_Secondary_Shoppers()</code></p></div>
+    </div>
+    <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
     <p>Srika Raja</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">Total_Spend_Rare_Shoppers</span><span class="op">(</span>county_pop<span class="op">=</span><span class="fl">18000</span>,</span></span>
-<span class="r-in"><span>                          towns_pop<span class="op">=</span><span class="fl">9786</span>,</span></span>
-<span class="r-in"><span>                          pct_county<span class="op">=</span><span class="fl">17.7</span>,</span></span>
-<span class="r-in"><span>                          town_list<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fl">77</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                          metro_list<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fl">2650</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                          state_index<span class="op">=</span><span class="fl">99</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in Total_Spend_Rare_Shoppers(county_pop = 18000, towns_pop = 9786,     pct_county = 17.7, town_list = list(77), metro_list = list(2650),     state_index = 99):</span> unused arguments (county_pop = 18000, towns_pop = 9786, pct_county = 17.7, town_list = list(77), metro_list = list(2650))</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">Total_Spend_Rare_Shoppers</span><span class="op">(</span>state_index<span class="op">=</span><span class="fl">99</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in Total_Spend_Rare_Shoppers(state_index = 99):</span> argument "metro_pop" is missing, with no default</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
