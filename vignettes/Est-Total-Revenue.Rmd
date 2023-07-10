@@ -36,11 +36,11 @@ The next component needed for estimating the revenue is the number of shoppers i
 
 We classify shoppers into 3 categories:
 
-***Primary Shoppers:*** The people doing most of the household grocery shopping.
+***Primary Shoppers:*** The people doing most of the household grocery shopping in that store.
 
-***Secondary Shoppers:***
+***Secondary Shoppers:*** Regular visitors for smaller purchases but will often do their weekly shopping elsewhere.
 
-***Rare Shoppers:*** People who are very occasional shoppers.
+***Rare Shoppers:*** People who are very occasional shoppers(only when necessary).
 
 We classify shoppers into 3 different populations:
 
