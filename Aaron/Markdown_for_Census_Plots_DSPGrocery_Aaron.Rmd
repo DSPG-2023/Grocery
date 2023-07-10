@@ -25,6 +25,8 @@ library(DT)
 library(forcats)
 library(ggokabeito)
 library(tidyr)
+
+city_county_state <- readRDS(file = "../ProjectData/city_county_state.RDS")
 ```
 
 ### ACS5:
