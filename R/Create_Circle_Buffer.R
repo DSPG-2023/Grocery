@@ -142,16 +142,17 @@ Create_Circle_Buffer <- function(address, api_key, keyword) {
 
   # Store Outputs in a list
   Store_Info <- list(df_grocery_all = df_grocery_all,
-                      df_grocery_only = df_grocery_only,
-                      df_grocery_circle = df_grocery_circle,
-                      buffer_point_origin = buffer_point_origin,
-                      store_points = store_points,
-                      furthest_point = furthest_point,
-                      buffer_circle = buffer_circle,
-                      all_counties = all_counties,
-                      grocery_counties_inter = grocery_counties_inter,
-                      grocery_cities_inter = grocery_cities_inter,
-                      df_census_call = df_census_call)
+                     df_geocode = df_geocode,
+                     df_grocery_only = df_grocery_only,
+                     df_grocery_circle = df_grocery_circle,
+                     buffer_point_origin = buffer_point_origin,
+                     store_points = store_points,
+                     furthest_point = furthest_point,
+                     buffer_circle = buffer_circle,
+                     all_counties = all_counties,
+                     grocery_counties_inter = grocery_counties_inter,
+                     grocery_cities_inter = grocery_cities_inter,
+                     df_census_call = df_census_call)
 
 
   # Timer End
