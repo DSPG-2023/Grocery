@@ -15,7 +15,8 @@
 #'
 #' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
 #' @param Gross_Margin_Percentage Percentage of total estimated revenue expected as gross margin
-#' selected via user input (default from Bizminer).
+#' selected via user input (defaults to the average percentage taken from
+#' Bizminer and Vertical IQ).
 #'
 #' @returns The output returns the estimated dollar amount for the cost of goods sold for
 #' a hypothetical grocery store in a given location.
