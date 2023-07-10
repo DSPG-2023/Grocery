@@ -81,16 +81,13 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DSPGGrocery</span><span class="op">)</span></span></code></pre></div>
-<div class="section level2">
-<h2 id="estimating-revenue">Estimating Revenue<a class="anchor" aria-label="anchor" href="#estimating-revenue"></a>
-</h2>
 <p>The average spending per capita and the number of shoppers in each
 category (Primary, Secondary, Rare) for each type of market (Metro,
 Rural, Town) are used for estimating the revenue of the proposed
 stores.</p>
-<div class="section level3">
-<h3 id="average-per-capita-grocery-spend">Average Per Capita Grocery Spend<a class="anchor" aria-label="anchor" href="#average-per-capita-grocery-spend"></a>
-</h3>
+<div class="section level2">
+<h2 id="average-per-capita-grocery-spend">Average Per Capita Grocery Spend<a class="anchor" aria-label="anchor" href="#average-per-capita-grocery-spend"></a>
+</h2>
 <p>The <code><a href="../reference/Avg_Capita_Grocery_Spending.html">Avg_Capita_Grocery_Spending()</a></code> function calculates
 the average per capita spending. The 2022 total US grocery sales data is
 taken from IBIS and divided by the 2022 total US population from the US
@@ -109,9 +106,9 @@ given year and are expressed as a percentage of the overall national
 price level. Adjusting according to this measure gives that state’s
 average per capita spending on groceries for that year.</p>
 </div>
-<div class="section level3">
-<h3 id="total-spend-by-category">Total Spend by Category<a class="anchor" aria-label="anchor" href="#total-spend-by-category"></a>
-</h3>
+<div class="section level2">
+<h2 id="total-spend-by-category">Total Spend by Category<a class="anchor" aria-label="anchor" href="#total-spend-by-category"></a>
+</h2>
 <p>The next component needed for estimating the revenue is the number of
 shoppers in each category for each type of market.</p>
 <p>Shoppers are classified into 3 categories:</p>
@@ -188,13 +185,12 @@ table:</p>
 </tbody>
 </table>
 </div>
-<div class="section level3">
-<h3 id="total-revenue-estimate">Total Revenue Estimate<a class="anchor" aria-label="anchor" href="#total-revenue-estimate"></a>
-</h3>
+<div class="section level2">
+<h2 id="total-revenue-estimate">Total Revenue Estimate<a class="anchor" aria-label="anchor" href="#total-revenue-estimate"></a>
+</h2>
 <p>Total revenue is estimated by summing the total spend by primary,
 secondary, and rare shoppers by the
 <code><a href="../reference/Total_Estimate_Revenue.html">Total_Estimate_Revenue()</a></code>.</p>
-</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
     </nav></aside>
