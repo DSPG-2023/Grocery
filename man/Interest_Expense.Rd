@@ -2,26 +2,26 @@
 % Please edit documentation in R/Interest_Expense.R
 \name{Interest_Expense}
 \alias{Interest_Expense}
-\title{Calculation of First-Year Interest on a Loan}
+\title{Calculates the Annual Cost of Interest on a Loan}
 \usage{
 Interest_Expense(Loan_Amount, Interest_Rate)
 }
 \arguments{
-\item{Loan_Amount}{Total dollar amount for loan}
+\item{Loan_Amount}{Dollar amount of the user's loan.}
 
-\item{Interest_Rate}{Interest rate (decimal form) on the loan}
+\item{Interest_Rate}{The annual interest rate on that loan.}
 }
 \value{
-Outputs first-year loan interest (in dollars)
+The output returns the estimated dollar amount spent on interest for a loan.
 }
 \description{
-Calculation of First-Year Interest on a Loan
+This function calculates the annual cost of interest on a loan. The amount of the loan
+and the annual interest rate is provided by the user.
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and
-calculated in Step Five.
+This function calculates the dollar amount spent on interest for a loan by multiplying
+the loan by the annual interest rate (provided by the user).
 }
-\examples{
-Interest_Expense(Loan_Amount = 1000000, Interest_Rate = .06)
-
+\author{
+Aaron Null
 }

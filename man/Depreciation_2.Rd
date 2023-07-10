@@ -2,7 +2,7 @@
 % Please edit documentation in R/Depreciation_2.R
 \name{Depreciation_2}
 \alias{Depreciation_2}
-\title{Depreciation Calculation}
+\title{Calculates the Cost of Depreciation Based on List of Assets (For a Renter)}
 \usage{
 Depreciation_2(
   Leasehold_Improvements,
@@ -23,59 +23,73 @@ Depreciation_2(
 )
 }
 \arguments{
-\item{Leasehold_Improvements}{Cost of Leasehold Improvements}
+\item{Leasehold_Improvements}{Cost of various leasehold improvements.}
 
-\item{Leasehold_Improvements_Use_Life}{Use life for Leasehold Improvements}
+\item{Leasehold_Improvements_Use_Life}{Use life of lease or lease term.}
 
-\item{Shelving_Check_Out_Counters}{Depreciation of Shelving/Check Out Counters}
+\item{Shelving_Check_Out_Counters}{Cost of Shelving/Check Out Counters.}
 
-\item{Computer_Equipment_POS}{Cost of Computer System/POS}
+\item{Computer_Equipment_POS}{Cost of Computer System/POS.}
 
-\item{Vehicles}{Cost of Vehicles}
+\item{Vehicles}{Cost of Vehicles.}
 
-\item{Display_Cases}{Cost of Display cases}
+\item{Display_Cases}{Cost of Display cases.}
 
-\item{Refrigeration}{Cost of Refrigeration}
+\item{Refrigeration}{Cost of Refrigeration.}
 
-\item{Freezers}{Cost of Freezers}
+\item{Freezers}{Cost of Freezers.}
 
-\item{Meat_Cutting_Equipment}{Cost of Meat-cutting Equipment}
+\item{Meat_Cutting_Equipment}{Cost of Meat-cutting Equipment.}
 
-\item{Miscellaneous_Assets_1}{Optional parameter. Cost of Miscellaneous Asset 1}
+\item{Miscellaneous_Assets_1}{(Optional) Cost of Miscellaneous Asset (1)}
 
-\item{Miscellaneous_Assets_1_Use_Life}{Optional parameter. Use Life of Miscellaneous Asset 1}
+\item{Miscellaneous_Assets_1_Use_Life}{(Optional) Use Life of Miscellaneous Asset (1)}
 
-\item{Miscellaneous_Assets_2}{Optional parameter. Cost of Miscellaneous Asset 2}
+\item{Miscellaneous_Assets_2}{(Optional) Cost of Miscellaneous Asset (2)}
 
-\item{Miscellaneous_Assets_2_Use_Life}{Optional parameter. Use Life of Miscellaneous Asset 2}
+\item{Miscellaneous_Assets_2_Use_Life}{(Optional) Use Life of Miscellaneous Asset (2)}
 
-\item{Miscellaneous_Assets_3}{Optional parameter. Cost of Miscellaneous Asset 3}
+\item{Miscellaneous_Assets_3}{(Optional) Cost of Miscellaneous Asset (3)}
 
-\item{Miscellaneous_Assets_3_Use_Life}{Optional parameter. Use life of Miscellaneous Asset 3}
+\item{Miscellaneous_Assets_3_Use_Life}{(Optional) Use life of Miscellaneous Asset (3)}
 }
 \value{
-Outputs total estimated loss from depreciation for property owners
+The output returns the estimated dollar amount lost annually to
+asset depreciation for a hypothetical grocery store.
 }
 \description{
-Depreciation Calculation
+This function calculates the estimated cost of the annual depreciation of assets
+for grocery stores (specifically for scenario 2 in which the building
+is rented, not owned).
 }
 \details{
-This function is taken from the "Estimating Expense" excel sheet step two
+This function is based upon calculations originally
+formulated by FFED ISU Extension and Outreach. The values of the various assets
+are divided by their use life to get the annual loss from depreciation for each asset.
+These values are added up to get the total annual loss from asset
+depreciation/amortization. Users can enter in up to 3 miscellaneous assets
+and each of their corresponding use-lives.
 }
 \examples{
-Depreciation_2(Leasehold_Improvements = 900000,
-               Leasehold_Improvements_Use_Life = 10,
-               Shelving_Check_Out_Counters = 60000,
-               Computer_Equipment_POS = 15000,
-               Vehicles = 12000,
-               Display_Cases = 15000,
-               Refrigeration = 20000,
-               Freezers = 20000,
-               Meat_Cutting_Equipment = 10000,
-               Miscellaneous_Assets_1 = 10000,
-               Miscellaneous_Assets_1_Use_Life = 10,
-               Miscellaneous_Assets_2 = 10000,
-               Miscellaneous_Assets_2_Use_Life = 10,
-               Miscellaneous_Assets_3 = 10000,
-               Miscellaneous_Assets_3_Use_Life = 10)
+Depreciation_1(
+  Building_Remodeling = 900000,
+  Parking_Lot_Improvements = 50000,
+  Shelving_Check_Out_Counters = 60000,
+  Computer_Equipment_POS = 15000,
+  Vehicles = 12000,
+  Display_Cases = 15000,
+  Refrigeration = 20000,
+  Freezers = 20000,
+  Meat_Cutting_Equipment = 10000,
+  Miscellaneous_Assets_1 = 10000,
+  Miscellaneous_Assets_1_Use_Life = 10,
+  Miscellaneous_Assets_2 = 10000,
+  Miscellaneous_Assets_2_Use_Life = 10,
+  Miscellaneous_Assets_3 = 10000,
+  Miscellaneous_Assets_3_Use_Life = 10)
+
+
+}
+\author{
+Aaron Null
 }

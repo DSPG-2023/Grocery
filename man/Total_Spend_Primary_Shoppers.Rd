@@ -9,11 +9,9 @@ Total_Spend_Primary_Shoppers(
   pct_metro_prim = 50,
   pct_rural_prim = 30,
   pct_town_prim = 30,
-  county_pop,
-  towns_pop,
-  pct_county,
-  metro_list,
-  town_list,
+  metro_pop,
+  town_pop,
+  rural_pop,
   state_index,
   est_per_price_increase = 7,
   grocery_sales = 8.11541e+11,
@@ -33,15 +31,11 @@ default taken as 30\% unless specified otherwise.}
 \item{pct_town_prim}{The percentage of primary shoppers in town market
 default taken as 30\% unless specified otherwise.}
 
-\item{county_pop}{Population of the county.}
+\item{metro_pop}{Population of the store location}
 
-\item{towns_pop}{Population of all towns in the county.}
+\item{town_pop}{Population of all towns in the county}
 
-\item{pct_county}{Percentage of county in our market.}
-
-\item{metro_list}{Lists of population of store location.}
-
-\item{town_list}{List of population of towns in the neighborhood.}
+\item{rural_pop}{Population of rural cities in our market}
 
 \item{state_index}{The ratio of the current price of the basket to the price of
 the basket during the base year}
@@ -65,14 +59,11 @@ in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 and Primary_Shopper_Count()
 }
 \examples{
-Total_Spend_Primary_Shoppers(county_pop=18000,
-                             towns_pop=9786,
-                             pct_county=17.7,
-                             town_list=list(77),
-                             metro_list=list(2650),
-                             est_per_price_increase=7,
-                             state_index=99)
+Total_Spend_Primary_Shoppers(state_index=99)
 
+}
+\seealso{
+\code{\link[=Total_Spend_Secondary_Shoppers(),Total_Spend_Rare_Shoppers]{Total_Spend_Secondary_Shoppers(),Total_Spend_Rare_Shoppers()}}
 }
 \author{
 Srika Raja

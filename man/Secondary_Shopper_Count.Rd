@@ -8,11 +8,9 @@ Secondary_Shopper_Count(
   pct_metro_sec = 40,
   pct_rural_sec = 50,
   pct_town_sec = 50,
-  county_pop,
-  towns_pop,
-  pct_county,
-  metro_list,
-  town_list
+  metro_pop,
+  town_pop,
+  rural_pop
 )
 }
 \arguments{
@@ -25,15 +23,11 @@ default taken as 50\% unless specified otherwise.}
 \item{pct_town_sec}{The percentage of secondary shoppers in town market
 default taken as 50\% unless specified otherwise.}
 
-\item{county_pop}{Population of the county.}
+\item{metro_pop}{Population of the store location}
 
-\item{towns_pop}{Population of all towns in the county.}
+\item{town_pop}{Population of all towns in the county}
 
-\item{pct_county}{Percentage of county in our market.}
-
-\item{metro_list}{Lists of population of store location.}
-
-\item{town_list}{List of population of towns in the neighborhood.}
+\item{rural_pop}{Population of rural cities in our market}
 }
 \value{
 Outputs the total number of secondary shoppers for the store
@@ -44,16 +38,14 @@ population in each market type.
 }
 \details{
 This function is taken from the estimating Market Size.xlsx
-and calculated in step 6. This function calls Rural_Population() and
-City_Populations()
+and calculated in step 6.
 }
 \examples{
-Secondary_Shopper_Count(county_pop=18000,
-                       towns_pop=9786,
-                       pct_county=17.7,
-                       town_list=list(77),
-                       metro_list=list(2650))
+Secondary_Shopper_Count()
 
+}
+\seealso{
+\code{\link[=Primary_Shopper_Count(),Rare_Shopper_Count]{Primary_Shopper_Count(),Rare_Shopper_Count()}}
 }
 \author{
 Srika Raja

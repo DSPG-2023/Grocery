@@ -35,7 +35,7 @@
 #' @returns The output returns the estimated dollar amount lost annually to
 #' asset depreciation for a hypothetical grocery store.
 #'
-#' @example Depreciation_1(
+#' @examples Depreciation_1(
 #'   Building_Remodeling = 900000,
 #'   Parking_Lot_Improvements = 50000,
 #'   Shelving_Check_Out_Counters = 60000,
