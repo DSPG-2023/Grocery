@@ -76,8 +76,8 @@ Depreciation_2 <- function(Leasehold_Improvements,
   Miscellaneous_Assets_2_D <- Miscellaneous_Assets_2/Miscellaneous_Assets_2_Use_Life
   Miscellaneous_Assets_3_D <- Miscellaneous_Assets_3/Miscellaneous_Assets_3_Use_Life
 
-    sum(Leasehold_Improvements, Shelving_Check_Out_Counters_D,
+    ceiling(sum(Leasehold_Improvements, Shelving_Check_Out_Counters_D,
         Computer_Equipment_POS_D, Vehicles_D, Display_Cases_D, Refrigeration_D, Freezers_D,
         Meat_Cutting_Equipment_D, Miscellaneous_Assets_1_D, Miscellaneous_Assets_2_D,
-        Miscellaneous_Assets_3_D, na.rm = TRUE)
+        Miscellaneous_Assets_3_D, na.rm = TRUE))
 }
