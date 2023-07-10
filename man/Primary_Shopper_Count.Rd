@@ -2,7 +2,7 @@
 % Please edit documentation in R/Primary_Shopper_Count.R
 \name{Primary_Shopper_Count}
 \alias{Primary_Shopper_Count}
-\title{Calculates the Number of Primary Shoppers in Each Marker}
+\title{Calculates the Number of Primary Shoppers in Each Market}
 \usage{
 Primary_Shopper_Count(
   pct_metro_prim = 50,
