@@ -32,8 +32,8 @@
 #' @param Miscellaneous_Assets_3_Use_Life (Optional) Use life of Miscellaneous Asset (3)
 #'
 #'
-#' @returns The output returns the estimated dollar amount for the cost of goods sold for
-#' a hypothetical grocery store in a given location.
+#' @returns The output returns the estimated dollar amount lost annually to asset
+#' depreciation for a hypoththetical grocery store.
 #'
 #' @example Depreciation_1(
 #'   Building_Remodeling = 900000,
