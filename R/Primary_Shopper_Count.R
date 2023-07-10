@@ -1,4 +1,4 @@
-#' Calculates the Number of Primary Shoppers in Each Marker
+#' Calculates the Number of Primary Shoppers in Each Market
 #'
 #' @author Srika Raja
 #'

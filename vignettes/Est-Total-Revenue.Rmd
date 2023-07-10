@@ -17,3 +17,59 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(DSPGGrocery)
 ```
+
+# Estimating Revenue
+
+For revenue estimation, we need the average spending per capita and the number of shoppers in each category (Primary, Secondary, Rare) for each type of market (Metro, Rural, Town).
+
+## Average Per Capita Grocery Spend
+
+The `Avg_Capita_Grocery_Spending()` function calculates the average per capita spending. The 2022 total US grocery sales data is taken from IBIS and divided by the 2022 total US population from the US Census Bureau. Since the population and grocery sales have taken 2022 data, we must account for the change for the current year. This is adjusted by the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()` using CPI (Consumer Price Index) and RPP (Rural Price Parities), respectively.
+
+The **Consumer Price Index** (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the inflation in the US.
+
+**Regional price parities** (RPP) measure the differences in price levels across states and metropolitan areas for a given year and are expressed as a percentage of the overall national price level. Adjusting according to this measure gives that state's average per capita spending on groceries for that year.
+
+## Total Spend by Category
+
+The next component needed for estimating the revenue is the number of shoppers in each category for each type of market.
+
+We classify shoppers into 3 categories:
+
+***Primary Shoppers:*** The people doing most of the household grocery shopping.
+
+***Secondary Shoppers:***
+
+***Rare Shoppers:*** People who are very occasional shoppers.
+
+We classify shoppers into 3 different populations:
+
+***Metro*****:** The population of the city in which the store is planned to open
+
+***Town:*** Population of all the cities in the market
+
+***Rural:*** Total rural population of the market
+
+The functions: `Primary_Shopper_Count()`, `Secondary_Shopper_Count()`, and `Rare_Shopper_Count()` calculates the number of shoppers in each category for each type of market. The outputs of these functions are used in calculating the total spend by each of these groups by `Total_Spend_Primary_Shoppers()`, `Total_Spend_Secondary_Shoppers()`, and `Total_Spend_Rare_Shoppers()` functions.
+
+For information on data update frequency and sources, check out this table:
+
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+| **Variable name**                         | **Frequency**                      | **Source**                     | **Link**                                       | **Notes**                                                        |
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+| Total US Grocery Sales                    | Optional                           | IBIS                           |                                                | Default base year is taken as 2022                               |
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+| Total US population                       | Optional                           | US Census Bureau               |                                                | Default base year is taken as 2022                               |
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+| Estimated cumulative price increase(CPI)  | yearly update/ Half yearly update  | US Bureau of Labor Statistics  | <https://data.bls.gov/timeseries/CUUR0000SA0>  | CPI in the current year - CPI in the base year                   |
+|                                           |                                    |                                |                                                |                                                                  |
+|                                           |                                    |                                |                                                |                                                                  |
+|                                           |                                    |                                |                                                |                                                                  |
+|                                           |                                    |                                |                                                | For now, defaulting as 7 for 2023                                |
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+| State Index                               | yearly update                      | BEA                            | <https://tinyurl.com/2wvca7vy>                 | Should be inputted by the user according to the store location.  |
++-------------------------------------------+------------------------------------+--------------------------------+------------------------------------------------+------------------------------------------------------------------+
+
+## Total Revenue Estimate
+
+Total revenue is estimated by summing the total spend by primary, secondary, and rare shoppers by the `Total_Estimate_Revenue()`.
