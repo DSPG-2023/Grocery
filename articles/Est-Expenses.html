@@ -86,94 +86,146 @@
 </h2>
 <p>One essential element of the calculation for store profitability is
 the estimation for the various expenses that a potential store owner
-might have to deal with when they open. Categories of expenses
-include:</p>
+might have to deal with when they open. Depending on the size of the
+store, the assets of the owner and the cost of buying or renting a
+building, these expenses can vary widely depending on the individual
+circumstances of the prospective owner. This tool allows for users to
+test the profitability of different budgetary percentages of different
+expenses in order to help determine the resources necessary for a store
+to succeed in a given area in regards to costs.</p>
+<div class="section level3">
+<h3 id="bizminervertical-iq-percentages">Bizminer/Vertical IQ Percentages<a class="anchor" aria-label="anchor" href="#bizminervertical-iq-percentages"></a>
+</h3>
+<p>Many of the functions used in this package utilize percentages taken
+from both Bizminer and Vertical IQ, two financial analysis and market
+research firms, as defaults in their calculations. These percentages are
+based off of industry 3-year averages for grocery stores as of 2022 and
+the average between the two firms is taken for all of the specified
+items of expense below. The slider inputs are automatically set to these
+average percentages when displayed.</p>
+<p>Functions that use Bizminer/Vertical IQ percentages as defaults:</p>
 <ul>
-<li>Cost of Goods Sold
-<ul>
-<li>How much of the total estimated revenue is spent on the cost of
-goods (inventory)?</li>
+<li><p><code><a href="../reference/Gross_Margin.html">Gross_Margin()</a></code></p></li>
+<li><p><code><a href="../reference/Cost_of_Goods_Sold.html">Cost_of_Goods_Sold()</a></code></p></li>
+<li><p><code><a href="../reference/Employee_Wages.html">Employee_Wages()</a></code></p></li>
+<li><p><code><a href="../reference/Officer_Compensation.html">Officer_Compensation()</a></code></p></li>
+<li><p><code><a href="../reference/Other_Operating_Expense.html">Other_Operating_Expense()</a></code></p></li>
+<li><p><code><a href="../reference/Other_Income.html">Other_Income()</a></code></p></li>
+<li><p><code><a href="../reference/Interest_Income.html">Interest_Income()</a></code></p></li>
 </ul>
-</li>
-<li>Operating Expenses
-<ul>
-<li>Covers expenses such as compensation for company officers, employee
-wages and other common operating expenses of grocery stores</li>
-</ul>
-</li>
-<li>Asset Depreciation
-<ul>
-<li>Covers the annual loss from the depreciation of various assets
-required to own and operate a grocery store</li>
-</ul>
-</li>
-<li>Loan Interest
-<ul>
-<li>Annual interest of loan payments (if a loan was taken out)</li>
-</ul>
-</li>
-<li>Rent (if leasing building)
-<ul>
-<li>Annual cost of rent for a leased building</li>
-</ul>
-</li>
-</ul>
-<p>Another important factor to consider is secondary sources of income.
-These sources may include:</p>
-<ul>
-<li>
-<p>Income from interest</p>
-<ul>
-<li>Income collected from interest-bearing assets.</li>
-</ul>
-</li>
-<li>
-<p>Other Income</p>
-<ul>
-<li>This could include special services outside the revenue from sold
-goods alone, such as special grocery delivery services</li>
-</ul>
-</li>
-</ul>
-<p>For our project, we have decided to give freedom to the user to
-determine the individual percentage of total estimated revenue that will
-be spent on each kind of expense, while also giving the user a default
-value to guide them. This default value is taken from Bizminer, a
-business data reporting platform that supplies us with the industry
-average percentages for each category of expense. Users will be able
-to:</p>
-<ul>
-<li>
-<p>Switch between multiple ownership scenarios</p>
-<ul>
-<li>
-<p>3 different scenarios:</p>
-<ul>
-<li><p>User owns a building.</p></li>
-<li><p>User rents a building.</p></li>
-<li><p>User establishes another holding company that owns a building,
-then rents from that company.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Input their own expense percentages with interactive sliders</p>
-<p>Sliders will contain a “Bizminer Default” as a tick mark</p>
-<p>Enter in a custom list of assets to calculate the cost of
-depreciation</p>
-<p>Default assets are listed along with multiple boxes for custom
-assets</p>
-<p>Users will enter in custom dollar values for these assets</p>
-<p>Enter in custom loan and rent information</p>
-<p>Users can calculate annual interest on a loan</p>
-<p>Users can calculate annual rent from a given rate of monthly rent</p>
-<p>Ultimately, the estimated expenses will be subtracted from the total
-estimated revenue and the estimated secondary income will be added. This
-will give the user an estimate of pre-tax profit for a given store
-location that we hope will help them in coming to a decision.</p>
 </div>
-  </main>
+<div class="section level3">
+<h3 id="categories-of-expenses">Categories of Expenses<a class="anchor" aria-label="anchor" href="#categories-of-expenses"></a>
+</h3>
+<p>Five different categories of expenses are accounted for in this
+tool:</p>
+<div class="section level4">
+<h4 id="cost-of-goods-sold">Cost of Goods Sold<a class="anchor" aria-label="anchor" href="#cost-of-goods-sold"></a>
+</h4>
+<p>This represents how much of the total estimated revenue is spent on
+the cost of goods (inventory). The calculation for this item takes the
+total estimated revenue and the selected gross margin percentage into
+account.</p>
+<p>Associated Functions:</p>
+<ul>
+<li><p><code><a href="../reference/Gross_Margin.html">Gross_Margin()</a></code></p></li>
+<li><p><code><a href="../reference/Employee_Wages.html">Employee_Wages()</a></code></p></li>
+<li><p><code><a href="../reference/Officer_Compensation.html">Officer_Compensation()</a></code></p></li>
+<li><p><code><a href="../reference/Other_Operating_Expense.html">Other_Operating_Expense()</a></code></p></li>
+<li><p><code><a href="../reference/Interest_Income.html">Interest_Income()</a></code></p></li>
+<li><p><code><a href="../reference/Other_Income.html">Other_Income()</a></code></p></li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="operating-expenses">Operating Expenses<a class="anchor" aria-label="anchor" href="#operating-expenses"></a>
+</h4>
+<p>Comprises expenses such as compensation for company officers,
+employee wages and other common operating expenses of grocery stores.
+Users can select percentages for each of these expenses or they can rely
+on the default value provided by Bizminer.</p>
+<p>Associated Functions:</p>
+<ul>
+<li><p><code><a href="../reference/Employee_Wages.html">Employee_Wages()</a></code></p></li>
+<li><p><code><a href="../reference/Officer_Compensation.html">Officer_Compensation()</a></code></p></li>
+<li><p><code><a href="../reference/Other_Operating_Expense.html">Other_Operating_Expense()</a></code></p></li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="asset-depreciation">Asset Depreciation<a class="anchor" aria-label="anchor" href="#asset-depreciation"></a>
+</h4>
+<p>Covers the annual loss from the depreciation of various assets
+required to own and operate a grocery store. The value of a list of
+assets are divided by their associated use life to determine the annual
+lost in value from asset depreciation. The tool gives the user the
+option to fill out a form for one of two scenarios: one if the user
+plans to own a building and the other if the user plans to rent.</p>
+<p>Associated Functions:</p>
+<ul>
+<li><p><code><a href="../reference/Depreciation_1.html">Depreciation_1()</a></code></p></li>
+<li><p><code><a href="../reference/Depreciation_2.html">Depreciation_2()</a></code></p></li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="loan-interest">Loan Interest<a class="anchor" aria-label="anchor" href="#loan-interest"></a>
+</h4>
+<p>Covers the annual interest on a user-specified loan (if a loan was
+taken out). The annual cost of interest on a loan is calculated from the
+loan amount and its annual interest rate, entered by the user.</p>
+<p>Associated Function:</p>
+<ul>
+<li><code><a href="../reference/Interest_Expense.html">Interest_Expense()</a></code></li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="rent-if-leasing-building">Rent (if leasing building)<a class="anchor" aria-label="anchor" href="#rent-if-leasing-building"></a>
+</h4>
+<p>This covers the annual cost of rent for a leased building. Users can
+enter their monthly rate of rent</p>
+<p>to determine the annual cost of rent for their building.</p>
+<p>Associated Function:</p>
+<ul>
+<li><code><a href="../reference/Annual_Rent.html">Annual_Rent()</a></code></li>
+</ul>
+</div>
+</div>
+<div class="section level3">
+<h3 id="secondary-sources-of-income">Secondary Sources of Income<a class="anchor" aria-label="anchor" href="#secondary-sources-of-income"></a>
+</h3>
+<p>Another important factor to consider is secondary sources of income.
+These are broken up into two main categories:</p>
+<div class="section level4">
+<h4 id="income-from-interest">Income from interest<a class="anchor" aria-label="anchor" href="#income-from-interest"></a>
+</h4>
+<p>Income collected from interest-bearing assets.</p>
+<p>Associated Function:</p>
+<ul>
+<li><code><a href="../reference/Interest_Income.html">Interest_Income()</a></code></li>
+</ul>
+</div>
+<div class="section level4">
+<h4 id="other-income">Other Income<a class="anchor" aria-label="anchor" href="#other-income"></a>
+</h4>
+<p>This could include special services outside the revenue from sold
+goods alone, such as special grocery delivery services or membership
+fees for discount clubs, among other things.</p>
+<p>Associated Function:</p>
+<ul>
+<li><code><a href="../reference/Other_Income.html">Other_Income()</a></code></li>
+</ul>
+</div>
+</div>
+<div class="section level3">
+<h3 id="pre-tax-profit">Pre-Tax Profit<a class="anchor" aria-label="anchor" href="#pre-tax-profit"></a>
+</h3>
+<p>In the tool, the estimated expenses will be subtracted from the total
+estimated revenue and the estimated secondary income will then be added
+in the calculation for the estimated pre-tax profit . Users will be able
+to adjust the percentages to suite their individual needs and determine
+profitability taking both expenses and market size into account.</p>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
