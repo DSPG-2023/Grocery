@@ -2,7 +2,8 @@
 % Please edit documentation in R/Operating_Income_Loss.R
 \name{Operating_Income_Loss}
 \alias{Operating_Income_Loss}
-\title{Calculation of the Operating Income (loss)}
+\title{Calculation of Revenue Surplus after the Subtraction of Cost of Goods and other Operating
+Costs (Interim Result - Not Final)}
 \usage{
 Operating_Income_Loss(
   Total_Estimated_Revenue,
@@ -10,24 +11,27 @@ Operating_Income_Loss(
 )
 }
 \arguments{
-\item{Total_Estimated_Revenue}{Output of total estimated revenue calculation sheet}
+\item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
-\item{Gross_Margin_Percentage}{Percentage of revenue as gross margin (default from Bizminer)}
+\item{Gross_Margin_Percentage}{User-selected gross margin percentage
+(default taken from Bizminer).}
 }
 \value{
-Outputs difference between total estimated revenue and aggregated expenses
-(in dollars)
+The output returns the estimated revenue surplus (revenue left over) after the
+subtraction of the cost of goods sold and operating expenses (minus depreciation).
 }
 \description{
-Calculation of the Operating Income (loss)
+This function calculates the estimated revenue surplus after subtracting the cost of goods,
+officer compensation, employee wages and other operating expenses and outputs an interim
+profit figure before depreciation, interest income, interest expense and secondary sources
+of income are taken into account.
 }
 \details{
-This function is taken from the "Estimating_Expenses.xlsx" sheet and
-calculated in Step Six)
-Functions called: Cost_of_Goods_Sold, Officer_Compensation, Employee_Wages,
-Other_Operating_Expense
+This function employs the user-selected gross margin percentage as an argument and calls
+the functions "Cost_of_Goods_Sold()", "Officer_Compensation()", "Employee_Wages()" and
+"Other_Operating_Expense()". This function is based upon calculations originally
+formulated by FFED ISU Extension and Outreach.
 }
-\examples{
-Employee_Wages(Total_Estimated_Revenue = 2000000)
-
+\author{
+Aaron Null
 }

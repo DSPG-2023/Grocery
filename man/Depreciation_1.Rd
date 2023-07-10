@@ -2,7 +2,7 @@
 % Please edit documentation in R/Depreciation_1.R
 \name{Depreciation_1}
 \alias{Depreciation_1}
-\title{Calculation of Depreciation (for Building Ownership)}
+\title{Calculates the Cost of Depreciation Based on List of Assets (For a Building Owner)}
 \usage{
 Depreciation_1(
   Building_Remodeling,
@@ -23,23 +23,23 @@ Depreciation_1(
 )
 }
 \arguments{
-\item{Building_Remodeling}{Cost  of Building/Remodeling}
+\item{Building_Remodeling}{Cost  of Building/Remodeling.}
 
-\item{Parking_Lot_Improvements}{Depreciation of Parking Lot Improvements}
+\item{Parking_Lot_Improvements}{Cost of Parking Lot Improvements.}
 
-\item{Shelving_Check_Out_Counters}{Depreciation of Shelving/Check Out Counters}
+\item{Shelving_Check_Out_Counters}{Cost of Shelving/Check Out Counters.}
 
-\item{Computer_Equipment_POS}{Cost of Computer System/POS}
+\item{Computer_Equipment_POS}{Cost of Computer System/POS.}
 
-\item{Vehicles}{Cost of Vehicles}
+\item{Vehicles}{Cost of Vehicles.}
 
-\item{Display_Cases}{Cost of Display cases}
+\item{Display_Cases}{Cost of Display cases.}
 
-\item{Refrigeration}{Cost of Refrigeration}
+\item{Refrigeration}{Cost of Refrigeration.}
 
-\item{Freezers}{Cost of Freezers}
+\item{Freezers}{Cost of Freezers.}
 
-\item{Meat_Cutting_Equipment}{Cost of Meat-cutting Equipment}
+\item{Meat_Cutting_Equipment}{Cost of Meat-cutting Equipment.}
 
 \item{Miscellaneous_Assets_1}{(Optional) Cost of Miscellaneous Asset (1)}
 
@@ -54,13 +54,21 @@ Depreciation_1(
 \item{Miscellaneous_Assets_3_Use_Life}{(Optional) Use life of Miscellaneous Asset (3)}
 }
 \value{
-Outputs total estimated loss from depreciation for property owners
+The output returns the estimated dollar amount lost annually to asset
+depreciation for a hypoththetical grocery store.
 }
 \description{
-Calculation of Depreciation (for Building Ownership)
+This function calculates the estimated cost of the annual depreciation of assets
+for grocery stores (specifically for scenario 1 in which the building
+is owned, not rented).
 }
 \details{
-This function is taken from the "Estimating Expense" excel sheet (step two)
+This function is based upon calculations originally
+formulated by FFED ISU Extension and Outreach. The values of the various assets
+are divided by their use life to get the annual loss from depreciation for each asset.
+These values are added up to get the total annual loss from asset
+depreciation/amortization. Users can enter in up to 3 miscellaneous assets
+and each of their corresponding use-lives.
 }
 \examples{
 Depreciation_1(
@@ -80,4 +88,8 @@ Depreciation_1(
   Miscellaneous_Assets_3 = 10000,
   Miscellaneous_Assets_3_Use_Life = 10)
 
+
+}
+\author{
+Aaron Null
 }

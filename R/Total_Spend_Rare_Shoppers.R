@@ -27,14 +27,14 @@
 #' Outputs the total spending by Rare Shoppers at the proposed store.
 #'
 #' @examples
-#' Total_Spend_Rare_Shoppers(state_index=99)
+#' #Total_Spend_Rare_Shoppers(state_index=99)
 #'
 #' @details
 #' This function is taken from the estimating Revenue.xlsx and calculated in
 #' step 4. This function calls State_Adj_Capita_Grocery_Spend()
 #' and Rare_Shopper_Count()
 #'
-#' @seealso [Total_Spend_Primary_Shoppers(),Total_Spend_Secondary_Shoppers()]
+#' @seealso [Total_Spend_Primary_Shoppers()],[Total_Spend_Secondary_Shoppers()]
 #'
 #' @export
 

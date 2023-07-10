@@ -13,8 +13,9 @@
 #' circle buffer established by the market size spatial calculations and outputs census data
 #' for each county.
 #'
-#' @param Data Data frame of cities, counties and states within the range of a circle buffer
-#' determined by the location of nearest grocery stores.
+#' @param df_locations Data frame of cities, counties and states within the range of a circle buffer
+#' determined by the location of nearest grocery stores. This data frame is inherited
+#' from the return of DSPGrocery::Create_Circle_Buffer as df_census_call.
 #'
 #' @returns The output returns a data frame of the 2020 decennial census variables
 #' for race/ethnicity and total population for each county.
@@ -26,7 +27,7 @@
 #' @export
 
 
-Get_Census_Vars_Decennial <- function(Data) {
+Get_Census_Vars_Decennial <- function(df_locations) {
 
   # Create empty list for the output data frames of each state
 
@@ -34,7 +35,7 @@ Get_Census_Vars_Decennial <- function(Data) {
 
   # Get vector of states
 
-  state_vector <- as.numeric(unique(Data$state))
+  state_vector <- as.numeric(unique(df_locations$state))
 
   # Iterate through that vector of states
 
@@ -42,7 +43,7 @@ Get_Census_Vars_Decennial <- function(Data) {
 
     # Subsetting based on current state in the loop
 
-    state_df <- Data[Data$state==my_state,]
+    state_df <- df_locations[df_locations$state==my_state,]
 
     # Getting a vector of the counties for the current state in the loop
 

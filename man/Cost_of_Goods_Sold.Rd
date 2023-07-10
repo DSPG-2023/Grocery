@@ -2,28 +2,30 @@
 % Please edit documentation in R/Cost_of_Goods_Sold.R
 \name{Cost_of_Goods_Sold}
 \alias{Cost_of_Goods_Sold}
-\title{Calculation of the Cost of Goods Sold}
+\title{Calculates the Cost of Goods Sold Based on Gross Margin for Grocery Stores}
 \usage{
 Cost_of_Goods_Sold(Total_Estimated_Revenue, Gross_Margin_Percentage = 0.2446)
 }
 \arguments{
-\item{Total_Estimated_Revenue}{Output of a total estimated revenue calculation}
+\item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
-\item{Gross_Margin_Percentage}{Percentage of revenue as gross margin (default from Bizminer)}
+\item{Gross_Margin_Percentage}{Percentage of total estimated revenue expected as gross margin
+selected via user input (default from Bizminer).}
 }
 \value{
-Outputs cost of goods sold (in dollars)
+The output returns the estimated dollar amount for the cost of goods sold for
+a hypothetical grocery store in a given location.
 }
 \description{
-Calculation of the Cost of Goods Sold
+This function calculates the estimated cost of goods sold based on
+the selected gross margin percentage for a hypothetical grocery store
+in a user-selected location.
 }
 \details{
-Calls Gross_Margin() function to provide the gross margin (in dollars)
-which is subtracted from revenue to
-calculate cost of goods.
-This function was taken from Estimating_Expense.xlxs (Step 6)
+This function calls the "Gross_Margin()" function from the DSPG package in its body.
+This function is based upon calculations originally
+formulated by FFED ISU Extension and Outreach.
 }
-\examples{
-# Cost_of_Goods_Sold(Total_Estimated_Revenue = 2000000, Gross_Margin_Percentage = .2446)
-
+\author{
+Aaron Null
 }

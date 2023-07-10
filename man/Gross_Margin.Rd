@@ -2,26 +2,32 @@
 % Please edit documentation in R/Gross_Margin.R
 \name{Gross_Margin}
 \alias{Gross_Margin}
-\title{Calculation of Gross Margin}
+\title{Calculates the Expected Gross Margin for Grocery Stores}
 \usage{
 Gross_Margin(Total_Estimated_Revenue, Percentage = 0.2446)
 }
 \arguments{
-\item{Total_Estimated_Revenue}{Output of a total estimated revenue calculation}
+\item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
-\item{Percentage}{Percentage of Revenue as Gross Margin (Revenue - Cost of Goods)}
+\item{Percentage}{Percentage of total estimated revenue expected as gross margin
+selected via user input (default from Bizminer).}
 }
 \value{
-Outputs Gross Margin (in dollars) depending on the percentage provided
-(default from Bizminer)
+The output returns the estimated dollar amount for gross margin for
+a hypothetical grocery store in a given location.
 }
 \description{
-Calculation of Gross Margin
+This function calculates the estimated portion of the total estimated revenue represented
+as gross margin for a hypothetical grocery store in a user-selected location
+based off of a user-selected percentage parameter.
+If not specified by the user, this percentage defaults to the industry average
+provided by Bizminer.
 }
 \details{
-This function is taken from the "Estimating Expense" excel sheet (step six)
+This function employs a default percentage value from the financial analysis
+and market research firm Bizminer and is based upon calculations originally
+formulated by FFED ISU Extension and Outreach.
 }
-\examples{
-# Gross_Margin(Total_Estimated_Revenue = 2000000, Percentage = .2446)
-
+\author{
+Aaron Null
 }

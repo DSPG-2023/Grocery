@@ -19,13 +19,13 @@
 #' @returns Outputs the total number of primary shoppers for the store
 #'
 #' @examples
-#' Primary_Shopper_Count()
+#' #Primary_Shopper_Count()
 #'
 #' @details
 #' This function is taken from the estimating Market Size.xlsx
 #' and calculated in step 6.
 #'
-#' @seealso [Secondary_Shopper_Count(),Rare_Shopper_Count()]
+#' @seealso [Secondary_Shopper_Count()],[Rare_Shopper_Count()]
 #'
 #' @export
 

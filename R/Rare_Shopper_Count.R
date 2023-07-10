@@ -19,13 +19,13 @@
 #' @returns Outputs the total number of Rare shoppers for the store
 #'
 #' @examples
-#' Rare_Shopper_Count()
+#' #Rare_Shopper_Count()
 #'
 #' @details
 #' This function is taken from the estimating Market Size.xlsx
 #' and calculated in step 6.
 #'
-#' @seealso [Primary_Shoppers_Count(),Secondary_Shoppers_Count()]
+#' @seealso [Primary_Shoppers_Count()],[Secondary_Shoppers_Count()]
 #'
 #' @export
 

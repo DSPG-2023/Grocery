@@ -27,14 +27,14 @@
 #' Outputs the total spending by secondary shoppers at the proposed store
 #'
 #' @examples
-#' Total_Spend_Secondary_Shoppers(state_index=99)
+#' #Total_Spend_Secondary_Shoppers(state_index=99)
 #'
 #' @details
 #' This function is taken from the estimating Revenue.xlsx and calculated
 #' in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 #' and Secondary_Shopper_Count()
 #'
-#' @seealso [Total_Spend_Primary_Shoppers(),Total_Spend_Rare_Shoppers()]
+#' @seealso [Total_Spend_Primary_Shoppers()],[Total_Spend_Rare_Shoppers()]
 #'
 #' @export
 
