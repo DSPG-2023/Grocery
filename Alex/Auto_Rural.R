@@ -15,34 +15,7 @@ Auto_Rural <- function() {
   city_in_county <- get_cities_in_county(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
-
   county_name <- bound_df$County
-
-  #This gives us the name of city and the population. We need to separate city
-  #and state name, and then remove the city and CDP from the NAME so we can join
-  #with the county_cities_list
-
-  place_pop <- get_decennial(year = 2020,
-                             geography = "place",
-                             variables = "DP1_0001C",
-                             sumfile = "dp",
-                             state = city_in_county[1])
-  place_pop$NAME <- gsub( " city", "", as.character(place_pop$NAME))
-  place_pop$NAME <- gsub( " CDP", "", as.character(place_pop$NAME))
-  place_pop <- separate(data = place_pop, col = NAME, into = c("City", "State"), sep = ";")
-
-
-
-  #Convert County cities list to a data frame in the correct shape and name
-  #to join with place_pop
-  county_cities_df <- data.frame(unlist(county_cities_list))
-  lookup <- c(City = "unlist.county_cities_list.")
-  county_cities_df <- rename(county_cities_df, all_of(lookup))
-
-  bound_df <- merge(county_cities_df, place_pop, by='City')
-  sum_val = 0
-
-  #NEED COUNTY_POP TODO
 
   county_pop_df <- get_decennial(year = 2020,
                   geography = "county",
@@ -53,21 +26,16 @@ Auto_Rural <- function() {
   county_pop_df$NAME <- gsub( " County", "", as.character(county_pop_df$NAME))
   county_pop_df <- separate(data = county_pop_df, col = NAME,
                             into = c("County", "State"), sep = ", ")
-  #print(county_pop_df)
-  print(county_name)
+
+  #Filter county_pop_df to be only the county the store is in
   county_pop_df <- county_pop_df %>% filter(county_pop_df$County
                                             == county_name[1])
   county_pop <- county_pop_df$value
 
 
-#This is broken currently
-  county_tigris <- counties(state = bound_df$State)
-  county_tigris <- county_tigris %>% filter(county_tigris$NAME[1] == county_name)
-  county_size = county_tigris$ALAND + county_tigris$AWATER
-
   pct_county <- Pct_County(northeast_dist, northwest_dist,
-                           southeast_dist, southwest_dist,
-                           county_size)
+                           southeast_dist, southwest_dist)
+
   for(i in 1:nrow(bound_df)) {
     sum_val = sum_val + as.numeric(bound_df$value[i])
   }

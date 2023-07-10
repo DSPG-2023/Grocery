@@ -5,21 +5,21 @@
 #' @return Population of all towns within region
 
 Cities_Pop <- function(df_city_state) {
-  cities_pop_val = 0
-  for(i in nrow(df_city_state)) {
-    pop_val <- get_decennial(year = 2020,
-                  geography = "place",
-                  variables = "DP1_0001C",
-                  sumfile = "dp",
-                  state = df_city_state$State)
+  cities_in_state <- get_decennial(year = 2020,
+                        geography = "place",
+                        variables = "DP1_0001C",
+                        sumfile = "dp",
+                        state = df_city_state$state)
+  #String cleaning
+  cities_in_state$NAME <- gsub( " city", "", as.character(cities_in_state$NAME))
+  cities_in_state$NAME <- gsub( " CDP", "", as.character(cities_in_state$NAME))
+  cities_in_state <- separate(data = cities_in_state, col = NAME,
+                              into = c("City", "State"), sep = "; ")
 
-    #Update this with the name of the population column
-    cities_pop_val = cities_pop_val + pop_val$value
-
-    Sys.sleep(5)
-
-  }
-  return(cities_pop_val)
+  #Rename cities col to City and combine df
+  names(city_county_state)[names(city_county_state)=="cities"] <- "City"
+  df_cities_pop <- merge(cities_in_state, city_county_state, by='City')
 
 
+  return(sum(df_cities_pop$value))
 }
