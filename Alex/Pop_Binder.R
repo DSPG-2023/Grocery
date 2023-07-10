@@ -1,5 +1,5 @@
 #'@author Alex Cory
-#'@params address the address must be in the standard Google maps form
+#'@param address the address must be in the standard Google maps form
 #'@description
 #'Function that takes in an address and returns a dataframe with data on county
 #'cities and populations
@@ -13,19 +13,18 @@ ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
 
 
 Pop_Binder <- function(address) {
-
-  #Doing this because I want to use this variable in Metro_Pop
+  #Parses Address, returns as df with street address, city, and state
   splt_addr <- Address_Parser(address)
-
-
   geocoded_address <- geocode(location = address, output = "all")
   geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[4]][["long_name"]]
   geo_county <- gsub( " County", "", as.character(geo_county))
 
-  city_df <- data.frame(state = splt_addr[5], county = geo_county, city = splt_addr[2])
+  #Makes new dataframe with the parsed address's information + the county tag
+  city_df <- data.frame(state = splt_addr$state,
+                        county = geo_county,
+                        city = splt_addr$city[1])
 
-
-  #city_df <- data.frame(state = "Iowa", county = "Sac")
+  #Makes a list of all the cities in the county
   city_in_county <- get_cities_in_county(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
@@ -42,11 +41,6 @@ Pop_Binder <- function(address) {
   place_pop$NAME <- gsub( " CDP", "", as.character(place_pop$NAME))
   place_pop <- separate(data = place_pop, col = NAME, into = c("City", "State"), sep = ";")
 
-
-
-
-
-
   #Convert County cities list to a data frame in the correct shape and name
   #to join with place_pop
   county_cities_df <- data.frame(unlist(county_cities_list))
@@ -54,6 +48,6 @@ Pop_Binder <- function(address) {
   county_cities_df <- rename(county_cities_df, all_of(lookup))
 
   bound_df <- merge(county_cities_df, place_pop, by='City')
-  cbind(bound_df, County = geo_county)
-
+  bound_df %>% cbind(County = geo_county)
+  return(bound_df)
 }
