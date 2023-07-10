@@ -9,8 +9,9 @@
 #'
 #'
 #' @details
-#' This function calls the "Gross_Margin()" function from the DSPG package in its
-#' calculations.
+#' This function calls the "Gross_Margin()" function from the DSPG package in its body.
+#' This function is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
 #'
 #' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
 #' @param Gross_Margin_Percentage Percentage of total estimated revenue expected as gross margin
