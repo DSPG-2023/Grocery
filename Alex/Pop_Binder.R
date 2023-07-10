@@ -13,10 +13,11 @@ ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
 
 
 Pop_Binder <- function(address) {
+
   #Parses Address, returns as df with street address, city, and state
   splt_addr <- Address_Parser(address)
   geocoded_address <- geocode(location = address, output = "all")
-  geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[4]][["long_name"]]
+  geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[2]][["long_name"]]
   geo_county <- gsub( " County", "", as.character(geo_county))
 
   #Makes new dataframe with the parsed address's information + the county tag
@@ -31,6 +32,12 @@ Pop_Binder <- function(address) {
   #This gives us the name of city and the population. We need to separate city
   #and state name, and then remove the city and CDP from the NAME so we can join
   #with the county_cities_list
+  county_pop <- get_decennial(year = 2020,
+                              geography = "county",
+                              variables = "DP1_0001C",
+                              sumfile = "dp",
+                              county = city_in_county["county"],
+                              state = city_in_county["state"])
 
   place_pop <- get_decennial(year = 2020,
                              geography = "place",
@@ -47,7 +54,13 @@ Pop_Binder <- function(address) {
   lookup <- c(City = "unlist.county_cities_list.")
   county_cities_df <- rename(county_cities_df, all_of(lookup))
 
-  bound_df <- merge(county_cities_df, place_pop, by='City')
-  bound_df %>% cbind(County = geo_county)
-  return(bound_df)
+  df_city_pop <- merge(county_cities_df, place_pop, by='City')
+  df_city_pop %>% cbind(County = geo_county)
+
+  county_pop <- county_pop["value"]
+
+  PopulationsList <- list(df_city_pop = df_city_pop,
+                          county_pop = county_pop)
+
+  return(PopulationsList)
 }
