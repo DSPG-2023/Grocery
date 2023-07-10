@@ -84,9 +84,10 @@
 <div class="section level2">
 <h2 id="estimating-revenue">Estimating Revenue<a class="anchor" aria-label="anchor" href="#estimating-revenue"></a>
 </h2>
-<p>For revenue estimation, we need the average spending per capita and
-the number of shoppers in each category (Primary, Secondary, Rare) for
-each type of market (Metro, Rural, Town).</p>
+<p>The average spending per capita and the number of shoppers in each
+category (Primary, Secondary, Rare) for each type of market (Metro,
+Rural, Town) are used for estimating the revenue of the proposed
+stores.</p>
 <div class="section level3">
 <h3 id="average-per-capita-grocery-spend">Average Per Capita Grocery Spend<a class="anchor" aria-label="anchor" href="#average-per-capita-grocery-spend"></a>
 </h3>
@@ -94,7 +95,7 @@ each type of market (Metro, Rural, Town).</p>
 the average per capita spending. The 2022 total US grocery sales data is
 taken from IBIS and divided by the 2022 total US population from the US
 Census Bureau. Since the population and grocery sales have taken 2022
-data, we must account for the change for the current year. This is
+data, the change for the current year must be accounted. This is
 adjusted by the functions <code><a href="../reference/Adj_Capita_Grocery_Spend.html">Adj_Capita_Grocery_Spend()</a></code> and
 <code><a href="../reference/State_Adj_Capita_Grocery_Spend.html">State_Adj_Capita_Grocery_Spend()</a></code> using CPI (Consumer Price
 Index) and RPP (Rural Price Parities), respectively.</p>
@@ -113,14 +114,14 @@ average per capita spending on groceries for that year.</p>
 </h3>
 <p>The next component needed for estimating the revenue is the number of
 shoppers in each category for each type of market.</p>
-<p>We classify shoppers into 3 categories:</p>
+<p>Shoppers are classified into 3 categories:</p>
 <p><strong><em>Primary Shoppers:</em></strong> The people doing most of
 the household grocery shopping in that store.</p>
 <p><strong><em>Secondary Shoppers:</em></strong> Regular visitors for
 smaller purchases but will often do their weekly shopping elsewhere.</p>
 <p><strong><em>Rare Shoppers:</em></strong> People who are very
 occasional shoppers(only when necessary).</p>
-<p>We classify shoppers into 3 different populations:</p>
+<p>Shoppers classified into 3 different populations:</p>
 <p><strong><em>Metro</em>:</strong> The population of the city in which
 the store is planned to open</p>
 <p><strong><em>Town:</em></strong> Population of all the cities in the
