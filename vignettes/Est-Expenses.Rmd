@@ -20,55 +20,110 @@ library(DSPGGrocery)
 
 # Estimating Expenses
 
-One essential element of the calculation for store profitability is the estimation for the various expenses that a potential store owner might have to deal with when they open. Categories of expenses include:
+One essential element of the calculation for store profitability is the estimation for the various expenses that a potential store owner might have to deal with when they open. Depending on the size of the store, the assets of the owner and the cost of buying or renting a building, these expenses can vary widely depending on the individual circumstances of the prospective owner. This tool allows for users to test the profitability of different budgetary percentages of different expenses in order to help determine the resources necessary for a store to succeed in a given area in regards to costs.
 
--   Cost of Goods Sold
-    -   How much of the total estimated revenue is spent on the cost of goods (inventory)?
--   Operating Expenses
-    -   Covers expenses such as compensation for company officers, employee wages and other common operating expenses of grocery stores
--   Asset Depreciation
-    -   Covers the annual loss from the depreciation of various assets required to own and operate a grocery store
--   Loan Interest
-    -   Annual interest of loan payments (if a loan was taken out)
--   Rent (if leasing building)
-    -   Annual cost of rent for a leased building
+## Bizminer/Vertical IQ Percentages
 
-Another important factor to consider is secondary sources of income. These sources may include:
+Many of the functions used in this package utilize percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms, as defaults in their calculations. These percentages are based off of industry 3-year averages for grocery stores as of 2022 and the average between the two firms is taken for all of the specified items of expense below. The slider inputs are automatically set to these average percentages when displayed.
 
--   Income from interest
+Functions that use Bizminer/Vertical IQ percentages as defaults:
 
-    -   Income collected from interest-bearing assets.
+-   `Gross_Margin()`
 
--   Other Income
+-   `Cost_of_Goods_Sold()`
 
-    -   This could include special services outside the revenue from sold goods alone, such as special grocery delivery services
+-   `Employee_Wages()`
 
-For our project, we have decided to give freedom to the user to determine the individual percentage of total estimated revenue that will be spent on each kind of expense, while also giving the user a default value to guide them. This default value is taken from Bizminer, a business data reporting platform that supplies us with the industry average percentages for each category of expense. Users will be able to:
+-   `Officer_Compensation()`
 
--   Switch between multiple ownership scenarios
+-   `Other_Operating_Expense()`
 
-    -   3 different scenarios:
+-   `Other_Income()`
 
-        -   User owns a building.
+-   `Interest_Income()`
 
-        -   User rents a building.
+## Categories of Expenses
 
-        -   User establishes another holding company that owns a building, then rents from that company.
+Five different categories of expenses are accounted for in this tool:
 
-Input their own expense percentages with interactive sliders
+### Cost of Goods Sold
 
-Sliders will contain a "Bizminer Default" as a tick mark
+This represents how much of the total estimated revenue is spent on the cost of goods (inventory). The calculation for this item takes the total estimated revenue and the selected gross margin percentage into account.
 
-Enter in a custom list of assets to calculate the cost of depreciation
+Associated Functions:
 
-Default assets are listed along with multiple boxes for custom assets
+-   `Gross_Margin()`
 
-Users will enter in custom dollar values for these assets
+-   `Employee_Wages()`
 
-Enter in custom loan and rent information
+-   `Officer_Compensation()`
 
-Users can calculate annual interest on a loan
+-   `Other_Operating_Expense()`
 
-Users can calculate annual rent from a given rate of monthly rent
+-   `Interest_Income()`
 
-Ultimately, the estimated expenses will be subtracted from the total estimated revenue and the estimated secondary income will be added. This will give the user an estimate of pre-tax profit for a given store location that we hope will help them in coming to a decision.
+-   `Other_Income()`
+
+### Operating Expenses
+
+Comprises expenses such as compensation for company officers, employee wages and other common operating expenses of grocery stores. Users can select percentages for each of these expenses or they can rely on the default value provided by Bizminer.
+
+Associated Functions:
+
+-   `Employee_Wages()`
+
+-   `Officer_Compensation()`
+
+-   `Other_Operating_Expense()`
+
+### Asset Depreciation
+
+Covers the annual loss from the depreciation of various assets required to own and operate a grocery store. The value of a list of assets are divided by their associated use life to determine the annual lost in value from asset depreciation. The tool gives the user the option to fill out a form for one of two scenarios: one if the user plans to own a building and the other if the user plans to rent.
+
+Associated Functions:
+
+-   `Depreciation_1()`
+
+-   `Depreciation_2()`
+
+### Loan Interest
+
+Covers the annual interest on a user-specified loan (if a loan was taken out). The annual cost of interest on a loan is calculated from the loan amount and its annual interest rate, entered by the user.
+
+Associated Function:
+
+-   `Interest_Expense()`
+
+### Rent (if leasing building)
+
+This covers the annual cost of rent for a leased building. Users can enter their monthly rate of rent
+
+to determine the annual cost of rent for their building.
+
+Associated Function:
+
+-   `Annual_Rent()`
+
+## Secondary Sources of Income
+
+Another important factor to consider is secondary sources of income. These are broken up into two main categories:
+
+### Income from interest
+
+Income collected from interest-bearing assets.
+
+Associated Function:
+
+-   `Interest_Income()`
+
+### Other Income
+
+This could include special services outside the revenue from sold goods alone, such as special grocery delivery services or membership fees for discount clubs, among other things.
+
+Associated Function:
+
+-   `Other_Income()`
+
+## Pre-Tax Profit
+
+In the tool, the estimated expenses will be subtracted from the total estimated revenue and the estimated secondary income will then be added in the calculation for the estimated pre-tax profit . Users will be able to adjust the percentages to suite their individual needs and determine profitability taking both expenses and market size into account.
