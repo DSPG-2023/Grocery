@@ -59,11 +59,11 @@ in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 and Primary_Shopper_Count()
 }
 \examples{
-Total_Spend_Primary_Shoppers(state_index=99)
+#Total_Spend_Primary_Shoppers(state_index=99)
 
 }
 \seealso{
-\code{\link[=Total_Spend_Secondary_Shoppers(),Total_Spend_Rare_Shoppers]{Total_Spend_Secondary_Shoppers(),Total_Spend_Rare_Shoppers()}}
+\code{\link[=Total_Spend_Secondary_Shoppers]{Total_Spend_Secondary_Shoppers()}},\code{\link[=Total_Spend_Rare_Shoppers]{Total_Spend_Rare_Shoppers()}}
 }
 \author{
 Srika Raja

@@ -41,11 +41,13 @@ This function is taken from the estimating Market Size.xlsx
 and calculated in step 6.
 }
 \examples{
-Rare_Shopper_Count()
+#Rare_Shopper_Count()
 
 }
 \seealso{
-\code{\link[=Primary_Shoppers_Count(),Secondary_Shoppers_Count]{Primary_Shoppers_Count(),Secondary_Shoppers_Count()}}
+\code{\link[=Primary_Shopper_Count]{Primary_Shopper_Count()}}
+
+\code{\link[=Secondary_Shopper_Count]{Secondary_Shopper_Count()}}
 }
 \author{
 Srika Raja
