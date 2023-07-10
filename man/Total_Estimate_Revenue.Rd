@@ -92,7 +92,7 @@ in step 4. This function calls Total_Spend_Primary_Shoppers(),
 Total_Spend_Secondary_Shoppers() and Total_Spend_Rare_Shoppers()
 }
 \examples{
-Total_Estimate_Revenue(state_index=99)
+#Total_Estimate_Revenue(state_index=99)
 
 }
 \author{

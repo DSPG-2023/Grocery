@@ -17,6 +17,7 @@ excel_file_2<-"salesgenie_large_chain_grocery_stores.xlsx"
 dollar_store_data <- read_excel(file.path(path, excel_file))
 grocery_store_data<-read_excel(file.path(path,excel_file_1))
 chain_grocery_store_data<-read_excel(file.path(path,excel_file_2))
+Google_Places_DollarStores<- readRDS(file="../ProjectData/Google_Places_DollarStores.rds")
 ```
 
 ```{r}
@@ -601,10 +602,14 @@ storetype_grp_pop<-merge(ncg_cg_ds_counts,city_group,all=TRUE)
 storetype_grp_pop[is.na(storetype_grp_pop)] <- 0
 storetype_grp_pop$total_grocery<-storetype_grp_pop$NCG_count+storetype_grp_pop$CG_count
 storetype_grp_pop$pop_store_ratio<-storetype_grp_pop$Pop20/storetype_grp_pop$total_grocery
+
+storetype_rucc_pop <-merge(cities,storetype_grp_pop,by="Mailing_City")
+
+storetype_grp_pop<-merge(storetype_grp_pop,cities,by="Mailing_City",all=TRUE)
+storetype_grp_pop<-storetype_grp_pop[,-c(15,16,19)]
 ```
 
 ```{r}
-storetype_rucc_pop <-merge(cities,storetype_grp_pop,by="Mailing_City")
 storetype_rucc_pop<-merge(storetype_rucc_pop,ruralurbancodes2013_iowa,by="County_Name")
 storetype_rucc_pop$GrpCode <- str_replace(storetype_rucc_pop$GrpCode, "PG8", "Rest_of_the_State")
 storetype_rucc_pop$GrpCode <- str_replace(storetype_rucc_pop$GrpCode, "PG9", "Rest_of_the_State")
