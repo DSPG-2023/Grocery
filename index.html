@@ -78,20 +78,32 @@
 </div>
 <!-- badges: start -->
 
+
 <!-- badges: end -->
 <p>The goal of DSPGrocery is to provide an R based tool to help users with decision-making for opening up a grocery store in a rural environment. The tool itself is an R Shiny app which uses the functions from the DSPGrocery package to generate market size, estimated revenue, expenses and other demographic information.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the development version of DSPGGrocery from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<p>You can install the development version of DSPGrrocery from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DSPG-2023/Grocery"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a>
+</h2>
+<p>The R Shiny tool and the DSPGrocery package are designed as alternative interfaces to an Excel tool developed by the ISU Extension and Outreach Farm, Food and Enterprise Development Program. The Excel workbooks are divided into the following three sections.</p>
+<ul>
+<li>Estimating Market Size</li>
+<li>Estimating Revenue</li>
+<li>Estimating Expenses</li>
+</ul>
+<p>These correspond to the articles in the vignette sections documenting how each of the excel tools were first converted into R functions and later updated to suit the needs of the R Shiny interface. Those articles can be found in the <code>Articles</code> tab on the navigation bar.</p>
+</div>
+<div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>This functions in the package can also be used independently of the R Shiny tool by simply calling the functions after loading the library.</p>
+<p>The functions in the package can also be used independently of the R Shiny tool if desired. Simply call the functions after loading the library.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DSPGGrocery</span><span class="op">)</span></span>
 <span></span>
@@ -103,6 +115,7 @@
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span><span class="st">"Total Gross Margin: $%d"</span>, <span class="va">GrossMargin</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] "Total Gross Margin: $30000"</span></span></code></pre></div>
+<p>A caveat to this is that a portion of the functions in the documentation are helper functions which shouldn’t be called directly. Referring to the documentation to determine which functions should be called is best practice.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="license">
