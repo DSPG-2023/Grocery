@@ -256,7 +256,7 @@ p2 <- employment_df2 %>%
 
 plot2 <- plotly::ggplotly(p2)
 
-plot2 <- plot5 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
+plot2 <- plot2 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 
 ## Show Plot
 
