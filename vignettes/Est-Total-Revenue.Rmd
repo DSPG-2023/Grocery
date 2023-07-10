@@ -20,11 +20,11 @@ library(DSPGGrocery)
 
 # Estimating Revenue
 
-For revenue estimation, we need the average spending per capita and the number of shoppers in each category (Primary, Secondary, Rare) for each type of market (Metro, Rural, Town).
+The average spending per capita and the number of shoppers in each category (Primary, Secondary, Rare) for each type of market (Metro, Rural, Town) are used for estimating the revenue of the proposed stores.
 
 ## Average Per Capita Grocery Spend
 
-The `Avg_Capita_Grocery_Spending()` function calculates the average per capita spending. The 2022 total US grocery sales data is taken from IBIS and divided by the 2022 total US population from the US Census Bureau. Since the population and grocery sales have taken 2022 data, we must account for the change for the current year. This is adjusted by the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()` using CPI (Consumer Price Index) and RPP (Rural Price Parities), respectively.
+The `Avg_Capita_Grocery_Spending()` function calculates the average per capita spending. The 2022 total US grocery sales data is taken from IBIS and divided by the 2022 total US population from the US Census Bureau. Since the population and grocery sales have taken 2022 data, the change for the current year must be accounted. This is adjusted by the functions `Adj_Capita_Grocery_Spend()` and `State_Adj_Capita_Grocery_Spend()` using CPI (Consumer Price Index) and RPP (Rural Price Parities), respectively.
 
 The **Consumer Price Index** (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services. So, adjusting according to the CPI accounts for the inflation in the US.
 
@@ -34,7 +34,7 @@ The **Consumer Price Index** (CPI) is a measure of the average change over time 
 
 The next component needed for estimating the revenue is the number of shoppers in each category for each type of market.
 
-We classify shoppers into 3 categories:
+Shoppers are classified into 3 categories:
 
 ***Primary Shoppers:*** The people doing most of the household grocery shopping in that store.
 
@@ -42,7 +42,7 @@ We classify shoppers into 3 categories:
 
 ***Rare Shoppers:*** People who are very occasional shoppers(only when necessary).
 
-We classify shoppers into 3 different populations:
+Shoppers classified into 3 different populations:
 
 ***Metro*****:** The population of the city in which the store is planned to open
 
