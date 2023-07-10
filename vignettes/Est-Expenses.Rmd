@@ -18,8 +18,6 @@ knitr::opts_chunk$set(
 library(DSPGGrocery)
 ```
 
-# Estimating Expenses
-
 One essential element of the calculation for store profitability is the estimation for the various expenses that a potential store owner might have to deal with when they open. Depending on the size of the store, the assets of the owner and the cost of buying or renting a building, these expenses can vary widely depending on the individual circumstances of the prospective owner. This tool allows for users to test the profitability of different budgetary percentages of different expenses in order to help determine the resources necessary for a store to succeed in a given area in regards to costs.
 
 ## Bizminer/Vertical IQ Percentages
