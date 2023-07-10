@@ -52,15 +52,7 @@ Associated Functions:
 
 -   `Gross_Margin()`
 
--   `Employee_Wages()`
-
--   `Officer_Compensation()`
-
--   `Other_Operating_Expense()`
-
--   `Interest_Income()`
-
--   `Other_Income()`
+-   `Cost_of_Goods_Sold()`
 
 ### Operating Expenses
 
