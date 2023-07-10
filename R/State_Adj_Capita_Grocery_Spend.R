@@ -26,7 +26,8 @@
 #' @export
 
 State_Adj_Capita_Grocery_Spend<- function(state_index,est_per_price_increase=7,
-                                          grocery_sales = 811541000000, population = 334233854){
+                                          grocery_sales = 811541000000,
+                                          population = 334233854){
   Adj_Avg_Spend<-Adj_Capita_Grocery_Spend(est_per_price_increase,grocery_sales, population)
   floor(Adj_Avg_Spend*(state_index/100))
 }

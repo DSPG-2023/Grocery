@@ -1,14 +1,29 @@
-#' Calculation of Depreciation (for Building Ownership)
+#' Calculates the Cost of Depreciation Based on List of Assets (For a Building Owner)
 #'
-#' @param Building_Remodeling Cost  of Building/Remodeling
-#' @param Parking_Lot_Improvements Depreciation of Parking Lot Improvements
-#' @param Shelving_Check_Out_Counters Depreciation of Shelving/Check Out Counters
-#' @param Computer_Equipment_POS Cost of Computer System/POS
-#' @param Vehicles Cost of Vehicles
-#' @param Display_Cases Cost of Display cases
-#' @param Refrigeration Cost of Refrigeration
-#' @param Freezers Cost of Freezers
-#' @param Meat_Cutting_Equipment Cost of Meat-cutting Equipment
+#' @author Aaron Null
+#'
+#' @description
+#' This function calculates the estimated cost of the annual depreciation of assets
+#' for grocery stores (specifically for scenario 1 in which the building
+#' is owned, not rented).
+#'
+#' @details
+#' This function is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach. The values of the various assets
+#' are divided by their use life to get the annual loss from depreciation for each asset.
+#' These values are added up to get the total annual loss from asset
+#' depreciation/amortization. Users can enter in up to 3 miscellaneous assets
+#' and each of their corresponding use-lives.
+#'
+#' @param Building_Remodeling Cost  of Building/Remodeling.
+#' @param Parking_Lot_Improvements Cost of Parking Lot Improvements.
+#' @param Shelving_Check_Out_Counters Cost of Shelving/Check Out Counters.
+#' @param Computer_Equipment_POS Cost of Computer System/POS.
+#' @param Vehicles Cost of Vehicles.
+#' @param Display_Cases Cost of Display cases.
+#' @param Refrigeration Cost of Refrigeration.
+#' @param Freezers Cost of Freezers.
+#' @param Meat_Cutting_Equipment Cost of Meat-cutting Equipment.
 #' @param Miscellaneous_Assets_1 (Optional) Cost of Miscellaneous Asset (1)
 #' @param Miscellaneous_Assets_1_Use_Life (Optional) Use Life of Miscellaneous Asset (1)
 #' @param Miscellaneous_Assets_2 (Optional) Cost of Miscellaneous Asset (2)
@@ -16,12 +31,11 @@
 #' @param Miscellaneous_Assets_3 (Optional) Cost of Miscellaneous Asset (3)
 #' @param Miscellaneous_Assets_3_Use_Life (Optional) Use life of Miscellaneous Asset (3)
 #'
-#' @returns Outputs total estimated loss from depreciation for property owners
 #'
-#' @details This function is taken from the "Estimating Expense" excel sheet (step two)
+#' @returns The output returns the estimated dollar amount lost annually to asset
+#' depreciation for a hypoththetical grocery store.
 #'
-#' @examples
-#' Depreciation_1(
+#' @example Depreciation_1(
 #'   Building_Remodeling = 900000,
 #'   Parking_Lot_Improvements = 50000,
 #'   Shelving_Check_Out_Counters = 60000,
@@ -37,6 +51,7 @@
 #'   Miscellaneous_Assets_2_Use_Life = 10,
 #'   Miscellaneous_Assets_3 = 10000,
 #'   Miscellaneous_Assets_3_Use_Life = 10)
+#'
 #'
 #' @export
 
