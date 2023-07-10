@@ -10,7 +10,8 @@ Cost_of_Goods_Sold(Total_Estimated_Revenue, Gross_Margin_Percentage = 0.2446)
 \item{Total_Estimated_Revenue}{Total estimated revenue based on market size/location.}
 
 \item{Gross_Margin_Percentage}{Percentage of total estimated revenue expected as gross margin
-selected via user input (default from Bizminer).}
+selected via user input (defaults to the average percentage taken from
+Bizminer and Vertical IQ).}
 }
 \value{
 The output returns the estimated dollar amount for the cost of goods sold for
