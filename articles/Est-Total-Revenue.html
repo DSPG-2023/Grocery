@@ -97,37 +97,101 @@ Census Bureau. Since the population and grocery sales have taken 2022
 data, we must account for the change for the current year. This is
 adjusted by the functions <code><a href="../reference/Adj_Capita_Grocery_Spend.html">Adj_Capita_Grocery_Spend()</a></code> and
 <code><a href="../reference/State_Adj_Capita_Grocery_Spend.html">State_Adj_Capita_Grocery_Spend()</a></code> using CPI (Consumer Price
-Index) and RPP (Rural Price Parities), respectively. The Consumer Price
-Index (CPI) is a measure of the average change over time in the prices
-paid by urban consumers for a market basket of consumer goods and
-services. So, adjusting according to the CPI accounts for the inflation
-in the US. Regional price parities (RPP) measure the differences in
-price levels across states and metropolitan areas for a given year and
-are expressed as a percentage of the overall national price level.
-Adjusting according to this measure gives that state’s average per
-capita spending on groceries for that year. ## Total Spend by Category
-The next component needed for estimating the revenue is the number of
-shoppers in each category for each type of market. We classify shoppers
-into 3 categories: Primary Shoppers: The people doing most of the
-household grocery shopping. Secondary Shoppers: Rare Shoppers: People
-who are very occasional shoppers. We classify shoppers into 3 different
-populations: Metro: The population of the city in which the store is
-planned to open Town: Population of all the cities in the market Rural:
-Total rural population of the market The functions:
-Primary_Shopper_Count(), Secondary_Shopper_Count(), and
-Rare_Shopper_Count() calculates the number of shoppers in each category
-for each type of market. The outputs of these functions are used in
-calculating the total spend by each of these groups by
-Total_Spend_Primary_Shoppers(), Total_Spend_Secondary_Shoppers(), and
-Total_Spend_Rare_Shoppers() functions.</p>
+Index) and RPP (Rural Price Parities), respectively.</p>
+<p>The <strong>Consumer Price Index</strong> (CPI) is a measure of the
+average change over time in the prices paid by urban consumers for a
+market basket of consumer goods and services. So, adjusting according to
+the CPI accounts for the inflation in the US.</p>
+<p><strong>Regional price parities</strong> (RPP) measure the
+differences in price levels across states and metropolitan areas for a
+given year and are expressed as a percentage of the overall national
+price level. Adjusting according to this measure gives that state’s
+average per capita spending on groceries for that year.</p>
+</div>
+<div class="section level3">
+<h3 id="total-spend-by-category">Total Spend by Category<a class="anchor" aria-label="anchor" href="#total-spend-by-category"></a>
+</h3>
+<p>The next component needed for estimating the revenue is the number of
+shoppers in each category for each type of market.</p>
+<p>We classify shoppers into 3 categories:</p>
+<p><strong><em>Primary Shoppers:</em></strong> The people doing most of
+the household grocery shopping.</p>
+<p><strong><em>Secondary Shoppers:</em></strong></p>
+<p><strong><em>Rare Shoppers:</em></strong> People who are very
+occasional shoppers.</p>
+<p>We classify shoppers into 3 different populations:</p>
+<p><strong><em>Metro</em>:</strong> The population of the city in which
+the store is planned to open</p>
+<p><strong><em>Town:</em></strong> Population of all the cities in the
+market</p>
+<p><strong><em>Rural:</em></strong> Total rural population of the
+market</p>
+<p>The functions: <code><a href="../reference/Primary_Shopper_Count.html">Primary_Shopper_Count()</a></code>,
+<code><a href="../reference/Secondary_Shopper_Count.html">Secondary_Shopper_Count()</a></code>, and
+<code><a href="../reference/Rare_Shopper_Count.html">Rare_Shopper_Count()</a></code> calculates the number of shoppers in
+each category for each type of market. The outputs of these functions
+are used in calculating the total spend by each of these groups by
+<code><a href="../reference/Total_Spend_Primary_Shoppers.html">Total_Spend_Primary_Shoppers()</a></code>,
+<code><a href="../reference/Total_Spend_Secondary_Shoppers.html">Total_Spend_Secondary_Shoppers()</a></code>, and
+<code><a href="../reference/Total_Spend_Rare_Shoppers.html">Total_Spend_Rare_Shoppers()</a></code> functions.</p>
 <p>For information on data update frequency and sources, check out this
 table:</p>
+<table style="width:99%;" class="table">
+<colgroup>
+<col width="18%">
+<col width="15%">
+<col width="14%">
+<col width="21%">
+<col width="28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable name</strong></td>
+<td><strong>Frequency</strong></td>
+<td><strong>Source</strong></td>
+<td><strong>Link</strong></td>
+<td><strong>Notes</strong></td>
+</tr>
+<tr class="even">
+<td>Total US Grocery Sales</td>
+<td>Optional</td>
+<td>IBIS</td>
+<td></td>
+<td>Default base year is taken as 2022</td>
+</tr>
+<tr class="odd">
+<td>Total US population</td>
+<td>Optional</td>
+<td>US Census Bureau</td>
+<td></td>
+<td>Default base year is taken as 2022</td>
+</tr>
+<tr class="even">
+<td>Estimated cumulative price increase(CPI)</td>
+<td>yearly update/ Half yearly update</td>
+<td>US Bureau of Labor Statistics</td>
+<td><a href="https://data.bls.gov/timeseries/CUUR0000SA0" class="external-link uri">https://data.bls.gov/timeseries/CUUR0000SA0</a></td>
+<td>
+<p>CPI in the current year - CPI in the base year</p>
+<p>For now, defaulting as 7 for 2023</p>
+</td>
+</tr>
+<tr class="odd">
+<td>State Index</td>
+<td>yearly update</td>
+<td>BEA</td>
+<td><a href="https://tinyurl.com/2wvca7vy" class="external-link uri">https://tinyurl.com/2wvca7vy</a></td>
+<td>Should be inputted by the user according to the store location.</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section level3">
 <h3 id="total-revenue-estimate">Total Revenue Estimate<a class="anchor" aria-label="anchor" href="#total-revenue-estimate"></a>
 </h3>
 <p>Total revenue is estimated by summing the total spend by primary,
-secondary, and rare shoppers.</p>
+secondary, and rare shoppers by the
+<code><a href="../reference/Total_Estimate_Revenue.html">Total_Estimate_Revenue()</a></code>.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
