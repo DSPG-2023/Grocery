@@ -12,34 +12,27 @@
 #' default taken as 20% unless specified otherwise.
 #' @param pct_town_rare The percentage of secondary shoppers in town market
 #'default taken as 20% unless specified otherwise.
-#' @param county_pop Population of the county.
-#' @param towns_pop Population of all towns in the county.
-#' @param pct_county Percentage of county in our market.
-#' @param metro_list Lists of population of store location.
-#' @param town_list List of population of towns in the neighborhood.
+#' @param metro_pop Population of the store location
+#' @param town_pop Population of all towns in the county
+#' @param rural_pop Population of rural cities in our market
 #'
 #' @returns Outputs the total number of Rare shoppers for the store
 #'
 #' @examples
-#' Rare_Shopper_Count(county_pop=18000,
-#'                   towns_pop=9786,
-#'                   pct_county=17.7,
-#'                   town_list=list(77),
-#'                   metro_list=list(2650))
+#' Rare_Shopper_Count()
 #'
 #' @details
 #' This function is taken from the estimating Market Size.xlsx
-#' and calculated in step 6. This function calls Rural_Population() and
-#' City_Populations()
+#' and calculated in step 6.
+#'
+#' @seealso [Primary_Shoppers_Count(),Secondary_Shoppers_Count()]
 #'
 #' @export
 
 Rare_Shopper_Count<-function(pct_metro_rare=10,pct_rural_rare=20,
-                             pct_town_rare=20,county_pop, towns_pop,
-                             pct_county,metro_list,town_list){
-  rural_pop<-Rural_Population(county_pop, towns_pop, pct_county)
-  metro_pop<-City_Populations(metro_list)
-  town_pop<-City_Populations(town_list)
+                             pct_town_rare=20,metro_pop, town_pop,
+                             rural_pop){
+
   floor((metro_pop*(pct_metro_rare/100))+(rural_pop*(pct_rural_rare/100))+
     (town_pop*(pct_town_rare/100)))
 }

@@ -13,11 +13,9 @@
 #' default taken as 30% unless specified otherwise.
 #' @param pct_town_prim The percentage of primary shoppers in town market
 #' default taken as 30% unless specified otherwise.
-#' @param county_pop Population of the county.
-#' @param towns_pop Population of all towns in the county.
-#' @param pct_county Percentage of county in our market.
-#' @param metro_list Lists of population of store location.
-#' @param town_list List of population of towns in the neighborhood.
+#' @param metro_pop Population of the store location
+#' @param town_pop Population of all towns in the county
+#' @param rural_pop Population of rural cities in our market
 #' @param state_index The ratio of the current price of the basket to the price of
 #' the basket during the base year
 #' @param est_per_price_increase Estimated increase in price of grocery in cumulative percent
@@ -33,30 +31,31 @@
 #' in step 4. This function calls State_Adj_Capita_Grocery_Spend()
 #' and Primary_Shopper_Count()
 #'
+#' @seealso [Total_Spend_Secondary_Shoppers(),Total_Spend_Rare_Shoppers()]
+#'
 #' @examples
-#' Total_Spend_Primary_Shoppers(county_pop=18000,
-#'                              towns_pop=9786,
-#'                              pct_county=17.7,
-#'                              town_list=list(77),
-#'                              metro_list=list(2650),
-#'                              est_per_price_increase=7,
-#'                              state_index=99)
+#' Total_Spend_Primary_Shoppers(state_index=99)
 #'
 #' @export
 #'
 
 
 Total_Spend_Primary_Shoppers<-function(per_of_grocery_spend_prim=60,
-                                       pct_metro_prim=50,pct_rural_prim=30,pct_town_prim=30,
-                                       county_pop,towns_pop,pct_county,metro_list,town_list,
+                                       pct_metro_prim=50,pct_rural_prim=30,
+                                       pct_town_prim=30,
+                                       metro_pop, town_pop,rural_pop,
                                        state_index,est_per_price_increase=7,
-                                       grocery_sales = 811541000000,population = 334233854){
-  per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend(state_index,est_per_price_increase,
-                                                           grocery_sales, population)
+                                       grocery_sales = 811541000000,
+                                       population = 334233854){
+  per_capita_grocery_spend<-State_Adj_Capita_Grocery_Spend(state_index,
+                                                           est_per_price_increase,
+                                                           grocery_sales,
+                                                           population)
 
-  num_prim_shoppers<-Primary_Shopper_Count(pct_metro_prim=50,pct_rural_prim=30
-                                           ,pct_town_prim=30,county_pop, towns_pop,
-                                           pct_county,metro_list,town_list)
+  num_prim_shoppers<-Primary_Shopper_Count(pct_metro_prim=50,
+                                           pct_rural_prim=30,
+                                           pct_town_prim=30,
+                                           metro_pop, town_pop,rural_pop)
 
 
   per_capita_grocery_spend*(per_of_grocery_spend_prim/100)*num_prim_shoppers
