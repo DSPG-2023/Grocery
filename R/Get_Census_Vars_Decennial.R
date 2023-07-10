@@ -26,7 +26,7 @@
 #' @export
 
 
-get_census_vars_decennial <- function(Data) {
+Get_Census_Vars_Decennial <- function(Data) {
 
   # Create empty list for the output data frames of each state
 

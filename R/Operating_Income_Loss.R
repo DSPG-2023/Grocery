@@ -1,18 +1,27 @@
-#' Calculation of the Operating Income (loss)
+#' Calculation of Revenue Surplus after the Subtraction of Cost of Goods and other Operating
+#' Costs (Interim Result - Not Final)
 #'
-#' @param Total_Estimated_Revenue Output of total estimated revenue calculation sheet
-#' @param Gross_Margin_Percentage Percentage of revenue as gross margin (default from Bizminer)
+#' @author Aaron Null
 #'
-#' @details This function is taken from the "Estimating_Expenses.xlsx" sheet and
-#' calculated in Step Six)
-#' Functions called: Cost_of_Goods_Sold, Officer_Compensation, Employee_Wages,
-#' Other_Operating_Expense
+#' @description
+#' This function calculates the estimated revenue surplus after subtracting the cost of goods,
+#' officer compensation, employee wages and other operating expenses and outputs an interim
+#' profit figure before depreciation, interest income, interest expense and secondary sources
+#' of income are taken into account.
 #'
-#' @returns Outputs difference between total estimated revenue and aggregated expenses
-#' (in dollars)
 #'
-#' @examples
-#'Employee_Wages(Total_Estimated_Revenue = 2000000)
+#' @details
+#' This function employs the user-selected gross margin percentage as an argument and calls
+#' the functions "Cost_of_Goods_Sold()", "Officer_Compensation()", "Employee_Wages()" and
+#' "Other_Operating_Expense()". This function is based upon calculations originally
+#' formulated by FFED ISU Extension and Outreach.
+#'
+#' @param Total_Estimated_Revenue Total estimated revenue based on market size/location.
+#' @param Gross_Margin_Percentage User-selected gross margin percentage
+#' (default taken from Bizminer).
+#'
+#' @returns The output returns the estimated revenue surplus (revenue left over) after the
+#' subtraction of the cost of goods sold and operating expenses (minus depreciation).
 #'
 #' @export
 
