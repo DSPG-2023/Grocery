@@ -7,6 +7,8 @@
 
 <a href="https://dspg-2023.github.io/Grocery/"><img src="man/figures/logo.png" align="right" height="139" alt="DSPGGrocery website" /></a>
 
+![](https://img.shields.io/badge/-Under%20Development-yellow)
+
 <!-- badges: end -->
 
 The goal of DSPGrocery is to provide an R based tool to help users with
@@ -17,7 +19,7 @@ and other demographic information.
 
 ## Installation
 
-You can install the development version of DSPGGrocery from
+You can install the development version of DSPGrrocery from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -25,10 +27,27 @@ You can install the development version of DSPGGrocery from
 devtools::install_github("DSPG-2023/Grocery")
 ```
 
+## Background
+
+The R Shiny tool and the DSPGrocery package are designed as alternative
+interfaces to an Excel tool developed by the ISU Extension and Outreach
+Farm, Food and Enterprise Development Program. The Excel workbooks are
+divided into the following three sections.
+
+- Estimating Market Size
+- Estimating Revenue
+- Estimating Expenses
+
+These correspond to the articles in the vignette sections documenting
+how each of the excel tools were first converted into R functions and
+later updated to suit the needs of the R Shiny interface. Those articles
+can be found in the `Articles` tab on the navigation bar.
+
 ## Example
 
-This functions in the package can also be used independently of the R
-Shiny tool by simply calling the functions after loading the library.
+The functions in the package can also be used independently of the R
+Shiny tool if desired. Simply call the functions after loading the
+library.
 
 ``` r
 library(DSPGGrocery)
@@ -42,3 +61,8 @@ GrossMargin <- Gross_Margin(Total_Estimated_Revenue = 120000,
 print(sprintf("Total Gross Margin: $%d", GrossMargin))
 #> [1] "Total Gross Margin: $30000"
 ```
+
+A caveat to this is that a portion of the functions in the documentation
+are helper functions which shouldn’t be called directly. Referring to
+the documentation to determine which functions should be called is best
+practice.

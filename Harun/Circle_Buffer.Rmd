@@ -27,7 +27,7 @@ address <- "St, Lamoni, IA"
 api_key <- Sys.getenv("PLACES_KEY")
 keyword <- "grocery"
 
-# Create_Circle_Buffer(address = address, api_key = api_key, keyword = keyword)
+# Create_Circle_Buffer(address = "St, Lamoni, IA", api_key = Sys.getenv("PLACES_KEY"), keyword = "grocery")
 ```
 
 
