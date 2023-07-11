@@ -5,8 +5,8 @@
 #' @param address the address must be in the standard Google maps form
 #'
 #' @description
-#' Function that takes in an address and returns a dataframe with data on county
-#' cities and populations
+#' Function that takes in an address and returns a dataframe with cities in the
+#' county and their populations in a tidy format.
 #'
 #' @details
 #' Makes a TidyCensus and Google Places API call, needs key
@@ -15,6 +15,7 @@
 #' @importFrom dplyr rename
 #' @importFrom ggmap geocode
 #' @importFrom stringr str_split
+#' @import magrittr %>%
 #' @importFrom tidyr separate
 #' @example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
 #' @export
