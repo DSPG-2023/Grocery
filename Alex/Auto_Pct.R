@@ -1,6 +1,7 @@
 #' Determining Percentage of County Covered in Market Area
 #'
 #' @author Alex Cory
+#'
 #' @description
 #' Determines size and percentage of County covered by Market Area
 #'
@@ -10,9 +11,13 @@
 #' @param southwest_dist Distance to nearest store to the Southwest
 #' @param df_city_pop Dataframe with City Population
 #' @param geo_county County Name
-#' @return Sum of Market Area Divided by Size of County
+#'
+#' @returns Sum of Market Area Divided by Size of County
+#'
 #' @importFrom tigris counties
+#' @importFrom magrittr %>%
 #' @importFrom dplyr filter
+#'
 #' @export
 
 

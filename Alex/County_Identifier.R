@@ -1,12 +1,17 @@
 #' Find County from Long/Lat points and state
+#'
 #' @author Jay Maxwell
 #' @param x Single row data frame,columns 1, 2 = lon, lat, column 3 = state name
-#' @return x with extra column for county name
-#' @importFrom dplyr mutate, select
-#' @importFrom magrittr ?>?
-#' @importFrom sf st_join, st_drop_geometry, st_intersects, st_as_sf, st_crs
+#'
+#' @returns x with extra column for county name
+#'
+#' @importFrom dplyr mutate select
+#' @importFrom magrittr %>%
+#' @importFrom sf st_join st_drop_geometry st_intersects st_as_sf st_crs
 #' @importFrom tigris counties
+#'
 #' @export
+
 get_county <- function(x) {
   counties <- counties(state=x[["state"]])
 

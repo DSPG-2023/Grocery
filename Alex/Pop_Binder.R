@@ -1,6 +1,9 @@
-#' Creating a Dataframe from an address
+#' Creating a Dataframe from an Address
+#'
 #' @author Alex Cory
+#'
 #' @param address the address must be in the standard Google maps form
+#'
 #' @description
 #' Function that takes in an address and returns a dataframe with data on county
 #' cities and populations
