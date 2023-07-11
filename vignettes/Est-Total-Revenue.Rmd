@@ -1,5 +1,6 @@
 ---
 title: "Estimating Total Revenue"
+author: "Srika Raja"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Estimating Total Revenue}
