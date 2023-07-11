@@ -2,9 +2,9 @@
 #' @author Jay Maxwell
 #' @param x Single row data frame,columns 1, 2 = lon, lat, column 3 = state name
 #' @return x with extra column for county name
-#' @importFrom dplyr mutate select
+#' @importFrom dplyr mutate, select
 #' @importFrom magrittr ?>?
-#' @importFrom sf st_join st_drop_geometry st_intersects st_as_sf st_crs
+#' @importFrom sf st_join, st_drop_geometry, st_intersects, st_as_sf, st_crs
 #' @importFrom tigris counties
 #' @export
 get_county <- function(x) {
@@ -29,8 +29,8 @@ get_county <- function(x) {
 #' @return x with all cities in a column as a list
 #' @importFrom dplyr mutate select pullcollapse
 #' @importFrom magrittr ?>?
-#' @importFrom sf st_join  st_intersects
-#' @importFrom tigris counties places
+#' @importFrom sf st_join, st_intersects
+#' @importFrom tigris counties, places
 #' @export
 get_cities_in_county <- function(x) {
   #input: a single-row data frame, a column named "state"
