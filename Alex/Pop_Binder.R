@@ -1,10 +1,20 @@
-#'@author Alex Cory
-#'@param address the address must be in the standard Google maps form
-#'@description
-#'Function that takes in an address and returns a dataframe with data on county
-#'cities and populations
+#' Creating a Dataframe from an address
+#' @author Alex Cory
+#' @param address the address must be in the standard Google maps form
+#' @description
+#' Function that takes in an address and returns a dataframe with data on county
+#' cities and populations
 #'
-#'@example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#' @details
+#' Makes a TidyCensus and Google Places API call, needs key
+#'
+#'
+#' @importFrom dplyr rename
+#' @importFrom ggmap geocode
+#' @importFrom stringr str_split
+#' @importFrom tidyr separate
+#' @example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#' @export
 
 library(stringr)
 library(ggmap)
