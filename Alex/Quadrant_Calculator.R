@@ -102,7 +102,7 @@ Quadrant_Calculator <- function(df_grocery_only, df_geocode) {
                                         ==min(southeast_stores$distance_vector))
   SW_min <- southwest_stores %>% filter(southwest_stores$distance_vector
                                         ==min(southwest_stores$distance_vector))
-
+  browser()
   df_circle_buffer <- rbind(NE_min,NW_min,SE_min,SW_min)
 
   Distance_Comp_List <- list(northeast_dist = northeast_dist,

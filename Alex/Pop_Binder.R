@@ -14,6 +14,7 @@ ggmap::register_google(key = Sys.getenv("PLACES_KEY"))
 
 Pop_Binder <- function(address) {
 
+  #browser()
   #Parses Address, returns as df with street address, city, and state
   splt_addr <- Address_Parser(address)
   geocoded_address <- geocode(location = address, output = "all")
@@ -60,7 +61,8 @@ Pop_Binder <- function(address) {
   county_pop <- county_pop["value"]
 
   PopulationsList <- list(df_city_pop = df_city_pop,
-                          county_pop = county_pop)
+                          county_pop = county_pop,
+                          county_name = geo_county)
 
   return(PopulationsList)
 }
