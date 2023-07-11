@@ -19,16 +19,27 @@ knitr::opts_chunk$set(
 The tool built in this project is built based on the Excel tool created by the Iowa State University Food and Farm Enterprise development FFED.The documentation and calculations done in those excel sheets were understood, recreated and improvised in this package.
 
 # Data Utilised
+
 ## ACS Data
-The demographic data for this project is taken from the 5 year American Community Survey(ACS) 2021. 
+
+The demographic data for this project is taken from the 5 year American Community Survey(ACS) 2021.
+
 ## Decennial Data
+
 The population data for the visualizations in this project is taken from the US Census Bureau's 2020 Decennial data. This data is used for population because it is the full count and not a sample unlike the ACS data.
+
 ## IBIS Data
+
 This project uses the 2022 total grocery sales data from IBIS.
+
 ## US Census Bureau Data
+
 The population used in the functions of this project takes the US census population as of 01/01/2022.
-## [BLS Data](https://data.bls.gov/timeseries/CUUR0000SA0 )
+
+## [BLS Data](https://data.bls.gov/timeseries/CUUR0000SA0)
+
 The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used in this project for calculating the inflation from the base year.This value is planned to be updated every month in the website but for this package it is updated every 6 months since that does change too much every month.
 
-## [BEA Data](https://tinyurl.com/2wvca7vy )
+## [BEA Data](https://tinyurl.com/2wvca7vy)
+
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI.This data is updated yearly.
