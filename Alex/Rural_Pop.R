@@ -21,7 +21,7 @@
 
 
 
-Auto_Rural <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
+Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
 
   #Jay's function takes a two value dataframe with state and county.
   #Take the values from df_city_pop

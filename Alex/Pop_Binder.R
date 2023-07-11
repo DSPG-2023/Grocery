@@ -40,7 +40,7 @@ Pop_Binder <- function(address) {
                         city = splt_addr$city[1])
 
   #Makes a list of all the cities in the county
-  city_in_county <- get_cities_in_county(city_df[1,])
+  city_in_county <- Get_Cities_in_County(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
   #This gives us the name of city and the population. We need to separate city
