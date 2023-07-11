@@ -48,6 +48,7 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/DataSourcesAndReferences.html">Data Sources And Literature Review</a>
     <a class="dropdown-item" href="../articles/Est-Expenses.html">Estimating Expenses</a>
     <a class="dropdown-item" href="../articles/Est-Market-Size.html">Estimating Market Size</a>
     <a class="dropdown-item" href="../articles/Est-Total-Revenue.html">Estimating Total Revenue</a>
@@ -79,23 +80,24 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DSPGGrocery</span><span class="op">)</span></span></code></pre></div>
-<p>The average spending per capita and the number of shoppers in each
-category (Primary, Secondary, Rare) for each type of market (Metro,
-Rural, Town) are used for estimating the revenue of the proposed
-stores.</p>
+<p>The functions in this section of the package estimate the total
+revenue of a store using the average spending per capita and the number
+of shoppers in each category for each type of market.</p>
 <div class="section level2">
 <h2 id="average-per-capita-grocery-spend">Average Per Capita Grocery Spend<a class="anchor" aria-label="anchor" href="#average-per-capita-grocery-spend"></a>
 </h2>
 <p>The <code><a href="../reference/Avg_Capita_Grocery_Spending.html">Avg_Capita_Grocery_Spending()</a></code> function calculates
-the average per capita spending. The 2022 total US grocery sales data is
-taken from IBIS and divided by the 2022 total US population from the US
-Census Bureau. Since the population and grocery sales have taken 2022
-data, the change for the current year must be accounted. This is
-adjusted by the functions <code><a href="../reference/Adj_Capita_Grocery_Spend.html">Adj_Capita_Grocery_Spend()</a></code> and
-<code><a href="../reference/State_Adj_Capita_Grocery_Spend.html">State_Adj_Capita_Grocery_Spend()</a></code> using CPI (Consumer Price
-Index) and RPP (Rural Price Parities), respectively.</p>
+the average per capita spending. This value serves as a baseline for how
+much each shopper will spend on average in a grocery store per year. The
+function takes 2022 total US grocery sales data from IBIS and divides it
+by the 2022 total US population from the US Census Bureau.</p>
+<p>Since the population and grocery sales have taken 2022 data, the
+change due to inflation for the current year must be accounted. This is
+done by adjusting the average per capita grocery spend according to the
+state index and inflation. The functions
+<code><a href="../reference/Adj_Capita_Grocery_Spend.html">Adj_Capita_Grocery_Spend()</a></code> and
+<code><a href="../reference/State_Adj_Capita_Grocery_Spend.html">State_Adj_Capita_Grocery_Spend()</a></code> does this by using CPI
+(Consumer Price Index) and RPP (Rural Price Parities), respectively.</p>
 <p>The <strong>Consumer Price Index</strong> (CPI) is a measure of the
 average change over time in the prices paid by urban consumers for a
 market basket of consumer goods and services. So, adjusting according to
@@ -109,8 +111,10 @@ average per capita spending on groceries for that year.</p>
 <div class="section level2">
 <h2 id="total-spend-by-category">Total Spend by Category<a class="anchor" aria-label="anchor" href="#total-spend-by-category"></a>
 </h2>
-<p>The next component needed for estimating the revenue is the number of
-shoppers in each category for each type of market.</p>
+<p>Not all shoppers have the same priority for all stores, and it is
+important that we classify them according to their preference for the
+store. So the next component needed for estimating the revenue is the
+number of shoppers in each category for each type of market.</p>
 <p>Shoppers are classified into 3 categories:</p>
 <p><strong><em>Primary Shoppers:</em></strong> The people doing most of
 the household grocery shopping in that store.</p>
@@ -118,7 +122,9 @@ the household grocery shopping in that store.</p>
 smaller purchases but will often do their weekly shopping elsewhere.</p>
 <p><strong><em>Rare Shoppers:</em></strong> People who are very
 occasional shoppers(only when necessary).</p>
-<p>Shoppers classified into 3 different populations:</p>
+<p>Location and accessibility are key factors affecting the preference
+for a shop. Shoppers are classified into 3 different populations based
+on their location:</p>
 <p><strong><em>Metro</em>:</strong> The population of the city in which
 the store is planned to open</p>
 <p><strong><em>Town:</em></strong> Population of all the cities in the
@@ -128,11 +134,21 @@ market</p>
 <p>The functions: <code><a href="../reference/Primary_Shopper_Count.html">Primary_Shopper_Count()</a></code>,
 <code><a href="../reference/Secondary_Shopper_Count.html">Secondary_Shopper_Count()</a></code>, and
 <code><a href="../reference/Rare_Shopper_Count.html">Rare_Shopper_Count()</a></code> calculates the number of shoppers in
-each category for each type of market. The outputs of these functions
-are used in calculating the total spend by each of these groups by
+each category for each type of market. These functions use some default
+values for the percentage of each type of shopper in the different
+populations. For example, if we take the primary shoppers count, it
+calculates this number by multiplying the different percentages of
+primary shoppers in the different markets. The percentage of primary
+shoppers is highest in the metro populations because there is a higher
+probability of people living in the same city as the store having that
+store as their primary shopping place compared to others who have to
+travel to get to that store. The outputs of these functions are
+multiplied with the average grocery spend calculated from the
+<code><a href="../reference/State_Adj_Capita_Grocery_Spend.html">State_Adj_Capita_Grocery_Spend()</a></code>to get the total spend by
+each of these groups in the functions
 <code><a href="../reference/Total_Spend_Primary_Shoppers.html">Total_Spend_Primary_Shoppers()</a></code>,
 <code><a href="../reference/Total_Spend_Secondary_Shoppers.html">Total_Spend_Secondary_Shoppers()</a></code>, and
-<code><a href="../reference/Total_Spend_Rare_Shoppers.html">Total_Spend_Rare_Shoppers()</a></code> functions.</p>
+<code><a href="../reference/Total_Spend_Rare_Shoppers.html">Total_Spend_Rare_Shoppers()</a></code>.</p>
 <p>For information on data update frequency and sources, check out this
 table:</p>
 <table style="width:99%;" class="table">
