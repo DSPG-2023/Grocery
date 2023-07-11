@@ -1,0 +1,25 @@
+```{r}
+  library(sf)
+  library(dplyr)
+  library(tigris)
+  library(tidyr)
+  library(stringr)
+  library(tidycensus)
+  library(oce)
+  library(geosphere)
+```
+
+```{r}
+address <- "st, Lamoni, ia"
+popbinder_list <- Pop_Binder(address = address)
+
+city_population <- Cities_Pop(df_city_state = popbinder_list$df_city_pop, city_county_state = df_census_call_test)
+
+metro_population <- Metro_Pop(address, df_city_pop = popbinder_list$df_city_pop)
+
+rural_population <- Auto_Rural(popbinder_list$df_city_pop,
+                               geo_county = popbinder_list$county_name,
+                               df_geocode = df_geocode_test,
+                               df_grocery_only = df_grocery_only_test)
+
+```
