@@ -13,7 +13,6 @@ Haversine_Calculator <- function(df_grocery_only, df_geocode) {
   api_stores <- data.frame( Name = df_grocery_only$name,
                             lat = df_grocery_only$lat,
                             lng = df_grocery_only$lng)
-  #browser()
 
   #Add Northing and Easting Columns
   UTM_geo <- lonlat2utm(longitude = df_geocode$lng,
@@ -32,7 +31,8 @@ Haversine_Calculator <- function(df_grocery_only, df_geocode) {
   all_stores_matrix <- matrix(data = c(df_grocery_only$lng,
                                  df_grocery_only$lat), ncol = 2)
 
-  all_stores_dist <- distHaversine(p1 = c(df_geocode$lng, df_geocode$lat), p2 = points)
+  all_stores_dist <- distHaversine(p1 = c(df_geocode$lng, df_geocode$lat),
+                                   p2 = all_stores_matrix)
 
   df_new <- cbind(api_stores, all_stores_dist)
 
