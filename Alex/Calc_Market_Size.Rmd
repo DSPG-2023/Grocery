@@ -10,6 +10,24 @@
 ```
 
 ```{r}
+source(file = "../R/Address_Parser.R")
+source(file = "../R/Quadrant_Area.R")
+source(file = "../R/UTM_Zoner.R")
+#source(file = Quadrant_Calculator())
+source(file = "Auto_Pct.R")
+source(file = "Auto_Rural.R")
+source(file = "Cities_Pop.R")
+source(file = "Haversine_Calculator.R")
+source(file = "Metro_Pop.R")
+source(file = "Pop_Binder.R")
+source(file = "../Test/Geography_Identifier.R")
+df_census_call_test <- readRDS("../ProjectData/df_census_call_test.RDS")
+df_geocode_test <- readRDS("../ProjectData/df_geocode_test.RDS")
+df_grocery_only_test <- readRDS("../ProjectData/df_grocery_only_test.RDS")
+```
+
+
+```{r}
 address <- "st, Lamoni, ia"
 popbinder_list <- Pop_Binder(address = address)
 
