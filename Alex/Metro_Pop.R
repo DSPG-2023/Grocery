@@ -6,7 +6,7 @@
 #' @param address the address we are interested in.
 #' @param df_city_pop dataframe with population of cities in county
 #' @returns population of city the store is in.
-#'
+#' @importFrom magrittr %>%
 #' @importFrom stringr str_to_title
 #'
 #' @export
