@@ -14,5 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-#General Overview
-The tool built in this project is built based on the Excel tool created by the Iowa State University Food and Farm Enterprise development FFED.
+# General Overview
+
+The tool built in this project is built based on the Excel tool created by the Iowa State University Food and Farm Enterprise development FFED.The documentation and calculations done in those excel sheets were understood and recreated and improvised in this package.
+
+# Data Utilised
+## BLS Data
+The US Bureau of labor statistics' CPI data was used in this project for calculating the inflation from the base year.This value is planned to be updated every month in the website but for this package it is updated every 6 months since that does change too much every month.
+
+## BEA Data
+Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI.This data is updated yearly.
+
+## ACS Data
+
