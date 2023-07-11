@@ -9,6 +9,7 @@
 #' @param city_county_state df with city county and state columns
 #'
 #' @importFrom tidyr separate
+#' @importFrom tidycensus get_decennial
 #' @return Population of all towns within region
 
 Cities_Pop <- function(df_city_state, city_county_state) {
