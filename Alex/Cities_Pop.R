@@ -1,8 +1,14 @@
+#' Finds the Population of all the Cities in the Market Area
 #' @author Alex Cory
 #' @description Population of all the cities in the list
-#' This will take some time to run
+#' @details
+#' Needs Tidycensus key
+#'
+#'
 #' @param df_city_state df from Pop_Binder with cities and populations
-#' @param city_county_state
+#' @param city_county_state df with city county and state columns
+#'
+#' @importFrom tidyr separate
 #' @return Population of all towns within region
 
 Cities_Pop <- function(df_city_state, city_county_state) {
