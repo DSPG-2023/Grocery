@@ -169,6 +169,7 @@ pop_plot <- Population_df %>%
   ggplot(aes(x = NAME, y = `Total Population`, fill = NAME)) +
   geom_bar(stat = 'identity', show.legend = FALSE) +
   ggtitle("Total Population (2021)") +
+  scale_y_continuous(labels = scales::comma) +
   scale_fill_okabe_ito() +
   labs(x = NULL, y = NULL) +
   coord_flip()
