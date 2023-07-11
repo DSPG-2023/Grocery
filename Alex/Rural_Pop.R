@@ -3,7 +3,7 @@
 #' @author Alex Cory
 #'
 #' @description
-#' Determines population that does not live in a town or a city that would likely
+#' Determines population that does not live in a town or a city but would likely
 #' shop at the proposed store
 #'
 #' @param df_city_pop df with city populations
@@ -14,6 +14,7 @@
 #' @importFrom tidycensus get_decennial
 #' @importFrom tidyr separate
 #' @importFrom stringr str_split
+#' @importFrom magrittr %>%
 #'
 #' @returns Count of people who would shop at the store who do not live in a city
 #'
@@ -21,7 +22,7 @@
 
 
 
-Auto_Rural <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
+Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
 
   #Jay's function takes a two value dataframe with state and county.
   #Take the values from df_city_pop
