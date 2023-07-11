@@ -43,6 +43,41 @@ distance to the closest store, and also ignores the radius that the
 other store would have. A more elegant solution to this would be Voronoi
 polygons or Reilly's law of Retail Gravitation.
 
+# Code
+
+## Shaping the data
+
+We needed several helper methods to shape the data to the way we want
+it. Address_Parser is a function to take an address as a string and turn
+it into a list.
+
+Pop_Binder is a function that takes in an address, parses it, and then
+converts it into a data frame with columns for cities in the county and
+their populations. This is used throughout several other functions.
+
+Our program is able to pull from the Google Places API to find the
+nearby stores, but it only gives us the latitude and longitude of each
+of the stores, not a distance, and not a direction. This function takes
+the data frame from the API call and figures out which direction each of
+the stores is in, and returns the nearest store in each quadrant. We are
+converting to UTM in order to filter our data frame into cardinal
+quadrants to find the nearest store in each direction. In order to find
+distance to each store, we are using something called the Haversine
+equation. This is a method used to find distance between two GPS
+coordinates while factoring in the curvature of the Earth.
+
+![](images/Law-of-haversines.png)
+
+## Populations
+
+Metro_Pop is a function that determines the population of the city that
+the potential store would be in.
+
+Cities_Pop is a function that finds all the nearby cities and finds the
+total of their populations. \
+Auto_Rural is a function that finds the population of all people who
+live in the market area but do not live in a town.
+
 # Alternates
 
 ## Voronoi
@@ -75,196 +110,3 @@ the likelihood exponentially decreases that they would visit the store.
 In the real world this would mean that even though a store might be 10
 times more attractive than another, if it is 10 times farther away, they
 most likely will not travel to it.
-
-# Code
-
-## Shaping the data
-
-We needed several helper methods to shape the data to the way we want
-it. Address Parser is a simple function to take an address as a string
-and turn it into a list.
-
-```{r}
-Address_Parser <- function(address) {
-  split_addr <- as.list(strsplit(address, ", ")[[1]])
-  names(split_addr) <- c("street", "city", "state")
-  return(split_addr)
-}
-```
-
-We also made a function that takes in an address, parses it, and then
-converts it into a dataframe with columns for cities in the county and
-their populations. This is used a lot throughout other functions.
-
-```{r}
-Pop_Binder <- function(address) {
-
-  #Doing this because I want to use this variable in Metro_Pop
-  splt_addr <- Address_Parser(address)
-
-
-  geocoded_address <- geocode(location = address, output = "all")
-  geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[4]][["long_name"]]
-  geo_county <- gsub( " County", "", as.character(geo_county))
-
-  city_df <- data.frame(state = splt_addr[5], county = geo_county, city = splt_addr[2])
-
-
-  #city_df <- data.frame(state = "Iowa", county = "Sac")
-  city_in_county <- get_cities_in_county(city_df[1,])
-  county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
-
-  #This gives us the name of city and the population. We need to separate city
-  #and state name, and then remove the city and CDP from the NAME so we can join
-  #with the county_cities_list
-
-  place_pop <- get_decennial(year = 2020,
-                             geography = "place",
-                             variables = "DP1_0001C",
-                             sumfile = "dp",
-                             state = city_in_county[1])
-  place_pop$NAME <- gsub( " city", "", as.character(place_pop$NAME))
-  place_pop$NAME <- gsub( " CDP", "", as.character(place_pop$NAME))
-  place_pop <- separate(data = place_pop, col = NAME, into = c("City", "State"), sep = ";")
-
-
-
-
-
-
-  #Convert County cities list to a data frame in the correct shape and name
-  #to join with place_pop
-  county_cities_df <- data.frame(unlist(county_cities_list))
-  lookup <- c(City = "unlist.county_cities_list.")
-  county_cities_df <- rename(county_cities_df, all_of(lookup))
-
-  bound_df <- merge(county_cities_df, place_pop, by='City')
-  cbind(bound_df, County = geo_county)
-
-}
-```
-
-Our program is able to pull from the Google Places API to find the
-nearby stores, but it only gives us the latitude and longitude of each
-of the stores, not a distance, and not a direction. This function takes
-the data frame from the API call and figures out which direction each of
-the stores is, and returns the nearest store in each quadrant. Because
-the original data frame gives us lat longs, which is a measure of
-position and not distance, we have to first convert it into another
-coordinate system called UTM, or Universal Transverse Mercator
-coordinates. These are a measure of distance, we can easily compare the
-points to find a distance between them, and since they are based on how
-far East and North the point is, we can determine which direction from
-the origin point the new point is.
-
-```{r}
-Distance_Comparator <- function(df_places_grocery) {
-
-  #Creates a new dataframe with the Lat, Long, and Name columns
-  #This step is completely unnecessary, but the original DF
-  #had awful column names and I didn't want to have to look at all
-  #the other columns
-  api_stores <- data.frame( Name = df_places_grocery$name,
-                            lat = df_places_grocery$lat,
-                            lng = df_places_grocery$lng)
-
-  #Add Northing and Easting Columns
-  UTM_geo <- lonlat2utm(longitude = df_geocode$lng,
-                             latitude = df_geocode$lat,
-                             zone = UTM_Zoner(abs(api_stores$lng[1])))
-  df_geocode <- cbind(df_geocode, UTM_geo)
-
-  UTM_df <- lonlat2utm(longitude = api_stores$lng,
-                            latitude = api_stores$lat,
-                            zone = UTM_Zoner(abs(api_stores$lng[1])))
-  api_stores <- cbind(api_stores, UTM_df)
-
-  # Save variables for testing.
-  #this is not a test I need this
-  origin_test <- c(df_geocode$easting, df_geocode$northing)
-  end_test <- matrix(c(api_stores$easting, api_stores$northing), ncol = 2)
-
-
-  #### FUNCTION TEST - Call Function
-  #this is not a test function, this is integral to the program functionality
-  #this saves a global variable named df_new with the distance appended
-  Distance_Euclidean(api_stores, origin = origin_test, end = end_test)
-
-
-
-  # Create Dataframes with stores in each quadrant
-
-  #Creates a new dataframe with all of the stores in each quadrant
-  northeast_stores <- df_new %>% filter(as.numeric(df_new$northing)
-                                        > as.numeric(df_geocode$northing[1])
-                                        & as.numeric(df_new$easting)
-                                        > as.numeric(df_geocode$easting[1]))
-
-  northwest_stores <- df_new %>% filter(as.numeric(df_new$northing)
-                                        > as.numeric(df_geocode$northing[1])
-                                        & as.numeric(df_new$easting)
-                                        < as.numeric(df_geocode$easting[1]))
-
-
-  southeast_stores <- df_new %>% filter(as.numeric(df_new$northing)
-                                        < as.numeric(df_geocode$northing[1])
-                                        & as.numeric(df_new$easting)
-                                        > as.numeric(df_geocode$easting[1]))
-
-  southwest_stores <- df_new %>% filter(as.numeric(df_new$northing)
-                                        < as.numeric(df_geocode$northing[1])
-                                        & as.numeric(df_new$easting)
-                                        < as.numeric(df_geocode$easting[1]))
-
-
-  # Find distance to nearest in each quadrant
-
-  #I guess in a conversion somewhere the value is being squared. Square rooting
-  #Makes this correct.
-  #Using %/%1 to remove decimal point
-  northeast_dist <<- sqrt(min(northeast_stores$distance_vector))%/%1
-  northwest_dist <<-sqrt(min(northwest_stores$distance_vector))%/%1
-  southeast_dist <<- sqrt(min(southeast_stores$distance_vector))%/%1
-  southwest_dist <<- sqrt(min(southwest_stores$distance_vector))%/%1
-
-
-  #df_new but with only closest stores named df_circle_buffer
-  NE_min <- northeast_stores %>% filter(northeast_stores$distance_vector
-                                        ==min(northeast_stores$distance_vector))
-  NW_min <- northwest_stores %>% filter(northwest_stores$distance_vector
-                                        ==min(northwest_stores$distance_vector))
-  SE_min <- southeast_stores %>% filter(southeast_stores$distance_vector
-                                        ==min(southeast_stores$distance_vector))
-  SW_min <- southwest_stores %>% filter(southwest_stores$distance_vector
-                                        ==min(southwest_stores$distance_vector))
-  return(df_circle_buffer <- rbind(NE_min,NW_min,SE_min,SW_min))
-  #add NESW labels
-
-
-}
-
-```
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Utm-zones-USA.svg/2560px-Utm-zones-USA.svg.png)
-
-## Metro population
-
-Metro population is a super simple function. It takes in an address as a
-parameter, parses an address, and then filters to just cities with that
-name.
-
-```{r}
-Metro_Pop <- function(address) {
-  #We should be saving address as a global variable so we don't have to pass it
-  #as a parameter in most of my functions
-  splt_addr <- Address_Parser(address)
-  df %>% filter(City == splt_addr["city"])
-  return(df$value)
-}
-```
-
-#TODO add Cities Pop and Rural Pop
-
-```{r setup}
-library(DSPGGrocery)
-```
