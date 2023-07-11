@@ -1,7 +1,8 @@
 #' Finds the Population of all the Cities in the Market Area
 #'
 #' @author Alex Cory
-#' @description Population of all the cities in the list
+#' @description Determines and cleans all the cities in the market area.
+#' Finds the sum of all of their populations.
 #'
 #' @details
 #' Needs Tidycensus key

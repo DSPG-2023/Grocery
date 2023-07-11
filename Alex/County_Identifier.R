@@ -2,6 +2,8 @@
 #'
 #' @author Jay Maxwell
 #' @param x Single row data frame,columns 1, 2 = lon, lat, column 3 = state name
+#' @description
+#' Uses Latitude, Longitude, and State to determines the county.
 #'
 #' @returns x with extra column for county name
 #'

@@ -3,7 +3,8 @@
 #' @author Alex Cory
 #'
 #' @description
-#' Determines size and percentage of County covered by Market Area
+#' Calculates total quadrant size.
+#' Determines size and percentage of County covered by Market Area.
 #'
 #' @param northeast_dist Distance to nearest store to the Northeast
 #' @param northwest_dist Distance to nearest store to the Northwest
