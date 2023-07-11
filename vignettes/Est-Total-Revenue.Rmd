@@ -32,19 +32,19 @@ Not all shoppers have the same priority for all stores, and it is important that
 
 Shoppers are classified into 3 categories:
 
-***Primary Shoppers:*** The people doing most of the household grocery shopping in that store.
+-   ***Primary Shoppers:*** The people doing most of the household grocery shopping in that store.
 
-***Secondary Shoppers:*** Regular visitors for smaller purchases but will often do their weekly shopping elsewhere.
+-   ***Secondary Shoppers:*** Regular visitors for smaller purchases but will often do their weekly shopping elsewhere.
 
-***Rare Shoppers:*** People who are very occasional shoppers(only when necessary).
+-   ***Rare Shoppers:*** People who are very occasional shoppers(only when necessary).
 
 Location and accessibility are key factors affecting the preference for a shop. Shoppers are classified into 3 different populations based on their location:
 
-***Metro*****:** The population of the city in which the store is planned to open
+-   ***Metro*****:** The population of the city in which the store is planned to open
 
-***Town:*** Population of all the cities in the market
+-   ***Town:*** Population of all the cities in the market
 
-***Rural:*** Total rural population of the market
+-   ***Rural:*** Total rural population of the market
 
 The functions: `Primary_Shopper_Count()`, `Secondary_Shopper_Count()`, and `Rare_Shopper_Count()` calculates the number of shoppers in each category for each type of market. These functions use some default values for the percentage of each type of shopper in the different populations. For example, if we take the primary shoppers count, it calculates this number by multiplying the different percentages of primary shoppers in the different markets. The percentage of primary shoppers is highest in the metro populations because there is a higher probability of people living in the same city as the store having that store as their primary shopping place compared to others who have to travel to get to that store. The outputs of these functions are multiplied with the average grocery spend calculated from the `State_Adj_Capita_Grocery_Spend()`to get the total spend by each of these groups in the functions `Total_Spend_Primary_Shoppers()`, `Total_Spend_Secondary_Shoppers()`, and `Total_Spend_Rare_Shoppers()`.
 
