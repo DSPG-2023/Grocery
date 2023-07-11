@@ -6,6 +6,7 @@
 #' @param address the address as a character to be parsed.
 #' @returns split_addr a data frame with columns street, city,
 #'state abbreviation, county, and state.
+#' @export
 
 
 
