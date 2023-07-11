@@ -1,0 +1,18 @@
+---
+title: "Data Sources And Literature Review"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Data Sources And Literature Review}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+#General Overview
+The tool built in this project is built based on the Excel tool created by the Iowa State University Food and Farm Enterprise development FFED.
