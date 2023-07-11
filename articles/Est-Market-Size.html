@@ -107,6 +107,42 @@ other store would have. A more elegant solution to this would be Voronoi
 polygons or Reilly’s law of Retail Gravitation.</p>
 </div>
 <div class="section level2">
+<h2 id="code">Code<a class="anchor" aria-label="anchor" href="#code"></a>
+</h2>
+<div class="section level3">
+<h3 id="shaping-the-data">Shaping the data<a class="anchor" aria-label="anchor" href="#shaping-the-data"></a>
+</h3>
+<p>We needed several helper methods to shape the data to the way we want
+it. Address_Parser is a function to take an address as a string and turn
+it into a list.</p>
+<p>Pop_Binder is a function that takes in an address, parses it, and
+then converts it into a data frame with columns for cities in the county
+and their populations. This is used throughout several other
+functions.</p>
+<p>Our program is able to pull from the Google Places API to find the
+nearby stores, but it only gives us the latitude and longitude of each
+of the stores, not a distance, and not a direction. This function takes
+the data frame from the API call and figures out which direction each of
+the stores is in, and returns the nearest store in each quadrant. We are
+converting to UTM in order to filter our data frame into cardinal
+quadrants to find the nearest store in each direction. In order to find
+distance to each store, we are using something called the Haversine
+equation. This is a method used to find distance between two GPS
+coordinates while factoring in the curvature of the Earth.</p>
+<p><img src="images/Law-of-haversines.png"></p>
+</div>
+<div class="section level3">
+<h3 id="populations">Populations<a class="anchor" aria-label="anchor" href="#populations"></a>
+</h3>
+<p>Metro_Pop is a function that determines the population of the city
+that the potential store would be in.</p>
+<p>Cities_Pop is a function that finds all the nearby cities and finds
+the total of their populations.<br>
+Auto_Rural is a function that finds the population of all people who
+live in the market area but do not live in a town.</p>
+</div>
+</div>
+<div class="section level2">
 <h2 id="alternates">Alternates<a class="anchor" aria-label="anchor" href="#alternates"></a>
 </h2>
 <div class="section level3">
@@ -141,193 +177,6 @@ farther and farther away, the likelihood exponentially decreases that
 they would visit the store. In the real world this would mean that even
 though a store might be 10 times more attractive than another, if it is
 10 times farther away, they most likely will not travel to it.</p>
-</div>
-</div>
-<div class="section level2">
-<h2 id="code">Code<a class="anchor" aria-label="anchor" href="#code"></a>
-</h2>
-<div class="section level3">
-<h3 id="shaping-the-data">Shaping the data<a class="anchor" aria-label="anchor" href="#shaping-the-data"></a>
-</h3>
-<p>We needed several helper methods to shape the data to the way we want
-it. Address Parser is a simple function to take an address as a string
-and turn it into a list.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Address_Parser</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">address</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">split_addr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">as.list</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">address</span>, <span class="st">", "</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">split_addr</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"street"</span>, <span class="st">"city"</span>, <span class="st">"state"</span><span class="op">)</span></span>
-<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">split_addr</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre></div>
-<p>We also made a function that takes in an address, parses it, and then
-converts it into a dataframe with columns for cities in the county and
-their populations. This is used a lot throughout other functions.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Pop_Binder</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">address</span><span class="op">)</span> <span class="op">{</span></span>
-<span></span>
-<span>  <span class="co">#Doing this because I want to use this variable in Metro_Pop</span></span>
-<span>  <span class="va">splt_addr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Address_Parser.html">Address_Parser</a></span><span class="op">(</span><span class="va">address</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span>  <span class="va">geocoded_address</span> <span class="op">&lt;-</span> <span class="fu">geocode</span><span class="op">(</span>location <span class="op">=</span> <span class="va">address</span>, output <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span></span>
-<span>  <span class="va">geo_county</span> <span class="op">&lt;-</span> <span class="va">geocoded_address</span><span class="op">[[</span><span class="st">"results"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"address_components"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="fl">4</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"long_name"</span><span class="op">]</span><span class="op">]</span></span>
-<span>  <span class="va">geo_county</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">gsub</a></span><span class="op">(</span> <span class="st">" County"</span>, <span class="st">""</span>, <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">geo_county</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="va">city_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>state <span class="op">=</span> <span class="va">splt_addr</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span>, county <span class="op">=</span> <span class="va">geo_county</span>, city <span class="op">=</span> <span class="va">splt_addr</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span>  <span class="co">#city_df &lt;- data.frame(state = "Iowa", county = "Sac")</span></span>
-<span>  <span class="va">city_in_county</span> <span class="op">&lt;-</span> <span class="fu">get_cities_in_county</span><span class="op">(</span><span class="va">city_df</span><span class="op">[</span><span class="fl">1</span>,<span class="op">]</span><span class="op">)</span></span>
-<span>  <span class="va">county_cities_list</span> <span class="op">&lt;-</span> <span class="fu">stringr</span><span class="fu">::</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_split.html" class="external-link">str_split</a></span><span class="op">(</span><span class="va">city_in_county</span><span class="op">$</span><span class="va">city_list</span>, <span class="st">", "</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="co">#This gives us the name of city and the population. We need to separate city</span></span>
-<span>  <span class="co">#and state name, and then remove the city and CDP from the NAME so we can join</span></span>
-<span>  <span class="co">#with the county_cities_list</span></span>
-<span></span>
-<span>  <span class="va">place_pop</span> <span class="op">&lt;-</span> <span class="fu">get_decennial</span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2020</span>,</span>
-<span>                             geography <span class="op">=</span> <span class="st">"place"</span>,</span>
-<span>                             variables <span class="op">=</span> <span class="st">"DP1_0001C"</span>,</span>
-<span>                             sumfile <span class="op">=</span> <span class="st">"dp"</span>,</span>
-<span>                             state <span class="op">=</span> <span class="va">city_in_county</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
-<span>  <span class="va">place_pop</span><span class="op">$</span><span class="va">NAME</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">gsub</a></span><span class="op">(</span> <span class="st">" city"</span>, <span class="st">""</span>, <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">place_pop</span><span class="op">$</span><span class="va">NAME</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">place_pop</span><span class="op">$</span><span class="va">NAME</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">gsub</a></span><span class="op">(</span> <span class="st">" CDP"</span>, <span class="st">""</span>, <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">place_pop</span><span class="op">$</span><span class="va">NAME</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">place_pop</span> <span class="op">&lt;-</span> <span class="fu">separate</span><span class="op">(</span>data <span class="op">=</span> <span class="va">place_pop</span>, col <span class="op">=</span> <span class="va">NAME</span>, into <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"City"</span>, <span class="st">"State"</span><span class="op">)</span>, sep <span class="op">=</span> <span class="st">";"</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span>  <span class="co">#Convert County cities list to a data frame in the correct shape and name</span></span>
-<span>  <span class="co">#to join with place_pop</span></span>
-<span>  <span class="va">county_cities_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/unlist.html" class="external-link">unlist</a></span><span class="op">(</span><span class="va">county_cities_list</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">lookup</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>City <span class="op">=</span> <span class="st">"unlist.county_cities_list."</span><span class="op">)</span></span>
-<span>  <span class="va">county_cities_df</span> <span class="op">&lt;-</span> <span class="fu">rename</span><span class="op">(</span><span class="va">county_cities_df</span>, <span class="fu">all_of</span><span class="op">(</span><span class="va">lookup</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="va">bound_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">county_cities_df</span>, <span class="va">place_pop</span>, by<span class="op">=</span><span class="st">'City'</span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">bound_df</span>, County <span class="op">=</span> <span class="va">geo_county</span><span class="op">)</span></span>
-<span></span>
-<span><span class="op">}</span></span></code></pre></div>
-<p>Our program is able to pull from the Google Places API to find the
-nearby stores, but it only gives us the latitude and longitude of each
-of the stores, not a distance, and not a direction. This function takes
-the data frame from the API call and figures out which direction each of
-the stores is, and returns the nearest store in each quadrant. Because
-the original data frame gives us lat longs, which is a measure of
-position and not distance, we have to first convert it into another
-coordinate system called UTM, or Universal Transverse Mercator
-coordinates. These are a measure of distance, we can easily compare the
-points to find a distance between them, and since they are based on how
-far East and North the point is, we can determine which direction from
-the origin point the new point is.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Distance_Comparator</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df_places_grocery</span><span class="op">)</span> <span class="op">{</span></span>
-<span></span>
-<span>  <span class="co">#Creates a new dataframe with the Lat, Long, and Name columns</span></span>
-<span>  <span class="co">#This step is completely unnecessary, but the original DF</span></span>
-<span>  <span class="co">#had awful column names and I didn't want to have to look at all</span></span>
-<span>  <span class="co">#the other columns</span></span>
-<span>  <span class="va">api_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span> Name <span class="op">=</span> <span class="va">df_places_grocery</span><span class="op">$</span><span class="va">name</span>,</span>
-<span>                            lat <span class="op">=</span> <span class="va">df_places_grocery</span><span class="op">$</span><span class="va">lat</span>,</span>
-<span>                            lng <span class="op">=</span> <span class="va">df_places_grocery</span><span class="op">$</span><span class="va">lng</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="co">#Add Northing and Easting Columns</span></span>
-<span>  <span class="va">UTM_geo</span> <span class="op">&lt;-</span> <span class="fu">lonlat2utm</span><span class="op">(</span>longitude <span class="op">=</span> <span class="va">df_geocode</span><span class="op">$</span><span class="va">lng</span>,</span>
-<span>                             latitude <span class="op">=</span> <span class="va">df_geocode</span><span class="op">$</span><span class="va">lat</span>,</span>
-<span>                             zone <span class="op">=</span> <span class="fu"><a href="../reference/UTM_Zoner.html">UTM_Zoner</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">df_geocode</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">df_geocode</span>, <span class="va">UTM_geo</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="va">UTM_df</span> <span class="op">&lt;-</span> <span class="fu">lonlat2utm</span><span class="op">(</span>longitude <span class="op">=</span> <span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span>,</span>
-<span>                            latitude <span class="op">=</span> <span class="va">api_stores</span><span class="op">$</span><span class="va">lat</span>,</span>
-<span>                            zone <span class="op">=</span> <span class="fu"><a href="../reference/UTM_Zoner.html">UTM_Zoner</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">abs</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">lng</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">api_stores</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">api_stores</span>, <span class="va">UTM_df</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="co"># Save variables for testing.</span></span>
-<span>  <span class="co">#this is not a test I need this</span></span>
-<span>  <span class="va">origin_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">easting</span>, <span class="va">df_geocode</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span></span>
-<span>  <span class="va">end_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">api_stores</span><span class="op">$</span><span class="va">easting</span>, <span class="va">api_stores</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span>  <span class="co">#### FUNCTION TEST - Call Function</span></span>
-<span>  <span class="co">#this is not a test function, this is integral to the program functionality</span></span>
-<span>  <span class="co">#this saves a global variable named df_new with the distance appended</span></span>
-<span>  <span class="fu"><a href="../reference/Distance_Euclidean.html">Distance_Euclidean</a></span><span class="op">(</span><span class="va">api_stores</span>, origin <span class="op">=</span> <span class="va">origin_test</span>, end <span class="op">=</span> <span class="va">end_test</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span></span>
-<span>  <span class="co"># Create Dataframes with stores in each quadrant</span></span>
-<span></span>
-<span>  <span class="co">#Creates a new dataframe with all of the stores in each quadrant</span></span>
-<span>  <span class="va">northeast_stores</span> <span class="op">&lt;-</span> <span class="va">df_new</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span></span>
-<span>                                        <span class="op">&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">northing</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
-<span>                                        <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">easting</span><span class="op">)</span></span>
-<span>                                        <span class="op">&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">easting</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="va">northwest_stores</span> <span class="op">&lt;-</span> <span class="va">df_new</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span></span>
-<span>                                        <span class="op">&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">northing</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
-<span>                                        <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">easting</span><span class="op">)</span></span>
-<span>                                        <span class="op">&lt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">easting</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span>  <span class="va">southeast_stores</span> <span class="op">&lt;-</span> <span class="va">df_new</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span></span>
-<span>                                        <span class="op">&lt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">northing</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
-<span>                                        <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">easting</span><span class="op">)</span></span>
-<span>                                        <span class="op">&gt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">easting</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span>  <span class="va">southwest_stores</span> <span class="op">&lt;-</span> <span class="va">df_new</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">northing</span><span class="op">)</span></span>
-<span>                                        <span class="op">&lt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">northing</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
-<span>                                        <span class="op">&amp;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_new</span><span class="op">$</span><span class="va">easting</span><span class="op">)</span></span>
-<span>                                        <span class="op">&lt;</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="va">df_geocode</span><span class="op">$</span><span class="va">easting</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span>  <span class="co"># Find distance to nearest in each quadrant</span></span>
-<span></span>
-<span>  <span class="co">#I guess in a conversion somewhere the value is being squared. Square rooting</span></span>
-<span>  <span class="co">#Makes this correct.</span></span>
-<span>  <span class="co">#Using %/%1 to remove decimal point</span></span>
-<span>  <span class="va">northeast_dist</span> <span class="op">&lt;&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">northeast_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span><span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span><span class="fl">1</span></span>
-<span>  <span class="va">northwest_dist</span> <span class="op">&lt;&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">northwest_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span><span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span><span class="fl">1</span></span>
-<span>  <span class="va">southeast_dist</span> <span class="op">&lt;&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">southeast_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span><span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span><span class="fl">1</span></span>
-<span>  <span class="va">southwest_dist</span> <span class="op">&lt;&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">southwest_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span><span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html" class="external-link">%/%</a></span><span class="fl">1</span></span>
-<span></span>
-<span></span>
-<span>  <span class="co">#df_new but with only closest stores named df_circle_buffer</span></span>
-<span>  <span class="va">NE_min</span> <span class="op">&lt;-</span> <span class="va">northeast_stores</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">northeast_stores</span><span class="op">$</span><span class="va">distance_vector</span></span>
-<span>                                        <span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">northeast_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">NW_min</span> <span class="op">&lt;-</span> <span class="va">northwest_stores</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">northwest_stores</span><span class="op">$</span><span class="va">distance_vector</span></span>
-<span>                                        <span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">northwest_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">SE_min</span> <span class="op">&lt;-</span> <span class="va">southeast_stores</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">southeast_stores</span><span class="op">$</span><span class="va">distance_vector</span></span>
-<span>                                        <span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">southeast_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="va">SW_min</span> <span class="op">&lt;-</span> <span class="va">southwest_stores</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">southwest_stores</span><span class="op">$</span><span class="va">distance_vector</span></span>
-<span>                                        <span class="op">==</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">southwest_stores</span><span class="op">$</span><span class="va">distance_vector</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">df_circle_buffer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">NE_min</span>,<span class="va">NW_min</span>,<span class="va">SE_min</span>,<span class="va">SW_min</span><span class="op">)</span><span class="op">)</span></span>
-<span>  <span class="co">#add NESW labels</span></span>
-<span></span>
-<span></span>
-<span><span class="op">}</span></span></code></pre></div>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Utm-zones-USA.svg/2560px-Utm-zones-USA.svg.png"></p>
-</div>
-<div class="section level3">
-<h3 id="metro-population">Metro population<a class="anchor" aria-label="anchor" href="#metro-population"></a>
-</h3>
-<p>Metro population is a super simple function. It takes in an address
-as a parameter, parses an address, and then filters to just cities with
-that name.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Metro_Pop</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">address</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="co">#We should be saving address as a global variable so we don't have to pass it</span></span>
-<span>  <span class="co">#as a parameter in most of my functions</span></span>
-<span>  <span class="va">splt_addr</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/Address_Parser.html">Address_Parser</a></span><span class="op">(</span><span class="va">address</span><span class="op">)</span></span>
-<span>  <span class="va">df</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">City</span> <span class="op">==</span> <span class="va">splt_addr</span><span class="op">[</span><span class="st">"city"</span><span class="op">]</span><span class="op">)</span></span>
-<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">value</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre></div>
-<p>#TODO add Cities Pop and Rural Pop</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">DSPGGrocery</span><span class="op">)</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; Attaching package: 'DSPGGrocery'</span></span>
-<span><span class="co">#&gt; The following object is masked _by_ '.GlobalEnv':</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;     Address_Parser</span></span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
