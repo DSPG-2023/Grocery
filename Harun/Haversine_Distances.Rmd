@@ -1,0 +1,18 @@
+---
+title: "Distance_Matrix_Test"
+author: "Harun Celik"
+date: "2023-07-11"
+output: html_document
+---
+
+```{r}
+df_geocode <- readRDS(file = "../ProjectData/df_geocode_test.RDS")
+df_grocery_only <- readRDS(file = "../ProjectData/df_grocery_only_test.RDS")
+```
+
+```{r}
+points <- matrix(data = c(df_grocery_only$lng, df_grocery_only$lat), ncol = 2)
+
+distHaversine(p1 = c(df_geocode$lng, df_geocode$lat), p2 = points)
+```
+
