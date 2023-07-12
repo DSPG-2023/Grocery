@@ -359,6 +359,7 @@ city_group<-city_group[,c(1,2,3,4,5)]
 city_group$GrpCode <- str_replace(city_group$GrpCode, "PG8", "Rest_of_the_State")
 city_group$GrpCode <- str_replace(city_group$GrpCode, "PG9", "Rest_of_the_State")
 county<-c("PGCO1","PGCO2","PGCO3","PGCO4","PGCO5")
+nonrur<-c("PG1","PG2","PG3","PG4")
 ```
 ```{r}
 city_group_chain_grocery<-merge(chain_grocery_store_data ,city_group, by='Mailing_City')
@@ -492,8 +493,7 @@ city_group_non_chain_sales <- city_group_non_chain_grocery_clean %>%
   filter(!(GrpCode %in% county)) %>%
   group_by(Location_Sales_Volume_Range, GrpCode) %>%
   summarise(Count = n()) %>%
-  mutate(Percentage = Count / sum(Count) * 100)%>%
-  filter(!(GrpCode %in% c("PG1","PG2","PG3","PG4")))
+  filter(!(GrpCode %in% nonrur))
 
 # Plot the percentage
 ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
@@ -505,16 +505,19 @@ ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range,
                                       '$10-20 Million',
                                       '$20-50 Million',
                                       '$50-100 Million',
-                                      '$100-500 Million')), y = Percentage, fill = factor(GrpCode))) +
+                                      '$100-500 Million')), y = Count, fill = factor(GrpCode))) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()+
   ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
   xlab("Sales Volume Range") +
-  ylab("Percentage of Stores") +
+  ylab("Number of Stores") +
   theme(axis.text.x = element_text(hjust = 1))
 ggplotly()
 ```
 
+```{r}
+write.csv(city_group_non_chain_sales,"C:\\Users\\srika\\Desktop\\city_group_non_chain_sales.csv")
+```
 
 
 ```{r}
@@ -792,44 +795,61 @@ PGs_plot <-PGs%>%
 ```
 
 ```{r}
+library(tidyr)
+```
+
+```{r}
+colnames(PGs_filtered)[1]<-"Chain Grocery"
+colnames(PGs_filtered)[2]<-"Non Chain Grocery"
+colnames(PGs_filtered)[3]<-"Dollar Store"
 PGs_plot_pct <-PGs_filtered%>%
   #Remove PGCOs
   filter(!(GrpCode %in% county))%>%
+  filter(!(GrpCode %in% nonrur))%>%
   #Pivot to plot by store type
-  pivot_longer(cols =c(NCG_count,CG_count,DS_count),
-                               names_to = "Store_Type",
+  pivot_longer(cols =c('Chain Grocery','Non Chain Grocery','Dollar Store'),
+                               names_to = "Store Type",
                                values_to = "Count")
+
   #plot the percentage of each store type in a given city group. 
   #Percentage = 100*count of stores/sum of all the store
-  ggplot(PGs_plot_pct, aes(x =GrpCode, y = 100*Count/sum, fill =Store_Type)) +
-  geom_bar(position="stack", stat="identity")+
-    #Flip coordinated to read the axis
-    coord_flip()+
+  ggplot(PGs_plot_pct, aes(x =GrpCode, y = Count, fill =`Store Type`)) +
+  geom_bar(position="dodge", stat="identity")+
     #Rename to decribe access
     scale_x_discrete(labels=c("PG1" = ">=10,000 Core county of a MSA",
                               "PG2" = ">=10,000 Non-core MSA county",
                               "PG3" = "2,500 to 9,999 Non-metro county",
                               "PG4"="2,500 to 9,999 Metro county",
-                              "PG5A"="500 to 2,499 Non-metro, 
-                              adjacent to a MSA  ",
-                              "PG5N"="500 to 2,499 Non-metro,
-                              not adjacent to a MSA  ",
-                              "PG6"="500 to 2,499 Metro county",
-                              "PG7"="250 to 499 Any county",
-                              "Rest_of_the_State"))+
-    theme(axis.text.x = element_text(angle = 90, hjust = 1))+
-    ggtitle("Distribution Of Different Type Of Stores") +
-    labs(subtitle = "By City Group Classification")+
-    xlab("Group Classification") + 
-    ylab("Percentage Of Stores")
+                              "PG5A"="500 to 2,499
+Non-metro 
+adjacent 
+to a MSA",
+                              "PG5N"="500 to 2,499
+Non-metro
+not adjacent 
+to a MSA",
+                              "PG6"="500 to 2,499 
+Metro county",
+                              "PG7"="250 to 499",
+                              "Rest_of_the_State"="249 or fewer"))+
+    theme(axis.text.x = element_text(hjust = 0.5),
+          plot.title = element_text(vjust = 3,hjust = 0.5))+
+    ggtitle("Number of Grocery Store Type in Cities in Iowa
+    (under 2,500 population)by Population Group") +
+    xlab("City Population")+
+    ylab("Number Of Stores")
   ggplotly()
 ```
 
+```{r}
+write.csv(PGs_plot_pct,"C:\\Users\\srika\\Desktop\\PGs_plot_pct.csv")
+```
 
 
 ```{r}
 PGs_pct <-PGs_filtered%>%
   filter(!(GrpCode %in% county))%>%
+  filter(!(GrpCode %in% nonrur))%>%
   pivot_longer(cols =c(NCG_total,CG_total,DS_total),
                                names_to = "Store_Type",
                                values_to = "Count")

@@ -1,0 +1,60 @@
+```{r}
+library(ggplot2)
+library(plotly)
+```
+
+
+```{r}
+city_group_non_chain_sales <- read.csv(file="C:\\Users\\srika\\Desktop\\city_group_non_chain_sales.csv")
+PGs_plot_pct<-read.csv(file="C:\\Users\\srika\\Desktop\\PGs_plot_pct.csv")
+
+```
+
+```{r}
+ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
+                                     level=c('Less Than $500,000',
+                                      '$500,000-1 Million',
+                                      '$1-2.5 Million',
+                                      '$2.5-5 Million',
+                                      '$5-10 Million',
+                                      '$10-20 Million',
+                                      '$20-50 Million',
+                                      '$50-100 Million',
+                                      '$100-500 Million')), y = Count, fill = GrpCode)) +
+  geom_bar(stat = "identity", position = "stack") +
+  coord_flip()+
+  ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
+  xlab("Sales Volume Range") +
+  ylab("Number of Stores") +
+  theme(axis.text.x = element_text(hjust = 1))
+ggplotly()
+```
+
+```{r}
+  ggplot(PGs_plot_pct, aes(x =GrpCode, y = Count, fill =StoreType)) +
+  geom_bar(position="dodge", stat="identity")+
+    #Rename to describe access
+    scale_x_discrete(labels=c("PG1" = ">=10,000 Core county of a MSA",
+                              "PG2" = ">=10,000 Non-core MSA county",
+                              "PG3" = "2,500 to 9,999 Non-metro county",
+                              "PG4"="2,500 to 9,999 Metro county",
+                              "PG5A"="500 to 2,499
+Non-metro 
+adjacent 
+to a MSA",
+                              "PG5N"="500 to 2,499
+Non-metro
+not adjacent 
+to a MSA",
+                              "PG6"="500 to 2,499 
+Metro county",
+                              "PG7"="250 to 499",
+                              "Rest_of_the_State"="249 or fewer"))+
+    theme(axis.text.x = element_text(hjust = 0.5),
+          plot.title = element_text(vjust = 3,hjust = 0.5))+
+    ggtitle("Number of Grocery Store Type in Cities in Iowa
+    (under 2,500 population)by Population Group") +
+    xlab("City Population")+
+    ylab("Number Of Stores")
+  ggplotly()
+```
