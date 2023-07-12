@@ -1,4 +1,4 @@
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(sf)
 library(dplyr)
 library(tigris)
@@ -10,6 +10,7 @@ library(geosphere)
 library(googleway)
 library(ggmap)
 library(stringr)
+library(DSPGGrocery)
 ```
 
 ```{r}
@@ -102,4 +103,21 @@ Calc_Market_Size_debug("St, Lamoni, IA", df_census_call = df_census_call_test,
                        df_grocery_only = df_grocery_only_test)
 ```
 
+```{r}
+test_address <- "Main St, Alma, WI"
+state = Address_Parser(test_address)[3]
+
+testList <- Create_Circle_Buffer(address = test_address, 
+                                 api_key = Sys.getenv("PLACES_KEY"), 
+                                 keyword = "grocery")
+list2env(testList, .GlobalEnv)
+```
+
+```{r}
+Calc_Market_Size(address = test_address, 
+                 df_census_call = df_census_call, 
+                 df_geocode = df_geocode, 
+                 df_grocery_only = df_grocery_only,
+                 state =  state$state[1])
+```
 
