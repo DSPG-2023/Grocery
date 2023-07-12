@@ -113,12 +113,12 @@ Reilly’s law of Retail Gravitation.</p>
 <h3 id="shaping-the-data">Shaping the data<a class="anchor" aria-label="anchor" href="#shaping-the-data"></a>
 </h3>
 <p>We needed several helper methods to shape the data to the way we want
-it. Address_Parser is a function to take an address as a string and turn
-it into a list.</p>
-<p>Pop_Binder is a function that takes in an address, parses it, and
-then converts it into a data frame with columns for cities in the county
-and their populations. This is used throughout several other
-functions.</p>
+it. <code><a href="../reference/Address_Parser.html">Address_Parser()</a></code> is a function to take an address as a
+string and turn it into a list.</p>
+<p><code><a href="../reference/Pop_Binder.html">Pop_Binder()</a></code> is a function that takes in an address,
+parses it, and then converts it into a data frame with columns for
+cities in the county and their populations. This is used throughout
+several other functions.</p>
 <p>Our program is able to pull from the Google Places API to find the
 nearby stores, but it only gives us the latitude and longitude of each
 of the stores, not a distance, and not a direction. This function takes
@@ -134,21 +134,21 @@ coordinates while factoring in the curvature of the Earth.</p>
 <div class="section level3">
 <h3 id="populations">Populations<a class="anchor" aria-label="anchor" href="#populations"></a>
 </h3>
-<p>Metro_Pop is a function that determines the population of the city
-that the potential store would be in. This function uses the parsed
-address to select just the city the store is out of a data frame
+<p><code><a href="../reference/Metro_Pop.html">Metro_Pop()</a></code> is a function that determines the population
+of the city that the potential store would be in. This function uses the
+parsed address to select just the city the store is out of a data frame
 containing the population of all the towns in the county that the store
 is in.</p>
-<p>Cities_Pop is a function that finds all the nearby cities and finds
-the total of their populations. This function uses a TidyCensus call to
-find the population of all the cities in the state, and then filters it
-down to be just the cities in our area. It then takes the sum of all the
-city populations.<br>
-Rural_Pop is a function that finds the population of all people who live
-in the market area but do not live in a town. This is done by finding
-the population of the whole county, and subtracting the people who live
-in all the towns in that area, then multiplying by the percentage of the
-county the area covers.</p>
+<p><code><a href="../reference/Cities_Pop.html">Cities_Pop()</a></code> is a function that finds all the nearby
+cities and finds the total of their populations. This function uses a
+TidyCensus call to find the population of all the cities in the state,
+and then filters it down to be just the cities in our area. It then
+takes the sum of all the city populations. <code><a href="../reference/Rural_Pop.html">Rural_Pop()</a></code> is a
+function that finds the population of all people who live in the market
+area but do not live in a town. This is done by finding the population
+of the whole county, and subtracting the people who live in all the
+towns in that area, then multiplying by the percentage of the county the
+area covers.</p>
 </div>
 </div>
 <div class="section level2">
