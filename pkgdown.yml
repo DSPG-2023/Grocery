@@ -5,10 +5,11 @@ articles:
   Alt-Market-Size: Alt-Market-Size.html
   DataSourcesAndReferences: DataSourcesAndReferences.html
   Est-Expenses: Est-Expenses.html
+  Est-Market-Area: Est-Market-Area.html
   Est-Market-Size: Est-Market-Size.html
   Est-Total-Revenue: Est-Total-Revenue.html
   Shiny-Plot-Descriptions: Shiny-Plot-Descriptions.html
-last_built: 2023-07-12T21:22Z
+last_built: 2023-07-12T21:33Z
 urls:
   reference: https://dspg-2023.github.io/Grocery/reference
   article: https://dspg-2023.github.io/Grocery/articles
