@@ -18,6 +18,7 @@
 #' @param df_grocery_only a data frame containing the values returned froma a call to
 #' googleway::google_places filtered for stores with the type set to "grocery". Also
 #' inherited from DSPGrocery::Create_Circle_Buffer.
+#' @param state a character value containing the abbreviated state value of the address.
 #'
 #' @importFrom ggmap register_google
 #'
@@ -27,11 +28,17 @@
 #'
 #' @export
 
-Calc_Market_Size <- function(address, df_census_call, df_geocode, df_grocery_only) {
+Calc_Market_Size <- function(address,
+                             df_census_call,
+                             df_geocode,
+                             df_grocery_only,
+                             state) {
 
   register_google(key = Sys.getenv("PLACES_KEY"))
 
-  popbinder_list <- Pop_Binder(address = address)
+  popbinder_list <- Pop_Binder(address = address,
+                               df_geocode = df_geocode,
+                               state = state)
 
   city_population <- Cities_Pop(df_city_state = popbinder_list$df_city_pop,
                                 city_county_state = df_census_call)

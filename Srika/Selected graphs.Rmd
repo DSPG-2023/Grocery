@@ -1,6 +1,7 @@
 ```{r}
 library(ggplot2)
 library(plotly)
+library(stringr)
 ```
 
 
@@ -9,6 +10,7 @@ city_group_non_chain_sales <- read.csv(file="C:\\Users\\srika\\Desktop\\city_gro
 PGs_plot_pct<-read.csv(file="C:\\Users\\srika\\Desktop\\PGs_plot_pct.csv")
 
 ```
+
 
 ```{r}
 ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
@@ -23,12 +25,15 @@ ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range,
                                       '$100-500 Million')), y = Count, fill = GrpCode)) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()+
-  ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
+  ggtitle("Number of Non-Chain Grocery Stores by Sales Volume Range
+          for Cities in Iowa (under 2,500 Population)") +
   xlab("Sales Volume Range") +
   ylab("Number of Stores") +
+  scale_fill_discrete(name="")+
   theme(axis.text.x = element_text(hjust = 1))
 ggplotly()
 ```
+
 
 ```{r}
   ggplot(PGs_plot_pct, aes(x =GrpCode, y = Count, fill =StoreType)) +

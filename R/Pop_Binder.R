@@ -3,6 +3,10 @@
 #' @author Alex Cory
 #'
 #' @param address the address must be in the standard Google maps form
+#' @param state a character value of the abbreviated state name inherited from
+#' DSPGrocery::Calc_Market_Size.
+#' @param df_geocode a single observation data frame containing the lat/lng values
+#' of the geocoded address inherited from DSPGrocery::Calc_Market_Size.
 #'
 #' @description
 #' Function that takes in an address and returns a dataframe with cities in the
@@ -13,21 +17,20 @@
 #'
 #'
 #' @importFrom dplyr rename
-#' @importFrom ggmap geocode
 #' @importFrom stringr str_split
 #' @importFrom magrittr %>%
 #' @importFrom tidyr separate
-#' @examples
-#' # Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#'
 #' @export
 
-Pop_Binder <- function(address) {
+
+Pop_Binder <- function(address, state, df_geocode) {
 
   #Parses Address, returns as df with street address, city, and state
   splt_addr <- Address_Parser(address)
-  geocoded_address <- geocode(location = address, output = "all")
-  geo_county <- geocoded_address[["results"]][[1]][["address_components"]][[2]][["long_name"]]
-  geo_county <- gsub( " County", "", as.character(geo_county))
+  state <- c(state = state)
+  df_geocode_state <- cbind(df_geocode, state)
+  geo_county <- County_Identifier(df_geocode_state)["county"]
 
   #Makes new dataframe with the parsed address's information + the county tag
   city_df <- data.frame(state = splt_addr$state,
@@ -36,7 +39,17 @@ Pop_Binder <- function(address) {
 
   #Makes a list of all the cities in the county
   city_in_county <- Get_Cities_in_County(city_df[1,])
-  county_cities_list <- str_split(city_in_county$city_list, ", ")
+
+
+
+
+  if (city_in_county$city_list == "") {
+    county_cities_list <- NULL
+  }
+  else {
+    county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
+  }
+
 
   #This gives us the name of city and the population. We need to separate city
   #and state name, and then remove the city and CDP from the NAME so we can join

@@ -487,10 +487,16 @@ ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range,
 ggplotly()
 ```
 ```{r}
+city_group_non_chain_grocery_clean$GrpCode<-str_replace(city_group_non_chain_grocery_clean$GrpCode, "PG7", "499 and fewer")
+city_group_non_chain_grocery_clean$GrpCode<-str_replace(city_group_non_chain_grocery_clean$GrpCode, "PG6", "500 to 2,499 in metro county")
+city_group_non_chain_grocery_clean$GrpCode<-str_replace(city_group_non_chain_grocery_clean$GrpCode, "Rest_of_the_State", "499 and fewer")
+city_group_non_chain_grocery_clean$GrpCode<-str_replace(city_group_non_chain_grocery_clean$GrpCode, "PG5N", "500 to 2,499 non-metro county")
+city_group_non_chain_grocery_clean$GrpCode<-str_replace(city_group_non_chain_grocery_clean$GrpCode, "PG5A", "500 to 2,499 non-metro county")
 # Calculate the percentage for each group
 city_group_non_chain_sales <- city_group_non_chain_grocery_clean %>%
   filter(Location_Sales_Volume_Range != "NA") %>%
   filter(!(GrpCode %in% county)) %>%
+  filter(!(Location_Sales_Volume_Range=="$10-20 Million"))%>%
   group_by(Location_Sales_Volume_Range, GrpCode) %>%
   summarise(Count = n()) %>%
   filter(!(GrpCode %in% nonrur))
@@ -505,12 +511,14 @@ ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range,
                                       '$10-20 Million',
                                       '$20-50 Million',
                                       '$50-100 Million',
-                                      '$100-500 Million')), y = Count, fill = factor(GrpCode))) +
+                                      '$100-500 Million')), y = Count, fill = GrpCode)) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()+
-  ggtitle("Location Sales Volume distribution for Non Chain Grocery Stores") +
+  ggtitle("Number of Non-Chain Grocery Stores by Sales Volume Range
+          for Cities in Iowa (under 2,500 Population)") +
   xlab("Sales Volume Range") +
   ylab("Number of Stores") +
+  scale_fill_discrete(name="")+
   theme(axis.text.x = element_text(hjust = 1))
 ggplotly()
 ```

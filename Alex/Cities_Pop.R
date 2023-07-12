@@ -17,7 +17,7 @@
 #' @returns Population of all towns within region
 
 Cities_Pop <- function(df_city_state, city_county_state) {
-  #browser()
+
   cities_in_state <- get_decennial(year = 2020,
                         geography = "place",
                         variables = "DP1_0001C",
