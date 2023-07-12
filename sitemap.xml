@@ -37,6 +37,9 @@
     <loc>https://dspg-2023.github.io/Grocery/reference/Annual_Rent.html</loc>
   </url>
   <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Auto_Pct.html</loc>
+  </url>
+  <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Avg_Capita_Grocery_Spending.html</loc>
   </url>
   <url>
@@ -49,10 +52,16 @@
     <loc>https://dspg-2023.github.io/Grocery/reference/Calc_Market_Size.html</loc>
   </url>
   <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Cities_Pop.html</loc>
+  </url>
+  <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/City_Populations.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Cost_of_Goods_Sold.html</loc>
+  </url>
+  <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/County_Identifier.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Create_Circle_Buffer.html</loc>
@@ -76,13 +85,22 @@
     <loc>https://dspg-2023.github.io/Grocery/reference/Get_Census_Vars_Decennial.html</loc>
   </url>
   <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Get_Cities_in_County.html</loc>
+  </url>
+  <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Gross_Margin.html</loc>
+  </url>
+  <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Haversine_Calculator.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Interest_Expense.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Interest_Income.html</loc>
+  </url>
+  <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Metro_Pop.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Officer_Compensation.html</loc>
@@ -98,6 +116,9 @@
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Pct_County.html</loc>
+  </url>
+  <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Pop_Binder.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Primary_Shopper_Count.html</loc>
@@ -116,6 +137,9 @@
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Rare_Shopper_Count.html</loc>
+  </url>
+  <url>
+    <loc>https://dspg-2023.github.io/Grocery/reference/Rural_Pop.html</loc>
   </url>
   <url>
     <loc>https://dspg-2023.github.io/Grocery/reference/Rural_Population.html</loc>
