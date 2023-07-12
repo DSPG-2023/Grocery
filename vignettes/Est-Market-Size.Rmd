@@ -20,10 +20,10 @@ knitr::opts_chunk$set(
 # DSPGrocery Current Operations
 
 Estimating market size has three main components. Metro population,
-population, and rural population. Metro population is the number of
-people who live in the town the proposed grocery store will be in. This
-is done by by parsing the name, and then using TidyCensus to get the
-population. Next is the populations of the towns around where we are
+cities population, and rural population. Metro population is the number
+of people who live in the town the proposed grocery store will be in.
+This is done by by parsing the name, and then using TidyCensus to get
+the population. Next is the populations of the towns around where we are
 building the store. This is found using a buffer around the city to
 figure out the names of these towns. Then we use TidyCensus to find the
 sum of their populations. Rural population is the people who don't live
@@ -46,12 +46,14 @@ Reilly's law of Retail Gravitation.
 ## Shaping the data
 
 We needed several helper methods to shape the data to the way we want
-it. `Address_Parser()` is a function to take an address as a string and
-turn it into a list.
+it.
 
-`Pop_Binder()` is a function that takes in an address, parses it, and then
-converts it into a data frame with columns for cities in the county and
-their populations. This is used throughout several other functions.
+`Address_Parser()` is a function to take an address as a string and turn
+it into a list.
+
+`Pop_Binder()` is a function that takes in an address, parses it, and
+then converts it into a data frame with columns for cities in the county
+and their populations. This is used throughout several other functions.
 
 Our program is able to pull from the Google Places API to find the
 nearby stores, but it only gives us the latitude and longitude of each
@@ -64,25 +66,35 @@ distance to each store, we are using something called the Haversine
 equation. This is a method used to find distance between two GPS
 coordinates while factoring in the curvature of the Earth.
 
-![](images/Law-of-haversines.png)
+![](images/Law-of-haversines.png){width="300"}
+
+## Gathering Data
+
+The functions utilize three sources of data, TidyCensus, Tigris, and the
+Google Place API. TidyCensus is a package that allows for easy retrival
+of US Census Bureau data in a tidy format. Tigris is a package designed
+to help developers use Census Bureau TIGER/Line files. This is being
+used to find county and place info, and is being used to determine which
+cities are in the market area. The Google Places API is being used to
+find nearby stores, and to convert addresses to GPS coordinates.
 
 ## Populations
 
-`Metro_Pop()` is a function that determines the population of the city that
-the potential store would be in. This function uses the parsed address
-to select just the city the store is out of a data frame containing the
-population of all the towns in the county that the store is in.
+`Metro_Pop()` is a function that determines the population of the city
+that the potential store would be in. This function uses the parsed
+address to select just the city the store is out of a data frame
+containing the population of all the towns in the county that the store
+is in.
 
-`Cities_Pop()` is a function that finds all the nearby cities and finds the
-total of their populations. This function uses a TidyCensus call to find
-the population of all the cities in the state, and then filters it down
-to be just the cities in our area. It then takes the sum of all the city
-populations.
-`Rural_Pop()` is a function that finds the population of all people who live
-in the market area but do not live in a town. This is done by finding
-the population of the whole county, and subtracting the people who live
-in all the towns in that area, then multiplying by the percentage of the
-county the area covers.
+`Cities_Pop()` is a function that finds all the nearby cities and finds
+the total of their populations. This function uses a TidyCensus call to
+find the population of all the cities in the state, and then filters it
+down to be just the cities in our area. It then takes the sum of all the
+city populations. `Rural_Pop()` is a function that finds the population
+of all people who live in the market area but do not live in a town.
+This is done by finding the population of the whole county, and
+subtracting the people who live in all the towns in that area, then
+multiplying by the percentage of the county the area covers.
 
 # Alternates
 
@@ -94,7 +106,7 @@ us a more accurate estimate of the market area because it would take the
 other store into account because people who live nearer to that store
 than our store would most likely choose to shop at that one instead.
 
-![](https://i.stack.imgur.com/bJs12.png)
+![](https://i.stack.imgur.com/bJs12.png){width="300"}
 
 ## Reilly's Law
 
