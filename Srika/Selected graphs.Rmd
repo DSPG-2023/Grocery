@@ -28,8 +28,6 @@ ncg_sales_plot<- ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales
                                       '$100-500 Million')), y = Count, fill = GrpCode)) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()+
-  #ggtitle("Number of Non-Chain Grocery Stores by Sales Volume Range
-  #        for Cities in Iowa (under 2,500 Population)") +
   xlab("") +
   ylab("Number of Stores") +
   scale_fill_okabe_ito(name="")+
@@ -61,12 +59,8 @@ Metro county",
     scale_fill_okabe_ito() +
     theme(axis.text.x = element_text(hjust = 0.5),
           plot.title = element_text(vjust = 3,hjust = 0.5))+
-    #ggtitle("Number of Grocery Store Type in Cities in Iowa
-    #(under 2,500 population)by Population Group") +
-    xlab("City Population")+
-    ylab("Number Of Stores")
+    ylab("Number Of Stores")+
+    xlab("")
 
-  ggplotly()
-  
 ggplotly(ds_ncg_cg) %>% layout(title = list(text = "Number of Grocery Store Type in Cities in Iowa (under 2,500 population) by Population Group", y = 0.98),font = list(size = 10))
 ```
