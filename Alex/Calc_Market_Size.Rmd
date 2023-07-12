@@ -1,12 +1,15 @@
 ```{r}
-  library(sf)
-  library(dplyr)
-  library(tigris)
-  library(tidyr)
-  library(stringr)
-  library(tidycensus)
-  library(oce)
-  library(geosphere)
+library(sf)
+library(dplyr)
+library(tigris)
+library(tidyr)
+library(stringr)
+library(tidycensus)
+library(oce)
+library(geosphere)
+library(googleway)
+library(ggmap)
+library(stringr)
 ```
 
 ```{r}
@@ -67,32 +70,36 @@ rural_population <- Rural_Pop(popbinder_list$df_city_pop,
 #' 
 #' @export
 
-Calc_Market_Size_debug <- function(address) {
+Calc_Market_Size_debug <- function(address, df_census_call, df_geocode, df_grocery_only) {
   browser()
-  
+
+  register_google(key = Sys.getenv("PLACES_KEY"))
+
   popbinder_list <- Pop_Binder(address = address)
-  
-  city_population <- Cities_Pop(df_city_state = popbinder_list$df_city_pop, 
-                                city_county_state = df_census_call_test)
-  
+
+  city_population <- Cities_Pop(df_city_state = popbinder_list$df_city_pop,
+                                city_county_state = df_census_call)
+
   metro_population <- Metro_Pop(address, df_city_pop = popbinder_list$df_city_pop)
-  
+
   rural_population <- Rural_Pop(geo_county = popbinder_list$county_name,
-                                df_geocode = df_geocode_test,
-                                df_grocery_only = df_grocery_only_test,
-                                df_city_pop = popbinder_list$df_city_pop, 
+                                df_geocode = df_geocode,
+                                df_grocery_only = df_grocery_only,
+                                df_city_pop = popbinder_list$df_city_pop,
                                 popbinder = popbinder_list)
-  
+
   MarketSizelist <- list(city_population = city_population,
                          metro_population = metro_population,
                          rural_population =  rural_population)
-  
+
   return(MarketSizelist)
 }
 ```
 
 ```{r}
-Calc_Market_Size_debug("St, Lamoni, IA")
+Calc_Market_Size_debug("St, Lamoni, IA", df_census_call = df_census_call_test, 
+                       df_geocode = df_geocode_test,
+                       df_grocery_only = df_grocery_only_test)
 ```
 
 
