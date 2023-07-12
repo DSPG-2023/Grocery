@@ -10,17 +10,18 @@
 ```
 
 ```{r}
-source(file = "../R/Address_Parser.R")
-source(file = "../R/Quadrant_Area.R")
-source(file = "../R/UTM_Zoner.R")
+#source(file = "../R/Address_Parser.R")
+#source(file = "../R/Quadrant_Area.R")
+#source(file = "../R/UTM_Zoner.R")
 #source(file = Quadrant_Calculator())
 source(file = "Auto_Pct.R")
-source(file = "Auto_Rural.R")
+source(file = "Rural_Pop.R")
 source(file = "Cities_Pop.R")
 source(file = "Haversine_Calculator.R")
 source(file = "Metro_Pop.R")
 source(file = "Pop_Binder.R")
 source(file = "County_Identifier.R")
+source(file = "Get_Cities_In_County.R")
 
 #Need to be fixed
 df_census_call_test <- readRDS("../ProjectData/df_census_call_test.RDS")
@@ -66,7 +67,8 @@ rural_population <- Rural_Pop(popbinder_list$df_city_pop,
 #' 
 #' @export
 
-Calc_Market_Size <- function(address) {
+Calc_Market_Size_debug <- function(address) {
+  browser()
   
   popbinder_list <- Pop_Binder(address = address)
   
@@ -75,10 +77,11 @@ Calc_Market_Size <- function(address) {
   
   metro_population <- Metro_Pop(address, df_city_pop = popbinder_list$df_city_pop)
   
-  rural_population <- Auto_Rural(popbinder_list$df_city_pop,
-                               geo_county = popbinder_list$county_name,
-                               df_geocode = df_geocode_test,
-                               df_grocery_only = df_grocery_only_test)
+  rural_population <- Rural_Pop(geo_county = popbinder_list$county_name,
+                                df_geocode = df_geocode_test,
+                                df_grocery_only = df_grocery_only_test,
+                                df_city_pop = popbinder_list$df_city_pop, 
+                                popbinder = popbinder_list)
   
   MarketSizelist <- list(city_population = city_population,
                          metro_population = metro_population,
@@ -87,4 +90,9 @@ Calc_Market_Size <- function(address) {
   return(MarketSizelist)
 }
 ```
+
+```{r}
+Calc_Market_Size_debug("St, Lamoni, IA")
+```
+
 

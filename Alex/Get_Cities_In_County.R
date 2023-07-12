@@ -7,7 +7,7 @@
 #' @importFrom sf st_join, st_intersects
 #' @importFrom tigris counties, places
 #' @export
-get_cities_in_county <- function(x) {
+Get_Cities_in_County <- function(x) {
   #input: a single-row data frame, a column named "state"
   #                                a column named "county"
   #output: x with extra column for all the cities w/in a county

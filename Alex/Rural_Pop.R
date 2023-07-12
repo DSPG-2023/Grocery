@@ -10,6 +10,8 @@
 #' @param geo_county name if county
 #' @param df_grocery_only API call with just grocery stores
 #' @param df_geocode latlong of store
+#' @param popbinder inherited list from the call to DSPGrocery::Calc_Market_Size
+#' containing df_city_pop and county_name.
 #'
 #' @importFrom tidycensus get_decennial
 #' @importFrom tidyr separate
@@ -22,13 +24,13 @@
 
 
 
-Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
+Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode, popbinder) {
 
   #Jay's function takes a two value dataframe with state and county.
   #Take the values from df_city_pop
 
   city_df <- data.frame(state = df_city_pop$State, county = geo_county)
-  city_in_county <- get_cities_in_county(city_df[1,])
+  city_in_county <- Get_Cities_in_County(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
   county_name <- geo_county
@@ -58,8 +60,8 @@ Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
                                 dist_list$northwest_dist,
                                 dist_list$northeast_dist,
                                 dist_list$southwest_dist,
-                                df_city_pop = popbinder_list$df_city_pop,
-                                geo_county = popbinder_list$county_name)
+                                df_city_pop = popbinder$df_city_pop,
+                                geo_county = popbinder$county_name)
 
 
   sum_val = 0
