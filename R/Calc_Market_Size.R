@@ -12,6 +12,8 @@
 #' @param address an address separated by commas containing street, city, and abbreviated state.
 #' Example: "Main Street, Lamoni, IA"
 #'
+#' @importFrom ggmap register_google
+#'
 #' @returns
 #' returns a list of atomic vectors containing city_population, metro_population,
 #' and rural_population.
@@ -19,6 +21,8 @@
 #' @export
 
 Calc_Market_Size <- function(address) {
+
+  register_google(key = Sys.getenv("PLACES_KEY"))
 
   popbinder_list <- Pop_Binder(address = address)
 

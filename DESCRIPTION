@@ -25,6 +25,10 @@ Imports:
     magrittr,
     oce (>= 1.8.1),
     cli,
-    googleway
+    googleway,
+    geosphere,
+    ggmap,
+    stringr,
+    tidyr
 Remotes: 
     github::dankelley/oce
