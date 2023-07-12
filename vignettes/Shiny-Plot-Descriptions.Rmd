@@ -1,0 +1,19 @@
+---
+title: "Plot Overview in Shiny"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Plot Overview in Shiny}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(DSPGGrocery)
+```
