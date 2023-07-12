@@ -17,7 +17,7 @@
 County_Identifier <- function(x) {
   counties <- counties(state=x[["state"]])
 
-  point <- st_as_sf(x, coords = c("lon", "lat"), crs=st_crs(counties))
+  point <- st_as_sf(x, coords = c("lng", "lat"), crs=st_crs(counties))
 
   point %>%
     st_join(counties, join=st_intersects) %>%

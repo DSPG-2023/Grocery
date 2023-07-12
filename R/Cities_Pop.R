@@ -19,11 +19,12 @@
 #' @export
 
 Cities_Pop <- function(df_city_state, city_county_state) {
+
   cities_in_state <- get_decennial(year = 2020,
-                        geography = "place",
-                        variables = "DP1_0001C",
-                        sumfile = "dp",
-                        state = city_county_state$state)
+                                   geography = "place",
+                                   variables = "DP1_0001C",
+                                   sumfile = "dp",
+                                   state = city_county_state$state)
   #String cleaning
   cities_in_state$NAME <- gsub( " city", "", as.character(cities_in_state$NAME))
   cities_in_state$NAME <- gsub( " CDP", "", as.character(cities_in_state$NAME))

@@ -4,10 +4,16 @@
 \alias{Pop_Binder}
 \title{Creating a Dataframe from an Address}
 \usage{
-Pop_Binder(address)
+Pop_Binder(address, state, df_geocode)
 }
 \arguments{
 \item{address}{the address must be in the standard Google maps form}
+
+\item{state}{a character value of the abbreviated state name inherited from
+DSPGrocery::Calc_Market_Size.}
+
+\item{df_geocode}{a single observation data frame containing the lat/lng values
+of the geocoded address inherited from DSPGrocery::Calc_Market_Size.}
 }
 \description{
 Function that takes in an address and returns a dataframe with cities in the
@@ -15,9 +21,6 @@ county and their populations in a tidy format.
 }
 \details{
 Makes a TidyCensus and Google Places API call, needs key
-}
-\examples{
-# Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
 }
 \author{
 Alex Cory
