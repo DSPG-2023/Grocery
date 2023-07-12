@@ -1,0 +1,42 @@
+# Estimating Market Size
+
+Market size is based on market area and market population.
+The market size is needed in order to estimate the number of shoppers the store
+will bring in. 
+
+## Market Area
+
+Market area is estimated by identifying the nearest grocery store to the address
+input by the user in each quadrant.
+A list of the nearest grocery stores from the address input by the user comes from the Google Places API.
+The distances between the user input address and the nearest grocery stores are 
+calculated and the nearest store in each quadrant give us the radius of a quarter circle. 
+The area for each quarter circle is then calculated and summed to give us a 
+total area in square meters.
+
+ 
+
+The county that the address falls within is identified by x process.
+Then the area in meters is pulled from tigris.
+A percentage representing market area (summed quarter circle area)
+divided by the total area of the county.
+
+ 
+
+ 
+
+## Market Population
+
+The four main components that make up the estimated market population are w,x,y,z.
+
+    - county population is defined as.... it is found by... and population is pulled from tidycensus
+
+   - metro population is defined as …. It is estimated by parsing the city name from the address input by the user… 
+    - towns population is defined as….. It is estimated by identifying the cities within the same county as the grocery store location (is it the cities in the buffer or is it the cities in the same county as the grocery store location?)
+    - rural population is defined as…. It is estimated by subtracting the towns population from the county population.
+
+ 
+
+## Market Size
+
+Once market area and market population are calculated market size is calculated by multiplying the market area percent by the market area populations. This value represents the estimated market size of a particular address. 
