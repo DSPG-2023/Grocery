@@ -3,7 +3,7 @@
 #' @description Allows the user to enter a longitude and have it return the
 #' UTM zone. Works only in North America.
 #'
-#' @params lng longitude
+#' @param lng longitude
 #' @returns zone the UTM zone
 #' @export
 

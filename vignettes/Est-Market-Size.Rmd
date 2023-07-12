@@ -17,31 +17,29 @@ knitr::opts_chunk$set(
 )
 ```
 
-# DSPGGrocery Current Operations
+# DSPGrocery Current Operations
 
 Estimating market size has three main components. Metro population,
 population, and rural population. Metro population is the number of
-people who live in the town the proposed grocery store will be in.
-Determining this is as simple as parsing the name of the town and using
-tidycensus to get the population. Next is the populations of the towns
-around where we are building the store. This is more complicated, we are
-using a buffer around the city to figure out the names of these towns,
-and then from there we can use a loop and tidycensus. Rural population
-is the people who don't live in a city. We can figure this out very
-roughly by figuring out all the people who live in the county, and then
-subtracting all the people that live in all the cities in that county.
-We then multiply this by the percentage of the area of the county
-covered by our market area. This is constricted by counties, and gives a
-very rough estimate.
+people who live in the town the proposed grocery store will be in. This
+is done by by parsing the name, and then using TidyCensus to get the
+population. Next is the populations of the towns around where we are
+building the store. This is found using a buffer around the city to
+figure out the names of these towns. Then we use TidyCensus to find the
+sum of their populations. Rural population is the people who don't live
+in a city, but are still in the market area. This operation finds the
+total population of the county, then subtracts all the people that live
+in the cities in that county. We then multiply this by the percentage of
+the area of the county covered by our market area.
 
-For our calculations we are estimating the area covered by our trade
-area by finding the distance to the nearest store in each quadrant (NE,
-NW, SE, SW). We use that distance as the radius of a quarter circle to
-figure out how much reach our store has. This is a very bad way of
-determining the market region as the only thing it takes into account is
-distance to the closest store, and also ignores the radius that the
-other store would have. A more elegant solution to this would be Voronoi
-polygons or Reilly's law of Retail Gravitation.
+The area calculations used in our functions are derived by finding the
+distance to the nearest store in each quadrant (NE, NW, SE, SW). We use
+that distance as the radius of a quarter circle to figure out how much
+reach the store has. This is a rudimentary way of determining the market
+region as the only thing it takes into account is distance to the
+closest store, and also ignores the radius that the other store would
+have. A more elegant solution to this would be Voronoi polygons or
+Reilly's law of Retail Gravitation.
 
 # Code
 
@@ -71,12 +69,20 @@ coordinates while factoring in the curvature of the Earth.
 ## Populations
 
 Metro_Pop is a function that determines the population of the city that
-the potential store would be in.
+the potential store would be in. This function uses the parsed address
+to select just the city the store is out of a data frame containing the
+population of all the towns in the county that the store is in.
 
 Cities_Pop is a function that finds all the nearby cities and finds the
-total of their populations. \
-Auto_Rural is a function that finds the population of all people who
-live in the market area but do not live in a town.
+total of their populations. This function uses a TidyCensus call to find
+the population of all the cities in the state, and then filters it down
+to be just the cities in our area. It then takes the sum of all the city
+populations. \
+Rural_Pop is a function that finds the population of all people who live
+in the market area but do not live in a town. This is done by finding
+the population of the whole county, and subtracting the people who live
+in all the towns in that area, then multiplying by the percentage of the
+county the area covers.
 
 # Alternates
 
@@ -110,3 +116,4 @@ the likelihood exponentially decreases that they would visit the store.
 In the real world this would mean that even though a store might be 10
 times more attractive than another, if it is 10 times farther away, they
 most likely will not travel to it.
+

@@ -4,11 +4,23 @@
 \alias{Calc_Market_Size}
 \title{Calculates Market Size}
 \usage{
-Calc_Market_Size(address)
+Calc_Market_Size(address, df_census_call, df_geocode, df_grocery_only, state)
 }
 \arguments{
 \item{address}{an address separated by commas containing street, city, and abbreviated state.
 Example: "Main Street, Lamoni, IA"}
+
+\item{df_census_call}{a data frame containing city, county, and state values inherited from
+DSPGrocery::Create_Circle_Buffer.}
+
+\item{df_geocode}{a data frame containing the lng and lat value of the geocoded address
+inherited from DSPGrocery::Create_Circle_Buffer.}
+
+\item{df_grocery_only}{a data frame containing the values returned froma a call to
+googleway::google_places filtered for stores with the type set to "grocery". Also
+inherited from DSPGrocery::Create_Circle_Buffer.}
+
+\item{state}{a character value containing the abbreviated state value of the address.}
 }
 \value{
 returns a list of atomic vectors containing city_population, metro_population,

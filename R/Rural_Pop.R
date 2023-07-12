@@ -37,10 +37,10 @@ Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode, popb
   county_name <- geo_county
 
   county_pop_df <- get_decennial(year = 2020,
-                  geography = "county",
-                  variables = "DP1_0001C",
-                  sumfile = "dp",
-                  state = df_city_pop$State)
+                                 geography = "county",
+                                 variables = "DP1_0001C",
+                                 sumfile = "dp",
+                                 state = df_city_pop$State)
   #String cleaning
 
   county_pop_df$NAME <- gsub( " County", "", as.character(county_pop_df$NAME))
@@ -57,11 +57,11 @@ Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode, popb
 
 
   pct_county <- Auto_Pct(dist_list$northeast_dist,
-                                dist_list$northwest_dist,
-                                dist_list$northeast_dist,
-                                dist_list$southwest_dist,
-                                df_city_pop = popbinder$df_city_pop,
-                                geo_county = popbinder$county_name$county[1])
+                         dist_list$northwest_dist,
+                         dist_list$northeast_dist,
+                         dist_list$southwest_dist,
+                         df_city_pop = popbinder$df_city_pop,
+                         geo_county = popbinder$county_name$county[1])
 
 
   sum_val = 0

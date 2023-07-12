@@ -23,7 +23,8 @@ render a data table and a plot in the tool.
 \details{
 This function receives the data frame of cities, counties and states within the
 circle buffer established by the market size spatial calculations and outputs census data
-for each county.
+for each county. This functions uses the Census API through the package TidyCensus
+to retrieve data using the function "get_decennial()"
 }
 \author{
 Aaron Null

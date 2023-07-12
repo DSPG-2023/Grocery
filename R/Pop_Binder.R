@@ -18,9 +18,9 @@
 #'
 #' @importFrom dplyr rename
 #' @importFrom stringr str_split
-#' @import magrittr %>%
+#' @importFrom magrittr %>%
 #' @importFrom tidyr separate
-#' @example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#'
 #' @export
 
 
