@@ -27,10 +27,11 @@ Calc_Market_Size <- function(address) {
 
   metro_population <- Metro_Pop(address, df_city_pop = popbinder_list$df_city_pop)
 
-  rural_population <- Auto_Rural(popbinder_list$df_city_pop,
-                                 geo_county = popbinder_list$county_name,
-                                 df_geocode = df_geocode_test,
-                                 df_grocery_only = df_grocery_only_test)
+  rural_population <- Rural_Pop(geo_county = popbinder_list$county_name,
+                                df_geocode = df_geocode_test,
+                                df_grocery_only = df_grocery_only_test,
+                                df_city_pop = popbinder_list$df_city_pop,
+                                popbinder = popbinder_list)
 
   MarketSizelist <- list(city_population = city_population,
                          metro_population = metro_population,
