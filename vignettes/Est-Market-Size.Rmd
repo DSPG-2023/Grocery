@@ -46,10 +46,10 @@ Reilly's law of Retail Gravitation.
 ## Shaping the data
 
 We needed several helper methods to shape the data to the way we want
-it. Address_Parser is a function to take an address as a string and turn
-it into a list.
+it. `Address_Parser()` is a function to take an address as a string and
+turn it into a list.
 
-Pop_Binder is a function that takes in an address, parses it, and then
+`Pop_Binder()` is a function that takes in an address, parses it, and then
 converts it into a data frame with columns for cities in the county and
 their populations. This is used throughout several other functions.
 
@@ -68,17 +68,17 @@ coordinates while factoring in the curvature of the Earth.
 
 ## Populations
 
-Metro_Pop is a function that determines the population of the city that
+`Metro_Pop()` is a function that determines the population of the city that
 the potential store would be in. This function uses the parsed address
 to select just the city the store is out of a data frame containing the
 population of all the towns in the county that the store is in.
 
-Cities_Pop is a function that finds all the nearby cities and finds the
+`Cities_Pop()` is a function that finds all the nearby cities and finds the
 total of their populations. This function uses a TidyCensus call to find
 the population of all the cities in the state, and then filters it down
 to be just the cities in our area. It then takes the sum of all the city
-populations. \
-Rural_Pop is a function that finds the population of all people who live
+populations.
+`Rural_Pop()` is a function that finds the population of all people who live
 in the market area but do not live in a town. This is done by finding
 the population of the whole county, and subtracting the people who live
 in all the towns in that area, then multiplying by the percentage of the
@@ -116,4 +116,3 @@ the likelihood exponentially decreases that they would visit the store.
 In the real world this would mean that even though a store might be 10
 times more attractive than another, if it is 10 times farther away, they
 most likely will not travel to it.
-
