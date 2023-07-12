@@ -1,7 +1,19 @@
-library(geosphere)
-
-
-
+#' Find Distance using Haversine Formula
+#'
+#' @author Alex Cory
+#' @description
+#' Finds the distance between a point and a dataframe of points using
+#' the Haversine formula, and finds nearest stores in each direction.
+#' Uses Haversine Formula to account for the curvature of the Earth.
+#' @param df_grocery_only dataframe with API call of grocery stores
+#' @param df_geocode dataframe with gps coordinates of store
+#' @return Distance_Comp_List with nearest store in each direction and
+#' the latlong information on those stores
+#' @importFrom oce lonlat2utm
+#' @importFrom geosphere distHaversine
+#' @importFrom dplyr filter
+#' @importFrom magrittr ?>?
+#' @export
 
 
 Haversine_Calculator <- function(df_grocery_only, df_geocode) {

@@ -1,17 +1,28 @@
+#' Finds the Population of everyone who is in the Area but not in a Town
+#'
 #' @author Alex Cory
+#'
 #' @description
-#' Determines population that does not live in a town or a city that would likely
+#' Determines population that does not live in a town or a city but would likely
 #' shop at the proposed store
+#'
 #' @param df_city_pop df with city populations
 #' @param geo_county name if county
 #' @param df_grocery_only API call with just grocery stores
 #' @param df_geocode latlong of store
 #'
-#' @return Count of people who would shop at the store who do not live in a city
+#' @importFrom tidycensus get_decennial
+#' @importFrom tidyr separate
+#' @importFrom stringr str_split
+#' @importFrom magrittr %>%
+#'
+#' @returns Count of people who would shop at the store who do not live in a city
+#'
+#' @export
 
 
 
-Auto_Rural <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
+Rural_Pop <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
 
   #Jay's function takes a two value dataframe with state and county.
   #Take the values from df_city_pop
@@ -39,7 +50,6 @@ Auto_Rural <- function(df_city_pop, geo_county, df_grocery_only, df_geocode) {
 
 
 
-  #TAKE PARAMETERS FOR THESE VARIABLES
   dist_list <- Haversine_Calculator(df_grocery_only,
                                     df_geocode)
 

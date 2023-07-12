@@ -1,10 +1,24 @@
-#'@author Alex Cory
-#'@param address the address must be in the standard Google maps form
-#'@description
-#'Function that takes in an address and returns a dataframe with data on county
-#'cities and populations
+#' Creating a Dataframe from an Address
 #'
-#'@example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#' @author Alex Cory
+#'
+#' @param address the address must be in the standard Google maps form
+#'
+#' @description
+#' Function that takes in an address and returns a dataframe with cities in the
+#' county and their populations in a tidy format.
+#'
+#' @details
+#' Makes a TidyCensus and Google Places API call, needs key
+#'
+#'
+#' @importFrom dplyr rename
+#' @importFrom ggmap geocode
+#' @importFrom stringr str_split
+#' @import magrittr %>%
+#' @importFrom tidyr separate
+#' @example Pop_Binder("223 S Main St, Lake View, IA, Unites States, Iowa")
+#' @export
 
 library(stringr)
 library(ggmap)
@@ -27,7 +41,7 @@ Pop_Binder <- function(address) {
                         city = splt_addr$city[1])
 
   #Makes a list of all the cities in the county
-  city_in_county <- get_cities_in_county(city_df[1,])
+  city_in_county <- Get_Cities_in_County(city_df[1,])
   county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
 
   #This gives us the name of city and the population. We need to separate city

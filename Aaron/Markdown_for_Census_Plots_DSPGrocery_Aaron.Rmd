@@ -165,8 +165,13 @@ decennial_df
 ```{r}
 Population_df <- decennial_df %>% select(GEOID, NAME, `Total Population`)
 
+## Formatting text for Hoverbox
+
+Population_df$text <- Population_df$text <- paste0("Count: ", scales::comma(Population_df$`Total Population`))
+ 
+
 pop_plot <- Population_df %>%
-  ggplot(aes(x = NAME, y = `Total Population`, fill = NAME)) +
+  ggplot(aes(x = NAME, y = `Total Population`, fill = NAME, text = text)) +
   geom_bar(stat = 'identity', show.legend = FALSE) +
   ggtitle("Total Population (2021)") +
   scale_y_continuous(labels = scales::comma) +
@@ -177,7 +182,7 @@ pop_plot <- Population_df %>%
 
 ## Convert to plotly object
 
-pop_plot <- plotly::ggplotly(pop_plot)
+pop_plot <- plotly::ggplotly(pop_plot, tooltip = "text")
 
 pop_plot <- pop_plot %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 
@@ -191,6 +196,11 @@ pop_plot
 
 ```{r}
 reduced_df_acs1 <- acs_df %>% filter(variable=="B19013_001")
+
+# Formatting Text for Hover Box
+
+reduced_df_acs1$text <- reduced_df_acs1$text <- paste0("Estimate: ", scales::dollar_format()(reduced_df_acs1$estimate), "<br>",
+                               "Margin of error: ", scales::dollar_format()(reduced_df_acs1$moe))
  
 # For moe bar in plot
 
@@ -202,7 +212,7 @@ reduced_df_acs1 <- acs_df %>% filter(variable=="B19013_001")
 ## Make plot object
 
 p <- reduced_df_acs1 %>%
-  ggplot(aes(x = NAME, y = estimate, fill = NAME)) +
+  ggplot(aes(x = NAME, y = estimate, fill = NAME, text = text)) +
   geom_bar(stat = 'identity', show.legend = FALSE) +
   geom_errorbar(ymin = ymin, ymax = ymax) +
   ggtitle("Median Household Income (2021)") +
@@ -214,7 +224,7 @@ p <- reduced_df_acs1 %>%
 
 ## Convert to plotly object
 
-plot <- plotly::ggplotly(p)
+plot <- plotly::ggplotly(p, tooltip = "text")
 
 plot <- plot %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 
@@ -245,16 +255,22 @@ employment_df <- Emploment_status_df_wide %>% rename("Total" = "estimate_B23025_
 
 employment_df2 <- employment_df %>% 
   mutate(Employment_rate = 100 * (Employed_in_Civilian_Labor_Force/Total), Employment_rate_moe = 100 * moe_prop(Employed_in_Civilian_Labor_Force, Total, Employed_in_Civilian_Labor_Force_moe, Total_moe))
+
+# Formatting Text for Hover Box
+
+employment_df2$text <- employment_df2$text <- paste0("Estimate: ", scales::percent_format(scale = 1)(employment_df2$Employment_rate), "<br>",
+                               "Margin of error: ", scales::percent_format(scale = 1)(employment_df2$Employment_rate_moe))
   
 ## For moe bar in plot
 
 ymin2 <- employment_df2$Employment_rate - employment_df2$Employment_rate_moe
 ymax2 <- employment_df2$Employment_rate + employment_df2$Employment_rate_moe
 
+
 ## Make plot object
 
 p2 <- employment_df2 %>%
-  ggplot(aes(x = NAME, y = Employment_rate, fill = NAME)) +
+  ggplot(aes(x = NAME, y = Employment_rate, fill = NAME, text = text)) +
   geom_bar(stat = 'identity', show.legend = FALSE) +
   geom_errorbar(ymin = ymin2, ymax = ymax2, width = .2) +
   ggtitle("Employment Rate (2021)") +
@@ -262,11 +278,11 @@ p2 <- employment_df2 %>%
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
   xlab(NULL) +
   ylab(NULL) +
-  coord_flip(ylim = c(80,100))
+  coord_flip(ylim = c(80, 100))
 
 ## Convert to plotly object
 
-plot2 <- plotly::ggplotly(p2)
+plot2 <- plotly::ggplotly(p2, tooltip = "text")
 
 plot2 <- plot2 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 
@@ -294,18 +310,24 @@ small_df2 <- language_df %>% group_by(NAME) %>% slice_max(estimate, n = 4)
   
 small_df2 <- small_df2 %>% mutate(Total = estimate[Language_Spoken=="Total"], 
 Total_moe = moe[Language_Spoken=="Total"]) %>% subset(Language_Spoken != "Total") %>%       mutate(Percentage = 100 * (estimate/Total),                                                 Percentage_moe = 100 * moe_prop(estimate, Total,   moe, Total_moe))
+
+## Formatting text for hover box
+
+small_df2$text <- small_df2$text <- paste0("Estimate: ", small_df2$estimate, "<br>",
+                               "Margin of error: ", small_df2$moe)
+ 
   
   
 ymin3 <- small_df2$Percentage - small_df2$Percentage_moe
 ymax3 <- small_df2$Percentage + small_df2$Percentage_moe
 
-max_lim2 <- max(ymax3)
+max_lim3 <- max(ymax3)
   
 
 ### GROUPED BAR APPROACH ###
 
 p3 <- small_df2 %>% 
-  ggplot(aes(fill = Language_Spoken, y = Percentage, x = NAME)) +
+  ggplot(aes(fill = Language_Spoken, y = Percentage, x = NAME, text = text)) +
   geom_bar(position = "dodge", stat = "identity", show.legend = FALSE) + 
   geom_errorbar(ymin = ymin3, ymax = ymax3, width = .2, position = position_dodge(.9)) + 
   ggtitle("Languages Spoken other than English (2021)") +
@@ -313,10 +335,10 @@ p3 <- small_df2 %>%
   scale_y_continuous(labels = scales::percent_format(accuracy = 1, scale = 1)) +
   xlab(NULL) +
   ylab(NULL) +
-  coord_flip(ylim = c(0, max_lim2))
+  coord_flip(ylim = c(0, max_lim3))
   
   
-plot3 <- plotly::ggplotly(p3)
+plot3 <- plotly::ggplotly(p3, tooltip = "text")
 
 plot3 <- plot3 %>% layout(annotations = list(list(x = 1, y = -0.1, text = "Source: American Community Survey (5-Year Average, 2021)", showarrow = FALSE, xref = 'paper', yref = 'paper', xanchor = 'right', yanchor = 'auto', font = list(size = 10, color = "grey50"))))
 

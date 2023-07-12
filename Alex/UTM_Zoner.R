@@ -1,11 +1,11 @@
+#' Finding UTM Zone from Longitude in North America
 #' @author Alex Cory
-#'
 #' @description Allows the user to enter a longitude and have it return the
-#' UTM zone. Do not use this ever, because implementing this is terrible.
+#' UTM zone. Works only in North America.
 #'
 #' @params lng longitude
-#'
 #' @returns zone the UTM zone
+#' @export
 
 
 UTM_Zoner <- function(lng) {
