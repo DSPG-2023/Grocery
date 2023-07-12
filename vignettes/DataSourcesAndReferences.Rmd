@@ -51,3 +51,7 @@ The Sales Genie grocery sales data and dollar store data were used to visualize 
 ## Google Places Data
 
 The Google Places API is being used to find nearby stores and convert addresses to GPS coordinates. These stores help to determine our market size ("buffer zone") and factor in the effect of competition on store profitability.
+
+## Tigris
+
+Tigris is a package designed to help developers use Census Bureau TIGER/Line files. This is being used to find county and place info and is being used to determine which cities are in the market area.
