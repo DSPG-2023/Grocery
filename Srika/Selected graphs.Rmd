@@ -2,6 +2,7 @@
 library(ggplot2)
 library(plotly)
 library(stringr)
+library(ggokabeito)
 ```
 
 
@@ -13,7 +14,9 @@ PGs_plot_pct<-read.csv(file="C:\\Users\\srika\\Desktop\\PGs_plot_pct.csv")
 
 
 ```{r}
-ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
+city_group_non_chain_sales$GrpCode <- factor(city_group_non_chain_sales$GrpCode, levels = c("499 and fewer", "500 to 2,499 non-metro county", "500 to 2,499 in metro county"))
+
+ncg_sales_plot<- ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range, 
                                      level=c('Less Than $500,000',
                                       '$500,000-1 Million',
                                       '$1-2.5 Million',
@@ -25,18 +28,16 @@ ggplot(city_group_non_chain_sales, aes(x =factor(Location_Sales_Volume_Range,
                                       '$100-500 Million')), y = Count, fill = GrpCode)) +
   geom_bar(stat = "identity", position = "stack") +
   coord_flip()+
-  ggtitle("Number of Non-Chain Grocery Stores by Sales Volume Range
-          for Cities in Iowa (under 2,500 Population)") +
-  xlab("Sales Volume Range") +
+  xlab("") +
   ylab("Number of Stores") +
-  scale_fill_discrete(name="")+
+  scale_fill_okabe_ito(name="")+
   theme(axis.text.x = element_text(hjust = 1))
-ggplotly()
+ggplotly(ncg_sales_plot) %>% layout(title = list(text = "Number of Non-Chain Grocery Stores by Sales Volume Range for Cities in Iowa (under 2,500 Population)", y = 0.98),font = list(size = 10))
 ```
 
 
 ```{r}
-  ggplot(PGs_plot_pct, aes(x =GrpCode, y = Count, fill =StoreType)) +
+ds_ncg_cg<-  ggplot(PGs_plot_pct, aes(x =GrpCode, y = Count, fill =StoreType)) +
   geom_bar(position="dodge", stat="identity")+
     #Rename to describe access
     scale_x_discrete(labels=c("PG1" = ">=10,000 Core county of a MSA",
@@ -55,11 +56,11 @@ to a MSA",
 Metro county",
                               "PG7"="250 to 499",
                               "Rest_of_the_State"="249 or fewer"))+
+    scale_fill_okabe_ito() +
     theme(axis.text.x = element_text(hjust = 0.5),
           plot.title = element_text(vjust = 3,hjust = 0.5))+
-    ggtitle("Number of Grocery Store Type in Cities in Iowa
-    (under 2,500 population)by Population Group") +
-    xlab("City Population")+
-    ylab("Number Of Stores")
-  ggplotly()
+    ylab("Number Of Stores")+
+    xlab("")
+
+ggplotly(ds_ncg_cg) %>% layout(title = list(text = "Number of Grocery Store Type in Cities in Iowa (under 2,500 population) by Population Group", y = 0.98),font = list(size = 10))
 ```

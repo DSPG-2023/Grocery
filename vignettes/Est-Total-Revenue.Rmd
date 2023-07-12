@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The functions in this section of the package estimate the total revenue of a store using the average spending per capita and the number of shoppers in each category for each type of market.
+The functions in this section of the package estimate the total revenue of a store using the estimated market size, three different shopper type categories, and the average per capita spending on groceries.
 
 ## Average Per Capita Grocery Spend
 
