@@ -2,7 +2,7 @@
 % Please edit documentation in R/UTM_Zoner.R
 \name{UTM_Zoner}
 \alias{UTM_Zoner}
-\title{Creates UTM Zones Based on Longitude Values}
+\title{Finding UTM Zone from Longitude in North America}
 \usage{
 UTM_Zoner(lng)
 }
@@ -14,7 +14,7 @@ zone the UTM zone
 }
 \description{
 Allows the user to enter a longitude and have it return the
-UTM zone. Do not use this ever, because implementing this is terrible.
+UTM zone. Works only in North America.
 }
 \author{
 Alex Cory
