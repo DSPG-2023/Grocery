@@ -40,15 +40,9 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-<<<<<<< HEAD
-## [Salesgenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
-
-The 2021 Salesgenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
-=======
 ## [SalesGenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
 
 The 2021 SalesGenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
->>>>>>> 917a1412cf0b2cb4f2fc645d2b0a7bb7d1f5197e
 
 ## [Bizminer](https://bizminer.com)/[Vertical IQ](https://verticaliq.com) Percentages
 
@@ -58,9 +52,9 @@ Many of the functions used in this package incorporate percentages taken from bo
 
 The Google Places API is being used to find nearby stores and convert addresses to GPS coordinates. These stores help to determine our market size ("buffer zone") and factor in the effect of competition on store profitability.
 
-## [Google GeoCoding](https://developers.google.com/maps/documentation/geocoding/overview) 
+## [Google Geocoding](https://developers.google.com/maps/documentation/geocoding/overview) 
 
-The Google Geo Codding API converts the addresses into latitude-longitude points which is used in the mapping the market.
+The Google Geocoding API converts the addresses into latitude-longitude points which is used in the mapping the market.
 
 ## [Tigris](https://www.rdocumentation.org/packages/tigris/versions/2.0.3)
 
