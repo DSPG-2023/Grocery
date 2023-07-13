@@ -1,10 +1,14 @@
 ---
 title: "Alternative Market Sizes"
+author: "Alex Cory"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Alternative Market Sizes}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r, include = FALSE}
@@ -17,3 +21,43 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(DSPGGrocery)
 ```
+
+# Alternates
+
+During our research process, we found several better ways of estimating
+market area, from both geometric and economic approaches. Voronoi
+diagrams are a more accurate implementation of the quarter circle
+approach. We also found Huff's Model and Reilly's Law of Retail
+Gravitation, which are models designed by economists to give an accurate
+estimation of market size, but we found to be more difficult to
+implement.
+
+## Voronoi
+
+A Voronoi Polygon is a polygon defined where all points in a region
+would be closer to a parent node than any other nodes. This would give
+us a more accurate estimation of market area, as well as be scaleable to
+many neighboring stores, not just four.
+
+![](https://i.stack.imgur.com/bJs12.png){width="300"}
+
+## Reilly's Law
+
+Reilly's law is an economic principle that states that people are more
+drawn to areas with a higher population than those with smaller
+populations. This is an excellent way to estimate market area, but is
+somewhat complicated. Maps are usually edited by hand to account for
+geographic barriers such as rivers, and there are various limitations
+such as the populations of the two cities having to be relatively
+similar.
+
+## Huff's Law
+
+Huff's law is a probabilistic model for estimating consumer attraction.
+It states that the attractiveness of a store and the something called
+distance decay determine the likelihood of someone visiting the store.
+Distance decay is the idea that as people move farther and farther away,
+the likelihood exponentially decreases that they would visit the store.
+In the real world this would mean that even though a store might be 10
+times more attractive than another, if it is 10 times farther away, they
+most likely will not travel to it.

@@ -20,21 +20,21 @@ The tool built in this project is built based on the Excel tool created by the I
 
 # Data Utilized
 
-## ACS Data
+## [ACS Data](https://www.census.gov/programs-surveys/acs/data.html)
 
-The demographic data for this project is taken from the five-year American Community Survey(ACS) 2021.
+The demographic data for this project is taken from the five-year American Community Survey(ACS) 2021.The plots in the dashboard showing the language,race, employment rate and median income uses the 2021 five-year ACS data.
 
-## Decennial Data
+## [Decennial Data](https://www.census.gov/programs-surveys/decennial-census/data.html)
 
 The population data for the visualizations in this project is taken from the US Census Bureau's 2020 Decennial data. This data is used for the population because it is the full count and not a sample, unlike the ACS data.
 
-## US Census Bureau Data
+## [US Census Bureau Data](https://www.census.gov/popclock/)
 
-The population used in the functions of this project takes the US census population as of 01/01/2022.
+The population used in the function, `Avg_Capita_Grocery_Spending()`, of this project takes the US census population as of 01/01/2022.
 
-## IBIS Data
+## [IBIS Data](https://help.ibisworld.com/s/article/methodology-and-sources)
 
-This project uses the 2022 total grocery sales data from IBIS.
+This project uses the 2022 total grocery sales data from IBIS World in the function `Avg_Capita_Grocery_Spending()`. The total grocery sales is the total money spent on groceries in the US in 2022.
 
 ## [BLS Data](https://data.bls.gov/timeseries/CUUR0000SA0)
 
@@ -44,18 +44,18 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-## Salesgenie
+## Sales Genie
 
-The Salesgenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+The 2021 Sales Genie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
 
 ## Bizminer/Vertical IQ Percentages
 
 Many of the functions used in this package incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms, that determine how much of the total estimated revenue will be spent on a given category of expense. The two percentages, each based on industry three-year averages, are averaged together for use in the calculations. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
 
-## Google Places Data
+## [Google Places Data](https://developers.google.com/maps/documentation/places/web-service/overview)
 
 The Google Places API is being used to find nearby stores and convert addresses to GPS coordinates. These stores help to determine our market size ("buffer zone") and factor in the effect of competition on store profitability.
 
-## Tigris
+## [Tigris](https://www.rdocumentation.org/packages/tigris/versions/2.0.3)
 
 Tigris is a package designed to help developers use Census Bureau TIGER/Line files. This is being used to find county and place info and is being used to determine which cities are in the market area.

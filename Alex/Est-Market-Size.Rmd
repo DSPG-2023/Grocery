@@ -1,5 +1,5 @@
 ---
-title: "Estimating Market Size"
+title: "Estimating Market"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Estimating Market Size}
@@ -96,35 +96,3 @@ This is done by finding the population of the whole county, and
 subtracting the people who live in all the towns in that area, then
 multiplying by the percentage of the county the area covers.
 
-# Alternates
-
-## Voronoi
-
-A Voronoi Polygon is a polygon defined where all points in a region
-would be closer to a parent node than any other nodes. This would show
-us a more accurate estimate of the market area because it would take the
-other store into account because people who live nearer to that store
-than our store would most likely choose to shop at that one instead.
-
-![](https://i.stack.imgur.com/bJs12.png){width="300"}
-
-## Reilly's Law
-
-Reilly's law is an economic principle that states that people are more
-drawn to areas with a higher population than those with smaller
-populations. This is an excellent way to estimate market area, but is
-somewhat complicated. Maps are usually edited by hand to account for
-geographic barriers such as rivers, and there are various limitations
-such as the populations of the two cities having to be relatively
-similar.
-
-## Huff's Law
-
-Huff's law is a probabilistic model for estimating consumer attraction.
-It states that the attractiveness of a store and the something called
-distance decay determine the likelihood of someone visiting the store.
-Distance decay is the idea that as people move farther and farther away,
-the likelihood exponentially decreases that they would visit the store.
-In the real world this would mean that even though a store might be 10
-times more attractive than another, if it is 10 times farther away, they
-most likely will not travel to it.
