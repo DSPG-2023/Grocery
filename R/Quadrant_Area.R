@@ -12,6 +12,6 @@
 
 Quadrant_Area <- function(user_area) {
 
-  output_area <- ((pi * (as.numeric(user_area) * as.numeric(user_area))) * 1/4)
+  output_area <- ((pi * (as.numeric(user_area/2) * as.numeric(user_area/2))) * 1/4)
   return(output_area)
 }
