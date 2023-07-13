@@ -40,9 +40,9 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-## [SalesGenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
+## [Salesgenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
 
-The 2021 SalesGenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+The 2021 Salesgenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
 
 ## Bizminer/Vertical IQ Percentages
 

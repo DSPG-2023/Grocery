@@ -44,7 +44,7 @@ Since these plots were rendered interactive with the Plotly package, users are a
 
 ## Rural Grocery Store Analysis
 
-The rural grocery store analysis uses the Sales Genie 2020 Data. The dashboard reviews the number and type of grocery stores in small communities in Iowa with a population of less than 2,500. Cities are categorized into groups based on population size and if the city is within a metro or non-metro county s well as adjacency to a metro area. The dashboard also shows the sales volume distribution for the non-chain grocery stores in Iowa cities with populations under 2,500.
+The rural grocery store analysis uses the Salesgenie 2020 grocery sales data. The dashboard reviews the number and type of grocery stores in small communities in Iowa with a population of less than 2,500. Cities are categorized into groups based on population size and if the city is within a metro or non-metro county s well as adjacency to a metro area. The dashboard also shows the sales volume distribution for the non-chain grocery stores in Iowa cities with populations under 2,500.
 
 ## Libraries Used For Plots
 
