@@ -22,13 +22,23 @@ will bring in.
 Market area is estimated by identifying the nearest grocery store to the address
 input by the user in each quadrant.
 A list of the nearest grocery stores from the address input by the user comes from the Google Places API.
+Our program is able to pull from the Google Places API to find the
+nearby stores, but it only gives us the latitude and longitude of each
+of the stores, not a distance, and not a direction. This function takes
+the data frame from the API call and figures out which direction each of
+the stores is in, and returns the nearest store in each quadrant. GPS coordinates are
+converted to UTM in order to filter our data frame into cardinal
+quadrants to find the nearest store in each direction. In order to find
+distance to each store, the Haversine equation is being used. 
+This is a method used to find distance between two GPS
+coordinates while factoring in the curvature of the Earth.
 The distances between the user input address and the nearest grocery stores are 
 calculated and the nearest store in each quadrant give us the radius of a quarter circle. 
 We half the radius to account for the market area of the other store,
 then the area for each quarter circle is then calculated and summed to give us a 
 total area in square meters.
 
- 
+ ![](images/Law-of-haversines.png){width="300"}
 
 The county that the address falls within is identified by the ` County_Identifier() ` function.
 Then the area in meters is pulled from Tigris.

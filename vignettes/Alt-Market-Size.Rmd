@@ -61,4 +61,3 @@ the likelihood exponentially decreases that they would visit the store.
 In the real world this would mean that even though a store might be 10
 times more attractive than another, if it is 10 times farther away, they
 most likely will not travel to it.
-
