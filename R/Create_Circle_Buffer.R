@@ -110,7 +110,7 @@ Create_Circle_Buffer <- function(address, api_key, keyword) {
   ## Buffer df_geocode point into a circle with a distance to furthest_point
   buffer_circle <- st_buffer(buffer_point_origin,
                              dist = as.integer(ceiling(st_distance(buffer_point_origin$geometry,
-                                                                   furthest_point$geometry))))
+                                                                   furthest_point$geometry/2))))
   cli_alert_success("Location buffered successfully")
 
 
