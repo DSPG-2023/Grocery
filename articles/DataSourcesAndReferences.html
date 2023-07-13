@@ -99,9 +99,11 @@ sheets were understood, recreated, and improvised in this package.</p>
 Data</a><a class="anchor" aria-label="anchor" href="#acs-data"></a>
 </h3>
 <p>The demographic data for this project is taken from the five-year
-American Community Survey(ACS) 2021.The plots in the dashboard showing
-the language,race, employment rate and median income uses the 2021
-five-year ACS data.</p>
+American Community Survey(ACS) 2021. The plots in the dashboard showing
+the language, race, employment rate, and median income use the 2021
+five-year ACS data. The population used in the function,
+<code><a href="../reference/Avg_Capita_Grocery_Spending.html">Avg_Capita_Grocery_Spending()</a></code>, of this project, takes the
+ACS 1-year data as of 01/01/2022.</p>
 </div>
 <div class="section level3">
 <h3 id="decennial-data">
@@ -112,15 +114,6 @@ Data</a><a class="anchor" aria-label="anchor" href="#decennial-data"></a>
 from the US Census Bureau’s 2020 Decennial data. This data is used for
 the population because it is the full count and not a sample, unlike the
 ACS data.</p>
-</div>
-<div class="section level3">
-<h3 id="us-census-bureau-data">
-<a href="https://www.census.gov/popclock/" class="external-link">US Census Bureau
-Data</a><a class="anchor" aria-label="anchor" href="#us-census-bureau-data"></a>
-</h3>
-<p>The population used in the function,
-<code><a href="../reference/Avg_Capita_Grocery_Spending.html">Avg_Capita_Grocery_Spending()</a></code>, of this project takes the US
-census population as of 01/01/2022.</p>
 </div>
 <div class="section level3">
 <h3 id="ibis-data">
@@ -153,9 +146,10 @@ adjusting for the overall inflation using the CPI. This data is updated
 yearly.</p>
 </div>
 <div class="section level3">
-<h3 id="sales-genie">Sales Genie<a class="anchor" aria-label="anchor" href="#sales-genie"></a>
+<h3 id="salesgenie">
+<a href="https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&amp;mediacode=SGNGAWS05038&amp;sfcid=7010d000001K16nAAC&amp;campaignid=1370030323&amp;adgroupid=58327803567&amp;keyword=salesgenie&amp;matchtype=p&amp;network=g&amp;device=c&amp;extensionid=&amp;gad=1&amp;gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE" class="external-link">SalesGenie</a><a class="anchor" aria-label="anchor" href="#salesgenie"></a>
 </h3>
-<p>The 2021 Sales Genie grocery sales data and dollar store data were
+<p>The 2021 SalesGenie grocery sales data and dollar store data were
 used to visualize the distribution of the different types of stores and
 the sales volume information.</p>
 </div>
@@ -180,6 +174,14 @@ Places Data</a><a class="anchor" aria-label="anchor" href="#google-places-data">
 addresses to GPS coordinates. These stores help to determine our market
 size (“buffer zone”) and factor in the effect of competition on store
 profitability.</p>
+</div>
+<div class="section level3">
+<h3 id="google-geocoding">
+<a href="https://developers.google.com/maps/documentation/geocoding/overview" class="external-link">Google
+GeoCoding</a><a class="anchor" aria-label="anchor" href="#google-geocoding"></a>
+</h3>
+<p>The Google Geo Codding API converts the addresses into
+latitude-longitude points which is used in the mapping the market.</p>
 </div>
 <div class="section level3">
 <h3 id="tigris">
