@@ -26,6 +26,7 @@
 #' @importFrom dplyr transmute select filter .data
 #' @importFrom magrittr %>%
 #' @importFrom sf st_as_sf st_buffer st_intersection st_distance st_join st_nearest_feature
+#' st_make_valid
 #' @importFrom tigris counties places
 #' @importFrom cli cli_h1 cli_h2 cli_alert_success cli_alert_info
 #'
