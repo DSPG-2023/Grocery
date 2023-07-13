@@ -44,13 +44,13 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-## Sales Genie
+## [Salesgenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
 
-The 2021 Sales Genie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+The 2021 Salesgenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
 
-## Bizminer/Vertical IQ Percentages
+## [Bizminer](https://bizminer.com)/[Vertical IQ](https://verticaliq.com) Percentages
 
-Many of the functions used in this package incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms, that determine how much of the total estimated revenue will be spent on a given category of expense. The two percentages, each based on industry three-year averages, are averaged together for use in the calculations. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
+Many of the functions used in this package incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms, that determine how much of the total estimated revenue will be spent on a given category of expense. These percentages are based off of industry 3-year averages for grocery stores as of 2022. In this tool, these default percentages are the averages taken from Bizminer and Vertical IQ's individual 3-year averages. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
 
 ## [Google Places Data](https://developers.google.com/maps/documentation/places/web-service/overview)
 
