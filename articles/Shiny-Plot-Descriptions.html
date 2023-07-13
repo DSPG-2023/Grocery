@@ -93,7 +93,70 @@
 <span><span class="co">#&gt; package maintainers should consider adding sf to Suggests:.</span></span>
 <span><span class="co">#&gt; The sp package is now running under evolution status 2</span></span>
 <span><span class="co">#&gt;      (status 2 uses the sf package in place of rgdal)</span></span></code></pre></div>
-  </main>
+<div class="section level2">
+<h2 id="census-data">Census Data<a class="anchor" aria-label="anchor" href="#census-data"></a>
+</h2>
+<p>Data from the American Community Survey (2021) and the Decennial
+Census (2020) were pulled in order to display data visualizations
+relevant to food desert status and the understanding the market of a
+given location. This data is displayed in three bar plots and one data
+table inside a dashboard in the tool. Based on the market size around a
+user-specified address, the data is retrieved for the all of the
+counties that hold a city that resides within a circular buffer zone
+around that location.</p>
+<div class="section level3">
+<h3 id="error-bars">Error Bars<a class="anchor" aria-label="anchor" href="#error-bars"></a>
+</h3>
+<p>For all data pulled from the ACS, a margin of error is visible in the
+plot. This is due to the ACS estimates being the product of
+representative sampling. These margins of error are not captured in the
+table which uses the Decennial data. It is important to note that with
+the ACS data, different counties may have significantly wider margins of
+error for certain variables due to complications at the level of
+sampling (such as very low population).</p>
+</div>
+<div class="section level3">
+<h3 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
+</h3>
+<ul>
+<li><p>Median Household Income (ACS): correlates with access to food,
+provides important information about the store’s potential customer
+base</p></li>
+<li><p>Employment Status (ACS): Indicator of poverty, highlights which
+areas may benefit most from the additional jobs provided by a potential
+store</p></li>
+<li><p>Languages Spoken other than English (ACS): Helps highlight the
+cultural makeup of a market area</p></li>
+<li><p>Race/Hispanic Origin (Decennial): Areas with higher proportions
+of minority groups are most likely to be living in food deserts</p></li>
+<li><p>Total Population (Decennial): Foundational for understanding
+market size (included alongside Race/Hispanic Origin table)</p></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="hover-boxes">Hover Boxes<a class="anchor" aria-label="anchor" href="#hover-boxes"></a>
+</h3>
+<p>Since these plots were rendered interactive with the Plotly package,
+users are able to see exact values of estimates for the variables in a
+plot, along with their margins of error. One can simply hover over the
+bars to see these values.</p>
+</div>
+<div class="section level3">
+<h3 id="libraries-used-for-plots">Libraries Used For Plots<a class="anchor" aria-label="anchor" href="#libraries-used-for-plots"></a>
+</h3>
+<ul>
+<li><p>plotly</p></li>
+<li><p>ggplot2</p></li>
+<li><p>ggokabeito</p></li>
+<li><p>scales</p></li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="section"></h3>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
