@@ -22,15 +22,11 @@ The tool built in this project is built based on the Excel tool created by the I
 
 ## [ACS Data](https://www.census.gov/programs-surveys/acs/data.html)
 
-The demographic data for this project is taken from the five-year American Community Survey(ACS) 2021.The plots in the dashboard showing the language,race, employment rate and median income uses the 2021 five-year ACS data.
+The demographic data for this project is taken from the five-year American Community Survey(ACS) 2021. The plots in the dashboard showing the language, race, employment rate, and median income use the 2021 five-year ACS data. The population used in the function, `Avg_Capita_Grocery_Spending()`, of this project, takes the ACS 1-year data as of 01/01/2022.
 
 ## [Decennial Data](https://www.census.gov/programs-surveys/decennial-census/data.html)
 
 The population data for the visualizations in this project is taken from the US Census Bureau's 2020 Decennial data. This data is used for the population because it is the full count and not a sample, unlike the ACS data.
-
-## [US Census Bureau Data](https://www.census.gov/popclock/)
-
-The population used in the function, `Avg_Capita_Grocery_Spending()`, of this project takes the US census population as of 01/01/2022.
 
 ## [IBIS Data](https://help.ibisworld.com/s/article/methodology-and-sources)
 
@@ -44,9 +40,9 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-## Sales Genie
+## [SalesGenie](https://www.dataaxlegenie.com/lp/genie/?bas_phone=877.846.6920&mediacode=SGNGAWS05038&sfcid=7010d000001K16nAAC&campaignid=1370030323&adgroupid=58327803567&keyword=salesgenie&matchtype=p&network=g&device=c&extensionid=&gad=1&gclid=EAIaIQobChMI7viYnomMgAMVOvfjBx3_xgnMEAAYASAAEgLDV_D_BwE)
 
-The 2021 Sales Genie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+The 2021 SalesGenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
 
 ## Bizminer/Vertical IQ Percentages
 
@@ -55,6 +51,10 @@ Many of the functions used in the expense estimation component of the tool incor
 ## [Google Places Data](https://developers.google.com/maps/documentation/places/web-service/overview)
 
 The Google Places API is being used to find nearby stores and convert addresses to GPS coordinates. These stores help to determine our market size ("buffer zone") and factor in the effect of competition on store profitability.
+
+## [Google GeoCoding](https://developers.google.com/maps/documentation/geocoding/overview) 
+
+The Google Geo Codding API converts the addresses into latitude-longitude points which is used in the mapping the market.
 
 ## [Tigris](https://www.rdocumentation.org/packages/tigris/versions/2.0.3)
 
