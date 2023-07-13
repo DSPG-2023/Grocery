@@ -23,7 +23,7 @@ Get_Cities_in_County <- function(x) {
   counties %>%
     filter(NAME == county) %>%
     st_join(cities, join=st_intersects) %>%
-    pull(NAME.y) %>%
+    pull(NAMELSAD.y) %>%
     sort() %>%
     paste(collapse = ", ") -> city_list
 
