@@ -97,8 +97,9 @@ the address input by the user in each quadrant. A list of the nearest
 grocery stores from the address input by the user comes from the Google
 Places API. The distances between the user input address and the nearest
 grocery stores are calculated and the nearest store in each quadrant
-give us the radius of a quarter circle. The area for each quarter circle
-is then calculated and summed to give us a total area in square
+give us the radius of a quarter circle. We half the radius to account
+for the market area of the other store, then the area for each quarter
+circle is then calculated and summed to give us a total area in square
 meters.</p>
 <p>The county that the address falls within is identified by the
 <code><a href="../reference/County_Identifier.html">County_Identifier()</a></code> function. Then the area in meters is
@@ -108,10 +109,11 @@ quarter circle area) divided by the total area of the county.</p>
 <div class="section level3">
 <h3 id="market-population">Market Population<a class="anchor" aria-label="anchor" href="#market-population"></a>
 </h3>
-<p>The three main components that make up the estimated market
-population are Metro, Cities, and Rural Populations.</p>
-<pre><code>- county population is defined as.... it is found by... and population is pulled from tidycensus</code></pre>
+<p>The four main components that make up the estimated market population
+are County, Metro, Cities, and Rural Populations.</p>
 <ul>
+<li>County population is defined as the population of the county the
+town is in. It is found by a TidyCensus call for the county.</li>
 <li>Metro population is defined as the population of the town the store
 is in. It is estimated by parsing the city name from the address input
 by the user and then filtering a data frame with all cities in that
