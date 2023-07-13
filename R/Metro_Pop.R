@@ -14,6 +14,6 @@
 Metro_Pop <- function(address, df_city_pop) {
   splt_addr <- Address_Parser(address)
   splt_addr[["city"]] <- str_to_title(splt_addr[["city"]])
-  df <- df_city_pop %>% filter(City == splt_addr[["city"]])
-  return(df$value)
+  df <- df_city_pop %>% filter(grepl(splt_addr[["city"]], City))
+  return(df$value[1])
 }

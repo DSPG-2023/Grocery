@@ -26,8 +26,6 @@ Cities_Pop <- function(df_city_state, city_county_state) {
                                    sumfile = "dp",
                                    state = city_county_state$state)
   #String cleaning
-  cities_in_state$NAME <- gsub( " city", "", as.character(cities_in_state$NAME))
-  cities_in_state$NAME <- gsub( " CDP", "", as.character(cities_in_state$NAME))
   cities_in_state <- separate(data = cities_in_state, col = NAME,
                               into = c("City", "State"), sep = "; ")
 
