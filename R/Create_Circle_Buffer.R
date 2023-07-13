@@ -134,7 +134,7 @@ Create_Circle_Buffer <- function(address, api_key, keyword) {
   ## Create the data frame for the census call
   df_census_call <- st_join(x = grocery_cities_inter,
                             y = all_counties, join = st_nearest_feature) %>%
-    transmute(cities =  .$NAME.x,
+    transmute(cities =  .$NAMELSAD.x,
               counties = .$NAME.y,
               state = .$STATEFP.x)
 
