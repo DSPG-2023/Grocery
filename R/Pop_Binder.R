@@ -41,14 +41,8 @@ Pop_Binder <- function(address, state, df_geocode) {
   city_in_county <- Get_Cities_in_County(city_df[1,])
 
 
+  county_cities_list <- str_split(city_in_county$city_list, ", ")
 
-
-  if (city_in_county$city_list == "") {
-    county_cities_list <- NULL
-  }
-  else {
-    county_cities_list <- stringr::str_split(city_in_county$city_list, ", ")
-  }
 
 
   #This gives us the name of city and the population. We need to separate city
@@ -66,8 +60,7 @@ Pop_Binder <- function(address, state, df_geocode) {
                              variables = "DP1_0001C",
                              sumfile = "dp",
                              state = city_in_county[1])
-  place_pop$NAME <- gsub( " city", "", as.character(place_pop$NAME))
-  place_pop$NAME <- gsub( " CDP", "", as.character(place_pop$NAME))
+
   place_pop <- separate(data = place_pop, col = NAME, into = c("City", "State"), sep = ";")
 
   #Convert County cities list to a data frame in the correct shape and name
