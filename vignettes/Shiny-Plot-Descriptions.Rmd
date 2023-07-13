@@ -17,3 +17,39 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(DSPGGrocery)
 ```
+
+# Census Data
+
+Data from the American Community Survey (2021) and the Decennial Census (2020) were pulled in order to display data visualizations relevant to food desert status and the understanding the market of a given location. This data is displayed in three bar plots and one data table inside a dashboard in the tool. Based on the market size around a user-specified address, the data is retrieved for the all of the counties that hold a city that resides within a circular buffer zone around that location.
+
+## Error Bars
+
+For all data pulled from the ACS, a margin of error is visible in the plot. This is due to the ACS estimates being the product of representative sampling. These margins of error are not captured in the table which uses the Decennial data. It is important to note that with the ACS data, different counties may have significantly wider margins of error for certain variables due to complications at the level of sampling (such as very low population).
+
+## Variables
+
+-   Median Household Income (ACS): correlates with access to food, provides important information about the store's potential customer base
+
+-   Employment Status (ACS): Indicator of poverty, highlights which areas may benefit most from the additional jobs provided by a potential store
+
+-   Languages Spoken other than English (ACS): Helps highlight the cultural makeup of a market area
+
+-   Race/Hispanic Origin (Decennial): Areas with higher proportions of minority groups are most likely to be living in food deserts
+
+-   Total Population (Decennial): Foundational for understanding market size (included alongside Race/Hispanic Origin table)
+
+## Hover Boxes
+
+Since these plots were rendered interactive with the Plotly package, users are able to see exact values of estimates for the variables in a plot, along with their margins of error. One can simply hover over the bars to see these values.
+
+## Libraries Used For Plots
+
+-   plotly
+
+-   ggplot2
+
+-   ggokabeito
+
+-   scales
+
+## 
