@@ -47,7 +47,6 @@ Create_Circle_Buffer <- function(address, api_key, keyword) {
   parsed_addr <- Address_Parser(address = address)
   cli_alert_success("Address parsed successfully")
 
-
   # STORE API CALLS
   ## Geocode Address
   cli_h2("Geocoding Address")
@@ -127,13 +126,18 @@ Create_Circle_Buffer <- function(address, api_key, keyword) {
 
   ## Intersecting buffer with Tigris files
   cli_h2("Intersecting buffer and place files")
-  suppressWarnings(grocery_counties_inter <- st_intersection(all_counties, buffer_circle))
-  suppressWarnings(grocery_cities_inter <- st_intersection(all_cities, buffer_circle))
+  suppressWarnings(grocery_counties_inter <- st_intersection(all_counties, buffer_circle)) %>%
+    st_make_valid()
+  suppressWarnings(grocery_cities_inter <- st_intersection(all_cities, buffer_circle)) %>%
+    st_make_valid()
   cli_alert_success("Intersected buffer and places successfully")
+
+  all_counties <- st_make_valid(all_counties)
+  all_cities <- st_make_valid(all_cities)
 
   ## Create the data frame for the census call
   df_census_call <- st_join(x = grocery_cities_inter,
-                            y = all_counties, join = st_nearest_feature) %>%
+                            y = all_counties, join = st_nearest_feature, largest = T) %>%
     transmute(cities =  .$NAMELSAD.x,
               counties = .$NAME.y,
               state = .$STATEFP.x)
