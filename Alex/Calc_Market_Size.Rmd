@@ -10,6 +10,7 @@ library(geosphere)
 library(googleway)
 library(ggmap)
 library(stringr)
+library(cli)
 library(DSPGGrocery)
 ```
 
