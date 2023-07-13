@@ -44,9 +44,13 @@ The US Bureau of labor statistics(BLS) Consumer Price Index(CPI) data was used i
 
 Bureau of Economic Analysis's data on regional price parities was used to adjust the spending according to the regional price levels after adjusting for the overall inflation using the CPI. This data is updated yearly.
 
-## Sales Genie
+## Salesgenie
 
-The Sales Genie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+The Salesgenie grocery sales data and dollar store data were used to visualize the distribution of the different types of stores and the sales volume information.
+
+## Bizminer/Vertical IQ Percentages
+
+Many of the functions used in the expense estimation component of the tool incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms. The value of these percentages determine how much of the total estimated revenue will be spent on a given category of expense. The two percentages, each based on industry three-year averages, are averaged together for use in the calculations. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
 
 ## Google Places Data
 
