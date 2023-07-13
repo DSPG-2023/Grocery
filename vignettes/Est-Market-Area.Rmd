@@ -1,3 +1,16 @@
+---
+title: "Estimating Market Size"
+author: "Alex Cory"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Estimating Market Size}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 # Estimating Market Size
 
 Market size is based on market area and market population.
