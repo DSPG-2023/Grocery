@@ -51,8 +51,7 @@
     <a class="dropdown-item" href="../articles/Alt-Market-Size.html">Alternative Market Sizes</a>
     <a class="dropdown-item" href="../articles/DataSourcesAndReferences.html">Data Sources And Literature Review</a>
     <a class="dropdown-item" href="../articles/Est-Expenses.html">Estimating Expenses</a>
-    <a class="dropdown-item" href="../articles/Est-Market-Area.html">UNKNOWN TITLE</a>
-    <a class="dropdown-item" href="../articles/Est-Market-Size.html">Estimating Market Size</a>
+    <a class="dropdown-item" href="../articles/Est-Market-Area.html">Estimating Market Size</a>
     <a class="dropdown-item" href="../articles/Est-Total-Revenue.html">Estimating Total Revenue</a>
     <a class="dropdown-item" href="../articles/Shiny-Plot-Descriptions.html">Plot Overview in Shiny</a>
   </div>
@@ -75,6 +74,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Alternative Market Sizes</h1>
+                        <h4 data-toc-skip class="author">Alex Cory</h4>
             
       
       
@@ -93,7 +93,51 @@
 <span><span class="co">#&gt; package maintainers should consider adding sf to Suggests:.</span></span>
 <span><span class="co">#&gt; The sp package is now running under evolution status 2</span></span>
 <span><span class="co">#&gt;      (status 2 uses the sf package in place of rgdal)</span></span></code></pre></div>
-  </main>
+<div class="section level2">
+<h2 id="alternates">Alternates<a class="anchor" aria-label="anchor" href="#alternates"></a>
+</h2>
+<p>During our research process, we found several better ways of
+estimating market area, from both geometric and economic approaches.
+Voronoi diagrams are a more accurate implementation of the quarter
+circle approach. We also found Huff’s Model and Reilly’s Law of Retail
+Gravitation, which are models designed by economists to give an accurate
+estimation of market size, but we found to be more difficult to
+implement.</p>
+<div class="section level3">
+<h3 id="voronoi">Voronoi<a class="anchor" aria-label="anchor" href="#voronoi"></a>
+</h3>
+<p>A Voronoi Polygon is a polygon defined where all points in a region
+would be closer to a parent node than any other nodes. This would give
+us a more accurate estimation of market area, as well as be scaleable to
+many neighboring stores, not just four.</p>
+<p><img src="https://i.stack.imgur.com/bJs12.png" width="300"></p>
+</div>
+<div class="section level3">
+<h3 id="reillys-law">Reilly’s Law<a class="anchor" aria-label="anchor" href="#reillys-law"></a>
+</h3>
+<p>Reilly’s law is an economic principle that states that people are
+more drawn to areas with a higher population than those with smaller
+populations. This is an excellent way to estimate market area, but is
+somewhat complicated. Maps are usually edited by hand to account for
+geographic barriers such as rivers, and there are various limitations
+such as the populations of the two cities having to be relatively
+similar.</p>
+</div>
+<div class="section level3">
+<h3 id="huffs-law">Huff’s Law<a class="anchor" aria-label="anchor" href="#huffs-law"></a>
+</h3>
+<p>Huff’s law is a probabilistic model for estimating consumer
+attraction. It states that the attractiveness of a store and the
+something called distance decay determine the likelihood of someone
+visiting the store. Distance decay is the idea that as people move
+farther and farther away, the likelihood exponentially decreases that
+they would visit the store. In the real world this would mean that even
+though a store might be 10 times more attractive than another, if it is
+10 times farther away, they most likely will not travel to it.</p>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
