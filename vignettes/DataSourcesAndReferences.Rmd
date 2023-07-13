@@ -46,7 +46,7 @@ The 2021 SalesGenie grocery sales data and dollar store data were used to visual
 
 ## Bizminer/Vertical IQ Percentages
 
-Many of the functions used in the expense estimation component of the tool incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms. The value of these percentages determine how much of the total estimated revenue will be spent on a given category of expense. The two percentages, each based on industry three-year averages, are averaged together for use in the calculations. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
+Many of the functions used in this package incorporate percentages taken from both Bizminer and Vertical IQ, two financial analysis and market research firms, that determine how much of the total estimated revenue will be spent on a given category of expense. The two percentages, each based on industry three-year averages, are averaged together for use in the calculations. Although the user has the freedom to choose their own percentage via sliders in the side panel, these Bizminer/Vertical IQ percentages are set as defaults.
 
 ## [Google Places Data](https://developers.google.com/maps/documentation/places/web-service/overview)
 
