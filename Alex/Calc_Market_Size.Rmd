@@ -106,9 +106,10 @@ Calc_Market_Size_debug("St, Lamoni, IA", df_census_call = df_census_call_test,
 
 ```{r}
 test_address <- "Main St, Alma, WI"
+test_address2 <- "St, Lamoni, IA"
 state = Address_Parser(test_address)[3]
 
-testList <- Create_Circle_Buffer(address = test_address, 
+testList <- Create_Circle_Buffer(address = test_address2, 
                                  api_key = Sys.getenv("PLACES_KEY"), 
                                  keyword = "grocery")
 list2env(testList, .GlobalEnv)
