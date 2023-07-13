@@ -16,27 +16,29 @@ total area in square meters.
 
  
 
-The county that the address falls within is identified by x process.
-Then the area in meters is pulled from tigris.
+The county that the address falls within is identified by the ` County_Identifier() ` function.
+Then the area in meters is pulled from Tigris.
 A percentage representing market area (summed quarter circle area)
 divided by the total area of the county.
 
- 
-
- 
 
 ## Market Population
 
-The four main components that make up the estimated market population are w,x,y,z.
+The three main components that make up the estimated market population are Metro, Cities, and Rural Populations.
 
     - county population is defined as.... it is found by... and population is pulled from tidycensus
 
-   - metro population is defined as …. It is estimated by parsing the city name from the address input by the user… 
-    - towns population is defined as….. It is estimated by identifying the cities within the same county as the grocery store location (is it the cities in the buffer or is it the cities in the same county as the grocery store location?)
-    - rural population is defined as…. It is estimated by subtracting the towns population from the county population.
+   - Metro population is defined as the population of the town the store is in.
+   It is estimated by parsing the city name from the address input by the user
+   and then filtering a data frame with all cities in that county's populations to find only the town with the store.
+    - Cities population is defined as the population of the cities within the market area.
+    It is estimated by finding the population of all the cities in the market area using Tigris.
+    - Rural population is defined as the population in the market area but outside of any towns. 
+    It is estimated by subtracting the towns population from the county population and multiplying it by
+    the percentage of the county covered in the market area.
 
  
 
 ## Market Size
 
-Once market area and market population are calculated market size is calculated by multiplying the market area percent by the market area populations. This value represents the estimated market size of a particular address. 
+Once market area and market population are calculated, market size is calculated by multiplying the market area percent by the market area populations. This value represents the estimated market size of a particular address. 
