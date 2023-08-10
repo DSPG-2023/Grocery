@@ -1,0 +1,89 @@
+This document is created as space for testing the returns of API calls and other functions used within the DSPGGroceries package.
+
+```{r}
+library(DSPGGrocery)
+library(dplyr)
+library(googleway)
+library(tigris)
+library(tidycensus)
+```
+
+# Testing Addresses
+```{r}
+Lamoni <- "W Main St, Lamoni, IA"
+Hatfield <- "W Apollo Rd, Hatfield, MO"
+Allendale <- "2208 Main St, Allendale, MO 64420"
+Lysite <- "Clark St, Lysite, WY"
+```
+
+```{r, echo=FALSE}
+googleway::set_key(key = Sys.getenv("PLACES_KEY"))
+```
+
+# API Returns
+## Google
+```{r}
+df_geocode <- google_geocode(address = Allendale)
+df_places <- google_places(location = c(df_geocode$results$geometry$location$lat,
+                                        df_geocode$results$geometry$location$lng),
+                                  keyword = "grocery",
+                                  rankby = "distance")
+```
+
+The following code creates a dataframe of address information retrieved from geocoding. 
+```{r}
+df_geocode_values <- df_geocode$results$address_components[[1]]
+df_geocode_values$types <- sapply(df_geocode_values$types, "[[", 1)
+```
+
+
+## Tigris
+```{r}
+state <- as.character(subset(df_geocode_values, types == "administrative_area_level_1")["long_name"])
+
+df_counties <- counties(state = state)
+df_cities <- places(state = state)
+```
+
+## Tidycensus
+Important to note that get_decennial can take multiple counties of one state OR multiple states
+```{r}
+county <- as.character(subset(df_geocode_values, types == "administrative_area_level_2")["long_name"])
+
+county_pop <- get_decennial(year = 2020,
+                              geography = "county",
+                              variables = "DP1_0001C",
+                              sumfile = "dp",
+                              state = c("IA", "MO"))
+```
+
+Important to note that get_decennial can take multiple states
+```{r}
+place_pop <- get_decennial(year = 2020,
+                             geography = "place",
+                             variables = "DP1_0001C",
+                             sumfile = "dp",
+                             state = c("IA", "MO"))
+```
+
+
+# Testing Market Size Geometry and Value functions
+
+## Creating Circle
+```{r}
+Store_Info <- Create_Circle_Buffer(address = Lamoni, 
+                     api_key = Sys.getenv("PLACES_KEY"), 
+                     keyword = "grocery")
+list2env(Store_Info, envir = .GlobalEnv)
+```
+
+## Market Size Estimation
+```{r}
+Calc_Market_Size(address = Lamoni,
+                 df_census_call = df_census_call, 
+                 df_geocode = df_geocode, 
+                 df_grocery_only = df_grocery_only, 
+                 state = "IA")
+```
+
+
